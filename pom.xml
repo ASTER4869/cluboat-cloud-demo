@@ -5,10 +5,13 @@
   <groupId>com.cluboat.demo.springcloud</groupId>
   <artifactId>cluboat</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <modules>
-    <module>cloud-user-login8001</module>
-  </modules>
   <packaging>pom</packaging>
+
+
+  <modules>
+    <module>cloud-user-login-8001</module>
+  </modules>
+
 
   <!--统一管理jar包和版本-->
   <properties>
