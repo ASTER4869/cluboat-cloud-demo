@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d4d16d2-b824-45f3-a1a5-21313ed733a4" name="变更" comment="变更" />
+    <list default="true" id="6d4d16d2-b824-45f3-a1a5-21313ed733a4" name="变更" comment="变更">
+      <change afterPath="$PROJECT_DIR$/cloud-api-common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login-8001/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login-8001/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login-8001/src/main/java/com/cluboat/springcloud/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login-8001/src/main/java/com/cluboat/springcloud/Controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login-8001/src/main/java/com/cluboat/springcloud/entities/user.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login-8001/src/main/java/com/cluboat/springcloud/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login-8001/src/main/java/com/cluboat/springcloud/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login-8001/src/main/java/com/cluboat/springcloud/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login-8001/src/main/java/com/cluboat/springcloud/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login-8001/src/main/java/com/cluboat/springcloud/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login-8001/src/main/java/com/cluboat/springcloud/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,7 +63,7 @@
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;08a6a89d4c495c9ac9914f4b3c32864e&quot;
+    &quot;spring.configuration.checksum&quot;: &quot;68b18d271e88614124c76fefb764947f&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;DatabaseDriversLRU&quot;: [
@@ -62,7 +71,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="JUnit.MyBatisplustest.testSelectList">
+  <component name="RunManager" selected="Spring Boot.login8001">
     <configuration name="MyBatisplustest.testSelectList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cloud-user-login-8001" />
       <extension name="coverage">
@@ -142,6 +151,13 @@
       <workItem from="1668222494140" duration="7855000" />
       <workItem from="1668325278775" duration="7746000" />
       <workItem from="1668411194448" duration="3992000" />
+      <workItem from="1668420677213" duration="639000" />
+      <workItem from="1668423650508" duration="3210000" />
+      <workItem from="1668438215736" duration="2552000" />
+      <workItem from="1668440809553" duration="1042000" />
+      <workItem from="1668441860753" duration="1187000" />
+      <workItem from="1668483389228" duration="625000" />
+      <workItem from="1668513339363" duration="3069000" />
     </task>
     <servers />
   </component>

@@ -10,6 +10,7 @@
 
   <modules>
     <module>cloud-user-login-8001</module>
+    <module>cloud-api-common</module>
   </modules>
 
 
@@ -24,6 +25,8 @@
     <mysql.version>8.0.18</mysql.version>
     <druid.verison>1.1.16</druid.verison>
     <mybatis-plus.verison>3.5.1</mybatis-plus.verison>
+    <springfox-swagger.version>2.7.0</springfox-swagger.version>
+    <swagger-annotations.version>1.5.13</swagger-annotations.version>
   </properties>
 
   <!--子模块继承之后，提供作用：锁定版本+子module不用谢groupId和version-->
@@ -90,6 +93,22 @@
         <groupId>log4j</groupId>
         <artifactId>log4j</artifactId>
         <version>${log4j.version}</version>
+      </dependency>
+      <!--swagger ui-->
+      <dependency>
+        <groupId>io.springfox</groupId>
+        <artifactId>springfox-swagger-ui</artifactId>
+        <version>${springfox-swagger.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.springfox</groupId>
+        <artifactId>springfox-swagger2</artifactId>
+        <version>${springfox-swagger.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.swagger</groupId>
+        <artifactId>swagger-annotations</artifactId>
+        <version>${swagger-annotations.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>

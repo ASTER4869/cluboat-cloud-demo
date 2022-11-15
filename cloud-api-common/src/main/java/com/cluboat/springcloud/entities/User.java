@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @TableName("user")
-public class user
+public class User
 {
     private String name;
 
@@ -18,7 +18,7 @@ public class user
 
     private String phone;
 
-    private long id;
+    private Integer id;
 
 
 
