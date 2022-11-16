@@ -110,6 +110,20 @@
         <artifactId>swagger-annotations</artifactId>
         <version>${swagger-annotations.version}</version>
       </dependency>
+
+      <!--整合Nacos -->
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        <version>0.9.0.RELEASE</version>
+      </dependency>
+
+      <!--gateway-->
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-gateway</artifactId>
+        <version>3.1.4</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 
