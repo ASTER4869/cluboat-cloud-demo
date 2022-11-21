@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d4d16d2-b824-45f3-a1a5-21313ed733a4" name="变更" comment="变更">
-      <change beforePath="$PROJECT_DIR$/cloud-user-login-8001/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login-8001/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-user-login-8001/src/main/java/com/cluboat/springcloud/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login-8001/src/main/java/com/cluboat/springcloud/Controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-user-login-8001/src/main/java/com/cluboat/springcloud/login8001.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login-8001/src/main/java/com/cluboat/springcloud/login8001.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-user-login-8001/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login-8001/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="6d4d16d2-b824-45f3-a1a5-21313ed733a4" name="变更" comment="变更" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -159,6 +153,10 @@
       <workItem from="1668530403502" duration="2786000" />
       <workItem from="1668578502049" duration="847000" />
       <workItem from="1668579362455" duration="876000" />
+      <workItem from="1668669338766" duration="2869000" />
+      <workItem from="1668757859403" duration="45000" />
+      <workItem from="1668838748042" duration="6476000" />
+      <workItem from="1668955955326" duration="654000" />
     </task>
     <servers />
   </component>
