@@ -11,6 +11,10 @@
   <modules>
     <module>cloud-user-login-8001</module>
     <module>cloud-api-common</module>
+    <module>cloud-user-info</module>
+    <module>cloud-forum</module>
+    <module>cloud-club-manage</module>
+    <module>cloud-examine</module>
   </modules>
 
 
