@@ -1,4 +1,4 @@
-package com.cluboat.demo.springcloud;
+package com.cluboat.springcloud;
 
 public class Main {
     public static void main(String[] args) {
