@@ -5,43 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d4d16d2-b824-45f3-a1a5-21313ed733a4" name="变更" comment="变更">
-      <change afterPath="$PROJECT_DIR$/cloud-club-manage/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-club-manage/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-club-manage/src/site/apt/format.apt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-club-manage/src/site/apt/index.apt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-club-manage/src/site/fml/faq.fml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-club-manage/src/site/fr/apt/format.apt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-club-manage/src/site/fr/apt/index.apt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-club-manage/src/site/fr/fml/faq.fml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-club-manage/src/site/fr/xdoc/xdoc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-club-manage/src/site/site.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-club-manage/src/site/site_fr.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-club-manage/src/site/xdoc/xdoc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-examine/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-examine/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-examine/src/site/apt/format.apt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-examine/src/site/apt/index.apt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-examine/src/site/fml/faq.fml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-examine/src/site/fr/apt/format.apt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-examine/src/site/fr/apt/index.apt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-examine/src/site/fr/fml/faq.fml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-examine/src/site/fr/xdoc/xdoc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-examine/src/site/site.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-examine/src/site/site_fr.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-examine/src/site/xdoc/xdoc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-forum/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-user-info/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-user-info/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-user-info/src/site/apt/format.apt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-user-info/src/site/apt/index.apt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-user-info/src/site/fml/faq.fml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-user-info/src/site/fr/apt/format.apt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-user-info/src/site/fr/apt/index.apt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-user-info/src/site/fr/fml/faq.fml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-user-info/src/site/fr/xdoc/xdoc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-user-info/src/site/site.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-user-info/src/site/site_fr.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-user-info/src/site/xdoc/xdoc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-club-manage/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-club-manage/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-club-manage/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-club-manage/src/site/apt/format.apt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-club-manage/src/site/apt/index.apt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-club-manage/src/site/fml/faq.fml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-club-manage/src/site/fr/apt/format.apt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-club-manage/src/site/fr/apt/index.apt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-club-manage/src/site/fr/fml/faq.fml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-club-manage/src/site/fr/xdoc/xdoc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-club-manage/src/site/site.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-club-manage/src/site/site_fr.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-club-manage/src/site/xdoc/xdoc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-examine/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-examine/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-examine/src/site/apt/format.apt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-examine/src/site/apt/index.apt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-examine/src/site/fml/faq.fml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-examine/src/site/fr/apt/format.apt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-examine/src/site/fr/apt/index.apt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-examine/src/site/fr/fml/faq.fml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-examine/src/site/fr/xdoc/xdoc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-examine/src/site/site.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-examine/src/site/site_fr.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-examine/src/site/xdoc/xdoc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-forum/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-forum/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-forum/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-info/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-info/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-info/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-info/src/site/apt/format.apt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-info/src/site/apt/index.apt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-info/src/site/fml/faq.fml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-info/src/site/fr/apt/format.apt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-info/src/site/fr/apt/index.apt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-info/src/site/fr/fml/faq.fml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-info/src/site/fr/xdoc/xdoc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-info/src/site/site.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-info/src/site/site_fr.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-info/src/site/xdoc/xdoc.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,6 +87,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "1.8",
+    "last_opened_file_path": "D:/Code/microservicesDemo/cluboat-cloud-demo/cloud-club-manage/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -101,50 +104,74 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="Spring Boot.login8001">
-    <configuration name="MyBatisplustest.testSelectList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cloud-user-login-8001" />
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Code\microservicesDemo\cluboat-cloud-demo\cloud-club-manage\src\main\resources" />
+      <recent name="D:\Code\microservicesDemo\cluboat-cloud-demo\cloud-examine\src\main\resources" />
+      <recent name="D:\Code\microservicesDemo\cluboat-cloud-demo\cloud-forum\src\main\resources" />
+      <recent name="D:\Code\microservicesDemo\cluboat-cloud-demo\cloud-user-info\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="应用程序.Main">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.cluboat.demo.springcloud.Main" />
+      <module name="cloud-forum" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.cluboat.springcloud.*" />
+          <option name="PATTERN" value="com.cluboat.demo.springcloud.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.cluboat.springcloud" />
-      <option name="MAIN_CLASS_NAME" value="com.cluboat.springcloud.MyBatisplustest" />
-      <option name="METHOD_NAME" value="testSelectList" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MybATISplustest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cloud-user-login-8001" />
+    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.cluboat.demo.springcloud.Main" />
+      <module name="cloud-club-manage" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.cluboat.springcloud.*" />
+          <option name="PATTERN" value="com.cluboat.demo.springcloud.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.cluboat.springcloud" />
-      <option name="MAIN_CLASS_NAME" value="com.cluboat.springcloud.MybATISplustest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MybATISplustest.testSelectList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cloud-user-login-8001" />
+    <configuration name="Main (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.cluboat.demo.springcloud.Main" />
+      <module name="cloud-examine" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.cluboat.springcloud.*" />
+          <option name="PATTERN" value="com.cluboat.demo.springcloud.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.cluboat.springcloud" />
-      <option name="MAIN_CLASS_NAME" value="com.cluboat.springcloud.MybATISplustest" />
-      <option name="METHOD_NAME" value="testSelectList" />
-      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.cluboat.demo.springcloud.Main" />
+      <module name="cloud-user-info" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cluboat.demo.springcloud.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="cloud-club-manage中的所有" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cloud-club-manage" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -158,9 +185,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MyBatisplustest.testSelectList" />
-        <item itemvalue="JUnit.MybATISplustest.testSelectList" />
-        <item itemvalue="JUnit.MybATISplustest" />
+        <item itemvalue="应用程序.Main" />
+        <item itemvalue="应用程序.Main (1)" />
+        <item itemvalue="应用程序.Main (3)" />
+        <item itemvalue="应用程序.Main (2)" />
+        <item itemvalue="JUnit.cloud-club-manage中的所有" />
       </list>
     </recent_temporary>
   </component>
@@ -201,6 +230,7 @@
       <workItem from="1669184258462" duration="1942000" />
       <workItem from="1669441296958" duration="933000" />
       <workItem from="1669471974396" duration="3397000" />
+      <workItem from="1669602818351" duration="2934000" />
     </task>
     <servers />
   </component>
@@ -228,7 +258,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-boot-starter/3.4.1/mybatis-plus-boot-starter-3.4.1.jar!/com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class</url>
           <line>31</line>
-          <properties class="com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration" method="sqlSessionFactory">
+          <properties class="com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
