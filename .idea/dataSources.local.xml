@@ -25,7 +25,7 @@
       <user-name>CluBoat</user-name>
       <schema-mapping>
         <introspection-scope>
-          <node kind="schema" negative="1" />
+          <node kind="schema" qname="cluboat" />
         </introspection-scope>
       </schema-mapping>
     </data-source>

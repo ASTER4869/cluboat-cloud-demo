@@ -6,10 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6d4d16d2-b824-45f3-a1a5-21313ed733a4" name="变更" comment="变更">
       <change beforePath="$PROJECT_DIR$/cloud-examine/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-examine/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-user-login-8001/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login-8001/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-user-login-8001/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login-8001/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/entity/apply/ActivityApplyEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/entity/apply/ActivityApplyEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/mapper/AdminApplyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/mapper/AdminApplyMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-examine/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/src/main/resources/hibernate.cfg.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,6 +81,8 @@
       <recent name="D:\Code\microservicesDemo\cluboat-cloud-demo\cloud-user-info\src\main\resources" />
     </key>
     <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="com.cluboat.springcloud.entity" />
+      <recent name="" />
       <recent name="com.cluboat.springcloud.entity.apply" />
     </key>
   </component>
@@ -218,6 +219,7 @@
       <workItem from="1669687195500" duration="5717000" />
       <workItem from="1669699597183" duration="2745000" />
       <workItem from="1669702374976" duration="1693000" />
+      <workItem from="1669720163425" duration="5848000" />
     </task>
     <servers />
   </component>

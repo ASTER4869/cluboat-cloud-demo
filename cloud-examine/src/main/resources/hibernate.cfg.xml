@@ -14,6 +14,11 @@
       <mapping class="com.cluboat.springcloud.entity.apply.ClubBuildApplyEntity"/>
       <mapping class="com.cluboat.springcloud.entity.apply.ClubCancelApplyEntity"/>
       <mapping class="com.cluboat.springcloud.entity.apply.JoinApplyEntity"/>
+      <mapping class="com.cluboat.springcloud.entity.ClubEntity"/>
+      <mapping class="com.cluboat.springcloud.entity.ClubAdminEntity"/>
+      <mapping class="com.cluboat.springcloud.entity.PostEntity"/>
+      <mapping class="com.cluboat.springcloud.entity.PubnotEntity"/>
+      <mapping class="com.cluboat.springcloud.entity.UserEntity"/>
       <!-- <property name="connection.username"/> -->
     <!-- <property name="connection.password"/> -->
 
