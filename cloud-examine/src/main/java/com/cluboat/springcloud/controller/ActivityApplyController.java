@@ -23,7 +23,7 @@ public class ActivityApplyController {
     private ActivityApplyService activityApplyService;
 
 
-    @GetMapping("{id}")
+    @GetMapping("/{id}")
     public CommonResult getActivityApplyById(@PathVariable("id") int id){
         ActivityApplyEntity activityApply = activityApplyService.getById(id);
         log.info("****插入结果：{payment}");

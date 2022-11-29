@@ -1,21 +1,16 @@
-package com.cluboat.springcloud.entity.apply;
-
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+package com.cluboat.springcloud.entity;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.Objects;
 
 @Entity
-@TableName("activity_apply")
 @Table(name = "activity_apply", schema = "cluboat", catalog = "")
 public class ActivityApplyEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @TableId("activity_apply_id")
     @Column(name = "activity_apply_id")
-    private  Integer activityApplyId;
+    private int activityApplyId;
     @Basic
     @Column(name = "user_id")
     private int userId;

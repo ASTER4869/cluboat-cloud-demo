@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d4d16d2-b824-45f3-a1a5-21313ed733a4" name="变更" comment="变更">
-      <change beforePath="$PROJECT_DIR$/cloud-examine/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/controller/ActivityApplyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/controller/ActivityApplyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/entity/apply/ActivityApplyEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/entity/apply/ActivityApplyEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/mapper/AdminApplyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/mapper/AdminApplyMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-examine/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,35 +38,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;JPA.DatabaseSchemaImportDialog&quot;: &quot;4b9110e6-cc66-487f-83b7-2d4ca637e428&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/cluboat/demo/cluboat/cloud-examine/src/main/resources/hibernate.cfg.xml&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;2237a2c1b2aa8c236266a63d31a45ff9&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "JPA.DatabaseSchemaImportDialog": "4b9110e6-cc66-487f-83b7-2d4ca637e428",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "1.8",
+    "last_opened_file_path": "F:/cluboat/demo/cluboat/cloud-api-common/src/main/resources/hibernate.cfg.xml",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "spring.configuration.checksum": "2237a2c1b2aa8c236266a63d31a45ff9"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -219,7 +216,7 @@
       <workItem from="1669687195500" duration="5717000" />
       <workItem from="1669699597183" duration="2745000" />
       <workItem from="1669702374976" duration="1693000" />
-      <workItem from="1669720163425" duration="5848000" />
+      <workItem from="1669720163425" duration="7757000" />
     </task>
     <servers />
   </component>
