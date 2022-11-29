@@ -1109,7 +1109,15 @@
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
+<<<<<<< Updated upstream
     <column id="301" parent="228" name="club_information">
+=======
+<<<<<<< HEAD
+    <column id="360" parent="228" name="clun_information">
+=======
+    <column id="301" parent="228" name="club_information">
+>>>>>>> gaohaicheng
+>>>>>>> Stashed changes
       <Comment>社团简介</Comment>
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>

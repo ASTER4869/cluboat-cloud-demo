@@ -13,6 +13,22 @@
 
     <dependencies>
         <dependency>
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-extension</artifactId>
+            <version>3.5.2</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.persistence</groupId>
+            <artifactId>persistence-api</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+        <dependency>
+=======
+>>>>>>> gaohaicheng
+>>>>>>> Stashed changes
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
@@ -67,11 +83,20 @@
             <version>${project.version}</version>
             <scope>compile</scope>
         </dependency>
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
         <!--gateway-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-gateway</artifactId>
         </dependency>
+<<<<<<< Updated upstream
+=======
+>>>>>>> gaohaicheng
+>>>>>>> Stashed changes
     </dependencies>
 
     <properties>

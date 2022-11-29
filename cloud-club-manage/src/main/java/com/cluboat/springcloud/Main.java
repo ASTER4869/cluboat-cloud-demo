@@ -5,5 +5,8 @@ public class Main {
         System.out.println("Hello world!");
     }
 }
+<<<<<<< Updated upstream
 
 
+=======
+>>>>>>> Stashed changes
