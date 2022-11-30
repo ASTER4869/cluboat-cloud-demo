@@ -1,5 +1,6 @@
 package com.cluboat.springcloud.entity.apply;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
 public class ActivityApplyEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @TableId("activity_apply_id")
+    @TableId(value="activity_apply_id",type = IdType.AUTO)
     @Column(name = "activity_apply_id")
     private  Integer activityApplyId;
     @Basic
