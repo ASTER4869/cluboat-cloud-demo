@@ -1,9 +1,12 @@
 package com.cluboat.springcloud.entity;
 
+import com.baomidou.mybatisplus.annotation.TableName;
+
 import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
+@TableName("follow")
 @Table(name = "follow", schema = "cluboat", catalog = "")
 @IdClass(FollowEntityPK.class)
 public class FollowEntity {

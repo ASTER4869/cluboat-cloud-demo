@@ -1,14 +1,19 @@
 package com.cluboat.springcloud.entity;
 
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+
 import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.Objects;
 
 @Entity
+@TableName("club")
 @Table(name = "club", schema = "cluboat", catalog = "")
 public class ClubEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
+    @TableId("club_id")
     @Column(name = "club_id")
     private int clubId;
     @Basic
