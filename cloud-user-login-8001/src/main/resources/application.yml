@@ -12,6 +12,8 @@ spring:
     username: cluboat
     password: esY4WkpBczwTZPhs
   cloud:
+    loadbalancer:
+      enabled: true
     nacos:
       discovery:
         server-addr: localhost:8848

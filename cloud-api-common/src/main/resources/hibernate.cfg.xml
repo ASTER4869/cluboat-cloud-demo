@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:mysql://1.15.156.161:3306</property>
+    <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+    <property name="connection.username">CluBoat</property>
+    <property name="connection.password">bf2mZnLFRpyy2JGE</property>
+    <mapping class="com.cluboat.springcloud.entity.ActivityEntity"/>
+    <mapping class="com.cluboat.springcloud.entity.ActivityApplyEntity"/>
+    <mapping class="com.cluboat.springcloud.entity.AdminApplyEntity"/>
+    <mapping class="com.cluboat.springcloud.entity.BudgetApplyEntity"/>
+    <mapping class="com.cluboat.springcloud.entity.ClubEntity"/>
+    <mapping class="com.cluboat.springcloud.entity.ClubAdminEntity"/>
+    <mapping class="com.cluboat.springcloud.entity.ClubBuildApplyEntity"/>
+    <mapping class="com.cluboat.springcloud.entity.ClubCancelApplyEntity"/>
+    <mapping class="com.cluboat.springcloud.entity.CollectionEntity"/>
+    <mapping class="com.cluboat.springcloud.entity.CommentEntity"/>
+    <mapping class="com.cluboat.springcloud.entity.FollowEntity"/>
+    <mapping class="com.cluboat.springcloud.entity.JoinApplyEntity"/>
+    <mapping class="com.cluboat.springcloud.entity.LikesEntity"/>
+    <mapping class="com.cluboat.springcloud.entity.NewsEntity"/>
+    <mapping class="com.cluboat.springcloud.entity.NotReceiverEntity"/>
+    <mapping class="com.cluboat.springcloud.entity.NotificationEntity"/>
+    <mapping class="com.cluboat.springcloud.entity.PostEntity"/>
+    <mapping class="com.cluboat.springcloud.entity.PostTagEntity"/>
+    <mapping class="com.cluboat.springcloud.entity.PubnotEntity"/>
+    <mapping class="com.cluboat.springcloud.entity.ReimApplyEntity"/>
+    <mapping class="com.cluboat.springcloud.entity.ReportEntity"/>
+    <mapping class="com.cluboat.springcloud.entity.SysAdminEntity"/>
+    <mapping class="com.cluboat.springcloud.entity.TagEntity"/>
+    <mapping class="com.cluboat.springcloud.entity.UserEntity"/>
+    <mapping class="com.cluboat.springcloud.entity.UserClubEntity"/>
+    <mapping class="com.cluboat.springcloud.entity.UserInfoEntity"/>
+    <!-- <property name="connection.username"/> -->
+    <!-- <property name="connection.password"/> -->
+
+    <!-- DB schema will be updated if needed -->
+    <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+  </session-factory>
+</hibernate-configuration>

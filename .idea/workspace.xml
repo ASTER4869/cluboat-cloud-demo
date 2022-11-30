@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d4d16d2-b824-45f3-a1a5-21313ed733a4" name="变更" comment="变更">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/demo/springcloud/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/demo/springcloud/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-forum/src/main/java/com/cluboat/demo/springcloud/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-forum/src/main/java/com/cluboat/springcloud/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/demo/springcloud/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/controller/ActivityApplyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/controller/ActivityApplyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/entity/apply/ActivityApplyEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/entity/apply/ActivityApplyEntity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -44,6 +41,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "JPA.DatabaseSchemaImportDialog": "4b9110e6-cc66-487f-83b7-2d4ca637e428",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -52,16 +50,16 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "D:/Code/microservicesDemo/cluboat-cloud-demo/cloud-forum/src/main/java/com/cluboat",
+    "last_opened_file_path": "F:/cluboat/demo/cluboat/cloud-api-common/src/main/resources/hibernate.cfg.xml",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Libraries",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.pluginManager",
-    "spring.configuration.checksum": "68b18d271e88614124c76fefb764947f"
+    "spring.configuration.checksum": "2237a2c1b2aa8c236266a63d31a45ff9"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -79,8 +77,13 @@
       <recent name="D:\Code\microservicesDemo\cluboat-cloud-demo\cloud-forum\src\main\resources" />
       <recent name="D:\Code\microservicesDemo\cluboat-cloud-demo\cloud-user-info\src\main\resources" />
     </key>
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="com.cluboat.springcloud.entity" />
+      <recent name="" />
+      <recent name="com.cluboat.springcloud.entity.apply" />
+    </key>
   </component>
-  <component name="RunManager" selected="应用程序.com.cluboat.springcloud.Main">
+  <component name="RunManager" selected="JUnit.MyBatisplustest.testSelectList">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.cluboat.demo.springcloud.Main" />
       <module name="cloud-forum" />
@@ -120,12 +123,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.cluboat.demo.springcloud.Main" />
-      <module name="cloud-user-info" />
+    <configuration name="examine" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.cluboat.springcloud.examine" />
+      <module name="cloud-examine" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.cluboat.demo.springcloud.*" />
+          <option name="PATTERN" value="com.cluboat.springcloud.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -133,15 +136,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.cluboat.springcloud.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.cluboat.springcloud.Main" />
-      <module name="cloud-user-info" />
+    <configuration name="MyBatisplustest.testSelectList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cloud-user-login-8001" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.cluboat.springcloud.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.cluboat.springcloud" />
+      <option name="MAIN_CLASS_NAME" value="com.cluboat.springcloud.MyBatisplustest" />
+      <option name="METHOD_NAME" value="testSelectList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="examine" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="cloud-examine" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.cluboat.springcloud.examine" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -155,11 +168,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="应用程序.com.cluboat.springcloud.Main" />
-        <item itemvalue="应用程序.Main" />
-        <item itemvalue="应用程序.Main (1)" />
-        <item itemvalue="应用程序.Main (3)" />
-        <item itemvalue="应用程序.Main (2)" />
+        <item itemvalue="JUnit.MyBatisplustest.testSelectList" />
       </list>
     </recent_temporary>
   </component>
@@ -201,6 +210,12 @@
       <workItem from="1669441296958" duration="933000" />
       <workItem from="1669471974396" duration="3397000" />
       <workItem from="1669602818351" duration="7944000" />
+      <workItem from="1669633397903" duration="4586000" />
+      <workItem from="1669642490855" duration="6369000" />
+      <workItem from="1669687195500" duration="5717000" />
+      <workItem from="1669699597183" duration="2745000" />
+      <workItem from="1669702374976" duration="1693000" />
+      <workItem from="1669720163425" duration="7757000" />
     </task>
     <servers />
   </component>
