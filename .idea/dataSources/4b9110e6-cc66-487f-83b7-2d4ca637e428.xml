@@ -849,7 +849,7 @@ cluboat|schema||CluBoat||UPDATE|G</Grants>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
     <column id="250" parent="224" name="activity_id">
-      <AutoIncrement>3</AutoIncrement>
+      <AutoIncrement>5</AutoIncrement>
       <Comment>活动id</Comment>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
@@ -1044,7 +1044,7 @@ cluboat|schema||CluBoat||UPDATE|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="287" parent="227" name="budget_apply_id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>3</AutoIncrement>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1062,19 +1062,16 @@ cluboat|schema||CluBoat||UPDATE|G</Grants>
     <column id="290" parent="227" name="budget_apply_reason">
       <Comment>申请理由</Comment>
       <DataType>text|0s</DataType>
-      <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
     <column id="291" parent="227" name="budget_apply_is_pass">
       <Comment>0审核中，1未通过 2已通过</Comment>
       <DataType>tinyint(4)|0s</DataType>
-      <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
     <column id="292" parent="227" name="budget_apply_time">
       <Comment>申请时间</Comment>
       <DataType>timestamp|0s</DataType>
-      <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
     <foreign-key id="293" parent="227" name="budget_apply_ibfk_1">
@@ -1206,7 +1203,7 @@ club_id</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="316" parent="230" name="build_apply_id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>3</AutoIncrement>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1219,25 +1216,21 @@ club_id</ColNames>
     <column id="318" parent="230" name="build_apply_reason">
       <Comment>申请内容</Comment>
       <DataType>text|0s</DataType>
-      <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
     <column id="319" parent="230" name="build_apply_time">
       <Comment>申请时间</Comment>
       <DataType>timestamp|0s</DataType>
-      <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
     <column id="320" parent="230" name="build_apply_is_pass">
       <Comment>0审核中 1已通过 2未通过</Comment>
       <DataType>tinyint(4)|0s</DataType>
-      <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
     <column id="321" parent="230" name="admin_club_name">
       <Comment>申请社团名字</Comment>
       <DataType>varchar(10)|0s</DataType>
-      <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
     <foreign-key id="322" parent="230" name="club_build_apply_ibfk_1">
@@ -1279,18 +1272,15 @@ club_id</ColNames>
     </column>
     <column id="329" parent="231" name="cancel_apply_reason">
       <DataType>text|0s</DataType>
-      <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
     <column id="330" parent="231" name="cancel_apply_is_pass">
       <Comment>0 审核中 1通过 2没通过</Comment>
       <DataType>tinyint(4)|0s</DataType>
-      <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
     <column id="331" parent="231" name="cancel_apply_time">
       <DataType>timestamp|0s</DataType>
-      <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
     <foreign-key id="332" parent="231" name="club_cancel_apply_ibfk_1">
@@ -1684,7 +1674,7 @@ receiver_id</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="401" parent="239" name="notification_id">
-      <AutoIncrement>2</AutoIncrement>
+      <AutoIncrement>3</AutoIncrement>
       <Comment>通知id</Comment>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
@@ -1898,7 +1888,7 @@ tag_name</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="440" parent="243" name="reim_apply_id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>3</AutoIncrement>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1915,18 +1905,15 @@ tag_name</ColNames>
     </column>
     <column id="443" parent="243" name="reim_apply_reason">
       <DataType>text|0s</DataType>
-      <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
     <column id="444" parent="243" name="reim_apply_is_pass">
       <Comment>0审核中 1通过 2未通过</Comment>
       <DataType>tinyint(4)|0s</DataType>
-      <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
     <column id="445" parent="243" name="reim_apply_time">
       <DataType>timestamp|0s</DataType>
-      <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
     <foreign-key id="446" parent="243" name="reim_apply_ibfk_1">
@@ -2173,7 +2160,7 @@ club_id</ColNames>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="490" parent="249" name="user_photoURL">
+    <column id="490" parent="249" name="user_photo_url">
       <Comment>用户头像URL</Comment>
       <DataType>varchar(256)|0s</DataType>
       <NotNull>1</NotNull>
