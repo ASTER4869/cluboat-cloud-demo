@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d4d16d2-b824-45f3-a1a5-21313ed733a4" name="变更" comment="变更">
-      <change beforePath="$PROJECT_DIR$/cloud-examine/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/entity/apply/BudgetApplyEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/entity/apply/BudgetApplyEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/entity/apply/ClubBuildApplyEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/entity/apply/ClubBuildApplyEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/entity/apply/ClubCancelApplyEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/entity/apply/ClubCancelApplyEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-gateway/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +83,7 @@
       <recent name="com.cluboat.springcloud.entity.apply" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.examine">
+  <component name="RunManager" selected="Spring Boot.NacosGatewayApplication">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.cluboat.demo.springcloud.Main" />
       <module name="cloud-forum" />
@@ -126,19 +123,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="examine" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.cluboat.springcloud.examine" />
-      <module name="cloud-examine" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.cluboat.springcloud.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MyBatisplustest.testSelectList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cloud-user-login-8001" />
       <extension name="coverage">
@@ -151,6 +135,19 @@
       <option name="MAIN_CLASS_NAME" value="com.cluboat.springcloud.MyBatisplustest" />
       <option name="METHOD_NAME" value="testSelectList" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NacosGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="cloud-gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.cluboat.springcloud.NacosGatewayApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cluboat.springcloud.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -171,6 +168,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.NacosGatewayApplication" />
         <item itemvalue="JUnit.MyBatisplustest.testSelectList" />
       </list>
     </recent_temporary>
@@ -231,6 +229,7 @@
       <workItem from="1669863626026" duration="599000" />
       <workItem from="1669872991582" duration="4749000" />
       <workItem from="1669892519002" duration="179000" />
+      <workItem from="1669958407842" duration="4435000" />
     </task>
     <servers />
   </component>

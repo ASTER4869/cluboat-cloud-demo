@@ -15,6 +15,7 @@
     <module>cloud-examine</module>
     <module>cloud-forum</module>
     <module>cloud-club-manage</module>
+    <module>cloud-gateway</module>
   </modules>
 
 
