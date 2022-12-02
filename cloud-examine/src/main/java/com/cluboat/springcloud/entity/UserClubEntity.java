@@ -1,31 +1,26 @@
 package com.cluboat.springcloud.entity;
 
-import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.github.jeffreyning.mybatisplus.anno.MppMultiId;
+
 import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "club_admin", schema = "cluboat", catalog = "")
-@TableName("club_admin")
-@IdClass(ClubAdminEntityPK.class)
-public class ClubAdminEntity {
+@Table(name = "user_club", schema = "cluboat", catalog = "")
+@TableName("user_club")
+@IdClass(UserClubEntityPK.class)
+public class UserClubEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @MppMultiId
-    @TableField(value = "user_id")
     @Column(name = "user_id")
     private int userId;
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @MppMultiId
-    @TableField(value = "club_id")
     @Column(name = "club_id")
     private int clubId;
     @Basic
-    @Column(name = "permission")
-    private byte permission;
+    @Column(name = "user_state")
+    private byte userState;
 
     public int getUserId() {
         return userId;
@@ -43,24 +38,24 @@ public class ClubAdminEntity {
         this.clubId = clubId;
     }
 
-    public byte getPermission() {
-        return permission;
+    public byte getUserState() {
+        return userState;
     }
 
-    public void setPermission(byte permission) {
-        this.permission = permission;
+    public void setUserState(byte userState) {
+        this.userState = userState;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        ClubAdminEntity that = (ClubAdminEntity) o;
-        return userId == that.userId && clubId == that.clubId && permission == that.permission;
+        UserClubEntity that = (UserClubEntity) o;
+        return userId == that.userId && clubId == that.clubId && userState == that.userState;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(userId, clubId, permission);
+        return Objects.hash(userId, clubId, userState);
     }
 }

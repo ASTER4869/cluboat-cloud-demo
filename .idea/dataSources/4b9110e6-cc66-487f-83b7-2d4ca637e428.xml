@@ -910,7 +910,7 @@ cluboat|schema||CluBoat||UPDATE|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="262" parent="225" name="activity_apply_id">
-      <AutoIncrement>3</AutoIncrement>
+      <AutoIncrement>2</AutoIncrement>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1044,7 +1044,7 @@ cluboat|schema||CluBoat||UPDATE|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="287" parent="227" name="budget_apply_id">
-      <AutoIncrement>3</AutoIncrement>
+      <AutoIncrement>2</AutoIncrement>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1107,7 +1107,7 @@ cluboat|schema||CluBoat||UPDATE|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="299" parent="228" name="club_id">
-      <AutoIncrement>3</AutoIncrement>
+      <AutoIncrement>9</AutoIncrement>
       <Comment>社团id</Comment>
       <DataType>int(11) unsigned|0s</DataType>
       <NotNull>1</NotNull>
@@ -1122,19 +1122,16 @@ cluboat|schema||CluBoat||UPDATE|G</Grants>
     <column id="301" parent="228" name="club_information">
       <Comment>社团简介</Comment>
       <DataType>text|0s</DataType>
-      <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
     <column id="302" parent="228" name="club_imageURL">
       <Comment>社团头像url</Comment>
       <DataType>varchar(256)|0s</DataType>
-      <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
     <column id="303" parent="228" name="club_create_time">
       <Comment>社团建立时间</Comment>
       <DataType>timestamp|0s</DataType>
-      <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
     <index id="304" parent="228" name="PRIMARY">
@@ -1203,7 +1200,7 @@ club_id</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="316" parent="230" name="build_apply_id">
-      <AutoIncrement>3</AutoIncrement>
+      <AutoIncrement>2</AutoIncrement>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1255,7 +1252,7 @@ club_id</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="326" parent="231" name="cancel_apply_id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>2</AutoIncrement>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1478,19 +1475,16 @@ user_id</ColNames>
     </column>
     <column id="366" parent="235" name="join_apply_content">
       <DataType>text|0s</DataType>
-      <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
     <column id="367" parent="235" name="join_apply_time">
       <Comment>申请时间</Comment>
       <DataType>timestamp|0s</DataType>
-      <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
     <column id="368" parent="235" name="join_apply_is_pass">
       <Comment>0审核中 1已通过 2未通过</Comment>
       <DataType>tinyint(4)|0s</DataType>
-      <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
     <foreign-key id="369" parent="235" name="join_apply_ibfk_1">
@@ -1674,7 +1668,7 @@ receiver_id</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="401" parent="239" name="notification_id">
-      <AutoIncrement>3</AutoIncrement>
+      <AutoIncrement>6</AutoIncrement>
       <Comment>通知id</Comment>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
@@ -1837,7 +1831,7 @@ tag_name</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="431" parent="242" name="pubnot_id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>4</AutoIncrement>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1851,19 +1845,16 @@ tag_name</ColNames>
     <column id="433" parent="242" name="pubnot_title">
       <Comment>公告标题</Comment>
       <DataType>varchar(50)|0s</DataType>
-      <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
     <column id="434" parent="242" name="pubnot_time">
       <Comment>发布时间</Comment>
       <DataType>timestamp|0s</DataType>
-      <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
     <column id="435" parent="242" name="pubnot_content">
       <Comment>内容</Comment>
       <DataType>text|0s</DataType>
-      <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
     <foreign-key id="436" parent="242" name="pubnot_ibfk_1">
@@ -1888,7 +1879,7 @@ tag_name</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="440" parent="243" name="reim_apply_id">
-      <AutoIncrement>3</AutoIncrement>
+      <AutoIncrement>2</AutoIncrement>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -2062,7 +2053,7 @@ tag_name</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="473" parent="247" name="user_id">
-      <AutoIncrement>5</AutoIncrement>
+      <AutoIncrement>6</AutoIncrement>
       <Comment>用户id</Comment>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
@@ -2130,7 +2121,7 @@ club_id</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="485" parent="249" name="user_id">
-      <AutoIncrement>4</AutoIncrement>
+      <AutoIncrement>6</AutoIncrement>
       <Comment>用户id</Comment>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>

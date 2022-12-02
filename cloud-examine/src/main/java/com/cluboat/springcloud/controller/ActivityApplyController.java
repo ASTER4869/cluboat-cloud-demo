@@ -51,10 +51,11 @@ public class ActivityApplyController {
         ActivityEntity activity = new ActivityEntity();
         boolean isSuccess = activityApplyService.updateById(activityApply);
         log.info("****插入结果：{state}");
-        if(state==1)
+        if(state==1) {
             activity.setActivityIsPass(state);
             activity.setClubId(activityApply.getClubId());
-            isSuccess=activityService.save(activity);
+            isSuccess = activityService.save(activity);
+        }
 
 
 
