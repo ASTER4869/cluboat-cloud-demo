@@ -2,10 +2,10 @@ package com.cluboat.springcloud.Controller;
 
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.cluboat.springcloud.entity.UserEntity;
 import com.cluboat.springcloud.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
-import com.cluboat.springcloud.entities.User;
 import com.cluboat.springcloud.entities.CommonResult;
 
 import javax.annotation.Resource;
@@ -23,7 +23,7 @@ public class UserController {
 
 
     @PostMapping(value = "/create")
-    public boolean save(@RequestBody User user) {
+    public boolean save(@RequestBody UserEntity user) {
         return userService.saveOrUpdate(user);
     }
     @DeleteMapping("/{id}")
@@ -36,28 +36,29 @@ public class UserController {
         return userService.removeByIds(ids);
     }
     @GetMapping
-    public List<User> findAll() {
+    public List<UserEntity> findAll() {
         return userService.list();
     }
 
     @GetMapping("/{id}")
-    public User findOne(@PathVariable Integer id) {
+    public UserEntity findOne(@PathVariable Integer id) {
         return userService.getById(id);
     }
     @GetMapping("/get/{id}")
-    public CommonResult getPaymentById(@PathVariable("id") Long id){
-        User user = userService.getById(id);
+    public CommonResult getUser(@PathVariable("id") Long id){
+        UserEntity user = userService.getById(id);
         log.info("****插入结果：{payment}");
         if(user!=null){
             return new CommonResult(200,"查询成功",user);
         }else {
-            return new CommonResult(444,"无记录");
+            return new CommonResult(400,"无记录");
         }
+
     }
 
 
     @GetMapping("/page")
-    public Page<User> findPage(@RequestParam Integer pageNum,
+    public Page<UserEntity> findPage(@RequestParam Integer pageNum,
                                @RequestParam Integer pageSize) {
         return userService.page(new Page<>(pageNum,pageSize));
     }
