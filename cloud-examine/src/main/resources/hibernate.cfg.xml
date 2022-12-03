@@ -8,7 +8,11 @@
     <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
       <property name="connection.username">CluBoat</property>
       <property name="connection.password">bf2mZnLFRpyy2JGE</property>
+<<<<<<< Updated upstream
     <mapping class="com.cluboat.springcloud.entity.apply.ActivityApplyEntity"/>
+=======
+      <mapping class="com.cluboat.springcloud.entity.apply.ActivityApplyEntity"/>
+>>>>>>> Stashed changes
       <mapping class="com.cluboat.springcloud.entity.apply.AdminApplyEntity"/>
       <mapping class="com.cluboat.springcloud.entity.apply.BudgetApplyEntity"/>
       <mapping class="com.cluboat.springcloud.entity.apply.ClubBuildApplyEntity"/>
@@ -19,9 +23,12 @@
       <mapping class="com.cluboat.springcloud.entity.PostEntity"/>
       <mapping class="com.cluboat.springcloud.entity.PubnotEntity"/>
       <mapping class="com.cluboat.springcloud.entity.UserEntity"/>
+<<<<<<< Updated upstream
       <mapping class="com.cluboat.springcloud.entity.UserInfoEntity"/>
       <mapping class="com.cluboat.springcloud.entity.NotificationEntity"/>
       <mapping class="com.cluboat.springcloud.entity.UserClubEntity"/>
+=======
+>>>>>>> Stashed changes
       <!-- <property name="connection.username"/> -->
     <!-- <property name="connection.password"/> -->
 

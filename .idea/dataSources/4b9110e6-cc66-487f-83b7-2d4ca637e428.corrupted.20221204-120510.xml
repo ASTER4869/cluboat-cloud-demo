@@ -910,7 +910,11 @@ cluboat|schema||CluBoat||UPDATE|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="262" parent="225" name="activity_apply_id">
+<<<<<<< Updated upstream
       <AutoIncrement>2</AutoIncrement>
+=======
+      <AutoIncrement>3</AutoIncrement>
+>>>>>>> Stashed changes
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1044,7 +1048,11 @@ cluboat|schema||CluBoat||UPDATE|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="287" parent="227" name="budget_apply_id">
+<<<<<<< Updated upstream
       <AutoIncrement>2</AutoIncrement>
+=======
+      <AutoIncrement>3</AutoIncrement>
+>>>>>>> Stashed changes
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1200,7 +1208,11 @@ club_id</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="316" parent="230" name="build_apply_id">
+<<<<<<< Updated upstream
       <AutoIncrement>2</AutoIncrement>
+=======
+      <AutoIncrement>3</AutoIncrement>
+>>>>>>> Stashed changes
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1668,7 +1680,11 @@ receiver_id</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="401" parent="239" name="notification_id">
+<<<<<<< Updated upstream
       <AutoIncrement>6</AutoIncrement>
+=======
+      <AutoIncrement>3</AutoIncrement>
+>>>>>>> Stashed changes
       <Comment>通知id</Comment>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
@@ -1879,7 +1895,11 @@ tag_name</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="440" parent="243" name="reim_apply_id">
+<<<<<<< Updated upstream
       <AutoIncrement>2</AutoIncrement>
+=======
+      <AutoIncrement>3</AutoIncrement>
+>>>>>>> Stashed changes
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -2053,7 +2073,11 @@ tag_name</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="473" parent="247" name="user_id">
+<<<<<<< Updated upstream
       <AutoIncrement>6</AutoIncrement>
+=======
+      <AutoIncrement>5</AutoIncrement>
+>>>>>>> Stashed changes
       <Comment>用户id</Comment>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>

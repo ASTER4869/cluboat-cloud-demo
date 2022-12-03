@@ -92,4 +92,8 @@ public class PostEntity {
     public int hashCode() {
         return Objects.hash(postId, postTime, isTop, postTitle, clubId, userId);
     }
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 }

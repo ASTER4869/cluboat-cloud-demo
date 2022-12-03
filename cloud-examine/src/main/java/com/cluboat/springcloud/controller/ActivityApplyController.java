@@ -51,11 +51,18 @@ public class ActivityApplyController {
         ActivityEntity activity = new ActivityEntity();
         boolean isSuccess = activityApplyService.updateById(activityApply);
         log.info("****插入结果：{state}");
+<<<<<<< Updated upstream
         if(state==1) {
             activity.setActivityIsPass(state);
             activity.setClubId(activityApply.getClubId());
             isSuccess = activityService.save(activity);
         }
+=======
+        if(state==1)
+            activity.setActivityIsPass(state);
+            activity.setClubId(activityApply.getClubId());
+            isSuccess=activityService.save(activity);
+>>>>>>> Stashed changes
 
 
 

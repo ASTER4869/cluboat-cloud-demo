@@ -1,14 +1,21 @@
 package com.cluboat.springcloud.entity;
 
+<<<<<<< Updated upstream
 import lombok.Data;
 
+=======
+>>>>>>> Stashed changes
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.io.Serializable;
 import java.util.Objects;
+<<<<<<< Updated upstream
 @Data
+=======
+
+>>>>>>> Stashed changes
 public class ClubAdminEntityPK implements Serializable {
     @Column(name = "user_id")
     @Id

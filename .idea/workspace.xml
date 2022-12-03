@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="6d4d16d2-b824-45f3-a1a5-21313ed733a4" name="变更" comment="变更">
       <change beforePath="$PROJECT_DIR$/cloud-examine/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/controller/ActivityApplyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/controller/ActivityApplyController.java" afterDir="false" />
@@ -17,6 +18,14 @@
       <change beforePath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/entity/apply/JoinApplyEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/entity/apply/JoinApplyEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/examine.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/examine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-examine/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+=======
+    <list default="true" id="fb3ac97f-d6bf-49bf-b2af-5f0ac89912af" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-common/src/main/java/com/cluboat/springcloud/entity/PostEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-common/src/main/java/com/cluboat/springcloud/entity/PostEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-forum/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-forum/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-forum/src/main/java/com/cluboat/springcloud/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-forum/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-forum/src/main/resources/application.yml" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +78,11 @@
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
+<<<<<<< Updated upstream
     &quot;spring.configuration.checksum&quot;: &quot;5f23aa5f3aca0d6340fcec772a5c7f89&quot;
+=======
+    &quot;spring.configuration.checksum&quot;: &quot;5599fcc358949d161b0269efe1b26c44&quot;
+>>>>>>> Stashed changes
   },
   &quot;keyToStringList&quot;: {
     &quot;DatabaseDriversLRU&quot;: [
@@ -87,12 +100,19 @@
       <recent name="D:\Code\microservicesDemo\cluboat-cloud-demo\cloud-forum\src\main\resources" />
       <recent name="D:\Code\microservicesDemo\cluboat-cloud-demo\cloud-user-info\src\main\resources" />
     </key>
+<<<<<<< Updated upstream
+=======
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.cluboat.springcloud.service.impl" />
+    </key>
+>>>>>>> Stashed changes
     <key name="ImportMappingsDialog.RecentPackages">
       <recent name="com.cluboat.springcloud.entity" />
       <recent name="" />
       <recent name="com.cluboat.springcloud.entity.apply" />
     </key>
   </component>
+<<<<<<< Updated upstream
   <component name="RunManager" selected="Spring Boot.examine">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.cluboat.demo.springcloud.Main" />
@@ -107,6 +127,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+=======
+  <component name="RunManager" selected="Spring Boot.forum">
+>>>>>>> Stashed changes
     <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.cluboat.demo.springcloud.Main" />
       <module name="cloud-club-manage" />
@@ -165,6 +188,22 @@
     <configuration name="examine" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="cloud-examine" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.cluboat.springcloud.examine" />
+<<<<<<< Updated upstream
+=======
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="forum" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="cloud-forum" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.cluboat.springcloud.forum" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cluboat.springcloud.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+>>>>>>> Stashed changes
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -178,6 +217,10 @@
     </configuration>
     <recent_temporary>
       <list>
+<<<<<<< Updated upstream
+=======
+        <item itemvalue="Spring Boot.forum" />
+>>>>>>> Stashed changes
         <item itemvalue="Spring Boot.NacosGatewayApplication" />
         <item itemvalue="JUnit.MyBatisplustest.testSelectList" />
       </list>
@@ -189,7 +232,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">
-      <changelist id="6d4d16d2-b824-45f3-a1a5-21313ed733a4" name="变更" comment="" />
+      <changelist id="fb3ac97f-d6bf-49bf-b2af-5f0ac89912af" name="Changes" comment="" />
       <created>1668087582571</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -240,8 +283,13 @@
       <workItem from="1669872991582" duration="4749000" />
       <workItem from="1669892519002" duration="179000" />
       <workItem from="1669958407842" duration="4435000" />
+<<<<<<< Updated upstream
       <workItem from="1669963546799" duration="791000" />
       <workItem from="1669983315930" duration="21379000" />
+=======
+      <workItem from="1669993541979" duration="2537000" />
+      <workItem from="1670045932352" duration="16485000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>

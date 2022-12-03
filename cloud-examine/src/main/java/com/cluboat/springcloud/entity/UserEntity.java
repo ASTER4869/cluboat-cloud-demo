@@ -1,19 +1,28 @@
 package com.cluboat.springcloud.entity;
 
+<<<<<<< Updated upstream
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 
+=======
+>>>>>>> Stashed changes
 import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
+<<<<<<< Updated upstream
 @TableName("user")
+=======
+>>>>>>> Stashed changes
 @Table(name = "user", schema = "cluboat", catalog = "")
 public class UserEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
+<<<<<<< Updated upstream
     @TableId(value="user_id",type = IdType.AUTO)
+=======
+>>>>>>> Stashed changes
     @Column(name = "user_id")
     private int userId;
     @Basic
