@@ -5,18 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d4d16d2-b824-45f3-a1a5-21313ed733a4" name="变更" comment="变更">
-      <change beforePath="$PROJECT_DIR$/cloud-examine/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/controller/ActivityApplyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/controller/ActivityApplyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/controller/AdminApplyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/controller/AdminApplyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/controller/ApplyController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/entity/ClubAdminEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/entity/ClubAdminEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/entity/ClubAdminEntityPK.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/entity/ClubAdminEntityPK.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/entity/ClubEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/entity/ClubEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/entity/PubnotEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/entity/PubnotEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/entity/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/entity/apply/JoinApplyEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/entity/apply/JoinApplyEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/examine.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/examine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-examine/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/controller/ClubController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/controller/ClubController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/controller/NotificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/controller/NotificationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/controller/PubnotController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/controller/PubnotController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,6 +233,11 @@
       <workItem from="1669958407842" duration="4435000" />
       <workItem from="1669963546799" duration="791000" />
       <workItem from="1669983315930" duration="21379000" />
+      <workItem from="1670052905899" duration="862000" />
+      <workItem from="1670056200750" duration="2022000" />
+      <workItem from="1670069906763" duration="2224000" />
+      <workItem from="1670081596655" duration="1137000" />
+      <workItem from="1670084564551" duration="239000" />
     </task>
     <servers />
   </component>

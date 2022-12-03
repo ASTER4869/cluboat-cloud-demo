@@ -44,7 +44,7 @@ public class NotificationController {
 
 
     @PostMapping
-    public CommonResult createNotification(NotificationParam notificationParam) {
+    public CommonResult createNotification(@RequestBody NotificationParam notificationParam) {
         NotificationEntity notification = new NotificationEntity();
         notificationParam.notificationTime=new Timestamp(System.currentTimeMillis());
         System.out.println(notificationParam);

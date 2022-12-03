@@ -54,7 +54,7 @@ public class PubnotController {
     }
 
     @PostMapping
-    public CommonResult createPubnot(PubnotParam pubnotParam) {
+    public CommonResult createPubnot(@RequestBody PubnotParam pubnotParam) {
         PubnotEntity pubnot = new PubnotEntity();
         pubnotParam.pubnotTime=new Timestamp(System.currentTimeMillis());
         System.out.println(pubnotParam);

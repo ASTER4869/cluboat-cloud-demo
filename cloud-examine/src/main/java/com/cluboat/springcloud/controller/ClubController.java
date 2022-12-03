@@ -55,7 +55,7 @@ public class ClubController {
     }
 
     @PostMapping
-    public CommonResult createClub(ClubParam clubParam) {
+    public CommonResult createClub(@RequestBody ClubParam clubParam) {
         ClubEntity club = new ClubEntity();
         SimpleDateFormat formatter= new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         Date date = new Date(System.currentTimeMillis());
