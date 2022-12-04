@@ -9,8 +9,8 @@ import java.sql.Timestamp;
 public class NotificationParam {
     public Integer sendAdminId;
     public Integer sendUserId;
-    public String notification_Title;
-    public String notification_Content;
+    public String notificationTitle;
+    public String notificationContent;
     public Timestamp notificationTime;
-    public byte isAdmin;
+    public Integer isAdmin;
 }

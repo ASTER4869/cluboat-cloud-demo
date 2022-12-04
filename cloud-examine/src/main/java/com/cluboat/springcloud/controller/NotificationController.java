@@ -1,8 +1,7 @@
 package com.cluboat.springcloud.controller;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.cluboat.springcloud.entities.CommonResult;
-import com.cluboat.springcloud.entity.ClubAdminEntity;
+
 import com.cluboat.springcloud.entity.NotificationEntity;
 import com.cluboat.springcloud.entity.param.NotificationParam;
 import com.cluboat.springcloud.service.NotificationService;

@@ -1,14 +1,17 @@
 package com.cluboat.springcloud.entity.apply;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.Objects;
 
 @Entity
+@Data
 @TableName("budget_apply")
 @Table(name = "budget_apply", schema = "cluboat", catalog = "")
 public class BudgetApplyEntity {
@@ -28,11 +31,12 @@ public class BudgetApplyEntity {
     private String budgetApplyReason;
     @Basic
     @Column(name = "budget_apply_is_pass")
-    private byte budgetApplyIsPass;
+    private int budgetApplyIsPass;
     @Basic
     @Column(name = "budget_apply_time")
     private Timestamp budgetApplyTime;
-
+    @TableField("feedback")
+    private String feedback;
     public int getBudgetApplyId() {
         return budgetApplyId;
     }
@@ -65,11 +69,11 @@ public class BudgetApplyEntity {
         this.budgetApplyReason = budgetApplyReason;
     }
 
-    public byte getBudgetApplyIsPass() {
+    public int getBudgetApplyIsPass() {
         return budgetApplyIsPass;
     }
 
-    public void setBudgetApplyIsPass(byte budgetApplyIsPass) {
+    public void setBudgetApplyIsPass(int budgetApplyIsPass) {
         this.budgetApplyIsPass = budgetApplyIsPass;
     }
 

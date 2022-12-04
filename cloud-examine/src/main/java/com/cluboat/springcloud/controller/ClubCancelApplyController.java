@@ -4,9 +4,11 @@ import com.cluboat.springcloud.entities.CommonResult;
 import com.cluboat.springcloud.entity.apply.ClubCancelApplyEntity;
 import com.cluboat.springcloud.service.ClubCancelApplyService;
 import lombok.extern.slf4j.Slf4j;
+import org.json.JSONObject;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @RestController
 @Slf4j
@@ -24,7 +26,16 @@ public class ClubCancelApplyController {
             return new CommonResult(444, "无记录");
         }
     }
-
+    @GetMapping
+    public CommonResult getClubCancelApplyById() {
+        List<ClubCancelApplyEntity> clubCancelApply = clubCancelApplyService.list();
+        log.info("****插入结果：{payment}");
+        if (clubCancelApply != null) {
+            return new CommonResult(200, "查询成功", clubCancelApply);
+        } else {
+            return new CommonResult(444, "无记录");
+        }
+    }
     @DeleteMapping("/{id}")
     public CommonResult removeById(@PathVariable("id") int id) {
         boolean isSuccess = clubCancelApplyService.removeById(id);
@@ -35,10 +46,15 @@ public class ClubCancelApplyController {
 
     }
 
-    @PostMapping("/{id}")
-    public CommonResult updateById(@PathVariable("id") int id,@RequestParam byte state) {
+    @PostMapping
+    public CommonResult updateById(@RequestBody String json) {
+        JSONObject jsonObject = new JSONObject(json);
+        int id = jsonObject.getInt("id");
+        int state = jsonObject.getInt("state");
+        String feedback =jsonObject.optString("feedback");
         ClubCancelApplyEntity clubCancelApply = clubCancelApplyService.getById(id);
         clubCancelApply.setCancelApplyIsPass(state);
+        clubCancelApply.setFeedback(feedback);
         boolean isSuccess = clubCancelApplyService.updateById(clubCancelApply);
         if (isSuccess)
             return new CommonResult(200, "修改成功");

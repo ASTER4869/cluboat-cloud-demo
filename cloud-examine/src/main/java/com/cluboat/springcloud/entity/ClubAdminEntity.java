@@ -11,21 +11,20 @@ import java.util.Objects;
 @TableName("club_admin")
 @IdClass(ClubAdminEntityPK.class)
 public class ClubAdminEntity {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Id
+
     @MppMultiId
     @TableField(value = "user_id")
     @Column(name = "user_id")
     private int userId;
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Id
+
     @MppMultiId
     @TableField(value = "club_id")
     @Column(name = "club_id")
     private int clubId;
     @Basic
+    @TableField(value = "permission")
     @Column(name = "permission")
-    private byte permission;
+    private int permission;
 
     public int getUserId() {
         return userId;
@@ -43,11 +42,11 @@ public class ClubAdminEntity {
         this.clubId = clubId;
     }
 
-    public byte getPermission() {
+    public int getPermission() {
         return permission;
     }
 
-    public void setPermission(byte permission) {
+    public void setPermission(int permission) {
         this.permission = permission;
     }
 

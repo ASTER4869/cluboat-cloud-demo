@@ -8,7 +8,7 @@
     <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
       <property name="connection.username">CluBoat</property>
       <property name="connection.password">bf2mZnLFRpyy2JGE</property>
-    <mapping class="com.cluboat.springcloud.entity.apply.ActivityApplyEntity"/>
+      <mapping class="com.cluboat.springcloud.entity.apply.ActivityApplyEntity"/>
       <mapping class="com.cluboat.springcloud.entity.apply.AdminApplyEntity"/>
       <mapping class="com.cluboat.springcloud.entity.apply.BudgetApplyEntity"/>
       <mapping class="com.cluboat.springcloud.entity.apply.ClubBuildApplyEntity"/>

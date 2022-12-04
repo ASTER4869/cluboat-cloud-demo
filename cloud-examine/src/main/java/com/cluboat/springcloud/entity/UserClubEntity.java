@@ -1,6 +1,8 @@
 package com.cluboat.springcloud.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.github.jeffreyning.mybatisplus.anno.MppMultiId;
 
 import javax.persistence.*;
 import java.util.Objects;
@@ -10,15 +12,18 @@ import java.util.Objects;
 @TableName("user_club")
 @IdClass(UserClubEntityPK.class)
 public class UserClubEntity {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Id
+
+    @MppMultiId
+    @TableField(value = "user_id")
     @Column(name = "user_id")
     private int userId;
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Id
+
+    @MppMultiId
+    @TableField(value = "club_id")
     @Column(name = "club_id")
     private int clubId;
     @Basic
+    @TableField(value = "user_state")
     @Column(name = "user_state")
     private byte userState;
 

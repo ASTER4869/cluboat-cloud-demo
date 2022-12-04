@@ -1,12 +1,12 @@
 package com.cluboat.springcloud.controller;
 
 import com.cluboat.springcloud.entities.CommonResult;
-import com.cluboat.springcloud.entity.NotificationEntity;
 import com.cluboat.springcloud.entity.UserClubEntity;
 import com.cluboat.springcloud.entity.apply.JoinApplyEntity;
 import com.cluboat.springcloud.service.JoinApplyService;
 import com.cluboat.springcloud.service.UserClubService;
 import lombok.extern.slf4j.Slf4j;
+import org.json.JSONObject;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -32,11 +32,17 @@ public class JoinApplyController {
 
     @Resource
     private UserClubService userClubService;
-    @PostMapping("/{id}")
-    public CommonResult updateById(@PathVariable("id") int id,@RequestParam byte state) {
+    @PostMapping
+    public CommonResult updateById(@RequestBody String json) {
+        JSONObject jsonObject = new JSONObject(json);
+        int id = jsonObject.getInt("id");
+        int state = jsonObject.getInt("state");
+        String feedback =jsonObject.optString("feedback");
         JoinApplyEntity joinApply = joinApplyService.getById(id);
         UserClubEntity userClubEntity=new UserClubEntity();
         joinApply.setJoinApplyIsPass(state);
+        joinApply.setFeedback(feedback);
+
         boolean isSuccess = joinApplyService.updateById(joinApply);
         if(state==1)
         {

@@ -63,9 +63,9 @@ public class ClubController {
         club.setClub(clubParam);
         try {
             clubService.save(club);
-            return new CommonResult(200, "修改成功");
+            return new CommonResult(200, "创建成功");
         } catch (Exception e){
-            return new CommonResult(400, "修改失败",e);
+            return new CommonResult(400, "创建失败",e);
         }
 
     }

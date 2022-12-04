@@ -6,6 +6,7 @@ import com.cluboat.springcloud.entity.param.ClubParam;
 import com.cluboat.springcloud.entity.param.PubnotParam;
 import com.cluboat.springcloud.service.PubnotService;
 import lombok.extern.slf4j.Slf4j;
+import org.json.JSONObject;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -68,13 +69,16 @@ public class PubnotController {
     }
 
     @PostMapping("/{id}")
-    public CommonResult editPubnot(@PathVariable("id") int id,PubnotParam pubnotParam) {
+    public CommonResult editPubnot(@PathVariable("id") int id,@RequestBody String json) {
+        JSONObject jsonObject = new JSONObject(json);
+        String pubnotContent = jsonObject.optString("pubnotContent");
+        String pubnotTitle =jsonObject.optString("pubnotTitle");
         PubnotEntity pubnot = pubnotService.getById(id);
-        if(pubnotParam.pubnotContent!=""){
-            pubnot.setPubnotContent(pubnotParam.pubnotContent);
+        if(pubnotContent!=null){
+            pubnot.setPubnotContent(pubnotContent);
         }
-        if(pubnotParam.pubnotTitle!=""){
-            pubnot.setPubnotTitle(pubnotParam.pubnotTitle);
+        if(pubnotTitle!=null){
+            pubnot.setPubnotTitle(pubnotTitle);
         }
         if(pubnotService.updateById(pubnot)){
             return new CommonResult(200, "更新成功");

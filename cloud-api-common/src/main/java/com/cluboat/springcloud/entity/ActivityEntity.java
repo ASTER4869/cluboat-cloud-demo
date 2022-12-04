@@ -33,7 +33,7 @@ public class ActivityEntity {
     private Timestamp activityEndTime;
     @Basic
     @Column(name = "activity_is_pass")
-    private byte activityIsPass;
+    private int activityIsPass;
     @Basic
     @Column(name = "activity_content")
     private String activityContent;
@@ -86,11 +86,11 @@ public class ActivityEntity {
         this.activityEndTime = activityEndTime;
     }
 
-    public byte getActivityIsPass() {
+    public int getActivityIsPass() {
         return activityIsPass;
     }
 
-    public void setActivityIsPass(byte activityIsPass) {
+    public void setActivityIsPass(int activityIsPass) {
         this.activityIsPass = activityIsPass;
     }
 

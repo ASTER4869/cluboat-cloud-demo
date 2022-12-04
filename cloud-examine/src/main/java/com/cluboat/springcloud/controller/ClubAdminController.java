@@ -1,17 +1,22 @@
 package com.cluboat.springcloud.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.cluboat.springcloud.entities.CommonResult;
 import com.cluboat.springcloud.entity.*;
 import com.cluboat.springcloud.entity.apply.BudgetApplyEntity;
+import com.cluboat.springcloud.mapper.ClubAdminMapper;
 import com.cluboat.springcloud.mapper.ClubMaMapper;
+import com.cluboat.springcloud.mapper.UserClubMapper;
 import com.cluboat.springcloud.service.ClubAdminService;
 
 import com.cluboat.springcloud.service.ClubMaService;
 import com.cluboat.springcloud.service.ClubService;
+import com.cluboat.springcloud.service.UserClubService;
 import com.github.yulichang.query.MPJQueryWrapper;
 import lombok.extern.slf4j.Slf4j;
+import org.json.JSONObject;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -27,9 +32,17 @@ public class ClubAdminController {
     @Resource
     private ClubAdminService clubAdminService;
     @Resource
-    private ClubMaService clubMaService;
+    private UserClubService userClubService;
+    @Resource
+    private ClubAdminMapper clubAdminMapper;
+
+    @Resource
+    private UserClubMapper userClubMapper;
     @DeleteMapping
-    public CommonResult deleteById(@RequestParam int user_id,@RequestParam int club_id) {
+    public CommonResult deleteById(@RequestBody String json) {
+        JSONObject jsonObject = new JSONObject(json);
+        int user_id = jsonObject.getInt("user_id");
+        int club_id = jsonObject.getInt("club_id");
         QueryWrapper<ClubAdminEntity> wrapper=new QueryWrapper<>();
 
         wrapper.eq("user_id",user_id);
@@ -45,20 +58,34 @@ public class ClubAdminController {
     }
 
     @PostMapping
-    public CommonResult updateById(@RequestParam int user_id,@RequestParam int club_id,@RequestParam byte permission) {
+    public CommonResult updateById(@RequestBody String json) {
+        JSONObject jsonObject = new JSONObject(json);
+        int user_id = jsonObject.getInt("user_id");
+        int club_id = jsonObject.getInt("club_id");
+        int permission = jsonObject.getInt("permission");
+
         QueryWrapper<ClubAdminEntity> wrapper=new QueryWrapper<>();
         //wrapper.eq相当于Map.put,放的是查询条件
         wrapper.eq("user_id",user_id);
         wrapper.eq("club_id",club_id);
-        ClubAdminEntity clubAdmin = clubAdminService.getOne(wrapper,false);
+
+        ClubAdminEntity clubAdmin = clubAdminMapper.selectOne(wrapper);
         if(clubAdmin==null)
         {
-            return new CommonResult(400, "不存在或者未加入社团");
+            ClubAdminEntity clubAdminNew=new ClubAdminEntity();
+            clubAdminNew.setClubId(club_id);
+            clubAdminNew.setUserId(user_id);
+            clubAdminNew.setPermission(permission);
+            clubAdminService.save(clubAdminNew);
+            return new CommonResult(200, "修改成功");
 
         }
-        clubAdmin.setPermission(permission);
-        clubAdminService.updateByMultiId(clubAdmin);
-        return new CommonResult(200, "修改成功",clubAdmin);
+        UpdateWrapper updateWrapper = new UpdateWrapper();
+        updateWrapper.eq("user_id", user_id);
+        updateWrapper.eq("club_id", club_id);
+        updateWrapper.set("permission", permission);
+        clubAdminMapper.update(null,updateWrapper);
+        return new CommonResult(200, "修改成功");
 
     }
     @Resource

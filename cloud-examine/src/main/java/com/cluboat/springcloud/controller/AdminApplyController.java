@@ -9,6 +9,7 @@ import com.cluboat.springcloud.entity.apply.JoinApplyEntity;
 import com.cluboat.springcloud.service.AdminApplyService;
 import com.cluboat.springcloud.service.ClubAdminService;
 import lombok.extern.slf4j.Slf4j;
+import org.json.JSONObject;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -36,23 +37,23 @@ public class AdminApplyController {
     }
     @Resource
     private ClubAdminService clubAdminService;
-    @PostMapping("/{id}")
-    public CommonResult updateById(@PathVariable("id") int id,@RequestParam byte state) {
+    @PostMapping
+    public CommonResult updateById(@RequestBody String json) {
+        JSONObject jsonObject = new JSONObject(json);
+        int id = jsonObject.getInt("id");
+        int state = jsonObject.getInt("state");
+        String feedback =jsonObject.optString("feedback");
         AdminApplyEntity adminApply = adminApplyService.getById(id);
         adminApply.setAdminApplyIsPass(state);
+        adminApply.setFeedback(feedback);
         ClubAdminEntity clubAdminEntity=new ClubAdminEntity();
         boolean isSuccess = adminApplyService.updateById(adminApply);
-        log.info("****插入结果：{state}");
         if(state==1) {
             clubAdminEntity.setPermission((byte)(0));
             clubAdminEntity.setClubId(adminApply.getAdminClubId());
             clubAdminEntity.setUserId(adminApply.getUserId());
             isSuccess = clubAdminService.save(clubAdminEntity);
         }
-
-
-
-
         if (isSuccess) {
             return new CommonResult(200, "修改成功");
         }
