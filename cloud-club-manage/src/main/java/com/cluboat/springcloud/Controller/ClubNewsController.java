@@ -3,6 +3,7 @@ package com.cluboat.springcloud.Controller;
 import com.cluboat.springcloud.entities.CommonResult;
 import com.cluboat.springcloud.entity.NewsEntity;
 import com.cluboat.springcloud.entity.param.NewsParam;
+import com.cluboat.springcloud.entity.param.NewsUpdateParam;
 import com.cluboat.springcloud.service.ClubNewsService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
@@ -25,8 +26,8 @@ public class ClubNewsController {
     @GetMapping("/{clubId}")
     public CommonResult getAllClubNewsById(@PathVariable("clubId") int id) {
         List<NewsEntity> newsEntityList = newsService.lambdaQuery()
-                .eq(NewsEntity::getClubId,id).list();
-        if (newsEntityList != null) {
+                .eq(NewsEntity::getClubId, id).list();
+        if (newsEntityList.size() > 0) {
             return new CommonResult(200, "查询成功", newsEntityList);
         } else {
             return new CommonResult(400, "无记录");
@@ -49,21 +50,32 @@ public class ClubNewsController {
     @PostMapping
     public CommonResult createNews(@RequestBody NewsParam newsParam) {
         NewsEntity news = new NewsEntity();
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        Date date = new Date(System.currentTimeMillis());
         newsParam.newsTime = new Timestamp(System.currentTimeMillis());
         news.setNews(newsParam);
         try {
             newsService.save(news);
             return new CommonResult(200, "修改成功");
         } catch (Exception e) {
-            return new CommonResult(400, "修改失败", news);
+            return new CommonResult(400, "修改失败", e);
         }
     }
 
     /* 改某一新闻 */
-//    @PutMapping
-//    public  CommonResult updateNews(){
-//
-//    }
+    @PutMapping
+    public CommonResult updateNews(@RequestBody NewsUpdateParam newsUpdateParam) {
+        NewsEntity news = new NewsEntity();
+        news.setNewsContent(newsUpdateParam.newsContent);
+        news.setNewsTitle(newsUpdateParam.newsTitle);
+        news.setNewsId(newsUpdateParam.newsId);
+//        news.setNewsTime( new  Timestamp(System.currentTimeMillis())  );
+//        news.setClubId(newsService.getById(newsUpdateParam.newsId).getClubId());
+//        news.setUserId(newsService.getById(newsUpdateParam.newsId).getUserId());
+
+        try {
+            newsService.updateById( news);
+            return new CommonResult(200, "修改成功");
+        } catch (Exception e) {
+            return new CommonResult(400, "修改失败", e);
+        }
+    }
 }

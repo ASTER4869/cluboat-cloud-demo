@@ -38,8 +38,8 @@ public class JoinApplyEntity {
     private String feedback;
 
     public void setJoinApply(JoinApplyParam joinApplyParam) {
-        this.joinApplyContent = joinApplyParam.JoinApplyContent;
-        this.joinApplyTime = joinApplyParam.JoinApplyTime;
+        this.joinApplyContent = joinApplyParam.joinApplyContent;
+        this.joinApplyTime = joinApplyParam.joinApplyTime;
         this.joinClubId = joinApplyParam.joinClubId;
         this.userId = joinApplyParam.userId;
     }

@@ -44,23 +44,12 @@ public class ClubActivityApplyController {
         List<ActivityApplyEntity> activityApplyList = activityApplyService.lambdaQuery()
                         .eq(ActivityApplyEntity::getUserId,id).list();
         log.info("****插入结果：{payment}");
-        if (activityApplyList != null) {
+        if (activityApplyList.size() > 0) {
             return new CommonResult(200, "查询成功", activityApplyList);
         } else {
-            return new CommonResult(444, "无记录");
+            return new CommonResult(400, "无记录");
         }
     }
-
-    /* 删除某个活动申请 , 目前不做 */
-//    @DeleteMapping("/{id}")
-//    public CommonResult removeById(@PathVariable("id") int id) {
-//        boolean isSuccess = activityApplyService.removeById(id);
-//        if (isSuccess)
-//            return new CommonResult(200, "删除成功");
-//        else
-//            return new CommonResult(400, "删除失败");
-//
-//    }
 
 
 }

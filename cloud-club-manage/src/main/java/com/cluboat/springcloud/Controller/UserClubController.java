@@ -17,6 +17,13 @@ public class UserClubController {
     @Resource
     private UserClubService userClubService;
 
+    /* 管理查看全部社员,要连表查 */
+//    @GetMapping("/{clubId}")
+//    public CommonResult getAllUserClubByClubId(@PathVariable("clubId") int id){
+//        List<>
+//    }
+
+    /* 退出社团 */
     @DeleteMapping()
     public CommonResult removeUserClub(@RequestBody UserClubParam userClubParam) {
         boolean isSuccess =  userClubService.lambdaUpdate()

@@ -31,7 +31,7 @@ public class ClubActivityController {
         List<ActivityEntity> activityEntityList = clubActivityService.lambdaQuery()
                 .eq(ActivityEntity::getClubId, id).list();
 
-        if (activityEntityList != null) {
+        if (activityEntityList.size() > 0) {
             return new CommonResult(200, "查询成功", activityEntityList);
         } else {
             return new CommonResult(400, "无记录");

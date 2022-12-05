@@ -8,6 +8,6 @@ import java.sql.Timestamp;
 public class JoinApplyParam {
     public int userId;
     public int joinClubId;
-    public String JoinApplyContent;
-    public Timestamp JoinApplyTime;
+    public String joinApplyContent;
+    public Timestamp joinApplyTime;
 }

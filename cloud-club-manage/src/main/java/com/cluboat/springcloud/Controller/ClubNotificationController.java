@@ -25,7 +25,7 @@ public class ClubNotificationController {
     public CommonResult getAllClubNotificationById(@PathVariable("sendUserId") int id) {
         List<NotificationEntity> notificationEntityList = notificationService.lambdaQuery()
                 .eq(NotificationEntity::getSendUserId, id).list();
-        if (notificationEntityList != null) {
+        if (notificationEntityList.size() > 0) {
             return new CommonResult(200, "查询成功",notificationEntityList);
         } else {
             return new CommonResult(400, "无记录");
