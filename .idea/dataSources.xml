@@ -8,9 +8,20 @@
       <jdbc-url>jdbc:mysql://1.15.156.161:3306</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="@1.15.156.161 [2]" uuid="4b9110e6-cc66-487f-83b7-2d4ca637e428">
+    <data-source source="LOCAL" name="@linux服务器" uuid="3d3b77be-2968-49ee-aea2-ae334fe844df">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://49.235.115.50:3306</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="28118269-f1a2-42c3-aebe-355382f1c3c2">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+D:/Code/microservicesDemo/cluboat-cloud-demo/cloud-api-common/src/main/resources/hibernate.cfg.xml</remarks>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://1.15.156.161:3306</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>

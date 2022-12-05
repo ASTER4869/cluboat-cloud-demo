@@ -15,10 +15,6 @@
     <module>cloud-forum</module>
     <module>cloud-club-manage</module>
     <module>cloud-examine</module>
-      <module>cloud-user-info</module>
-    <module>cloud-examine</module>
-    <module>cloud-forum</module>
-    <module>cloud-club-manage</module>
   </modules>
 
 

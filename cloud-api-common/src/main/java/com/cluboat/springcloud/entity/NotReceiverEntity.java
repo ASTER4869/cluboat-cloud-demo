@@ -1,14 +1,19 @@
 package com.cluboat.springcloud.entity;
 
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+
 import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
+@TableName("not_receiver")
 @Table(name = "not_receiver", schema = "cluboat", catalog = "")
 @IdClass(NotReceiverEntityPK.class)
 public class NotReceiverEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
+    @TableId
     @Column(name = "notification_id")
     private int notificationId;
     @GeneratedValue(strategy = GenerationType.IDENTITY)

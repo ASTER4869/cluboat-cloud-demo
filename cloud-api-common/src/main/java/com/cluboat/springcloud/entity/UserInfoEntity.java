@@ -1,14 +1,19 @@
 package com.cluboat.springcloud.entity;
 
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+
 import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.Objects;
 
 @Entity
+@TableName("user_info")
 @Table(name = "user_info", schema = "cluboat", catalog = "")
 public class UserInfoEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
+    @TableId
     @Column(name = "user_id")
     private int userId;
     @Basic
@@ -24,7 +29,7 @@ public class UserInfoEntity {
     @Column(name = "user_create_time")
     private Timestamp userCreateTime;
     @Basic
-    @Column(name = "user_photoURL")
+    @Column(name = "user_photo_url")
     private String userPhotoUrl;
     @Basic
     @Column(name = "user_sign")

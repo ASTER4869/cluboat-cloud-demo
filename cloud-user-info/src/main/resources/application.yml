@@ -8,9 +8,12 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     # mysql驱动类
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://1.15.156.161:3306/cluboat_test?serverTimezone=GMT%2B8&characterEncoding=utf-8&useSSL=false
-    username: cluboat
-    password: esY4WkpBczwTZPhs
+#    url: jdbc:mysql://49.235.115.50:3306/cluboat?serverTimezone=GMT%2B8&characterEncoding=utf-8&useSSL=false
+#    username: root
+#    password: itongji123456
+    url: jdbc:mysql://1.15.156.161:3306/cluboat?serverTimezone=GMT%2B8&characterEncoding=utf-8&useSSL=false
+    username: CluBoat
+    password: bf2mZnLFRpyy2JGE
   cloud:
     nacos:
       discovery:
@@ -22,6 +25,8 @@ spring:
           uri: lb://user-infoservice # 路由的目标地址 lb就是负载均衡，后面跟服务名称
           predicates: # 路由断言，也就是判断请求是否符合路由规则的条件
             - Path=/user-info/** # 这个是按照路径匹配，只要以/user-info/开头就符合要求
+#          filters:                       # 过滤器,请求在传递过程中可以通过过滤器对其进行一定的修改
+#            - StripPrefix=1              # 转发之前去掉最前面的1层路径
 logging:
   pattern:
     console: "[%thread] %-5level %logger{36} - %msg%n"

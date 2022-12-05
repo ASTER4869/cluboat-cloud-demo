@@ -1,23 +1,30 @@
 package com.cluboat.springcloud.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+
 import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.Objects;
 
 @Entity
+@TableName("club")
 @Table(name = "club", schema = "cluboat", catalog = "")
 public class ClubEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
+    @TableId
     @Column(name = "club_id")
     private int clubId;
     @Basic
     @Column(name = "club_name")
     private String clubName;
     @Basic
-    @Column(name = "clun_information")
-    private String clunInformation;
+    @Column(name = "club_information")
+    private String clubInformation;
     @Basic
+    @TableField(value = "club_imageURL")
     @Column(name = "club_imageURL")
     private String clubImageUrl;
     @Basic
@@ -40,12 +47,12 @@ public class ClubEntity {
         this.clubName = clubName;
     }
 
-    public String getClunInformation() {
-        return clunInformation;
+    public String getClubInformation() {
+        return clubInformation;
     }
 
-    public void setClunInformation(String clunInformation) {
-        this.clunInformation = clunInformation;
+    public void setClubInformation(String clubInformation) {
+        this.clubInformation = clubInformation;
     }
 
     public String getClubImageUrl() {
@@ -69,11 +76,11 @@ public class ClubEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ClubEntity that = (ClubEntity) o;
-        return clubId == that.clubId && Objects.equals(clubName, that.clubName) && Objects.equals(clunInformation, that.clunInformation) && Objects.equals(clubImageUrl, that.clubImageUrl) && Objects.equals(clubCreateTime, that.clubCreateTime);
+        return clubId == that.clubId && Objects.equals(clubName, that.clubName) && Objects.equals(clubInformation, that.clubInformation) && Objects.equals(clubImageUrl, that.clubImageUrl) && Objects.equals(clubCreateTime, that.clubCreateTime);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(clubId, clubName, clunInformation, clubImageUrl, clubCreateTime);
+        return Objects.hash(clubId, clubName, clubInformation, clubImageUrl, clubCreateTime);
     }
 }

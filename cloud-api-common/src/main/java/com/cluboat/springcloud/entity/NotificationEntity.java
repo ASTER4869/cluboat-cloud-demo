@@ -1,14 +1,20 @@
 package com.cluboat.springcloud.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+
 import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.Objects;
 
 @Entity
+@TableName("notification")
 @Table(name = "notification", schema = "cluboat", catalog = "")
 public class NotificationEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
+    @TableId
     @Column(name = "notification_id")
     private int notificationId;
     @Basic
@@ -19,10 +25,12 @@ public class NotificationEntity {
     private Integer sendUserId;
     @Basic
     @Column(name = "notification＿title")
-    private String notification＿Title;
+    @TableField(value = "notification＿title")
+    private String notificationTitle;
     @Basic
     @Column(name = "notification＿content")
-    private String notification＿Content;
+    @TableField(value = "notification＿content")
+    private String notificationContent;
     @Basic
     @Column(name = "notification_time")
     private Timestamp notificationTime;
@@ -55,19 +63,19 @@ public class NotificationEntity {
     }
 
     public String getNotification＿Title() {
-        return notification＿Title;
+        return notificationTitle;
     }
 
-    public void setNotification＿Title(String notification＿Title) {
-        this.notification＿Title = notification＿Title;
+    public void setNotificationTitle(String notificationTitle) {
+        this.notificationTitle = notificationTitle;
     }
 
-    public String getNotification＿Content() {
-        return notification＿Content;
+    public String getNotificationContent() {
+        return notificationContent;
     }
 
-    public void setNotification＿Content(String notification＿Content) {
-        this.notification＿Content = notification＿Content;
+    public void setNotificationContent(String notificationContent) {
+        this.notificationContent = notificationContent;
     }
 
     public Timestamp getNotificationTime() {
@@ -91,11 +99,11 @@ public class NotificationEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         NotificationEntity that = (NotificationEntity) o;
-        return notificationId == that.notificationId && isAdmin == that.isAdmin && Objects.equals(sendAdminId, that.sendAdminId) && Objects.equals(sendUserId, that.sendUserId) && Objects.equals(notification＿Title, that.notification＿Title) && Objects.equals(notification＿Content, that.notification＿Content) && Objects.equals(notificationTime, that.notificationTime);
+        return notificationId == that.notificationId && isAdmin == that.isAdmin && Objects.equals(sendAdminId, that.sendAdminId) && Objects.equals(sendUserId, that.sendUserId) && Objects.equals(notificationTitle, that.notificationTitle) && Objects.equals(notificationContent, that.notificationContent) && Objects.equals(notificationTime, that.notificationTime);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(notificationId, sendAdminId, sendUserId, notification＿Title, notification＿Content, notificationTime, isAdmin);
+        return Objects.hash(notificationId, sendAdminId, sendUserId, notificationTitle, notificationContent, notificationTime, isAdmin);
     }
 }
