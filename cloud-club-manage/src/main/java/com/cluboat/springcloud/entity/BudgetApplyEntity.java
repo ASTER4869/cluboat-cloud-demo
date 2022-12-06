@@ -1,4 +1,4 @@
-package com.cluboat.springcloud.entity.apply;
+package com.cluboat.springcloud.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;

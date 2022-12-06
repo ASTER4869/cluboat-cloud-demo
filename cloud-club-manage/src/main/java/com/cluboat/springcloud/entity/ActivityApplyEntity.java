@@ -4,9 +4,6 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.cluboat.springcloud.entity.param.ActivityApplyParam;
-import com.cluboat.springcloud.entity.param.ActivityParam;
-import com.cluboat.springcloud.entity.param.ClubParam;
-
 import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.Objects;
@@ -19,7 +16,7 @@ public class ActivityApplyEntity {
     @Id
     @TableId(value="activity_apply_id",type = IdType.AUTO)
     @Column(name = "activity_apply_id")
-    private  Integer activityApplyId;
+    private  int activityApplyId;
     @Basic
     @Column(name = "user_id")
     private int userId;

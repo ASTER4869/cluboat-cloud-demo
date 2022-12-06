@@ -4,6 +4,7 @@ import com.cluboat.springcloud.entities.CommonResult;
 import com.cluboat.springcloud.entity.ActivityEntity;
 import com.cluboat.springcloud.entity.FollowEntity;
 import com.cluboat.springcloud.entity.param.FollowParam;
+import com.cluboat.springcloud.mapper.FollowMapper;
 import com.cluboat.springcloud.service.ClubNotificationService;
 import com.cluboat.springcloud.service.FollowService;
 import lombok.extern.slf4j.Slf4j;
@@ -18,21 +19,23 @@ import javax.annotation.Resource;
 public class FollowController {
     @Resource
     private FollowService followService;
+    @Resource
+    private  FollowMapper followMapper;
 
     /* 关注活动 */
     @PostMapping
     public CommonResult createFollow(@RequestBody FollowParam followParam) {
         FollowEntity follow = new FollowEntity();
         follow.setFollow(followParam);
-        try {
-            followService.save(follow);
+//        try {
+            followMapper.insert(follow);
             return new CommonResult(200, "修改成功");
-        } catch (Exception e) {
-            return new CommonResult(400, "修改失败", e);
-        }
+//        } catch (Exception e) {
+//            return new CommonResult(400, "修改失败", e);
+//        }
     }
 
-    /* 删除活动 */
+    /* 删除关注 */
     @DeleteMapping
     public CommonResult removeFollow(@RequestBody FollowParam followParam) {
         boolean isSuccess = followService.lambdaUpdate()

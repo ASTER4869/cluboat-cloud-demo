@@ -26,14 +26,14 @@ public class ClubActivityApplyController {
         ActivityApplyEntity activityApply = new ActivityApplyEntity();
         activityApply.setFeedback(null);  //提交申请没有反馈！
         activityApply.setActivityApplyIsPass((byte) 0);  //初始未通过！
-
         activityApplyParam.activityApplyTime = new Timestamp(System.currentTimeMillis());
         activityApply.setActivityApply(activityApplyParam);
+
         try {
             activityApplyService.save(activityApply);
-            return new CommonResult(200, "上传申请成功");
+            return new CommonResult(200, "申请成功");
         } catch (Exception e) {
-            return new CommonResult(400, "上传申请失败", e);
+            return new CommonResult(400, "申请失败", e);
         }
 
     }

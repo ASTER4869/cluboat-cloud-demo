@@ -51,6 +51,7 @@ public class ClubNewsController {
     public CommonResult createNews(@RequestBody NewsParam newsParam) {
         NewsEntity news = new NewsEntity();
         newsParam.newsTime = new Timestamp(System.currentTimeMillis());
+//        System.out.println(newsParam);
         news.setNews(newsParam);
         try {
             newsService.save(news);
@@ -63,19 +64,15 @@ public class ClubNewsController {
     /* 改某一新闻 */
     @PutMapping
     public CommonResult updateNews(@RequestBody NewsUpdateParam newsUpdateParam) {
-        NewsEntity news = new NewsEntity();
+        NewsEntity news = newsService.getById(newsUpdateParam.newsId);
         news.setNewsContent(newsUpdateParam.newsContent);
         news.setNewsTitle(newsUpdateParam.newsTitle);
-        news.setNewsId(newsUpdateParam.newsId);
-//        news.setNewsTime( new  Timestamp(System.currentTimeMillis())  );
-//        news.setClubId(newsService.getById(newsUpdateParam.newsId).getClubId());
-//        news.setUserId(newsService.getById(newsUpdateParam.newsId).getUserId());
 
-        try {
-            newsService.updateById( news);
-            return new CommonResult(200, "修改成功");
-        } catch (Exception e) {
-            return new CommonResult(400, "修改失败", e);
+        if(newsService.updateById(news)){
+            return new CommonResult(200, "更新成功");
+        }
+        else {
+            return new CommonResult(400, "更新失败");
         }
     }
 }

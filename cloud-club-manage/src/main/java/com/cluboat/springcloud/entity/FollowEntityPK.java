@@ -1,32 +1,21 @@
 package com.cluboat.springcloud.entity;
 
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableName;
-import com.cluboat.springcloud.entity.param.FollowParam;
-import com.github.jeffreyning.mybatisplus.anno.MppMultiId;
-
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import java.io.Serializable;
 import java.util.Objects;
 
-@Entity
-@TableName("follow")
-@Table(name = "follow", schema = "cluboat", catalog = "")
-@IdClass(FollowEntityPK.class)
-public class FollowEntity {
-    @MppMultiId
-    @TableField(value = "activity_id")
+public class FollowEntityPK implements Serializable {
     @Column(name = "activity_id")
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int activityId;
-    @MppMultiId
-    @TableField(value = "user_id")
     @Column(name = "user_id")
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int userId;
-
-    public void setFollow(FollowParam followParam) {
-        this.activityId = followParam.activityId;
-        this.userId = followParam.userId;
-    }
-
 
     public int getActivityId() {
         return activityId;
@@ -48,7 +37,7 @@ public class FollowEntity {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        FollowEntity that = (FollowEntity) o;
+        FollowEntityPK that = (FollowEntityPK) o;
         return activityId == that.activityId && userId == that.userId;
     }
 

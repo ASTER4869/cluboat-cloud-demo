@@ -2,6 +2,7 @@ package com.cluboat.springcloud.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.cluboat.springcloud.entity.param.ActivityParam;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
@@ -37,6 +38,14 @@ public class ActivityEntity {
     @Basic
     @Column(name = "activity_content")
     private String activityContent;
+
+    public void setActivity(ActivityParam activityParam){
+        this.activityContent = activityParam.activityContent;
+        this.activityArea = activityParam.activityArea;
+        this.activityName = activityParam.activityName;
+        this.activityStartTime = activityParam.activityStartTime;
+        this.activityEndTime = activityParam.activityEndTime;
+    }
 
     public int getActivityId() {
         return activityId;

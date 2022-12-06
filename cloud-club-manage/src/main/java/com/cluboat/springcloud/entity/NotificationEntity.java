@@ -1,5 +1,6 @@
 package com.cluboat.springcloud.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.cluboat.springcloud.entity.param.NewsParam;
@@ -15,7 +16,7 @@ import java.util.Objects;
 public class NotificationEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @TableId("notification_id")
+    @TableId(value="notification_id",type = IdType.AUTO)
     @Column(name = "notification_id")
     private int notificationId;
     @Basic
@@ -47,6 +48,7 @@ public class NotificationEntity {
         this.sendUserId = notificationParam.sendAdminId;
         this.notificationContent = notificationParam.notificationContent;
         this.notificationTitle = notificationParam.notificationTitle;
+        this.notificationTime = notificationParam.notificationTime;
     }
 
     public void setNotificationId(int notificationId) {

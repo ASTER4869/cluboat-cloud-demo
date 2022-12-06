@@ -3,10 +3,7 @@ package com.cluboat.springcloud.Controller;
 
 import com.cluboat.springcloud.entities.CommonResult;
 import com.cluboat.springcloud.entity.ReimApplyEntity;
-import com.cluboat.springcloud.entity.apply.BudgetApplyEntity;
-import com.cluboat.springcloud.entity.param.BudgetApplyParam;
 import com.cluboat.springcloud.entity.param.ReimApplyParam;
-import com.cluboat.springcloud.service.BudgetApplyService;
 import com.cluboat.springcloud.service.ReimApplyService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,8 +16,8 @@ import java.sql.Timestamp;
 
 @RestController
 @Slf4j
-@RequestMapping("/reim_application")
-public class ReimApplyController {
+@RequestMapping("/reim-application")
+public class ClubReimApplyController {
 
     @Resource
     private ReimApplyService reimApplyService;
