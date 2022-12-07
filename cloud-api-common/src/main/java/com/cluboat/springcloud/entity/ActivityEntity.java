@@ -12,7 +12,6 @@ import java.util.Objects;
 @Table(name = "activity", schema = "cluboat", catalog = "")
 public class ActivityEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @TableId
     @Id
     @TableId("activity_id")
     @Column(name = "activity_id")
