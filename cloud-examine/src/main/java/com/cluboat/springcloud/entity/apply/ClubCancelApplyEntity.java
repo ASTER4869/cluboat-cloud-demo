@@ -1,14 +1,23 @@
 package com.cluboat.springcloud.entity.apply;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
+
 import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.Objects;
 
 @Entity
+@Data
+@TableName("club_cancel_apply")
 @Table(name = "club_cancel_apply", schema = "cluboat", catalog = "")
 public class ClubCancelApplyEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
+    @TableId(value="cancel_apply_id",type = IdType.AUTO)
     @Column(name = "cancel_apply_id")
     private int cancelApplyId;
     @Basic
@@ -22,11 +31,12 @@ public class ClubCancelApplyEntity {
     private String cancelApplyReason;
     @Basic
     @Column(name = "cancel_apply_is_pass")
-    private byte cancelApplyIsPass;
+    private int cancelApplyIsPass;
     @Basic
     @Column(name = "cancel_apply_time")
     private Timestamp cancelApplyTime;
-
+    @TableField("feedback")
+    private String feedback;
     public int getCancelApplyId() {
         return cancelApplyId;
     }
@@ -59,11 +69,11 @@ public class ClubCancelApplyEntity {
         this.cancelApplyReason = cancelApplyReason;
     }
 
-    public byte getCancelApplyIsPass() {
+    public int getCancelApplyIsPass() {
         return cancelApplyIsPass;
     }
 
-    public void setCancelApplyIsPass(byte cancelApplyIsPass) {
+    public void setCancelApplyIsPass(int cancelApplyIsPass) {
         this.cancelApplyIsPass = cancelApplyIsPass;
     }
 

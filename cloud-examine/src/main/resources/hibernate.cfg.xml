@@ -19,6 +19,9 @@
       <mapping class="com.cluboat.springcloud.entity.PostEntity"/>
       <mapping class="com.cluboat.springcloud.entity.PubnotEntity"/>
       <mapping class="com.cluboat.springcloud.entity.UserEntity"/>
+      <mapping class="com.cluboat.springcloud.entity.UserInfoEntity"/>
+      <mapping class="com.cluboat.springcloud.entity.NotificationEntity"/>
+      <mapping class="com.cluboat.springcloud.entity.UserClubEntity"/>
       <!-- <property name="connection.username"/> -->
     <!-- <property name="connection.password"/> -->
 

@@ -14,7 +14,7 @@ import java.util.Objects;
 public class NotificationEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @TableId
+    @TableId("notification_id")
     @Column(name = "notification_id")
     private int notificationId;
     @Basic

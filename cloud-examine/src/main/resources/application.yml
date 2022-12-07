@@ -18,6 +18,10 @@ spring:
 logging:
   pattern:
     console: "[%thread] %-5level %logger{36} - %msg%n"
+mybatis:
+  configuration:
+    return-instance-for-empty-row: true
+    call-setters-on-nulls: true
 
 
 

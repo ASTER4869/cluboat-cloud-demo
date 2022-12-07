@@ -722,10 +722,7 @@ cluboat|schema||CluBoat||UPDATE|G</Grants>
     <collation id="220" parent="1" name="eucjpms_bin">
       <Charset>eucjpms</Charset>
     </collation>
-    <schema id="221" parent="1" name="information_schema">
-      <CollationName>utf8_general_ci</CollationName>
-    </schema>
-    <schema id="222" parent="1" name="cluboat">
+    <schema id="221" parent="1" name="cluboat_test">
       <Current>1</Current>
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>

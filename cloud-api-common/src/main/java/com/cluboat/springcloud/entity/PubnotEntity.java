@@ -1,14 +1,19 @@
 package com.cluboat.springcloud.entity;
 
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+
 import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.Objects;
 
 @Entity
+@TableName("pubnot")
 @Table(name = "pubnot", schema = "cluboat", catalog = "")
 public class PubnotEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
+    @TableId("pubnot_id")
     @Column(name = "pubnot_id")
     private int pubnotId;
     @Basic

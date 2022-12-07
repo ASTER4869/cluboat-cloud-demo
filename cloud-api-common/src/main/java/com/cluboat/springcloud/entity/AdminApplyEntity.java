@@ -13,7 +13,7 @@ import java.util.Objects;
 public class AdminApplyEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @TableId
+    @TableId("admin_apply_id")
     @Column(name = "admin_apply_id")
     private int adminApplyId;
     @Basic

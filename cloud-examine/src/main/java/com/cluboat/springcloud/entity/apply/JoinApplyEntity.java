@@ -1,14 +1,23 @@
 package com.cluboat.springcloud.entity.apply;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
+
 import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.Objects;
 
 @Entity
+@Data
+@TableName("join_apply")
 @Table(name = "join_apply", schema = "cluboat", catalog = "")
 public class JoinApplyEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
+    @TableId(value="join_apply_id",type = IdType.AUTO)
     @Column(name = "join_apply_id")
     private int joinApplyId;
     @Basic
@@ -25,8 +34,10 @@ public class JoinApplyEntity {
     private Timestamp joinApplyTime;
     @Basic
     @Column(name = "join_apply_is_pass")
-    private byte joinApplyIsPass;
+    private int joinApplyIsPass;
 
+    @TableField("feedback")
+    private String feedback;
     public int getJoinApplyId() {
         return joinApplyId;
     }
@@ -67,11 +78,11 @@ public class JoinApplyEntity {
         this.joinApplyTime = joinApplyTime;
     }
 
-    public byte getJoinApplyIsPass() {
+    public int getJoinApplyIsPass() {
         return joinApplyIsPass;
     }
 
-    public void setJoinApplyIsPass(byte joinApplyIsPass) {
+    public void setJoinApplyIsPass(int joinApplyIsPass) {
         this.joinApplyIsPass = joinApplyIsPass;
     }
 

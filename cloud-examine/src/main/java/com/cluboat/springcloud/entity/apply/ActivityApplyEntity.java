@@ -1,19 +1,23 @@
 package com.cluboat.springcloud.entity.apply;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.Objects;
 
 @Entity
+@Data
 @TableName("activity_apply")
 @Table(name = "activity_apply", schema = "cluboat", catalog = "")
 public class ActivityApplyEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @TableId("activity_apply_id")
+    @TableId(value="activity_apply_id",type = IdType.AUTO)
     @Column(name = "activity_apply_id")
     private  Integer activityApplyId;
     @Basic
@@ -27,11 +31,12 @@ public class ActivityApplyEntity {
     private String activityApplyReason;
     @Basic
     @Column(name = "activity_apply_is_pass")
-    private byte activityApplyIsPass;
+    private int activityApplyIsPass;
     @Basic
     @Column(name = "activity_apply_time")
     private Timestamp activityApplyTime;
-
+    @TableField("feedback")
+    private String feedback;
     public int getActivityApplyId() {
         return activityApplyId;
     }
@@ -64,11 +69,11 @@ public class ActivityApplyEntity {
         this.activityApplyReason = activityApplyReason;
     }
 
-    public byte getActivityApplyIsPass() {
+    public int getActivityApplyIsPass() {
         return activityApplyIsPass;
     }
 
-    public void setActivityApplyIsPass(byte activityApplyIsPass) {
+    public void setActivityApplyIsPass(int activityApplyIsPass) {
         this.activityApplyIsPass = activityApplyIsPass;
     }
 

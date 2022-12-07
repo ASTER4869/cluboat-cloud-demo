@@ -1,13 +1,18 @@
 package com.cluboat.springcloud.entity;
 
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+
 import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
+@TableName("sys_admin")
 @Table(name = "sys_admin", schema = "cluboat", catalog = "")
 public class SysAdminEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
+    @TableId("admin_id")
     @Column(name = "admin_id")
     private int adminId;
     @Basic
