@@ -19,6 +19,12 @@
 
 
     <dependencies>
+<!--        &lt;!&ndash;这个注释掉直接跑不了了&ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>com.github.jeffreyning</groupId>-->
+<!--            <artifactId>mybatisplus-plus</artifactId>-->
+<!--            <version>1.7.0-RELEASE</version>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -54,5 +60,23 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
+
+
+<!--    <build>-->
+<!--        <plugins>-->
+<!--            &lt;!&ndash;解决打包出错问题&ndash;&gt;-->
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-compiler-plugin</artifactId>-->
+<!--                <version>3.1</version>-->
+<!--                <configuration>-->
+<!--                    <source>1.8</source>-->
+<!--                    <target>1.8</target>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+
+<!--        </plugins>-->
+<!--    </build>-->
+
 
 </project>

@@ -24,9 +24,9 @@ public class AdminApplyController {
     //查看提交的管理员申请
     @GetMapping("/{userId}")
     public CommonResult getAdminApply(@PathVariable Integer userId) {
-        AdminApplyDTO adminApplyDTO = adminApplyService.GetAdminApply(userId);
-        if(adminApplyDTO!=null){
-            return new CommonResult(200,"查询成功", adminApplyDTO);
+        List<AdminApplyDTO> adminApplyList = adminApplyService.GetAdminApply(userId);
+        if(adminApplyList.isEmpty()!=true){
+            return new CommonResult(200,"查询成功", adminApplyList);
         }
         else{
             return new CommonResult(444,"无记录");

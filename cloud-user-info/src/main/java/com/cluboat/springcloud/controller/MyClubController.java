@@ -24,7 +24,7 @@ public class MyClubController {
     @GetMapping("/{userId}")
     public CommonResult getClubList(@PathVariable Integer userId) {
         List<MyClubDTO> myClub = userClubService.GetMyClub(userId);
-        if(myClub.isEmpty()==false){
+        if(myClub.isEmpty()!=true){
             return new CommonResult(200,"查询成功", myClub);
         }
         else{

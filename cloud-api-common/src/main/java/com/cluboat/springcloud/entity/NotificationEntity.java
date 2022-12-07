@@ -25,11 +25,11 @@ public class NotificationEntity {
     private Integer sendUserId;
     @Basic
     @Column(name = "notification＿title")
-    @TableField(value = "notification＿title")
+//    @TableField(value = "notification＿title")
     private String notificationTitle;
     @Basic
     @Column(name = "notification＿content")
-    @TableField(value = "notification＿content")
+//    @TableField(value = "notification＿content")
     private String notificationContent;
     @Basic
     @Column(name = "notification_time")

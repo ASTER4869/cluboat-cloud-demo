@@ -20,10 +20,10 @@ public class AdminApplyServiceImpl extends ServiceImpl<AdminApplyMapper, AdminAp
     AdminApplyMapper adminApplyMapper;
 
     @Override
-    public AdminApplyDTO GetAdminApply(Integer userId){
-        AdminApplyDTO adminApplyDTO = adminApplyMapper.selectJoinOne(AdminApplyDTO.class, new MPJLambdaWrapper<AdminApplyEntity>()
+    public List<AdminApplyDTO> GetAdminApply(Integer userId){
+        List<AdminApplyDTO> adminApplyList = adminApplyMapper.selectJoinList(AdminApplyDTO.class, new MPJLambdaWrapper<AdminApplyEntity>()
                 .selectAll(AdminApplyEntity.class)
                 .eq(AdminApplyEntity::getUserId, userId));
-        return adminApplyDTO;
+        return adminApplyList;
     }
 }

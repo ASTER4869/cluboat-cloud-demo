@@ -12,4 +12,6 @@ public class MyClubDTO {
     private Integer clubId;
 
     private String clubName;
+
+    private String clubImageUrl;
 }
