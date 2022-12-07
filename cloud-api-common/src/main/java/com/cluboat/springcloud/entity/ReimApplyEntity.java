@@ -1,14 +1,22 @@
 package com.cluboat.springcloud.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
+
 import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.Objects;
 
 @Entity
+@Data
+@TableName("reim_apply")
 @Table(name = "reim_apply", schema = "cluboat", catalog = "")
 public class ReimApplyEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
+    @TableId("reim_apply_id")
     @Column(name = "reim_apply_id")
     private int reimApplyId;
     @Basic
@@ -22,11 +30,12 @@ public class ReimApplyEntity {
     private String reimApplyReason;
     @Basic
     @Column(name = "reim_apply_is_pass")
-    private byte reimApplyIsPass;
+    private int reimApplyIsPass;
     @Basic
     @Column(name = "reim_apply_time")
     private Timestamp reimApplyTime;
-
+    @TableField("feedback")
+    private String feedback;
     public int getReimApplyId() {
         return reimApplyId;
     }
@@ -59,11 +68,11 @@ public class ReimApplyEntity {
         this.reimApplyReason = reimApplyReason;
     }
 
-    public byte getReimApplyIsPass() {
+    public int getReimApplyIsPass() {
         return reimApplyIsPass;
     }
 
-    public void setReimApplyIsPass(byte reimApplyIsPass) {
+    public void setReimApplyIsPass(int reimApplyIsPass) {
         this.reimApplyIsPass = reimApplyIsPass;
     }
 

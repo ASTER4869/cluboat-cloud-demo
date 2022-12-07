@@ -1,10 +1,13 @@
 package com.cluboat.springcloud.entity;
 
+import com.baomidou.mybatisplus.annotation.TableName;
+
 import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.Objects;
 
 @Entity
+@TableName("comment")
 @Table(name = "comment", schema = "cluboat", catalog = "")
 @IdClass(CommentEntityPK.class)
 public class CommentEntity {

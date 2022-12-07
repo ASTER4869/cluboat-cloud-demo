@@ -9,18 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aea2f6a1-9446-4b5b-8989-7362c60e37c9" name="变更" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="6d4d16d2-b824-45f3-a1a5-21313ed733a4" name="变更" comment="变更">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-api-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-api-common/src/main/java/com/cluboat/springcloud/entity/NotificationEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-common/src/main/java/com/cluboat/springcloud/entity/NotificationEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-user-info/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-info/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/controller/AdminApplyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/controller/AdminApplyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/controller/MyClubController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/controller/MyClubController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/controller/NotificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/controller/NotificationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/entity/dto/MyClubDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/entity/dto/MyClubDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/service/AdminApplyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/service/AdminApplyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/service/impl/AdminApplyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/service/impl/AdminApplyServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-common/src/main/java/com/cluboat/springcloud/entity/ActivityEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-common/src/main/java/com/cluboat/springcloud/entity/ActivityEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-common/src/main/java/com/cluboat/springcloud/entity/ClubEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-common/src/main/java/com/cluboat/springcloud/entity/ClubEntity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +50,8 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;JPA.DatabaseSchemaImportDialog&quot;: &quot;4b9110e6-cc66-487f-83b7-2d4ca637e428&quot;,
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
     &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
     &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
@@ -65,27 +59,109 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/个人文件/大三上/软件设计模式/新建文件夹/pre-design-patterns/2021-CanFactory/pom.xml&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/cluboat/demo/cluboat/cloud-api-common/src/main/resources/hibernate.cfg.xml&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;工件&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;db90e80f4fe69f77da72ee6b9ad62256&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;5f23aa5f3aca0d6340fcec772a5c7f89&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
   }
 }</component>
-  <component name="RunDashboard">
-    <option name="configurationTypes">
-      <set>
-        <option value="SpringBootApplicationConfigurationType" />
-      </set>
-    </option>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Code\microservicesDemo\cluboat-cloud-demo\cloud-club-manage\src\main\resources" />
+      <recent name="D:\Code\microservicesDemo\cluboat-cloud-demo\cloud-examine\src\main\resources" />
+      <recent name="D:\Code\microservicesDemo\cluboat-cloud-demo\cloud-forum\src\main\resources" />
+      <recent name="D:\Code\microservicesDemo\cluboat-cloud-demo\cloud-user-info\src\main\resources" />
+    </key>
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="com.cluboat.springcloud.entity" />
+      <recent name="" />
+      <recent name="com.cluboat.springcloud.entity.apply" />
+    </key>
   </component>
   <component name="RunManager" selected="Spring Boot.UserInfoApplication">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.cluboat.demo.springcloud.Main" />
+      <module name="cloud-forum" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cluboat.demo.springcloud.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.cluboat.demo.springcloud.Main" />
+      <module name="cloud-club-manage" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cluboat.demo.springcloud.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.cluboat.demo.springcloud.Main" />
+      <module name="cloud-examine" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cluboat.demo.springcloud.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyBatisplustest.testSelectList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cloud-user-login-8001" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cluboat.springcloud.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cluboat.springcloud" />
+      <option name="MAIN_CLASS_NAME" value="com.cluboat.springcloud.MyBatisplustest" />
+      <option name="METHOD_NAME" value="testSelectList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NacosGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="cloud-gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.cluboat.springcloud.NacosGatewayApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cluboat.springcloud.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserInfoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="cloud-user-info" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.cluboat.springcloud.UserInfoApplication" />
@@ -107,27 +183,79 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.NacosGatewayApplication" />
+        <item itemvalue="JUnit.MyBatisplustest.testSelectList" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="SshConsoleOptionsProvider">
+    <option name="myEncoding" value="UTF-8" />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">
       <changelist id="aea2f6a1-9446-4b5b-8989-7362c60e37c9" name="变更" comment="" />
       <created>1669872781769</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1669872781769</updated>
-      <workItem from="1669872784010" duration="8472000" />
-      <workItem from="1669891979380" duration="20589000" />
-      <workItem from="1669945925306" duration="2131000" />
-      <workItem from="1669955251726" duration="2222000" />
-      <workItem from="1669966635068" duration="6661000" />
-      <workItem from="1669974031979" duration="266000" />
-      <workItem from="1669980422704" duration="265000" />
-      <workItem from="1669981362919" duration="6338000" />
-      <workItem from="1670141615048" duration="4098000" />
-      <workItem from="1670205499418" duration="919000" />
-      <workItem from="1670256171094" duration="11475000" />
-      <workItem from="1670330627712" duration="6930000" />
+      <updated>1668087582571</updated>
+      <workItem from="1668087584396" duration="383000" />
+      <workItem from="1668087978051" duration="1774000" />
+      <workItem from="1668131575417" duration="3886000" />
+      <workItem from="1668145958897" duration="2671000" />
+      <workItem from="1668148645171" duration="1805000" />
+      <workItem from="1668174261327" duration="5578000" />
+      <workItem from="1668222494140" duration="7855000" />
+      <workItem from="1668325278775" duration="7746000" />
+      <workItem from="1668411194448" duration="3992000" />
+      <workItem from="1668420677213" duration="639000" />
+      <workItem from="1668423650508" duration="3210000" />
+      <workItem from="1668438215736" duration="2552000" />
+      <workItem from="1668440809553" duration="1042000" />
+      <workItem from="1668441860753" duration="1187000" />
+      <workItem from="1668483389228" duration="625000" />
+      <workItem from="1668513339363" duration="5013000" />
+      <workItem from="1668525927981" duration="687000" />
+      <workItem from="1668530403502" duration="2786000" />
+      <workItem from="1668578502049" duration="847000" />
+      <workItem from="1668579362455" duration="876000" />
+      <workItem from="1668669338766" duration="2869000" />
+      <workItem from="1668757859403" duration="45000" />
+      <workItem from="1668838748042" duration="6476000" />
+      <workItem from="1668955955326" duration="654000" />
+      <workItem from="1669095766499" duration="5490000" />
+      <workItem from="1669184111816" duration="124000" />
+      <workItem from="1669184258462" duration="1942000" />
+      <workItem from="1669441296958" duration="933000" />
+      <workItem from="1669471974396" duration="3397000" />
+      <workItem from="1669602818351" duration="7944000" />
+      <workItem from="1669633397903" duration="4586000" />
+      <workItem from="1669642490855" duration="6369000" />
+      <workItem from="1669687195500" duration="5717000" />
+      <workItem from="1669699597183" duration="2745000" />
+      <workItem from="1669702374976" duration="1693000" />
+      <workItem from="1669720163425" duration="7757000" />
+      <workItem from="1669735801366" duration="5569000" />
+      <workItem from="1669776443431" duration="2477000" />
+      <workItem from="1669786578027" duration="5316000" />
+      <workItem from="1669806238478" duration="3547000" />
+      <workItem from="1669822764377" duration="4476000" />
+      <workItem from="1669860824070" duration="2761000" />
+      <workItem from="1669863626026" duration="599000" />
+      <workItem from="1669872991582" duration="4749000" />
+      <workItem from="1669892519002" duration="179000" />
+      <workItem from="1669958407842" duration="4435000" />
+      <workItem from="1669963546799" duration="791000" />
+      <workItem from="1669983315930" duration="21379000" />
+      <workItem from="1670052905899" duration="862000" />
+      <workItem from="1670056200750" duration="2022000" />
+      <workItem from="1670069906763" duration="2224000" />
+      <workItem from="1670081596655" duration="1137000" />
+      <workItem from="1670084564551" duration="239000" />
+      <workItem from="1670086676116" duration="225000" />
+      <workItem from="1670138428717" duration="16020000" />
     </task>
     <servers />
   </component>

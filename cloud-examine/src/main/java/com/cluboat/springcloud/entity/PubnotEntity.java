@@ -1,20 +1,30 @@
 package com.cluboat.springcloud.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.cluboat.springcloud.entity.param.ClubParam;
+import com.cluboat.springcloud.entity.param.PubnotParam;
+
 import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.Objects;
 
 @Entity
+@TableName("pubnot")
 @Table(name = "pubnot", schema = "cluboat", catalog = "")
 public class PubnotEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
+    @TableId(value="pubnot_id",type = IdType.AUTO)
     @Column(name = "pubnot_id")
     private int pubnotId;
     @Basic
     @Column(name = "admin_id")
     private int adminId;
     @Basic
+    @TableField("pubnot_title")
     @Column(name = "pubnot_title")
     private String pubnotTitle;
     @Basic
@@ -22,6 +32,14 @@ public class PubnotEntity {
     private Timestamp pubnotTime;
     @Basic
     @Column(name = "pubnot_content")
+
+
+    public void setPubnot(PubnotParam pubnotParam) {
+        this.adminId = pubnotParam.adminId;
+        this.pubnotTitle = pubnotParam.pubnotTitle;
+        this.pubnotTime = pubnotParam.pubnotTime;
+        this.pubnotContent = pubnotParam.pubnotContent;
+    }
     private String pubnotContent;
 
     public int getPubnotId() {

@@ -12,9 +12,10 @@
     <module>cloud-user-login-8001</module>
     <module>cloud-api-common</module>
     <module>cloud-user-info</module>
+    <module>cloud-examine</module>
     <module>cloud-forum</module>
     <module>cloud-club-manage</module>
-    <module>cloud-examine</module>
+    <module>cloud-gateway</module>
   </modules>
 
 
@@ -136,8 +137,8 @@
   </dependencyManagement>
 
   <build>
-    <plugins>
-      <plugin>
+<!--    <plugins>
+&lt;!&ndash;      <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
         <version>2.7.5</version>
@@ -145,7 +146,7 @@
           <fork>true</fork>
           <addResources>true</addResources>
         </configuration>
-      </plugin>
-    </plugins>
+      </plugin>&ndash;&gt;
+    </plugins>-->
   </build>
 </project>

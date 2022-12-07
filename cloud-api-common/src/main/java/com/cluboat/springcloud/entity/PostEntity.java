@@ -13,7 +13,7 @@ import java.util.Objects;
 public class PostEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @TableId
+    @TableId("post_id")
     @Column(name = "post_id")
     private int postId;
     @Basic

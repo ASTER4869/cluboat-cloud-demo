@@ -1,5 +1,6 @@
 package com.cluboat.springcloud.entity.apply;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
@@ -33,7 +34,8 @@ public class AdminApplyEntity {
     @Basic
     @Column(name = "admin_apply_time")
     private Timestamp adminApplyTime;
-
+    @TableField("feedback")
+    private String feedback;
     public int getAdminApplyId() {
         return adminApplyId;
     }

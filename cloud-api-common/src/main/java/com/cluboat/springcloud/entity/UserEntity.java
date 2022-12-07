@@ -12,7 +12,7 @@ import java.util.Objects;
 public class UserEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @TableId
+    @TableId("user_id")
     @Column(name = "user_id")
     private int userId;
     @Basic
