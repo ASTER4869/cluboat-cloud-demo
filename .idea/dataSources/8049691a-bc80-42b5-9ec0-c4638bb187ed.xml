@@ -1,30 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="@1.15.156.161">
   <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.43">
-    <root id="1">
-      <DefaultCasing>exact</DefaultCasing>
-      <DefaultEngine>InnoDB</DefaultEngine>
-      <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
-      <Grants>cluboat_test|schema||cluboat||ALTER|G
-cluboat_test|schema||cluboat||ALTER ROUTINE|G
-cluboat_test|schema||cluboat||CREATE|G
-cluboat_test|schema||cluboat||CREATE ROUTINE|G
-cluboat_test|schema||cluboat||CREATE TEMPORARY TABLES|G
-cluboat_test|schema||cluboat||CREATE VIEW|G
-cluboat_test|schema||cluboat||DELETE|G
-cluboat_test|schema||cluboat||DROP|G
-cluboat_test|schema||cluboat||EVENT|G
-cluboat_test|schema||cluboat||EXECUTE|G
-cluboat_test|schema||cluboat||INDEX|G
-cluboat_test|schema||cluboat||INSERT|G
-cluboat_test|schema||cluboat||LOCK TABLES|G
-cluboat_test|schema||cluboat||REFERENCES|G
-cluboat_test|schema||cluboat||SELECT|G
-cluboat_test|schema||cluboat||SHOW VIEW|G
-cluboat_test|schema||cluboat||TRIGGER|G
-cluboat_test|schema||cluboat||UPDATE|G</Grants>
-      <ServerVersion>5.6.50</ServerVersion>
-    </root>
+    <root id="1"/>
     <collation id="2" parent="1" name="armscii8_bin">
       <Charset>armscii8</Charset>
     </collation>
