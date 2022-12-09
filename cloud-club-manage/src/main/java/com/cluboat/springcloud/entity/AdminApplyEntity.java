@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.cluboat.springcloud.entity.param.ActivityApplyParam;
 import com.cluboat.springcloud.entity.param.AdminApplyParam;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
@@ -32,6 +33,7 @@ public class AdminApplyEntity {
     private int adminApplyIsPass;
     @Basic
     @Column(name = "admin_apply_time")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Timestamp adminApplyTime;
 
     @Basic

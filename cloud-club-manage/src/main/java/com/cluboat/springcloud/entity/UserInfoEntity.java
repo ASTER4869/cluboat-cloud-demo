@@ -2,6 +2,7 @@ package com.cluboat.springcloud.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
@@ -27,6 +28,7 @@ public class UserInfoEntity {
     private String userSexual;
     @Basic
     @Column(name = "user_create_time")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Timestamp userCreateTime;
     @Basic
     @Column(name = "user_photoURL")

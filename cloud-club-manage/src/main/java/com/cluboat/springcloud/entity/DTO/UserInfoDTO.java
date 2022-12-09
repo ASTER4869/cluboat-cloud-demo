@@ -1,4 +1,4 @@
-package com.cluboat.springcloud.entity.param;
+package com.cluboat.springcloud.entity.DTO;
 
 import lombok.Data;
 

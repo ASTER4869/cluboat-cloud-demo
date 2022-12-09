@@ -3,6 +3,7 @@ package com.cluboat.springcloud.entity;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.cluboat.springcloud.entity.param.ActivityParam;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
@@ -28,9 +29,11 @@ public class ActivityEntity {
     private String activityArea;
     @Basic
     @Column(name = "activity_start_time")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Timestamp activityStartTime;
     @Basic
     @Column(name = "activity_end_time")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Timestamp activityEndTime;
     @Basic
     @Column(name = "activity_is_pass")
