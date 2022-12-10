@@ -2,6 +2,7 @@ package com.cluboat.springcloud.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.cluboat.springcloud.entities.User;
+import com.cluboat.springcloud.entity.param.UserParam;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 import com.cluboat.springcloud.entity.UserEntity;

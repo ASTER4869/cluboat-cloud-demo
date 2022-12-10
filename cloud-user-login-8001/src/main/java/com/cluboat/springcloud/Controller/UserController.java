@@ -7,6 +7,7 @@ import com.cluboat.springcloud.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 import com.cluboat.springcloud.entities.CommonResult;
+import com.cluboat.springcloud.entity.param.UserParam;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -21,6 +22,10 @@ public class UserController {
     @Resource
     private UserService userService;
 
+
+
+
+//    old api version (for test demo only)
 
     @PostMapping(value = "/create")
     public boolean save(@RequestBody UserEntity user) {
@@ -44,7 +49,7 @@ public class UserController {
     public UserEntity findOne(@PathVariable Integer id) {
         return userService.getById(id);
     }
-    @GetMapping("/get/{id}")
+    @GetMapping("/user/{id}")
     public CommonResult getUser(@PathVariable("id") Long id){
         UserEntity user = userService.getById(id);
         log.info("****插入结果：{payment}");
@@ -61,6 +66,18 @@ public class UserController {
     public Page<UserEntity> findPage(@RequestParam Integer pageNum,
                                @RequestParam Integer pageSize) {
         return userService.page(new Page<>(pageNum,pageSize));
+    }
+
+    @PostMapping
+    public CommonResult AddUser(@PathVariable UserParam param){
+        UserEntity user = new UserEntity();
+        user.setUserPhone(param.getUserPhone());
+        user.setUserPassword(param.getUserPassword());
+        boolean res = userService.save(user);
+        if(res)
+            return new CommonResult(200, "添加成功");
+        else
+            return  new CommonResult(400, "操作失败");
     }
 
 

@@ -15,6 +15,11 @@ public class UserEntity {
     @TableId("user_id")
     @Column(name = "user_id")
     private int userId;
+
+    @Basic
+    @Column(name = "phone")
+    private  int userPhone;
+
     @Basic
     @Column(name = "user_password")
     private String userPassword;
@@ -27,6 +32,14 @@ public class UserEntity {
         this.userId = userId;
     }
 
+    public int getUserPhone() {
+        return userPhone;
+    }
+
+    public void setUserPhone(int userPhone) {
+        this.userPhone = userPhone;
+    }
+
     public String getUserPassword() {
         return userPassword;
     }
@@ -34,6 +47,7 @@ public class UserEntity {
     public void setUserPassword(String userPassword) {
         this.userPassword = userPassword;
     }
+
 
     @Override
     public boolean equals(Object o) {
@@ -45,6 +59,6 @@ public class UserEntity {
 
     @Override
     public int hashCode() {
-        return Objects.hash(userId, userPassword);
+        return Objects.hash(userId, userPhone, userPassword);
     }
 }

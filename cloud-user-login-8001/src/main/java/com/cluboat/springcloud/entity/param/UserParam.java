@@ -1,17 +1,24 @@
-package com.cluboat.springcloud.entity.pam;
+package com.cluboat.springcloud.entity.param;
 
 //import net.sf.jsqlparser.expression.TimestampValue;
 
-import java.sql.Timestamp;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-public class UserPam {
-    private String user_password;
-    private String user_name;
-    private String user_sexual;
-    private String user_phone;
-    private Timestamp user_create_time;
-    private String user_photoURL;
-    private String user_sign;
+import java.sql.Timestamp;
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class UserParam {
+    private int userPhone;
+    private String userPassword;
+//    private String userName;
+//    private String userSexual;
+//    private String userPhone;
+//    private Timestamp userCreateTime;
+//    private String userPhotoURL;
+//    private String userSign;
 }
 
 
