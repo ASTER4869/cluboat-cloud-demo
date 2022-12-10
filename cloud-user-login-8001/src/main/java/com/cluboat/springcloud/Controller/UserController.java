@@ -27,10 +27,6 @@ public class UserController {
 
 //    old api version (for test demo only)
 
-    @PostMapping(value = "/create")
-    public boolean save(@RequestBody UserEntity user) {
-        return userService.saveOrUpdate(user);
-    }
     @DeleteMapping("/{id}")
     public Boolean delete(@PathVariable Integer id) {
         return userService.removeById(id);
