@@ -69,6 +69,11 @@
             <version>1.0.2</version>
             <scope>provided</scope>
         </dependency>
+        <!--引入JsonFormat注解-->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+        </dependency>
     </dependencies>
 
 
