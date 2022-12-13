@@ -19,6 +19,10 @@ public class UserEntity {
     @Column(name = "user_password")
     private String userPassword;
 
+    @Basic
+    @Column(name = "user_phone")
+    private String userPhone;
+
     public int getUserId() {
         return userId;
     }
@@ -33,6 +37,14 @@ public class UserEntity {
 
     public void setUserPassword(String userPassword) {
         this.userPassword = userPassword;
+    }
+
+    public String getUserPhone() {
+        return userPhone;
+    }
+
+    public void setUserPhone(String userPhone) {
+        this.userPhone = userPhone;
     }
 
     @Override

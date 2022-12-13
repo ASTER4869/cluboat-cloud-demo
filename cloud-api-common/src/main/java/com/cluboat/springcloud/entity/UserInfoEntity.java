@@ -20,9 +20,6 @@ public class UserInfoEntity {
     @Column(name = "user_name")
     private String userName;
     @Basic
-    @Column(name = "user_phone")
-    private String userPhone;
-    @Basic
     @Column(name = "user_sexual")
     private String userSexual;
     @Basic
@@ -51,13 +48,7 @@ public class UserInfoEntity {
         this.userName = userName;
     }
 
-    public String getUserPhone() {
-        return userPhone;
-    }
 
-    public void setUserPhone(String userPhone) {
-        this.userPhone = userPhone;
-    }
 
     public String getUserSexual() {
         return userSexual;
@@ -96,11 +87,11 @@ public class UserInfoEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         UserInfoEntity that = (UserInfoEntity) o;
-        return userId == that.userId && Objects.equals(userName, that.userName) && Objects.equals(userPhone, that.userPhone) && Objects.equals(userSexual, that.userSexual) && Objects.equals(userCreateTime, that.userCreateTime) && Objects.equals(userPhotoUrl, that.userPhotoUrl) && Objects.equals(userSign, that.userSign);
+        return userId == that.userId && Objects.equals(userName, that.userName) && Objects.equals(userSexual, that.userSexual) && Objects.equals(userCreateTime, that.userCreateTime) && Objects.equals(userPhotoUrl, that.userPhotoUrl) && Objects.equals(userSign, that.userSign);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(userId, userName, userPhone, userSexual, userCreateTime, userPhotoUrl, userSign);
+        return Objects.hash(userId, userName, userSexual, userCreateTime, userPhotoUrl, userSign);
     }
 }

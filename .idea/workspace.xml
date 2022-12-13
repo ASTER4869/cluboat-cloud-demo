@@ -10,27 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d4d16d2-b824-45f3-a1a5-21313ed733a4" name="变更" comment="变更">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/28118269-f1a2-42c3-aebe-355382f1c3c2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/28118269-f1a2-42c3-aebe-355382f1c3c2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8049691a-bc80-42b5-9ec0-c4638bb187ed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8049691a-bc80-42b5-9ec0-c4638bb187ed.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-api-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-api-common/src/main/java/com/cluboat/springcloud/entity/ActivityApplyEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-common/src/main/java/com/cluboat/springcloud/entity/ActivityApplyEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-club-manage/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-club-manage/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/controller/ClubController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/entity/dto/ClubDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/mapper/ClubMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/mapper/ClubMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/service/ClubService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/service/ClubService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/service/impl/ClubServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/service/impl/ClubServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-club-manage/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-club-manage/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-forum/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-forum/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-forum/src/main/java/com/cluboat/springcloud/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-forum/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-forum/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/entity/dto/AdminApplyDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/entity/dto/AdminApplyDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/entity/dto/CollectionDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/entity/dto/CollectionDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/entity/dto/MyActivityDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/entity/dto/MyActivityDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/entity/dto/NotificationDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/entity/dto/NotificationDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/entity/dto/PersonInfoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/entity/dto/PersonInfoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-common/src/main/java/com/cluboat/springcloud/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-common/src/main/java/com/cluboat/springcloud/entity/UserEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-common/src/main/java/com/cluboat/springcloud/entity/UserInfoEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-common/src/main/java/com/cluboat/springcloud/entity/UserInfoEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/controller/PersonInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/controller/PersonInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/service/impl/UserInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/service/impl/UserInfoServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -292,7 +277,7 @@
       <workItem from="1670416960693" duration="849000" />
       <workItem from="1670483947976" duration="1418000" />
       <workItem from="1670497625758" duration="7854000" />
-      <workItem from="1670836160235" duration="746000" />
+      <workItem from="1670836160235" duration="3869000" />
     </task>
     <servers />
   </component>

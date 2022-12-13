@@ -2,6 +2,7 @@ package com.cluboat.springcloud.service.impl;
 
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.cluboat.springcloud.entity.UserEntity;
 import com.cluboat.springcloud.entity.UserInfoEntity;
 import com.cluboat.springcloud.entity.dto.PersonInfoDTO;
 import com.cluboat.springcloud.entity.param.PutPersonInfoParam;
@@ -21,6 +22,8 @@ public class UserInfoServiceImpl extends ServiceImpl<UserInfoMapper, UserInfoEnt
     public PersonInfoDTO GetPersonInfo(Integer userId){
         PersonInfoDTO personInfo = userInfoMapper.selectJoinOne(PersonInfoDTO.class, new MPJLambdaWrapper<UserInfoEntity>()
             .selectAll(UserInfoEntity.class)
+            .select(UserEntity::getUserPhone)
+            .leftJoin(UserEntity.class, UserEntity::getUserId, UserInfoEntity::getUserId)
             .eq(UserInfoEntity::getUserId, userId));
         return personInfo;
     }
