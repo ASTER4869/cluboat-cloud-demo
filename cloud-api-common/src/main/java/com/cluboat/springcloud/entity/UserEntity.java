@@ -51,6 +51,7 @@ public class UserEntity {
 
     @Override
     public boolean equals(Object o) {
+        // 没改
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         UserEntity that = (UserEntity) o;

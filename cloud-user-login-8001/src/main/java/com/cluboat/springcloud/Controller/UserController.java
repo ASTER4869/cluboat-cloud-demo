@@ -22,7 +22,17 @@ public class UserController {
     @Resource
     private UserService userService;
 
-
+    @PostMapping  // sign up and create user
+    public CommonResult AddUser(@PathVariable UserParam param){
+        UserEntity user = new UserEntity();
+        user.setUserPhone(param.getUserPhone());
+        user.setUserPassword(param.getUserPassword());
+        boolean res = userService.save(user);
+        if(res)
+            return new CommonResult(200, "添加成功");
+        else
+            return  new CommonResult(400, "操作失败");
+    }
 
 
 //    old api version (for test demo only)
@@ -57,24 +67,12 @@ public class UserController {
 
     }
 
-
     @GetMapping("/page")
     public Page<UserEntity> findPage(@RequestParam Integer pageNum,
                                @RequestParam Integer pageSize) {
         return userService.page(new Page<>(pageNum,pageSize));
     }
 
-    @PostMapping
-    public CommonResult AddUser(@PathVariable UserParam param){
-        UserEntity user = new UserEntity();
-        user.setUserPhone(param.getUserPhone());
-        user.setUserPassword(param.getUserPassword());
-        boolean res = userService.save(user);
-        if(res)
-            return new CommonResult(200, "添加成功");
-        else
-            return  new CommonResult(400, "操作失败");
-    }
 
 
 
