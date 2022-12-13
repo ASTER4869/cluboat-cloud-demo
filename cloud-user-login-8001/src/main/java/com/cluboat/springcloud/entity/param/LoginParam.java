@@ -11,6 +11,7 @@ import java.sql.Timestamp;
 @NoArgsConstructor
 
 public class LoginParam {
-    private String result;
-    private
+    private int isAdmin;
+    private int userPhone;
+    private String inputPassword;
 }
