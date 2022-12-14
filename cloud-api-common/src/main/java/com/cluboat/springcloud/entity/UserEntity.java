@@ -1,5 +1,6 @@
 package com.cluboat.springcloud.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 
@@ -12,13 +13,13 @@ import java.util.Objects;
 public class UserEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @TableId("user_id")
+    @TableId(value="user_id",type = IdType.AUTO)
     @Column(name = "user_id")
     private int userId;
 
     @Basic
-    @Column(name = "phone")
-    private  int userPhone;
+    @Column(name = "user_phone")
+    private  String userPhone;
 
     @Basic
     @Column(name = "user_password")
@@ -32,11 +33,11 @@ public class UserEntity {
         this.userId = userId;
     }
 
-    public int getUserPhone() {
+    public String getUserPhone() {
         return userPhone;
     }
 
-    public void setUserPhone(int userPhone) {
+    public void setUserPhone(String userPhone) {
         this.userPhone = userPhone;
     }
 

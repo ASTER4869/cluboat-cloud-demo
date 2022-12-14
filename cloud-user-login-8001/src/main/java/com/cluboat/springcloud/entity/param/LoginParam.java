@@ -12,6 +12,6 @@ import java.sql.Timestamp;
 
 public class LoginParam {
     private int isAdmin;
-    private int userPhone;
+    private String loginAccount;
     private String inputPassword;
 }

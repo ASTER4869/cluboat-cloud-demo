@@ -23,7 +23,7 @@ public class UserController {
     private UserService userService;
 
     @PostMapping  // sign up and create user
-    public CommonResult AddUser(@PathVariable UserParam param){
+    public CommonResult AddUser(@RequestBody UserParam param){
         UserEntity user = new UserEntity();
         user.setUserPhone(param.getUserPhone());
         user.setUserPassword(param.getUserPassword());
@@ -33,47 +33,5 @@ public class UserController {
         else
             return  new CommonResult(400, "操作失败");
     }
-
-
-//    old api version (for test demo only)
-
-    @DeleteMapping("/{id}")
-    public Boolean delete(@PathVariable Integer id) {
-        return userService.removeById(id);
-    }
-
-    @PostMapping("/del/batch")
-    public boolean deleteBatch(@RequestBody List<Integer> ids) {
-        return userService.removeByIds(ids);
-    }
-    @GetMapping
-    public List<UserEntity> findAll() {
-        return userService.list();
-    }
-
-    @GetMapping("/{id}")
-    public UserEntity findOne(@PathVariable Integer id) {
-        return userService.getById(id);
-    }
-    @GetMapping("/user/{id}")
-    public CommonResult getUser(@PathVariable("id") Long id){
-        UserEntity user = userService.getById(id);
-        log.info("****插入结果：{payment}");
-        if(user!=null){
-            return new CommonResult(200,"查询成功",user);
-        }else {
-            return new CommonResult(400,"无记录");
-        }
-
-    }
-
-    @GetMapping("/page")
-    public Page<UserEntity> findPage(@RequestParam Integer pageNum,
-                               @RequestParam Integer pageSize) {
-        return userService.page(new Page<>(pageNum,pageSize));
-    }
-
-
-
 
 }

@@ -5,7 +5,6 @@ import com.cluboat.springcloud.entity.UserEntity;
 import com.cluboat.springcloud.entity.param.UserParam;
 import com.cluboat.springcloud.mapper.UserMapper;
 import com.cluboat.springcloud.service.UserService;
-import com.cluboat.springcloud.entities.User;
 import org.springframework.stereotype.Service;
 
 

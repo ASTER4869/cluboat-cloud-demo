@@ -16,6 +16,9 @@ public class SysAdminEntity {
     @Column(name = "admin_id")
     private int adminId;
     @Basic
+    @Column(name = "admin_account")
+    private String adminAccount;
+    @Basic
     @Column(name = "admin_password")
     private String adminPassword;
 
@@ -25,6 +28,14 @@ public class SysAdminEntity {
 
     public void setAdminId(int adminId) {
         this.adminId = adminId;
+    }
+
+    public String getAdminAccount() {
+        return adminAccount;
+    }
+
+    public void setAdminAccount(String adminAccount) {
+        this.adminAccount = adminAccount;
     }
 
     public String getAdminPassword() {
@@ -45,6 +56,6 @@ public class SysAdminEntity {
 
     @Override
     public int hashCode() {
-        return Objects.hash(adminId, adminPassword);
+        return Objects.hash(adminId, adminAccount, adminPassword);
     }
 }

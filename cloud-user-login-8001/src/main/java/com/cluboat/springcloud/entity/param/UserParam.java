@@ -11,14 +11,8 @@ import java.sql.Timestamp;
 @AllArgsConstructor
 @NoArgsConstructor
 public class UserParam {
-    private int userPhone;
+    private String userPhone;
     private String userPassword;
-//    private String userName;
-//    private String userSexual;
-//    private String userPhone;
-//    private Timestamp userCreateTime;
-//    private String userPhotoURL;
-//    private String userSign;
 }
 
 
