@@ -14,6 +14,7 @@ import javax.annotation.Resource;
 
 @RestController
 @Slf4j
+@RequestMapping
 //@RequestMapping("/login")
 
 public class LoginController {
@@ -24,14 +25,14 @@ public class LoginController {
     public CommonResult Login(@RequestBody LoginParam param){
         if (param.getIsAdmin()==1){
             SysAdminEntity admin = adminService.lambdaQuery().eq(SysAdminEntity::getAdminAccount, param.getLoginAccount())
-                    .eq(SysAdminEntity::getAdminPassword, param.getInputPassword()).getEntity();
+                    .eq(SysAdminEntity::getAdminPassword, param.getInputPassword()).one();
             if (admin!=null){
                 return new CommonResult<>(200, "登录成功", admin.getAdminId());
             }
         }
         else {
             UserEntity user = userService.lambdaQuery().eq(UserEntity::getUserPhone, param.getLoginAccount())
-                    .eq(UserEntity::getUserPassword, param.getInputPassword()).getEntity();
+                    .eq(UserEntity::getUserPassword, param.getInputPassword()).one();
             if (user!=null){
                 return new CommonResult<>(200, "登录成功", user.getUserId());
             }
@@ -43,7 +44,8 @@ public class LoginController {
     @PutMapping ("/password")
     public CommonResult ChangePassword(@RequestBody PasswordParam param){
         UserEntity user = userService.getById(param.getUserId());
-        boolean res = (user.getUserPassword()==param.getInputPassword());
+
+        boolean res = (user.getUserPassword()).equals(param.getInputPassword());
         if (res==false)
             return new CommonResult<>(400, "修改失败， 密码错误");
         user.setUserPassword(param.getNewPassword());
