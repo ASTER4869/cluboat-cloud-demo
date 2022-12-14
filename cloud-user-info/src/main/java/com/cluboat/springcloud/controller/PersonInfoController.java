@@ -7,6 +7,7 @@ import com.cluboat.springcloud.entity.UserEntity;
 import com.cluboat.springcloud.entity.dto.PersonInfoDTO;
 import com.cluboat.springcloud.entity.param.PutPersonInfoParam;
 import com.cluboat.springcloud.service.UserInfoService;
+import com.cluboat.springcloud.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,6 +20,8 @@ public class PersonInfoController {
     @Resource
     private UserInfoService userInfoService;
 
+    @Resource
+    private UserService userService;
 
     @GetMapping("/{userId}")
     public CommonResult getPersonInfo(@PathVariable Integer userId) {
@@ -36,20 +39,24 @@ public class PersonInfoController {
     @PutMapping
     public CommonResult updatePersonInfo(@RequestBody PutPersonInfoParam param) {
         UserInfoEntity userInfoEntity = userInfoService.getById(param.getUserId());
-//        //如果没有该user的记录
-//        if(userInfoEntity==null){
-//            return new CommonResult(444,"无记录");
-//        }
-//        userInfoEntity.setUserName(param.getUserName());
-//        userEntity.setUserPhone(param.getUserPhone());
-//        userInfoEntity.setUserSexual(param.getUserSexual());
-//        userInfoEntity.setUserPhotoUrl(param.getUserPhotoUrl());
-//        userInfoEntity.setUserSign(param.getUserSign());
-//        boolean isSuccessful = userInfoService.updateById(userInfoEntity);
-//
-//        if(isSuccessful == false){
-//            return new CommonResult(400,"修改失败");
-//        }
+        UserEntity userEntity = userService.getById(param.getUserId());
+
+        //如果没有该user的记录
+        if(userInfoEntity==null){
+            return new CommonResult(444,"无记录");
+        }
+        userInfoEntity.setUserName(param.getUserName());
+        userEntity.setUserPhone(param.getUserPhone());
+        userInfoEntity.setUserSexual(param.getUserSexual());
+        userInfoEntity.setUserPhotoUrl(param.getUserPhotoUrl());
+        userInfoEntity.setUserSign(param.getUserSign());
+        boolean isSuccessful1 = userInfoService.updateById(userInfoEntity);
+        boolean isSuccessful2 = userService.updateById(userEntity);
+
+        //目前还没做其中一个失败则另一个成功操作进行回滚的操作
+        if(isSuccessful1 == false || isSuccessful2 == false){
+            return new CommonResult(400,"修改失败");
+        }
         return new CommonResult(200,"修改成功");
     }
 }
