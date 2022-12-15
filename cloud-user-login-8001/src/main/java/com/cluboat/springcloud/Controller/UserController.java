@@ -29,6 +29,9 @@ public class UserController {
 
     @PostMapping  // sign up and create user
     public CommonResult AddUser(@RequestBody UserParam param){
+        UserEntity user_check = userService.lambdaQuery().eq(UserEntity::getUserPhone, param.getUserPhone()).one();
+        if (user_check!=null)
+            return new CommonResult(400, "该手机已注册，请登录账号");
         UserEntity user = new UserEntity();
         UserInfoEntity info = new UserInfoEntity();
         user.setUserPhone(param.getUserPhone());

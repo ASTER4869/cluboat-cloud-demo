@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d4d16d2-b824-45f3-a1a5-21313ed733a4" name="变更" comment="变更" />
+    <list default="true" id="6d4d16d2-b824-45f3-a1a5-21313ed733a4" name="变更" comment="变更">
+      <change beforePath="$PROJECT_DIR$/cloud-user-login-8001/src/main/java/com/cluboat/springcloud/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login-8001/src/main/java/com/cluboat/springcloud/Controller/UserController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -238,6 +240,7 @@
       <workItem from="1669983979613" duration="5689000" />
       <workItem from="1670478544448" duration="3653000" />
       <workItem from="1670571848373" duration="33683000" />
+      <workItem from="1671116963253" duration="529000" />
     </task>
     <servers />
   </component>
