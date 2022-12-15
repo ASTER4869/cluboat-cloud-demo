@@ -36,6 +36,7 @@ public class UserController {
         boolean res1 = userService.save(user);
         user = userService.lambdaQuery().eq(UserEntity::getUserPhone, param.getUserPhone()).one();
 
+        // set original user info
         info.setUserId(user.getUserId());
         info.setUserName("user"+param.getUserPhone());
         info.setUserSexual("保密");

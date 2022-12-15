@@ -15,7 +15,6 @@ import javax.annotation.Resource;
 @RestController
 @Slf4j
 @RequestMapping
-//@RequestMapping("/login")
 
 public class LoginController {
     @Resource UserService userService;
