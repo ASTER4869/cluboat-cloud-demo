@@ -81,6 +81,13 @@
             <version>${project.version}</version>
             <scope>compile</scope>
         </dependency>
+
+        <!--junit-->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+        </dependency>
     </dependencies>
 
     <properties>
@@ -88,5 +95,27 @@
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <build>
+    <plugins>
+    <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <version>1.5.3.RELEASE</version>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>repackage</goal>
+                    </goals>
+                </execution>
+            </executions>
+
+            <configuration>
+                <includeSystemScope>true</includeSystemScope>
+                <mainClass>com.cluboat.springcloud.login8001</mainClass>
+            </configuration>
+    </plugin>
+    </plugins>
+    </build>
 
 </project>

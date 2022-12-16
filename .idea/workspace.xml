@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d4d16d2-b824-45f3-a1a5-21313ed733a4" name="变更" comment="变更">
-      <change beforePath="$PROJECT_DIR$/cloud-user-login-8001/src/main/java/com/cluboat/springcloud/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login-8001/src/main/java/com/cluboat/springcloud/Controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login-8001/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login-8001/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login-8001/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login-8001/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -240,7 +242,7 @@
       <workItem from="1669983979613" duration="5689000" />
       <workItem from="1670478544448" duration="3653000" />
       <workItem from="1670571848373" duration="33683000" />
-      <workItem from="1671116963253" duration="529000" />
+      <workItem from="1671116963253" duration="1161000" />
     </task>
     <servers />
   </component>
