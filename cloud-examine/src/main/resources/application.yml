@@ -1,5 +1,7 @@
 server:
   port: 8004
+  servlet:
+    context-path: /examine
 spring:
   application:
     name: cloud-examine-service
@@ -14,7 +16,9 @@ spring:
   cloud:
     nacos:
       discovery:
+        ip: 1.15.156.161
         server-addr: localhost:8848
+
 logging:
   pattern:
     console: "[%thread] %-5level %logger{36} - %msg%n"

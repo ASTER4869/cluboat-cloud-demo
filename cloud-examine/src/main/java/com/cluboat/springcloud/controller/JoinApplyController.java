@@ -1,10 +1,8 @@
 package com.cluboat.springcloud.controller;
 
 import com.cluboat.springcloud.entities.CommonResult;
-import com.cluboat.springcloud.entity.UserClubEntity;
 import com.cluboat.springcloud.entity.apply.JoinApplyEntity;
 import com.cluboat.springcloud.service.JoinApplyService;
-import com.cluboat.springcloud.service.UserClubService;
 import lombok.extern.slf4j.Slf4j;
 import org.json.JSONObject;
 import org.springframework.web.bind.annotation.*;

@@ -29,7 +29,10 @@
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-loadbalancer</artifactId>
+        </dependency>
         <!--nacos的配置-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
@@ -64,7 +67,7 @@
 
                 <configuration>
                     <includeSystemScope>true</includeSystemScope>
-                    <mainClass>com.cluboat.springcloud.examine</mainClass>
+                    <mainClass>com.cluboat.springcloud.NacosGatewayApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>

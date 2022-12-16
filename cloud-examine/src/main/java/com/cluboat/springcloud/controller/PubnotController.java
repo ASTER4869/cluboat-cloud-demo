@@ -68,11 +68,12 @@ public class PubnotController {
         }
     }
 
-    @PostMapping("/{id}")
-    public CommonResult editPubnot(@PathVariable("id") int id,@RequestBody String json) {
+    @PutMapping
+    public CommonResult editPubnot(@RequestBody String json) {
         JSONObject jsonObject = new JSONObject(json);
         String pubnotContent = jsonObject.optString("pubnotContent");
         String pubnotTitle =jsonObject.optString("pubnotTitle");
+        int id =jsonObject.optInt("id");
         PubnotEntity pubnot = pubnotService.getById(id);
         if(pubnotContent!=null){
             pubnot.setPubnotContent(pubnotContent);
