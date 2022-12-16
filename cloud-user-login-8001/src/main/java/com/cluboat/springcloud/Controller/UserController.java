@@ -2,13 +2,17 @@ package com.cluboat.springcloud.Controller;
 
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.cluboat.springcloud.entity.UserEntity;
+import com.cluboat.springcloud.entity.UserInfoEntity;
+import com.cluboat.springcloud.service.UserInfoService;
 import com.cluboat.springcloud.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
-import com.cluboat.springcloud.entities.User;
 import com.cluboat.springcloud.entities.CommonResult;
+import com.cluboat.springcloud.entity.param.UserParam;
 
 import javax.annotation.Resource;
+import java.sql.Timestamp;
 import java.util.List;
 
 //@RequestMapping(value = "/employees/{id}",method = RequestMethod.GET)
@@ -20,48 +24,34 @@ public class UserController {
 
     @Resource
     private UserService userService;
+    @Resource
+    private UserInfoService userInfoService;
 
+    @PostMapping  // sign up and create user
+    public CommonResult AddUser(@RequestBody UserParam param){
+        UserEntity user_check = userService.lambdaQuery().eq(UserEntity::getUserPhone, param.getUserPhone()).one();
+        if (user_check!=null)
+            return new CommonResult(400, "该手机已注册，请登录账号");
+        UserEntity user = new UserEntity();
+        UserInfoEntity info = new UserInfoEntity();
+        user.setUserPhone(param.getUserPhone());
+        user.setUserPassword(param.getUserPassword());
+        boolean res1 = userService.save(user);
+        user = userService.lambdaQuery().eq(UserEntity::getUserPhone, param.getUserPhone()).one();
 
-    @PostMapping(value = "/create")
-    public boolean save(@RequestBody User user) {
-        return userService.saveOrUpdate(user);
+        // set original user info
+        info.setUserId(user.getUserId());
+        info.setUserName("user"+param.getUserPhone());
+        info.setUserSexual("保密");
+        info.setUserCreateTime(new Timestamp(System.currentTimeMillis()));
+        info.setUserPhotoUrl("https://s2.loli.net/2022/11/20/sK9DCVWY7qLyIhw.jpg");
+        info.setUserSign("该用户什么都没写");
+        boolean res2 = userInfoService.save(info);
+        boolean res = res1&&res2;
+        if(res)
+            return new CommonResult(200, "添加成功");
+        else
+            return  new CommonResult(400, "操作失败");
     }
-    @DeleteMapping("/{id}")
-    public Boolean delete(@PathVariable Integer id) {
-        return userService.removeById(id);
-    }
-
-    @PostMapping("/del/batch")
-    public boolean deleteBatch(@RequestBody List<Integer> ids) {
-        return userService.removeByIds(ids);
-    }
-    @GetMapping
-    public List<User> findAll() {
-        return userService.list();
-    }
-
-    @GetMapping("/{id}")
-    public User findOne(@PathVariable Integer id) {
-        return userService.getById(id);
-    }
-    @GetMapping("/get/{id}")
-    public CommonResult getPaymentById(@PathVariable("id") Long id){
-        User user = userService.getById(id);
-        log.info("****插入结果：{payment}");
-        if(user!=null){
-            return new CommonResult(200,"查询成功",user);
-        }else {
-            return new CommonResult(444,"无记录");
-        }
-    }
-
-
-    @GetMapping("/page")
-    public Page<User> findPage(@RequestParam Integer pageNum,
-                               @RequestParam Integer pageSize) {
-        return userService.page(new Page<>(pageNum,pageSize));
-    }
-
-
 
 }

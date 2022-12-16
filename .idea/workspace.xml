@@ -10,10 +10,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d4d16d2-b824-45f3-a1a5-21313ed733a4" name="变更" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8049691a-bc80-42b5-9ec0-c4638bb187ed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8049691a-bc80-42b5-9ec0-c4638bb187ed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/28118269-f1a2-42c3-aebe-355382f1c3c2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/28118269-f1a2-42c3-aebe-355382f1c3c2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3d3b77be-2968-49ee-aea2-ae334fe844df.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3d3b77be-2968-49ee-aea2-ae334fe844df.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-api-common/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-common/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/controller/MyClubController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/controller/MyClubController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-common/src/main/java/com/cluboat/springcloud/entity/SysAdminEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-common/src/main/java/com/cluboat/springcloud/entity/SysAdminEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-common/src/main/java/com/cluboat/springcloud/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-common/src/main/java/com/cluboat/springcloud/entity/UserEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-info/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-info/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login-8001/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login-8001/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login-8001/src/main/java/com/cluboat/springcloud/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login-8001/src/main/java/com/cluboat/springcloud/Controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login-8001/src/main/java/com/cluboat/springcloud/login8001.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login-8001/src/main/java/com/cluboat/springcloud/login8001.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login-8001/src/main/java/com/cluboat/springcloud/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login-8001/src/main/java/com/cluboat/springcloud/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login-8001/src/main/java/com/cluboat/springcloud/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login-8001/src/main/java/com/cluboat/springcloud/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login-8001/src/main/java/com/cluboat/springcloud/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login-8001/src/main/java/com/cluboat/springcloud/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login-8001/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login-8001/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login-8001/src/test/java/com/cluboat/springcloud/MyBatisplustest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login-8001/src/test/java/com/cluboat/springcloud/MyBatisplustest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login-8001/src/test/java/mybatistest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login-8001/src/test/java/mybatistest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,36 +60,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "JPA.DatabaseSchemaImportDialog": "8049691a-bc80-42b5-9ec0-c4638bb187ed",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "D:/Code/microservicesDemo/cluboat-cloud-demo/cloud-api-common/src/main/resources/hibernate.cfg.xml",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "模块",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "spring.configuration.checksum": "22fa5c84541c400006594b8ec3adf7a8"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;JPA.DatabaseSchemaImportDialog&quot;: &quot;8049691a-bc80-42b5-9ec0-c4638bb187ed&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Code/microservicesDemo/cluboat-cloud-demo/cloud-api-common/src/main/resources/hibernate.cfg.xml&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;22fa5c84541c400006594b8ec3adf7a8&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -102,7 +113,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.UserInfoApplication">
+  <component name="RunManager" selected="Spring Boot.login8001">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.cluboat.demo.springcloud.Main" />
       <module name="cloud-forum" />

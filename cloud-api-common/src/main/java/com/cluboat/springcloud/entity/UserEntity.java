@@ -1,5 +1,6 @@
 package com.cluboat.springcloud.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 
@@ -12,16 +13,17 @@ import java.util.Objects;
 public class UserEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @TableId("user_id")
+    @TableId(value="user_id",type = IdType.AUTO)
     @Column(name = "user_id")
     private int userId;
-    @Basic
-    @Column(name = "user_password")
-    private String userPassword;
 
     @Basic
     @Column(name = "user_phone")
-    private String userPhone;
+    private  String userPhone;
+
+    @Basic
+    @Column(name = "user_password")
+    private String userPassword;
 
     public int getUserId() {
         return userId;
@@ -29,14 +31,6 @@ public class UserEntity {
 
     public void setUserId(int userId) {
         this.userId = userId;
-    }
-
-    public String getUserPassword() {
-        return userPassword;
-    }
-
-    public void setUserPassword(String userPassword) {
-        this.userPassword = userPassword;
     }
 
     public String getUserPhone() {
@@ -47,8 +41,18 @@ public class UserEntity {
         this.userPhone = userPhone;
     }
 
+    public String getUserPassword() {
+        return userPassword;
+    }
+
+    public void setUserPassword(String userPassword) {
+        this.userPassword = userPassword;
+    }
+
+
     @Override
     public boolean equals(Object o) {
+        // 没改
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         UserEntity that = (UserEntity) o;
@@ -57,6 +61,6 @@ public class UserEntity {
 
     @Override
     public int hashCode() {
-        return Objects.hash(userId, userPassword);
+        return Objects.hash(userId, userPhone, userPassword);
     }
 }
