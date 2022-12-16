@@ -1,7 +1,9 @@
 package com.cluboat.springcloud.controller;
 
 import com.cluboat.springcloud.entities.CommonResult;
+import com.cluboat.springcloud.entity.Belong;
 import com.cluboat.springcloud.entity.apply.JoinApplyEntity;
+import com.cluboat.springcloud.service.BelongService;
 import com.cluboat.springcloud.service.JoinApplyService;
 import lombok.extern.slf4j.Slf4j;
 import org.json.JSONObject;
@@ -29,7 +31,7 @@ public class JoinApplyController {
     }
 
     @Resource
-    private UserClubService userClubService;
+    private BelongService belongService;
     @PostMapping
     public CommonResult updateById(@RequestBody String json) {
         JSONObject jsonObject = new JSONObject(json);
@@ -37,16 +39,18 @@ public class JoinApplyController {
         int state = jsonObject.getInt("state");
         String feedback =jsonObject.optString("feedback");
         JoinApplyEntity joinApply = joinApplyService.getById(id);
-        UserClubEntity userClubEntity=new UserClubEntity();
+        Belong belong=new Belong();
         joinApply.setJoinApplyIsPass(state);
         joinApply.setFeedback(feedback);
 
         boolean isSuccess = joinApplyService.updateById(joinApply);
         if(state==1)
         {
-            userClubEntity.setUserId(id);
-            userClubEntity.setClubId(joinApply.getJoinClubId());
-            userClubService.save(userClubEntity);
+            belong.setUserId(id);
+            belong.setClubId(joinApply.getJoinClubId());
+            belong.setState(0);
+            belong.setPermission(0);
+            belongService.save(belong);
         }
         if (isSuccess) {
             return new CommonResult(200, "修改成功");

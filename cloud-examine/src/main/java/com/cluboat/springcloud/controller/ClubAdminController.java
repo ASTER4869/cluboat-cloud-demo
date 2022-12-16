@@ -4,10 +4,10 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.cluboat.springcloud.entities.CommonResult;
 import com.cluboat.springcloud.entity.*;
-import com.cluboat.springcloud.mapper.ClubAdminMapper;
+import com.cluboat.springcloud.mapper.BelongMapper;
 import com.cluboat.springcloud.mapper.ClubMaMapper;
-import com.cluboat.springcloud.mapper.UserClubMapper;
 
+import com.cluboat.springcloud.service.BelongService;
 import com.cluboat.springcloud.service.ClubService;
 import lombok.extern.slf4j.Slf4j;
 import org.json.JSONObject;
@@ -23,27 +23,24 @@ import java.util.List;
 public class ClubAdminController {
 
 
-    @Resource
-    private ClubAdminService clubAdminService;
-    @Resource
-    private UserClubService userClubService;
-    @Resource
-    private ClubAdminMapper clubAdminMapper;
+
 
     @Resource
-    private UserClubMapper userClubMapper;
+    private BelongService belongService;
+    @Resource
+    private BelongMapper belongMapper;
     @DeleteMapping
     public CommonResult deleteById(@RequestBody String json) {
         JSONObject jsonObject = new JSONObject(json);
         int user_id = jsonObject.getInt("user_id");
         int club_id = jsonObject.getInt("club_id");
-        QueryWrapper<ClubAdminEntity> wrapper=new QueryWrapper<>();
+        QueryWrapper<Belong> wrapper=new QueryWrapper<>();
 
         wrapper.eq("user_id",user_id);
         wrapper.eq("club_id",club_id);
 
         try {
-            clubAdminService.remove(wrapper);
+            belongService.remove(wrapper);
             return new CommonResult(200, "删除成功");
         } catch (Exception e){
             return new CommonResult(400, "删除失败",e);
@@ -58,19 +55,20 @@ public class ClubAdminController {
         int club_id = jsonObject.getInt("club_id");
         int permission = jsonObject.getInt("permission");
 
-        QueryWrapper<ClubAdminEntity> wrapper=new QueryWrapper<>();
+        QueryWrapper<Belong> wrapper=new QueryWrapper<>();
         //wrapper.eq相当于Map.put,放的是查询条件
         wrapper.eq("user_id",user_id);
         wrapper.eq("club_id",club_id);
 
-        ClubAdminEntity clubAdmin = clubAdminMapper.selectOne(wrapper);
-        if(clubAdmin==null)
+        Belong belong = belongMapper.selectOne(wrapper);
+        if(belong==null)
         {
-            ClubAdminEntity clubAdminNew=new ClubAdminEntity();
-            clubAdminNew.setClubId(club_id);
-            clubAdminNew.setUserId(user_id);
-            clubAdminNew.setPermission(permission);
-            clubAdminService.save(clubAdminNew);
+            Belong newBelong=new Belong();
+            newBelong.setClubId(club_id);
+            newBelong.setUserId(user_id);
+            newBelong.setPermission(permission);
+            newBelong.setState(0);
+            belongService.save(newBelong);
             return new CommonResult(200, "修改成功");
 
         }
@@ -78,7 +76,7 @@ public class ClubAdminController {
         updateWrapper.eq("user_id", user_id);
         updateWrapper.eq("club_id", club_id);
         updateWrapper.set("permission", permission);
-        clubAdminMapper.update(null,updateWrapper);
+        belongMapper.update(null,updateWrapper);
         return new CommonResult(200, "修改成功");
 
     }
@@ -88,12 +86,14 @@ public class ClubAdminController {
     private ClubService clubService;
     @GetMapping
     public CommonResult getById() {
-        List<ClubAdminEntity> clubAdminList = clubAdminService.list();
+        QueryWrapper<Belong> wrapper=new QueryWrapper<>();
+        wrapper.eq("permission",2);
+        List<Belong> clubAdminList = belongService.list(wrapper);
         List<ClubMaster> clubMaList = new ArrayList<>();
-        try {
+
             for (int i = 0; i < clubAdminList.size(); i++) {
                 System.out.println(clubAdminList.get(i));
-                if (clubAdminList.get(i).getPermission() == 1) {
+                if (clubAdminList.get(i).getPermission() == 2) {
                     ClubMaster clubMaster = new ClubMaster();
                     clubMaster.userId = clubAdminList.get(i).getUserId();
                     clubMaster.clubId = clubAdminList.get(i).getClubId();
@@ -110,9 +110,7 @@ public class ClubAdminController {
                 clubMaList.get(i).clubName = s.getClubName();
             }
             return new CommonResult(200, "查询成功", clubMaList);
-        }catch (Exception e){
-            return new CommonResult(400, "查询失败",e);
-        }
+
     }
 
 

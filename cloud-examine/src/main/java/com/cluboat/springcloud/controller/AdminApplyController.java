@@ -1,8 +1,10 @@
 package com.cluboat.springcloud.controller;
 
 import com.cluboat.springcloud.entities.CommonResult;
+import com.cluboat.springcloud.entity.Belong;
 import com.cluboat.springcloud.entity.apply.AdminApplyEntity;
 import com.cluboat.springcloud.service.AdminApplyService;
+import com.cluboat.springcloud.service.BelongService;
 import lombok.extern.slf4j.Slf4j;
 import org.json.JSONObject;
 import org.springframework.web.bind.annotation.*;
@@ -31,7 +33,7 @@ public class AdminApplyController {
         }
     }
     @Resource
-    private ClubAdminService clubAdminService;
+    private BelongService belongService;
     @PostMapping
     public CommonResult updateById(@RequestBody String json) {
         JSONObject jsonObject = new JSONObject(json);
@@ -41,13 +43,14 @@ public class AdminApplyController {
         AdminApplyEntity adminApply = adminApplyService.getById(id);
         adminApply.setAdminApplyIsPass(state);
         adminApply.setFeedback(feedback);
-        ClubAdminEntity clubAdminEntity=new ClubAdminEntity();
+        Belong belong=new Belong();
         boolean isSuccess = adminApplyService.updateById(adminApply);
         if(state==1) {
-            clubAdminEntity.setPermission((byte)(0));
-            clubAdminEntity.setClubId(adminApply.getAdminClubId());
-            clubAdminEntity.setUserId(adminApply.getUserId());
-            isSuccess = clubAdminService.save(clubAdminEntity);
+            belong.setPermission(1);
+            belong.setClubId(adminApply.getAdminClubId());
+            belong.setUserId(adminApply.getUserId());
+            belong.setState(0);
+            isSuccess = belongService.save(belong);
         }
         if (isSuccess) {
             return new CommonResult(200, "修改成功");

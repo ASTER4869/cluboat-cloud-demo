@@ -39,10 +39,12 @@ public class ReimApplyController {
     @DeleteMapping("/{id}")
     public CommonResult removeById(@PathVariable("id") int id) {
         boolean isSuccess = reimApplyService.removeById(id);
-        if (isSuccess)
+        if (isSuccess) {
             return new CommonResult(200, "删除成功");
-        else
+        }
+        else {
             return new CommonResult(400, "删除失败");
+        }
 
     }
 
