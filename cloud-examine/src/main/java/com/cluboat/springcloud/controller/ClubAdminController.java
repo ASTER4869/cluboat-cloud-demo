@@ -19,7 +19,7 @@ import java.util.List;
 
 @RestController
 @Slf4j
-@RequestMapping("/clubadmin")
+@RequestMapping("/club-admin")
 public class ClubAdminController {
 
 
@@ -91,6 +91,7 @@ public class ClubAdminController {
         List<Belong> clubAdminList = belongService.list(wrapper);
         List<ClubMaster> clubMaList = new ArrayList<>();
 
+        if(!clubAdminList.isEmpty()) {
             for (int i = 0; i < clubAdminList.size(); i++) {
                 System.out.println(clubAdminList.get(i));
                 if (clubAdminList.get(i).getPermission() == 2) {
@@ -110,7 +111,8 @@ public class ClubAdminController {
                 clubMaList.get(i).clubName = s.getClubName();
             }
             return new CommonResult(200, "查询成功", clubMaList);
-
+        }
+        return new CommonResult(400, "无记录");
     }
 
 

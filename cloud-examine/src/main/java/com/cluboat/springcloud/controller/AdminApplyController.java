@@ -15,7 +15,7 @@ import java.util.List;
 
 @RestController
 @Slf4j
-@RequestMapping("/adminApply")
+@RequestMapping("/admin-apply")
 public class AdminApplyController {
 
     @Resource
@@ -26,7 +26,7 @@ public class AdminApplyController {
     public CommonResult getPaymentById(@PathVariable("id") int id){
         List<AdminApplyEntity> list = adminApplyService.lambdaQuery().eq(AdminApplyEntity::getAdminClubId, id).list();
         log.info("****插入结果：{payment}");
-        if(list!=null){
+        if(!list.isEmpty()){
             return new CommonResult(200,"查询成功",list);
         }else {
             return new CommonResult(444,"无记录");

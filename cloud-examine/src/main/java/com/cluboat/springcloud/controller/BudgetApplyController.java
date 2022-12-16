@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController
 @Slf4j
-@RequestMapping("/budgetapply")
+@RequestMapping("/budget-apply")
 public class BudgetApplyController {
 
     @Resource
@@ -31,7 +31,7 @@ public class BudgetApplyController {
     public CommonResult getBudgetApplyById() {
         List<BudgetApplyEntity> budgetApply = budgetApplyService.list();
         log.info("****插入结果：{payment}");
-        if (budgetApply != null) {
+        if (!budgetApply.isEmpty()) {
             return new CommonResult(200, "查询成功", budgetApply);
         } else {
             return new CommonResult(444, "无记录");

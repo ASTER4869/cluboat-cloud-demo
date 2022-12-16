@@ -24,7 +24,7 @@ public class NotificationController {
 
         List<NotificationEntity> list = notificationService.lambdaQuery().eq(NotificationEntity::getSendUserId, id).list();
         log.info("****插入结果：{payment}");
-        if (list != null) {
+        if (!list.isEmpty()) {
             return new CommonResult(200, "查询成功", list);
         } else {
             return new CommonResult(400, "无记录");
@@ -34,7 +34,7 @@ public class NotificationController {
     public CommonResult getAllNotification() {
         List<NotificationEntity> notificationEntityList = notificationService.list();
         log.info("****插入结果：{payment}");
-        if (notificationEntityList != null) {
+        if (!notificationEntityList.isEmpty()) {
             return new CommonResult(200, "查询成功", notificationEntityList);
         } else {
             return new CommonResult(400, "无记录");

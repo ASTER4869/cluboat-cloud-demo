@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController
 @Slf4j
-@RequestMapping("/clubbuildapply")
+@RequestMapping("/club-build-apply")
 public class ClubBuildApplyController {
     @Resource
     private ClubBuildApplyService clubBuildApplyService;
@@ -30,7 +30,7 @@ public class ClubBuildApplyController {
     public CommonResult getClubBuildApplyById() {
         List<ClubBuildApplyEntity> clubBuildApply = clubBuildApplyService.list();
         log.info("****插入结果：{payment}");
-        if (clubBuildApply != null) {
+        if (!clubBuildApply.isEmpty()) {
             return new CommonResult(200, "查询成功", clubBuildApply);
         } else {
             return new CommonResult(444, "无记录");

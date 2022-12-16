@@ -35,7 +35,7 @@ public class ClubController {
     public CommonResult getAllClub() {
         List<ClubEntity> clubEntityList = clubService.list();
         log.info("****插入结果：{payment}");
-        if (clubEntityList != null) {
+        if (!clubEntityList.isEmpty()) {
             return new CommonResult(200, "查询成功", clubEntityList);
         } else {
             return new CommonResult(400, "无记录");

@@ -17,7 +17,7 @@ import org.json.*;
 
 @RestController
 @Slf4j
-@RequestMapping("/activityapply")
+@RequestMapping("/activity-apply")
 public class ActivityApplyController {
 
 
@@ -41,7 +41,7 @@ public class ActivityApplyController {
     @GetMapping
     public CommonResult getActivityApply() {
         List<ActivityApplyEntity> activityApply = activityApplyService.list();
-        if (activityApply != null) {
+        if (!activityApply.isEmpty()) {
             return new CommonResult(200, "查询成功", activityApply);
         } else {
             return new CommonResult(444, "无记录");

@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController
 @Slf4j
-@RequestMapping("/reimapply")
+@RequestMapping("/reim-apply")
 public class ReimApplyController {
     @Resource
     private ReimApplyService reimApplyService;
@@ -30,7 +30,7 @@ public class ReimApplyController {
     public CommonResult getReimApplyById() {
         List<ReimApplyEntity> reimApply = reimApplyService.list();
         log.info("****插入结果：{payment}");
-        if (reimApply != null) {
+        if (!reimApply.isEmpty()) {
             return new CommonResult(200, "查询成功", reimApply);
         } else {
             return new CommonResult(444, "无记录");

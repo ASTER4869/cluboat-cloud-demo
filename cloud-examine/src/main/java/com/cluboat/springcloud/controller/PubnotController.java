@@ -35,7 +35,7 @@ public class PubnotController {
     public CommonResult getAllPubnot() {
         List<PubnotEntity> pubnotEntityList = pubnotService.list();
         log.info("****插入结果：{payment}");
-        if (pubnotEntityList != null) {
+        if (!pubnotEntityList.isEmpty()) {
             return new CommonResult(200, "查询成功", pubnotEntityList);
         } else {
             return new CommonResult(400, "无记录");

@@ -1,7 +1,5 @@
 server:
   port: 8004
-  servlet:
-    context-path: /examine
 spring:
   application:
     name: cloud-examine-service

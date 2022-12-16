@@ -14,7 +14,7 @@ import java.util.List;
 
 @RestController
 @Slf4j
-@RequestMapping("/joinapply")
+@RequestMapping("/join-apply")
 public class JoinApplyController {
 
     @Resource
@@ -23,7 +23,7 @@ public class JoinApplyController {
     public CommonResult getJoinApplyById() {
         List<JoinApplyEntity> list = joinApplyService.lambdaQuery().eq(JoinApplyEntity::getJoinApplyIsPass, 0).list();
         log.info("****插入结果：{payment}");
-        if (list != null) {
+        if (!list.isEmpty()) {
             return new CommonResult(200, "查询成功", list);
         } else {
             return new CommonResult(400, "无记录");
