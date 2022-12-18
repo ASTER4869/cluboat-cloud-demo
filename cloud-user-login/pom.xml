@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cloud-user-login-8001</artifactId>
+    <artifactId>cloud-user-login</artifactId>
 
     <dependencies>
         <dependency>

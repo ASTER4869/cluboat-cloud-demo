@@ -1,9 +1,7 @@
 package com.cluboat.springcloud.Controller;
 
 import com.cluboat.springcloud.entities.CommonResult;
-import com.cluboat.springcloud.entity.ClubEntity;
-import com.cluboat.springcloud.entity.param.UserInfoDTO;
-import com.cluboat.springcloud.service.ClubService;
+import com.cluboat.springcloud.entity.DTO.UserInfoDTO;
 import com.cluboat.springcloud.service.UserInfoService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;

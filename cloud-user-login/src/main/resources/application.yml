@@ -2,7 +2,7 @@ server:
   port: 8001
 spring:
   application:
-    name: cloud-login-service
+    name: cloud-user-login-service
   datasource:
     # 当前数据源操作类型
     type: com.alibaba.druid.pool.DruidDataSource

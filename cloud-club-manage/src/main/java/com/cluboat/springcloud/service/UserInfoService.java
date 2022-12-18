@@ -1,9 +1,8 @@
 package com.cluboat.springcloud.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.cluboat.springcloud.entity.ClubEntity;
 import com.cluboat.springcloud.entity.UserInfoEntity;
-import com.cluboat.springcloud.entity.param.UserInfoDTO;
+import com.cluboat.springcloud.entity.DTO.UserInfoDTO;
 
 import java.util.List;
 

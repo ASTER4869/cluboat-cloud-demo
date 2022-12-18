@@ -1,13 +1,10 @@
 package com.cluboat.springcloud.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.cluboat.springcloud.entity.ClubEntity;
-import com.cluboat.springcloud.entity.UserClubEntity;
+import com.cluboat.springcloud.entity.BelongEntity;
 import com.cluboat.springcloud.entity.UserInfoEntity;
-import com.cluboat.springcloud.entity.param.UserInfoDTO;
-import com.cluboat.springcloud.mapper.ClubMapper;
+import com.cluboat.springcloud.entity.DTO.UserInfoDTO;
 import com.cluboat.springcloud.mapper.UserInfoMapper;
-import com.cluboat.springcloud.service.ClubService;
 import com.cluboat.springcloud.service.UserInfoService;
 import com.github.yulichang.wrapper.MPJLambdaWrapper;
 import org.springframework.stereotype.Service;
@@ -26,8 +23,8 @@ public class UserInfoServiceImpl extends ServiceImpl<UserInfoMapper, UserInfoEnt
         List<UserInfoDTO> userInfoDTOList = userInfoMapper.selectJoinList(UserInfoDTO.class,
                 new MPJLambdaWrapper<UserInfoEntity>()
                         .select(UserInfoEntity::getUserId,UserInfoEntity::getUserName)
-                        .leftJoin(UserClubEntity.class, UserClubEntity::getUserId, UserInfoEntity::getUserId)
-                        .eq(UserClubEntity::getClubId, clubId));
+                        .leftJoin(BelongEntity.class, BelongEntity::getUserId, UserInfoEntity::getUserId)
+                        .eq(BelongEntity::getClubId, clubId));
         return userInfoDTOList;
     }
 }

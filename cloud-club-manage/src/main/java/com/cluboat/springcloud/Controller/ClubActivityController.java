@@ -52,18 +52,18 @@ public class ClubActivityController {
     }
 
     //* 改某一活动 */
-    @PutMapping
-    public CommonResult updateNews(@RequestBody ActivityParam activityParam) {
-        ActivityEntity activity = clubActivityService.getById(activityParam.activityId);
-        activity.setActivity(activityParam);
-        activity.setActivityIsPass((byte) 0);  //重新送审
-
-        if (clubActivityService.updateById(activity)) {
-            return new CommonResult(200, "更新成功");
-        } else {
-            return new CommonResult(400, "更新失败");
-        }
-    }
+//    @PutMapping
+//    public CommonResult updateActivity(@RequestBody ActivityParam activityParam) {
+//        ActivityEntity activity = clubActivityService.getById(activityParam.activityId);
+////        activity.setActivity(activityParam);
+////        activity.setActivityIsPass((byte) 0);  //重新送审
+//
+//        if (clubActivityService.updateById(activity)) {
+//            return new CommonResult(200, "更新成功");
+//        } else {
+//            return new CommonResult(400, "更新失败");
+//        }
+//    }
 }
 
 

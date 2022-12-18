@@ -12,7 +12,7 @@ import java.util.Objects;
 @IdClass(CollectionEntityPK.class)
 public class CollectionEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @TableId
+//    @TableId("post_id")
     @Id
     @Column(name = "post_id")
     private int postId;

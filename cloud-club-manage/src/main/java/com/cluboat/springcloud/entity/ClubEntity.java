@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.cluboat.springcloud.entity.param.ClubParam;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
@@ -32,13 +33,13 @@ public class ClubEntity {
     private String clubImageUrl;
     @Basic
     @Column(name = "club_create_time")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Timestamp clubCreateTime;
 
     public void setClub(ClubParam clubParam) {
         this.clubName = clubParam.clubName;
         this.clubInformation = clubParam.clubInformation;
         this.clubImageUrl = clubParam.clubImageUrl;
-        this.clubCreateTime = clubParam.clubCreateTime;
     }
     public int getClubId() {
         return clubId;

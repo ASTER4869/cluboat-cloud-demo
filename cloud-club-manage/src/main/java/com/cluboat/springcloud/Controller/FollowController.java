@@ -27,12 +27,12 @@ public class FollowController {
     public CommonResult createFollow(@RequestBody FollowParam followParam) {
         FollowEntity follow = new FollowEntity();
         follow.setFollow(followParam);
-//        try {
+        try {
             followMapper.insert(follow);
             return new CommonResult(200, "修改成功");
-//        } catch (Exception e) {
-//            return new CommonResult(400, "修改失败", e);
-//        }
+        } catch (Exception e) {
+            return new CommonResult(400, "修改失败", e);
+        }
     }
 
     /* 删除关注 */

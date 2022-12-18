@@ -2,28 +2,23 @@ package com.cluboat.springcloud.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.cluboat.springcloud.entity.ClubEntity;
-import com.cluboat.springcloud.entity.UserClubEntity;
 import com.cluboat.springcloud.mapper.ClubMapper;
 import com.cluboat.springcloud.service.ClubService;
-import com.github.yulichang.wrapper.MPJLambdaWrapper;
 import org.springframework.stereotype.Service;
-
-import javax.annotation.Resource;
-import java.util.List;
 
 
 @Service
 public class ClubServiceImpl extends ServiceImpl<ClubMapper, ClubEntity> implements ClubService {
-    @Resource
-    ClubMapper clubMapper;
+//    @Resource
+//    ClubMapper clubMapper;
 
-    @Override
-    public  List<ClubEntity> GetAllClubByUserId(Integer id) {
-        List<ClubEntity> clubEntityList = clubMapper.selectJoinList(ClubEntity.class,
-                new MPJLambdaWrapper<ClubEntity>()
-                        .selectAll(ClubEntity.class)
-                        .leftJoin(UserClubEntity.class, UserClubEntity::getClubId, ClubEntity::getClubId)
-                        .eq(UserClubEntity::getUserId,id));
-        return clubEntityList;
-    }
+//    @Override
+//    public  List<ClubEntity> GetAllClubByUserId(Integer id) {
+//        List<ClubEntity> clubEntityList = clubMapper.selectJoinList(ClubEntity.class,
+//                new MPJLambdaWrapper<ClubEntity>()
+//                        .selectAll(ClubEntity.class)
+//                        .leftJoin(UserClubEntity.class, UserClubEntity::getClubId, ClubEntity::getClubId)
+//                        .eq(UserClubEntity::getUserId,id));
+//        return clubEntityList;
+//    }
 }

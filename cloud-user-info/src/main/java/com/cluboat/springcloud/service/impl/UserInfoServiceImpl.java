@@ -12,6 +12,7 @@ import com.github.yulichang.wrapper.MPJLambdaWrapper;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @Service
 public class UserInfoServiceImpl extends ServiceImpl<UserInfoMapper, UserInfoEntity> implements UserInfoService {
@@ -26,6 +27,15 @@ public class UserInfoServiceImpl extends ServiceImpl<UserInfoMapper, UserInfoEnt
             .leftJoin(UserEntity.class, UserEntity::getUserId, UserInfoEntity::getUserId)
             .eq(UserInfoEntity::getUserId, userId));
         return personInfo;
+    }
+
+    @Override
+    public List<PersonInfoDTO> GetAllPersonInfo(){
+        List<PersonInfoDTO> personInfoList = userInfoMapper.selectJoinList(PersonInfoDTO.class, new MPJLambdaWrapper<UserInfoEntity>()
+                .selectAll(UserInfoEntity.class)
+                .select(UserEntity::getUserPhone)
+                .leftJoin(UserEntity.class, UserEntity::getUserId, UserInfoEntity::getUserId));
+        return personInfoList;
     }
 
     //修改用户个人信息，返回修改的个数

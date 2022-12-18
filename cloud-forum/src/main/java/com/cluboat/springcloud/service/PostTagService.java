@@ -10,4 +10,8 @@ public interface PostTagService extends IService<PostTagEntity> {
     public List<PostTagDTO> GetPostTagListByPostId(Integer postId);
 
     public int DeleteByPostId(Integer postId);
+
+    public void SavePostTag(Integer postId, String tagName);
+
+//    public List<PostTagDTO> GetPostTagList(Integer postId);
 }

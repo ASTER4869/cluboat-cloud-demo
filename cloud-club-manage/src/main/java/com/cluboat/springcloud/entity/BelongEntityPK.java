@@ -1,5 +1,7 @@
 package com.cluboat.springcloud.entity;
 
+import com.baomidou.mybatisplus.annotation.TableId;
+
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -7,22 +9,23 @@ import javax.persistence.Id;
 import java.io.Serializable;
 import java.util.Objects;
 
-public class FollowEntityPK implements Serializable {
-    @Column(name = "activity_id")
+public class BelongEntityPK implements Serializable {
+    @Column(name = "club_id")
+    @TableId("club_id")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int activityId;
+    private int clubId;
     @Column(name = "user_id")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int userId;
 
-    public int getActivityId() {
-        return activityId;
+    public int getClubId() {
+        return clubId;
     }
 
-    public void setActivityId(int activityId) {
-        this.activityId = activityId;
+    public void setClubId(int clubId) {
+        this.clubId = clubId;
     }
 
     public int getUserId() {
@@ -37,12 +40,12 @@ public class FollowEntityPK implements Serializable {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        FollowEntityPK that = (FollowEntityPK) o;
-        return activityId == that.activityId && userId == that.userId;
+        BelongEntityPK that = (BelongEntityPK) o;
+        return clubId == that.clubId && userId == that.userId;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(activityId, userId);
+        return Objects.hash(clubId, userId);
     }
 }

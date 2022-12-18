@@ -2,6 +2,7 @@ package com.cluboat.springcloud.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
@@ -20,13 +21,11 @@ public class UserInfoEntity {
     @Column(name = "user_name")
     private String userName;
     @Basic
-    @Column(name = "user_phone")
-    private String userPhone;
-    @Basic
     @Column(name = "user_sexual")
     private String userSexual;
     @Basic
     @Column(name = "user_create_time")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Timestamp userCreateTime;
     @Basic
     @Column(name = "user_photoURL")
@@ -49,14 +48,6 @@ public class UserInfoEntity {
 
     public void setUserName(String userName) {
         this.userName = userName;
-    }
-
-    public String getUserPhone() {
-        return userPhone;
-    }
-
-    public void setUserPhone(String userPhone) {
-        this.userPhone = userPhone;
     }
 
     public String getUserSexual() {
@@ -96,11 +87,11 @@ public class UserInfoEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         UserInfoEntity that = (UserInfoEntity) o;
-        return userId == that.userId && Objects.equals(userName, that.userName) && Objects.equals(userPhone, that.userPhone) && Objects.equals(userSexual, that.userSexual) && Objects.equals(userCreateTime, that.userCreateTime) && Objects.equals(userPhotoUrl, that.userPhotoUrl) && Objects.equals(userSign, that.userSign);
+        return userId == that.userId && Objects.equals(userName, that.userName)  && Objects.equals(userSexual, that.userSexual) && Objects.equals(userCreateTime, that.userCreateTime) && Objects.equals(userPhotoUrl, that.userPhotoUrl) && Objects.equals(userSign, that.userSign);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(userId, userName, userPhone, userSexual, userCreateTime, userPhotoUrl, userSign);
+        return Objects.hash(userId, userName,  userSexual, userCreateTime, userPhotoUrl, userSign);
     }
 }

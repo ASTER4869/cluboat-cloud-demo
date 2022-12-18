@@ -17,9 +17,9 @@ public class ClubListController {
     private ClubService clubService;
 
     /* 返回根据user id找到的社团 需要连表查询*/
-    @GetMapping("/{userId}")
-    public CommonResult getAllClubByUserId(@PathVariable("userId") int userId ) {
-        List<ClubEntity> clubEntityList = clubService.GetAllClubByUserId(userId);
+    @GetMapping()
+    public CommonResult getAllClubs()  {
+        List<ClubEntity> clubEntityList = clubService.list();
         log.info("****插入结果：{payment}");
         if (clubEntityList.size() > 0) {
             return new CommonResult(200, "查询成功", clubEntityList);

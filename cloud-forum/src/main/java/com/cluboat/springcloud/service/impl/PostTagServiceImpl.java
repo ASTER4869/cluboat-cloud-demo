@@ -13,6 +13,16 @@ import javax.annotation.Resource;
 import java.util.List;
 @Service
 public class PostTagServiceImpl extends ServiceImpl<PostTagMapper, PostTagEntity> implements PostTagService {
+//    @Resource
+//    PostTagMapper postTagMapper;
+//
+//    @Override
+//    public List<PostTagDTO> GetPostTagList(Integer postId){
+//        List<PostTagDTO> postTagList = postTagMapper.selectJoinList(PostTagDTO.class, new MPJLambdaWrapper<PostTagEntity>()
+//                .selectAll(PostTagEntity.class)
+//                .eq(PostTagEntity::getPostId, postId));
+//        return postTagList;
+//    }
     @Resource
     PostTagMapper postTagMapper;
 
@@ -20,16 +30,27 @@ public class PostTagServiceImpl extends ServiceImpl<PostTagMapper, PostTagEntity
     public List<PostTagDTO> GetPostTagListByPostId(Integer postId){
         List<PostTagDTO> postTagList = postTagMapper.selectJoinList(PostTagDTO.class,
                 new MPJLambdaWrapper<PostTagEntity>()
-                        .select(PostTagEntity::getTagName)
+                        .selectAll(PostTagEntity.class)
                         .eq(PostTagEntity::getPostId,postId)
         );
         return postTagList;
     }
+
+
 
     @Override
     public int DeleteByPostId(Integer postId){
         LambdaQueryWrapper<PostTagEntity> wrapper = new LambdaQueryWrapper<PostTagEntity>()
                 .eq(PostTagEntity::getPostId, postId);
         return postTagMapper.delete(wrapper);
+    }
+
+
+    @Override
+    public void SavePostTag(Integer postId, String tagName){
+        PostTagEntity postTag = new PostTagEntity();
+        postTag.setTagName(tagName);
+        postTag.setPostId(postId);
+        postTagMapper.insert(postTag);
     }
 }

@@ -14,6 +14,7 @@ spring:
   cloud:
     nacos:
       discovery:
+        ip: 1.15.156.161
         server-addr: localhost:8848
 logging:
   pattern:

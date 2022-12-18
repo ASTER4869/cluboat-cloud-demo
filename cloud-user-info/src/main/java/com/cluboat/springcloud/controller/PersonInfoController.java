@@ -12,6 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @RestController
 @Slf4j
@@ -22,6 +23,19 @@ public class PersonInfoController {
 
     @Resource
     private UserService userService;
+
+    @GetMapping()
+    public CommonResult getPersonInfo() {
+        List<PersonInfoDTO> personInfoList = userInfoService.GetAllPersonInfo();
+        if(personInfoList.isEmpty()==false){
+            return new CommonResult(200,"查询成功", personInfoList);
+        }
+        else {
+            return new CommonResult(444,"无记录");
+        }
+//        由于返回的参数需要自定义，不是按userInfo表来返回的，所以不能直接getById
+//        return new CommonResult(200,"查询成功", userInfoService.getById(userId));
+    }
 
     @GetMapping("/{userId}")
     public CommonResult getPersonInfo(@PathVariable Integer userId) {

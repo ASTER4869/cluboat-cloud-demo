@@ -9,7 +9,7 @@
 
 
   <modules>
-    <module>cloud-user-login-8001</module>
+    <module>cloud-user-login</module>
     <module>cloud-api-common</module>
     <module>cloud-user-info</module>
     <module>cloud-examine</module>

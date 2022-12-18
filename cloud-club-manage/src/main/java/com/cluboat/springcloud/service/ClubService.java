@@ -7,5 +7,4 @@ import java.util.List;
 
 
 public interface ClubService extends IService<ClubEntity> {
-    public List<ClubEntity> GetAllClubByUserId(Integer id);
 }

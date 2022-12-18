@@ -81,13 +81,6 @@
             <version>${project.version}</version>
             <scope>compile</scope>
         </dependency>
-
-
-        <dependency>
-            <groupId>com.github.jeffreyning</groupId>
-            <artifactId>mybatisplus-plus</artifactId>
-            <version>1.5.1-RELEASE</version>
-        </dependency>
     </dependencies>
 
     <properties>
@@ -112,7 +105,6 @@
 
                 <configuration>
                     <includeSystemScope>true</includeSystemScope>
-                    <!--这里要注意更改-->
                     <mainClass>com.cluboat.springcloud.club_manage</mainClass>
                 </configuration>
             </plugin>

@@ -3,6 +3,7 @@ package com.cluboat.springcloud.entity;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.cluboat.springcloud.entity.param.ActivityParam;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
@@ -28,13 +29,13 @@ public class ActivityEntity {
     private String activityArea;
     @Basic
     @Column(name = "activity_start_time")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Timestamp activityStartTime;
     @Basic
     @Column(name = "activity_end_time")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Timestamp activityEndTime;
-    @Basic
-    @Column(name = "activity_is_pass")
-    private byte activityIsPass;
+
     @Basic
     @Column(name = "activity_content")
     private String activityContent;
@@ -95,13 +96,7 @@ public class ActivityEntity {
         this.activityEndTime = activityEndTime;
     }
 
-    public byte getActivityIsPass() {
-        return activityIsPass;
-    }
 
-    public void setActivityIsPass(byte activityIsPass) {
-        this.activityIsPass = activityIsPass;
-    }
 
     public String getActivityContent() {
         return activityContent;
@@ -116,11 +111,11 @@ public class ActivityEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ActivityEntity that = (ActivityEntity) o;
-        return activityId == that.activityId && clubId == that.clubId && activityIsPass == that.activityIsPass && Objects.equals(activityName, that.activityName) && Objects.equals(activityArea, that.activityArea) && Objects.equals(activityStartTime, that.activityStartTime) && Objects.equals(activityEndTime, that.activityEndTime) && Objects.equals(activityContent, that.activityContent);
+        return activityId == that.activityId && clubId == that.clubId  && Objects.equals(activityName, that.activityName) && Objects.equals(activityArea, that.activityArea) && Objects.equals(activityStartTime, that.activityStartTime) && Objects.equals(activityEndTime, that.activityEndTime) && Objects.equals(activityContent, that.activityContent);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(activityId, clubId, activityName, activityArea, activityStartTime, activityEndTime, activityIsPass, activityContent);
+        return Objects.hash(activityId, clubId, activityName, activityArea, activityStartTime, activityEndTime, activityContent);
     }
 }

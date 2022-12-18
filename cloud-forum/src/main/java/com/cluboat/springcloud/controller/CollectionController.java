@@ -19,13 +19,17 @@ public class CollectionController {
 
     @PostMapping
     public CommonResult InsertCollection(@RequestBody CollectionAddParam param){
-        CollectionEntity collection = new CollectionEntity();
-        collection.setPostId(param.getPostId());
-        collection.setUserId(param.getUserId());
-        boolean re = collectionService.save(collection);
-        if(re){
-            return new CommonResult(200, "添加成功", collection.getPostId());
-        } else {
+        CollectionEntity collectionEntity = new CollectionEntity();
+        collectionEntity.setPostId(param.getPostId());
+        collectionEntity.setUserId(param.getUserId());
+        try {
+            boolean re = collectionService.save(collectionEntity);
+            if(re){
+                return new CommonResult(200, "添加成功", collectionEntity.getPostId());
+            } else {
+                return new CommonResult(400, "添加失败");
+            }
+        }catch (Exception e){
             return new CommonResult(400, "添加失败");
         }
     }
@@ -36,7 +40,7 @@ public class CollectionController {
         if(collectionNum != 0){
             return new CommonResult(200, "删除成功", collectionNum);
         } else {
-            return new CommonResult(400, "删除失败");
+            return new CommonResult(444, "删除失败");
         }
     }
 }
