@@ -2,6 +2,7 @@ package com.cluboat.springcloud.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.cluboat.springcloud.entity.BelongEntity;
+import com.cluboat.springcloud.entity.DTO.GetClubStaffDTO;
 import com.cluboat.springcloud.entity.UserInfoEntity;
 import com.cluboat.springcloud.entity.DTO.UserInfoDTO;
 import com.cluboat.springcloud.mapper.UserInfoMapper;
@@ -19,10 +20,11 @@ public class UserInfoServiceImpl extends ServiceImpl<UserInfoMapper, UserInfoEnt
     UserInfoMapper userInfoMapper;
 
     @Override
-    public  List<UserInfoDTO> GetAllStaffByUserId(int clubId) {
-        List<UserInfoDTO> userInfoDTOList = userInfoMapper.selectJoinList(UserInfoDTO.class,
+    public  List<GetClubStaffDTO> GetAllStaffByUserId(int clubId) {
+        List<GetClubStaffDTO> userInfoDTOList = userInfoMapper.selectJoinList(GetClubStaffDTO.class,
                 new MPJLambdaWrapper<UserInfoEntity>()
                         .select(UserInfoEntity::getUserId,UserInfoEntity::getUserName)
+                        .select(BelongEntity::getPermission, BelongEntity::getState)
                         .leftJoin(BelongEntity.class, BelongEntity::getUserId, UserInfoEntity::getUserId)
                         .eq(BelongEntity::getClubId, clubId));
         return userInfoDTOList;

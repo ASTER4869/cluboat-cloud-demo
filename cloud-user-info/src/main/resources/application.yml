@@ -16,7 +16,7 @@ spring:
       enabled: true
     nacos:
       discovery:
-        ip: 1.15.156.161
+        ip: 49.235.115.50
         server-addr: 1.15.156.161:8848
 
 logging:
