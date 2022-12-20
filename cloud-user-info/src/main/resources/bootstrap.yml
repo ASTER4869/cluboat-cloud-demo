@@ -1,0 +1,29 @@
+#server:
+#  port: 8002
+#spring:
+#  application:
+#    name: cloud-user-info-service   #唯一名称
+#  cloud:
+#    nacos:
+#      discovery:
+#        ip: 49.235.115.50
+#        server-addr: 1.15.156.161:8848
+#      config:
+#        server-addr: 1.15.156.161:8848  #Nacos 链接地址
+#        group: DEFAULT_GROUP  # 默认分组就是DEFAULT_GROUP，如果使用默认分组可以不配置
+#        file-extension: yml   #默认properties
+#  config:
+#    activate:
+#      on-profile: public
+
+#spring:
+#  application:
+#    name: cloud-user-info-service
+#  cloud:
+#    nacos:
+#      discovery:
+#        ip: 49.235.115.50
+#        server-addr: 1.15.156.161:8848 #Nacos地址
+#      config:
+#        server-addr: 1.15.156.161:8848 #Nacos地址
+#        file-extension: yaml #这里我们获取的yaml格式的配置

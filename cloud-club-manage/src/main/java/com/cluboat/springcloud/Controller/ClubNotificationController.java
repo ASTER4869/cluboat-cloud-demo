@@ -2,6 +2,7 @@ package com.cluboat.springcloud.Controller;
 
 import com.cluboat.springcloud.entities.CommonResult;
 import com.cluboat.springcloud.entity.ActivityEntity;
+import com.cluboat.springcloud.entity.DTO.NotificationDTO;
 import com.cluboat.springcloud.entity.NewsEntity;
 import com.cluboat.springcloud.entity.NotificationEntity;
 import com.cluboat.springcloud.entity.param.NotificationParam;
@@ -23,10 +24,9 @@ public class ClubNotificationController {
     /* 根据社团id返回某社团所有新闻列表 */
     @GetMapping("/{sendUserId}")
     public CommonResult getAllClubNotificationById(@PathVariable("sendUserId") int id) {
-        List<NotificationEntity> notificationEntityList = notificationService.lambdaQuery()
-                .eq(NotificationEntity::getSendUserId, id).list();
-        if (notificationEntityList.size() > 0) {
-            return new CommonResult(200, "查询成功",notificationEntityList);
+        List<NotificationDTO> notificationDTOList = notificationService.GetNotificationBySendUserId(id);
+        if (notificationDTOList.size() > 0) {
+            return new CommonResult(200, "查询成功",notificationDTOList);
         } else {
             return new CommonResult(400, "无记录");
         }

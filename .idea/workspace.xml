@@ -11,9 +11,10 @@
   <component name="ChangeListManager">
     <list default="true" id="6d4d16d2-b824-45f3-a1a5-21313ed733a4" name="变更" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/Controller/ClubStaffController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/Controller/ClubStaffController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/service/UserInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/service/UserInfoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/service/impl/UserInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/service/impl/UserInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/Controller/ClubNotificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/Controller/ClubNotificationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/entity/NotificationEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/entity/NotificationEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/service/ClubNotificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/service/ClubNotificationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/service/impl/ClubNotificationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/service/impl/ClubNotificationServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-user-info/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-info/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -95,6 +96,9 @@
       <recent name="" />
       <recent name="com.cluboat.springcloud.entity.apply" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.cluboat.springcloud.entity.DTO" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
@@ -103,7 +107,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.forum">
+  <component name="RunManager" selected="Spring Boot.club_manage">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.cluboat.demo.springcloud.Main" />
       <module name="cloud-forum" />
@@ -286,7 +290,7 @@
       <workItem from="1670836160235" duration="3869000" />
       <workItem from="1671153282180" duration="3109000" />
       <workItem from="1671196385005" duration="9601000" />
-      <workItem from="1671242418057" duration="19302000" />
+      <workItem from="1671242418057" duration="30375000" />
     </task>
     <servers />
   </component>
