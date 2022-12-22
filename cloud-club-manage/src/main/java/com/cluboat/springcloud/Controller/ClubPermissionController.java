@@ -20,7 +20,7 @@ public class ClubPermissionController {
     @Resource
     BelongService belongService;
 
-    @GetMapping
+    @PostMapping
     public CommonResult getAllClubNotificationById(@RequestBody GetPermissionParam param) {
         LambdaQueryWrapper<BelongEntity> wrapper = new LambdaQueryWrapper<BelongEntity>()
                 .eq(BelongEntity::getUserId, param.getUserId())

@@ -37,10 +37,15 @@ public class ActivityEntity {
     private Timestamp activityEndTime;
 
     @Basic
+    @Column(name = "activity_is_pass")
+    private byte activityIsPass;
+
+    @Basic
     @Column(name = "activity_content")
     private String activityContent;
 
     public void setActivity(ActivityParam activityParam){
+        this.clubId = activityParam.clubId;
         this.activityContent = activityParam.activityContent;
         this.activityArea = activityParam.activityArea;
         this.activityName = activityParam.activityName;
@@ -78,6 +83,10 @@ public class ActivityEntity {
 
     public void setActivityArea(String activityArea) {
         this.activityArea = activityArea;
+    }
+
+    public void setActivityIsPass(byte isPass) {
+        this.activityIsPass = isPass;
     }
 
     public Timestamp getActivityStartTime() {
