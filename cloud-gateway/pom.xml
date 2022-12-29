@@ -50,6 +50,8 @@
             <artifactId>spring-cloud-starter-dubbo</artifactId>
         </dependency>
 
+
+
         <!--sentinel 核心环境 依赖-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>

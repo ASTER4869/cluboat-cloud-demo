@@ -21,11 +21,14 @@ public class NotificationServiceImpl  extends ServiceImpl<NotificationMapper, No
 
     @Override
     public List<NotificationDTO> GetMyNotification(Integer userId){
-        //第一个参数是接受返回参数的类，第二个参数中的类型是连接中的左表对应的DO
+//        //第一个参数是接受返回参数的类，第二个参数中的类型是连接中的左表对应的DO
+//        List<NotificationDTO> myNotificationList = notificationMapper.selectJoinList(NotificationDTO.class, new MPJLambdaWrapper<NotificationEntity>()
+//                .selectAll(NotificationEntity.class)
+//                .leftJoin(NotReceiverEntity.class, NotReceiverEntity::getNotificationId, NotificationEntity::getNotificationId)
+//                .eq(NotReceiverEntity::getReceiverId, userId));
         List<NotificationDTO> myNotificationList = notificationMapper.selectJoinList(NotificationDTO.class, new MPJLambdaWrapper<NotificationEntity>()
                 .selectAll(NotificationEntity.class)
-                .leftJoin(NotReceiverEntity.class, NotReceiverEntity::getNotificationId, NotificationEntity::getNotificationId)
-                .eq(NotReceiverEntity::getReceiverId, userId));
+                .eq(NotificationEntity::getSendUserId, userId));
         return myNotificationList;
     }
 }

@@ -11,10 +11,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6d4d16d2-b824-45f3-a1a5-21313ed733a4" name="变更" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/Controller/ClubActivityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/Controller/ClubActivityController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/Controller/ClubPermissionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/Controller/ClubPermissionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/entity/ActivityEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/entity/ActivityEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/entity/param/ActivityParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/entity/param/ActivityParam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/service/impl/NotificationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/service/impl/NotificationServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,36 +48,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "JPA.DatabaseSchemaImportDialog": "8049691a-bc80-42b5-9ec0-c4638bb187ed",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "D:/Code/SE-Backend/G-Errand-main/pom.xml",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "模块",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "spring.configuration.checksum": "9ab8ffd85c90676bc759ead872e92e5e"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;JPA.DatabaseSchemaImportDialog&quot;: &quot;8049691a-bc80-42b5-9ec0-c4638bb187ed&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Code/SE-Backend/G-Errand-main/pom.xml&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;89d6f87b3d8716d930e9af53b018e5fa&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -289,7 +287,10 @@
       <workItem from="1670836160235" duration="3869000" />
       <workItem from="1671153282180" duration="3109000" />
       <workItem from="1671196385005" duration="9601000" />
-      <workItem from="1671242418057" duration="36591000" />
+      <workItem from="1671242418057" duration="37191000" />
+      <workItem from="1672315009542" duration="647000" />
+      <workItem from="1672318590343" duration="2464000" />
+      <workItem from="1672324940577" duration="33000" />
     </task>
     <servers />
   </component>
