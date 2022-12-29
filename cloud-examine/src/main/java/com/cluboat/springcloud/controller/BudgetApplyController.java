@@ -24,7 +24,7 @@ public class BudgetApplyController {
         if (budgetApply != null) {
             return new CommonResult(200, "查询成功", budgetApply);
         } else {
-            return new CommonResult(444, "无记录");
+            return new CommonResult(400, "无记录");
         }
     }
     @GetMapping
@@ -34,7 +34,7 @@ public class BudgetApplyController {
         if (!budgetApply.isEmpty()) {
             return new CommonResult(200, "查询成功", budgetApply);
         } else {
-            return new CommonResult(444, "无记录");
+            return new CommonResult(400, "无记录");
         }
     }
     @DeleteMapping("/{id}")

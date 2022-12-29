@@ -34,7 +34,7 @@ public class ActivityApplyController {
         if (activityApply != null) {
             return new CommonResult(200, "查询成功", activityApply);
         } else {
-            return new CommonResult(444, "无记录");
+            return new CommonResult(400, "无记录");
         }
     }
 
@@ -44,7 +44,7 @@ public class ActivityApplyController {
         if (!activityApply.isEmpty()) {
             return new CommonResult(200, "查询成功", activityApply);
         } else {
-            return new CommonResult(444, "无记录");
+            return new CommonResult(400, "无记录");
         }
     }
 

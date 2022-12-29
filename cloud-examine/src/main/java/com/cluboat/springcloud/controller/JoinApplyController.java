@@ -1,7 +1,9 @@
 package com.cluboat.springcloud.controller;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.cluboat.springcloud.entities.CommonResult;
 import com.cluboat.springcloud.entity.Belong;
+import com.cluboat.springcloud.entity.ClubMaster;
 import com.cluboat.springcloud.entity.apply.JoinApplyEntity;
 import com.cluboat.springcloud.service.BelongService;
 import com.cluboat.springcloud.service.JoinApplyService;
@@ -10,6 +12,7 @@ import org.json.JSONObject;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -57,6 +60,19 @@ public class JoinApplyController {
         }
         else {
             return new CommonResult(400, "修改失败");
+        }
+
+    }
+    @GetMapping("/{id}")
+    public CommonResult getByClubId(@PathVariable("id") int id) {
+        QueryWrapper<JoinApplyEntity> wrapper=new QueryWrapper<>();
+        wrapper.eq("join_club_id",id);
+        List<JoinApplyEntity> joinApplyList = joinApplyService.list(wrapper);
+        if (!joinApplyList.isEmpty()) {
+            return new CommonResult(200, "查询成功",joinApplyList);
+        }
+        else {
+            return new CommonResult(400, "无记录");
         }
 
     }

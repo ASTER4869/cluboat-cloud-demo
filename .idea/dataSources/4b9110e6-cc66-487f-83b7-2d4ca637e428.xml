@@ -853,7 +853,7 @@ cluboat|schema||CluBoat||UPDATE|G</Grants>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
     <column id="251" parent="224" name="activity_id">
-      <AutoIncrement>6</AutoIncrement>
+      <AutoIncrement>25</AutoIncrement>
       <Comment>活动id</Comment>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
@@ -917,7 +917,7 @@ cluboat|schema||CluBoat||UPDATE|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="263" parent="225" name="activity_apply_id">
-      <AutoIncrement>6</AutoIncrement>
+      <AutoIncrement>12</AutoIncrement>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -989,7 +989,7 @@ cluboat|schema||CluBoat||UPDATE|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="277" parent="226" name="admin_apply_id">
-      <AutoIncrement>114517</AutoIncrement>
+      <AutoIncrement>114518</AutoIncrement>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1110,7 +1110,7 @@ user_id</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="299" parent="228" name="budget_apply_id">
-      <AutoIncrement>8</AutoIncrement>
+      <AutoIncrement>18</AutoIncrement>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1177,7 +1177,7 @@ user_id</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="312" parent="229" name="club_id">
-      <AutoIncrement>10</AutoIncrement>
+      <AutoIncrement>14</AutoIncrement>
       <Comment>社团id</Comment>
       <DataType>int(11) unsigned|0s</DataType>
       <NotNull>1</NotNull>
@@ -1270,7 +1270,7 @@ club_id</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="329" parent="231" name="build_apply_id">
-      <AutoIncrement>5</AutoIncrement>
+      <AutoIncrement>12</AutoIncrement>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1326,7 +1326,7 @@ club_id</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="340" parent="232" name="cancel_apply_id">
-      <AutoIncrement>9</AutoIncrement>
+      <AutoIncrement>10</AutoIncrement>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1402,7 +1402,7 @@ club_id</ColNames>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <foreign-key id="355" parent="233" name="collection_ibfk_1">
+    <foreign-key id="355" parent="233" name="collection_ibfk_3">
       <ColNames>post_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
@@ -1432,7 +1432,6 @@ user_id</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="360" parent="234" name="comment_id">
-      <AutoIncrement>3</AutoIncrement>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1464,10 +1463,8 @@ user_id</ColNames>
       <RefColNames>user_id</RefColNames>
       <RefTableName>user</RefTableName>
     </foreign-key>
-    <foreign-key id="366" parent="234" name="comment_ibfk_2">
+    <foreign-key id="366" parent="234" name="comment_ibfk_4">
       <ColNames>post_id</ColNames>
-      <OnDelete>cascade</OnDelete>
-      <OnUpdate>cascade</OnUpdate>
       <RefColNames>post_id</RefColNames>
       <RefTableName>post</RefTableName>
     </foreign-key>
@@ -1532,7 +1529,7 @@ user_id</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="378" parent="236" name="join_apply_id">
-      <AutoIncrement>7</AutoIncrement>
+      <AutoIncrement>15</AutoIncrement>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1544,7 +1541,7 @@ user_id</ColNames>
       <Position>2</Position>
     </column>
     <column id="380" parent="236" name="join_club_id">
-      <Comment>申请社团名字</Comment>
+      <Comment>申请社团id</Comment>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
@@ -1614,7 +1611,7 @@ user_id</ColNames>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <foreign-key id="393" parent="237" name="likes_ibfk_1">
+    <foreign-key id="393" parent="237" name="likes_ibfk_3">
       <ColNames>post_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
@@ -1644,7 +1641,7 @@ user_id</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="398" parent="238" name="news_id">
-      <AutoIncrement>6</AutoIncrement>
+      <AutoIncrement>9</AutoIncrement>
       <Comment>资讯id</Comment>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
@@ -1752,7 +1749,7 @@ receiver_id</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="417" parent="240" name="notification_id">
-      <AutoIncrement>9</AutoIncrement>
+      <AutoIncrement>16</AutoIncrement>
       <Comment>通知id</Comment>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
@@ -1809,9 +1806,9 @@ receiver_id</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="428" parent="241" name="post_id">
+      <AutoIncrement>21</AutoIncrement>
       <Comment>帖子id</Comment>
       <DataType>int(10) unsigned|0s</DataType>
-      <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
@@ -1885,7 +1882,7 @@ receiver_id</ColNames>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <foreign-key id="442" parent="242" name="post_tag_ibfk_1">
+    <foreign-key id="442" parent="242" name="post_tag_ibfk_3">
       <ColNames>post_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
@@ -1915,7 +1912,7 @@ tag_name</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="447" parent="243" name="pubnot_id">
-      <AutoIncrement>5</AutoIncrement>
+      <AutoIncrement>34</AutoIncrement>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1963,7 +1960,7 @@ tag_name</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="456" parent="244" name="reim_apply_id">
-      <AutoIncrement>4</AutoIncrement>
+      <AutoIncrement>9</AutoIncrement>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -2050,7 +2047,7 @@ tag_name</ColNames>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <foreign-key id="473" parent="245" name="report_ibfk_1">
+    <foreign-key id="473" parent="245" name="report_ibfk_3">
       <ColNames>post_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
@@ -2156,7 +2153,7 @@ tag_name</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="493" parent="248" name="user_id">
-      <AutoIncrement>17</AutoIncrement>
+      <AutoIncrement>28</AutoIncrement>
       <Comment>用户id</Comment>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
@@ -2230,7 +2227,7 @@ club_id</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="506" parent="250" name="user_id">
-      <AutoIncrement>17</AutoIncrement>
+      <AutoIncrement>28</AutoIncrement>
       <Comment>用户id</Comment>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>

@@ -23,7 +23,7 @@ public class ReimApplyController {
         if (reimApply != null) {
             return new CommonResult(200, "查询成功", reimApply);
         } else {
-            return new CommonResult(444, "无记录");
+            return new CommonResult(400, "无记录");
         }
     }
     @GetMapping
@@ -33,7 +33,7 @@ public class ReimApplyController {
         if (!reimApply.isEmpty()) {
             return new CommonResult(200, "查询成功", reimApply);
         } else {
-            return new CommonResult(444, "无记录");
+            return new CommonResult(400, "无记录");
         }
     }
     @DeleteMapping("/{id}")
