@@ -101,7 +101,7 @@
 
                 <configuration>
                     <includeSystemScope>true</includeSystemScope>
-                    <mainClass>com.cluboat.springcloud.examine</mainClass>
+                    <mainClass>com.cluboat.springcloud.NacosGatewayApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>

@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController
 @Slf4j
-@RequestMapping("/reimapply")
+@RequestMapping("/reim-apply")
 public class ReimApplyController {
     @Resource
     private ReimApplyService reimApplyService;
@@ -23,26 +23,28 @@ public class ReimApplyController {
         if (reimApply != null) {
             return new CommonResult(200, "查询成功", reimApply);
         } else {
-            return new CommonResult(444, "无记录");
+            return new CommonResult(400, "无记录");
         }
     }
     @GetMapping
     public CommonResult getReimApplyById() {
         List<ReimApplyEntity> reimApply = reimApplyService.list();
         log.info("****插入结果：{payment}");
-        if (reimApply != null) {
+        if (!reimApply.isEmpty()) {
             return new CommonResult(200, "查询成功", reimApply);
         } else {
-            return new CommonResult(444, "无记录");
+            return new CommonResult(400, "无记录");
         }
     }
     @DeleteMapping("/{id}")
     public CommonResult removeById(@PathVariable("id") int id) {
         boolean isSuccess = reimApplyService.removeById(id);
-        if (isSuccess)
+        if (isSuccess) {
             return new CommonResult(200, "删除成功");
-        else
+        }
+        else {
             return new CommonResult(400, "删除失败");
+        }
 
     }
 

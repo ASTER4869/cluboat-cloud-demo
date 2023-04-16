@@ -14,7 +14,9 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: localhost:8848
+        ip: 124.70.158.106
+        server-addr: 1.15.156.161:8848
+
 logging:
   pattern:
     console: "[%thread] %-5level %logger{36} - %msg%n"

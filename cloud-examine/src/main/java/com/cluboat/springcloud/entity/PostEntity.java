@@ -1,5 +1,7 @@
 package com.cluboat.springcloud.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.Objects;
@@ -13,6 +15,7 @@ public class PostEntity {
     private int postId;
     @Basic
     @Column(name = "post_time")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Timestamp postTime;
     @Basic
     @Column(name = "is_top")
