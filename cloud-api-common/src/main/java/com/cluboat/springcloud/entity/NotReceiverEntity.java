@@ -13,7 +13,7 @@ import java.util.Objects;
 public class NotReceiverEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @TableId
+//    @TableId
     @Column(name = "notification_id")
     private int notificationId;
     @GeneratedValue(strategy = GenerationType.IDENTITY)

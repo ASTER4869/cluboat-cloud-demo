@@ -2,7 +2,6 @@ package com.cluboat.springcloud.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.cluboat.springcloud.entity.param.NotificationParam;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
@@ -11,7 +10,7 @@ import java.util.Objects;
 @Entity
 @TableName("notification")
 @Table(name = "notification", schema = "cluboat", catalog = "")
-public class NotificationEntity {
+public class NotificationEntity111 {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @TableId("notification_id")
@@ -25,18 +24,26 @@ public class NotificationEntity {
     private Integer sendUserId;
     @Basic
     @Column(name = "notification_title")
+//    @TableField(value = "notification＿title")
     private String notificationTitle;
     @Basic
     @Column(name = "notification_content")
+//    @TableField(value = "notification＿content")
     private String notificationContent;
     @Basic
     @Column(name = "notification_time")
     private Timestamp notificationTime;
     @Basic
-    @Column(name = "sender_type")
-    private byte senderType;
+    @Column(name = "is_admin")
+    private byte isAdmin;
 
+    public String getNotificationTitle() {
+        return notificationTitle;
+    }
 
+    public void setNotificationTitle(String notificationTitle) {
+        this.notificationTitle = notificationTitle;
+    }
 
     public int getNotificationId() {
         return notificationId;
@@ -62,12 +69,8 @@ public class NotificationEntity {
         this.sendUserId = sendUserId;
     }
 
-    public String getNotificationTitle() {
+    public String getNotification＿Title() {
         return notificationTitle;
-    }
-
-    public void setNotificationTitle(String notificationTitle) {
-        this.notificationTitle = notificationTitle;
     }
 
     public String getNotificationContent() {
@@ -86,26 +89,24 @@ public class NotificationEntity {
         this.notificationTime = notificationTime;
     }
 
-    public byte getSenderType() {
-        return senderType;
+    public byte getIsAdmin() {
+        return isAdmin;
     }
 
-    public void setSenderType(byte senderType) {
-        this.senderType = senderType;
+    public void setIsAdmin(byte isAdmin) {
+        this.isAdmin = isAdmin;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        NotificationEntity that = (NotificationEntity) o;
-        return notificationId == that.notificationId && senderType == that.senderType && Objects.equals(sendAdminId, that.sendAdminId) && Objects.equals(sendUserId, that.sendUserId) && Objects.equals(notificationTitle, that.notificationTitle) && Objects.equals(notificationContent, that.notificationContent) && Objects.equals(notificationTime, that.notificationTime);
+        NotificationEntity111 that = (NotificationEntity111) o;
+        return notificationId == that.notificationId && isAdmin == that.isAdmin && Objects.equals(sendAdminId, that.sendAdminId) && Objects.equals(sendUserId, that.sendUserId) && Objects.equals(notificationTitle, that.notificationTitle) && Objects.equals(notificationContent, that.notificationContent) && Objects.equals(notificationTime, that.notificationTime);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(notificationId, sendAdminId, sendUserId, notificationTitle, notificationContent, notificationTime, senderType);
+        return Objects.hash(notificationId, sendAdminId, sendUserId, notificationTitle, notificationContent, notificationTime, isAdmin);
     }
-
-
 }

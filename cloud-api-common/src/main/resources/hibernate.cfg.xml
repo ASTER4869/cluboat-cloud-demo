@@ -7,6 +7,7 @@
     <property name="connection.url">jdbc:mysql://1.15.156.161:3306</property>
     <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
     <property name="connection.username">CluBoat</property>
+    <property name="connection.password">bf2mZnLFRpyy2JGE</property>
     <mapping class="com.cluboat.springcloud.entity.ActivityEntity"/>
     <mapping class="com.cluboat.springcloud.entity.ActivityApplyEntity"/>
     <mapping class="com.cluboat.springcloud.entity.AdminApplyEntity"/>
@@ -22,7 +23,7 @@
     <mapping class="com.cluboat.springcloud.entity.LikesEntity"/>
     <mapping class="com.cluboat.springcloud.entity.NewsEntity"/>
     <mapping class="com.cluboat.springcloud.entity.NotReceiverEntity"/>
-    <mapping class="com.cluboat.springcloud.entity.NotificationEntity"/>
+<!--    <mapping class="com.cluboat.springcloud.entity.NotificationEntity"/>-->
     <mapping class="com.cluboat.springcloud.entity.PostEntity"/>
     <mapping class="com.cluboat.springcloud.entity.PostTagEntity"/>
     <mapping class="com.cluboat.springcloud.entity.PubnotEntity"/>
@@ -34,6 +35,7 @@
     <mapping class="com.cluboat.springcloud.entity.UserClubEntity"/>
     <mapping class="com.cluboat.springcloud.entity.UserInfoEntity"/>
     <mapping class="com.cluboat.springcloud.entity.BelongEntity"/>
+    <mapping class="com.cluboat.springcloud.entity.NotificationEntity"/>
     <!-- <property name="connection.username"/> -->
     <!-- <property name="connection.password"/> -->
 

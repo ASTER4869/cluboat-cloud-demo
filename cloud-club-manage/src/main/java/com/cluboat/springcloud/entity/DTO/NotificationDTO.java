@@ -19,6 +19,7 @@ public class NotificationDTO {
 
     private Integer sendAdminId;
     private Integer sendUserId;
+    private Integer receiverId;
     @Basic
     @Column(name = "notification＿title")
     @TableField(value = "notification＿title")
@@ -30,5 +31,5 @@ public class NotificationDTO {
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Timestamp notificationTime;
 
-    private byte isAdmin;
+    private byte senderType;
 }

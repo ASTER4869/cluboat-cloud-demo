@@ -8,4 +8,7 @@ import java.util.List;
 
 public interface NotificationService extends IService<NotificationEntity> {
     public List<NotificationDTO> GetMyNotification(Integer userId);
+    public List<NotificationDTO> GetAllNotification();
+
+
 }

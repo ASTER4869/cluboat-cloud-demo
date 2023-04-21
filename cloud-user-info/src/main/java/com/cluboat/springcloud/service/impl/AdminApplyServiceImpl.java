@@ -2,10 +2,7 @@ package com.cluboat.springcloud.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.cluboat.springcloud.entity.AdminApplyEntity;
-import com.cluboat.springcloud.entity.NotReceiverEntity;
-import com.cluboat.springcloud.entity.NotificationEntity;
 import com.cluboat.springcloud.entity.dto.AdminApplyDTO;
-import com.cluboat.springcloud.entity.dto.NotificationDTO;
 import com.cluboat.springcloud.mapper.AdminApplyMapper;
 import com.cluboat.springcloud.service.AdminApplyService;
 import com.github.yulichang.wrapper.MPJLambdaWrapper;

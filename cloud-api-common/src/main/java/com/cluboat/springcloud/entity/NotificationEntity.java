@@ -1,8 +1,8 @@
 package com.cluboat.springcloud.entity;
 
-import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
@@ -24,19 +24,17 @@ public class NotificationEntity {
     @Column(name = "send_user_id")
     private Integer sendUserId;
     @Basic
-    @Column(name = "notification＿title")
-//    @TableField(value = "notification＿title")
+    @Column(name = "notification_title")
     private String notificationTitle;
     @Basic
-    @Column(name = "notification＿content")
-//    @TableField(value = "notification＿content")
+    @Column(name = "notification_content")
     private String notificationContent;
     @Basic
     @Column(name = "notification_time")
     private Timestamp notificationTime;
     @Basic
-    @Column(name = "is_admin")
-    private byte isAdmin;
+    @Column(name = "sender_type")
+    private byte senderType;
 
     public int getNotificationId() {
         return notificationId;
@@ -62,7 +60,7 @@ public class NotificationEntity {
         this.sendUserId = sendUserId;
     }
 
-    public String getNotification＿Title() {
+    public String getNotificationTitle() {
         return notificationTitle;
     }
 
@@ -86,12 +84,12 @@ public class NotificationEntity {
         this.notificationTime = notificationTime;
     }
 
-    public byte getIsAdmin() {
-        return isAdmin;
+    public byte getSenderType() {
+        return senderType;
     }
 
-    public void setIsAdmin(byte isAdmin) {
-        this.isAdmin = isAdmin;
+    public void setSenderType(byte senderType) {
+        this.senderType = senderType;
     }
 
     @Override
@@ -99,11 +97,11 @@ public class NotificationEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         NotificationEntity that = (NotificationEntity) o;
-        return notificationId == that.notificationId && isAdmin == that.isAdmin && Objects.equals(sendAdminId, that.sendAdminId) && Objects.equals(sendUserId, that.sendUserId) && Objects.equals(notificationTitle, that.notificationTitle) && Objects.equals(notificationContent, that.notificationContent) && Objects.equals(notificationTime, that.notificationTime);
+        return notificationId == that.notificationId && senderType == that.senderType && Objects.equals(sendAdminId, that.sendAdminId) && Objects.equals(sendUserId, that.sendUserId) && Objects.equals(notificationTitle, that.notificationTitle) && Objects.equals(notificationContent, that.notificationContent) && Objects.equals(notificationTime, that.notificationTime);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(notificationId, sendAdminId, sendUserId, notificationTitle, notificationContent, notificationTime, isAdmin);
+        return Objects.hash(notificationId, sendAdminId, sendUserId, notificationTitle, notificationContent, notificationTime, senderType);
     }
 }

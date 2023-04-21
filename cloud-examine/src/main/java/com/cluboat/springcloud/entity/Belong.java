@@ -10,4 +10,11 @@ public class Belong {
     int userId;
     int permission;
     int state;
+
+    public int getClubId() {
+        return clubId;
+    }
+    public int getUserId() {
+        return userId;
+    }
 }

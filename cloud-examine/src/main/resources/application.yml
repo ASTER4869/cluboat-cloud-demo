@@ -14,7 +14,8 @@ spring:
   cloud:
     nacos:
       discovery:
-        ip: 124.70.158.106
+#        ip: 124.70.158.106
+        ip: 1.15.156.161
         server-addr: 1.15.156.161:8848
 
 logging:
