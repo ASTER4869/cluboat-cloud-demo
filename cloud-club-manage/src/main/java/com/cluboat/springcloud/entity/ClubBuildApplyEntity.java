@@ -34,8 +34,8 @@ public class ClubBuildApplyEntity {
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Timestamp buildApplyTime;
     @Basic
-    @Column(name = "build_apply_is_pass")
-    private int buildApplyIsPass;
+    @Column(name = "status")
+    private String status;
     @Basic
     @Column(name = "admin_club_name")
     private String adminClubName;
@@ -81,12 +81,12 @@ public class ClubBuildApplyEntity {
         this.buildApplyTime = buildApplyTime;
     }
 
-    public int getBuildApplyIsPass() {
-        return buildApplyIsPass;
+    public String getStatus() {
+        return status;
     }
 
-    public void setBuildApplyIsPass(int buildApplyIsPass) {
-        this.buildApplyIsPass = buildApplyIsPass;
+    public void setStatus(String inStatus) {
+        this.status = inStatus;
     }
 
     public String getAdminClubName() {
@@ -102,11 +102,11 @@ public class ClubBuildApplyEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ClubBuildApplyEntity that = (ClubBuildApplyEntity) o;
-        return buildApplyId == that.buildApplyId && userId == that.userId && buildApplyIsPass == that.buildApplyIsPass && Objects.equals(buildApplyReason, that.buildApplyReason) && Objects.equals(buildApplyTime, that.buildApplyTime) && Objects.equals(adminClubName, that.adminClubName);
+        return buildApplyId == that.buildApplyId && userId == that.userId && status == that.status && Objects.equals(buildApplyReason, that.buildApplyReason) && Objects.equals(buildApplyTime, that.buildApplyTime) && Objects.equals(adminClubName, that.adminClubName);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(buildApplyId, userId, buildApplyReason, buildApplyTime, buildApplyIsPass, adminClubName);
+        return Objects.hash(buildApplyId, userId, buildApplyReason, buildApplyTime, status, adminClubName);
     }
 }

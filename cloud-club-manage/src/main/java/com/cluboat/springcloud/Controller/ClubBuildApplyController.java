@@ -28,7 +28,7 @@ public class ClubBuildApplyController {
     public CommonResult createBuildApply(@RequestBody ClubBuildApplyParam clubBuildApplyParam) {
         ClubBuildApplyEntity clubBuildApply = new ClubBuildApplyEntity();
         clubBuildApply.setFeedback(null);  //提交申请没有反馈！
-        clubBuildApply.setBuildApplyIsPass((byte) 0);  //初始未通过！
+        clubBuildApply.setStatus("待审批");  //初始未通过！
 
         clubBuildApplyParam.buildApplyTime =  new Timestamp(System.currentTimeMillis());
         clubBuildApply.setBuildApply(clubBuildApplyParam);

@@ -8,7 +8,7 @@
     <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
     <property name="connection.username">CluBoat</property>
     <property name="connection.password">bf2mZnLFRpyy2JGE</property>
-    <mapping class="com.cluboat.springcloud.entity.ActivityEntity"/>
+      <mapping class="com.cluboat.springcloud.entity.ActivityEntity"/>
     <mapping class="com.cluboat.springcloud.entity.ActivityApplyEntity"/>
     <mapping class="com.cluboat.springcloud.entity.AdminApplyEntity"/>
     <mapping class="com.cluboat.springcloud.entity.BudgetApplyEntity"/>
@@ -36,7 +36,11 @@
     <mapping class="com.cluboat.springcloud.entity.UserInfoEntity"/>
     <mapping class="com.cluboat.springcloud.entity.BelongEntity"/>
     <mapping class="com.cluboat.springcloud.entity.NotificationEntity"/>
-    <!-- <property name="connection.username"/> -->
+      <mapping class="com.cluboat.springcloud.entity.BudgetsEntity"/>
+      <mapping class="com.cluboat.springcloud.entity.ReimAttachEntity"/>
+      <mapping class="com.cluboat.springcloud.entity.ReimbursementsEntity"/>
+      <mapping class="com.cluboat.springcloud.entity.BudgetItemEntity"/>
+      <!-- <property name="connection.username"/> -->
     <!-- <property name="connection.password"/> -->
 
     <!-- DB schema will be updated if needed -->

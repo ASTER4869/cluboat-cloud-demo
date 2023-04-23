@@ -26,11 +26,14 @@ public class ClubBuildApplyEntity {
     @Column(name = "build_apply_time")
     private Timestamp buildApplyTime;
     @Basic
-    @Column(name = "build_apply_is_pass")
-    private byte buildApplyIsPass;
-    @Basic
     @Column(name = "admin_club_name")
     private String adminClubName;
+    @Basic
+    @Column(name = "status")
+    private String status;
+    @Basic
+    @Column(name = "feedback")
+    private String feedback;
 
     public int getBuildApplyId() {
         return buildApplyId;
@@ -64,14 +67,6 @@ public class ClubBuildApplyEntity {
         this.buildApplyTime = buildApplyTime;
     }
 
-    public byte getBuildApplyIsPass() {
-        return buildApplyIsPass;
-    }
-
-    public void setBuildApplyIsPass(byte buildApplyIsPass) {
-        this.buildApplyIsPass = buildApplyIsPass;
-    }
-
     public String getAdminClubName() {
         return adminClubName;
     }
@@ -80,16 +75,32 @@ public class ClubBuildApplyEntity {
         this.adminClubName = adminClubName;
     }
 
+    public Object getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getFeedback() {
+        return feedback;
+    }
+
+    public void setFeedback(String feedback) {
+        this.feedback = feedback;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ClubBuildApplyEntity that = (ClubBuildApplyEntity) o;
-        return buildApplyId == that.buildApplyId && userId == that.userId && buildApplyIsPass == that.buildApplyIsPass && Objects.equals(buildApplyReason, that.buildApplyReason) && Objects.equals(buildApplyTime, that.buildApplyTime) && Objects.equals(adminClubName, that.adminClubName);
+        return buildApplyId == that.buildApplyId && userId == that.userId && Objects.equals(buildApplyReason, that.buildApplyReason) && Objects.equals(buildApplyTime, that.buildApplyTime) && Objects.equals(adminClubName, that.adminClubName) && Objects.equals(status, that.status) && Objects.equals(feedback, that.feedback);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(buildApplyId, userId, buildApplyReason, buildApplyTime, buildApplyIsPass, adminClubName);
+        return Objects.hash(buildApplyId, userId, buildApplyReason, buildApplyTime, status, adminClubName, feedback);
     }
 }

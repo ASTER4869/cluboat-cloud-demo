@@ -751,1541 +751,1807 @@ cluboat|schema||CluBoat||UPDATE|G</Grants>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="229" parent="221" name="club">
+    <table id="229" parent="221" name="budget_item">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="230" parent="221" name="club_admin">
+    <table id="230" parent="221" name="budgets">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="231" parent="221" name="club_build_apply">
+    <table id="231" parent="221" name="club">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="232" parent="221" name="club_cancel_apply">
+    <table id="232" parent="221" name="club_admin">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="233" parent="221" name="collection">
+    <table id="233" parent="221" name="club_build_apply">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </table>
+    <table id="234" parent="221" name="club_cancel_apply">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </table>
+    <table id="235" parent="221" name="collection">
       <Comment>用户的帖子收藏</Comment>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="234" parent="221" name="comment">
+    <table id="236" parent="221" name="comment">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="235" parent="221" name="follow">
+    <table id="237" parent="221" name="follow">
       <Comment>用户_活动的关注表</Comment>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="236" parent="221" name="join_apply">
+    <table id="238" parent="221" name="join_apply">
       <Comment>入社申请</Comment>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="237" parent="221" name="likes">
+    <table id="239" parent="221" name="likes">
       <Comment>点赞，只能对帖子,另外，他说like是mysql保留字，所以起这个名</Comment>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="238" parent="221" name="news">
+    <table id="240" parent="221" name="news">
       <Comment>社团资讯</Comment>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="239" parent="221" name="not_receiver">
+    <table id="241" parent="221" name="not_receiver">
       <Comment>用户接受通知的表</Comment>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="240" parent="221" name="notification">
+    <table id="242" parent="221" name="notification">
       <Comment>私发通知，注意！取消了外码，否则有很多破烦事 两个id默认null</Comment>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="241" parent="221" name="post">
+    <table id="243" parent="221" name="post">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="242" parent="221" name="post_tag">
+    <table id="244" parent="221" name="post_tag">
       <Comment>帖子所属标签</Comment>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="243" parent="221" name="pubnot">
+    <table id="245" parent="221" name="pubnot">
       <Comment>公告</Comment>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="244" parent="221" name="reim_apply">
+    <table id="246" parent="221" name="reim_apply">
       <Comment>报销申请</Comment>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="245" parent="221" name="report">
+    <table id="247" parent="221" name="reim_attach">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="246" parent="221" name="sys_admin">
+    <table id="248" parent="221" name="reimbursements">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="247" parent="221" name="tag">
+    <table id="249" parent="221" name="report">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </table>
+    <table id="250" parent="221" name="sys_admin">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </table>
+    <table id="251" parent="221" name="tag">
       <Comment>社团论坛标签</Comment>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="248" parent="221" name="user">
+    <table id="252" parent="221" name="user">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="249" parent="221" name="user_club">
+    <table id="253" parent="221" name="user_club">
       <Comment>用户-社团关系表</Comment>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="250" parent="221" name="user_info">
+    <table id="254" parent="221" name="user_info">
       <Comment>用户信息</Comment>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <column id="251" parent="224" name="activity_id">
-      <AutoIncrement>25</AutoIncrement>
+    <column id="255" parent="224" name="activity_id">
+      <AutoIncrement>24</AutoIncrement>
       <Comment>活动id</Comment>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="252" parent="224" name="club_id">
+    <column id="256" parent="224" name="club_id">
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="253" parent="224" name="activity_name">
+    <column id="257" parent="224" name="activity_name">
       <Comment>活动名字</Comment>
       <DataType>varchar(20)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="254" parent="224" name="activity_area">
+    <column id="258" parent="224" name="activity_area">
       <Comment>活动地点</Comment>
       <DataType>varchar(30)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="255" parent="224" name="activity_start_time">
+    <column id="259" parent="224" name="activity_start_time">
       <Comment>活动起始时间</Comment>
       <DataType>timestamp|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="256" parent="224" name="activity_end_time">
+    <column id="260" parent="224" name="activity_end_time">
       <Comment>活动结束时间</Comment>
       <DataType>timestamp|0s</DataType>
       <Position>6</Position>
     </column>
-    <column id="257" parent="224" name="activity_content">
+    <column id="261" parent="224" name="activity_content">
       <Comment>活动内容</Comment>
       <DataType>text|0s</DataType>
       <Position>7</Position>
     </column>
-    <column id="258" parent="224" name="activity_is_pass">
+    <column id="262" parent="224" name="activity_is_pass">
       <Comment>1是通过 0是没有</Comment>
       <DataType>tinyint(4)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>8</Position>
     </column>
-    <foreign-key id="259" parent="224" name="activity_ibfk_1">
+    <foreign-key id="263" parent="224" name="activity_ibfk_1">
       <ColNames>club_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>club_id</RefColNames>
       <RefTableName>club</RefTableName>
     </foreign-key>
-    <index id="260" parent="224" name="PRIMARY">
+    <index id="264" parent="224" name="PRIMARY">
       <ColNames>activity_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="261" parent="224" name="club_id">
+    <index id="265" parent="224" name="club_id">
       <ColNames>club_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="262" parent="224" name="PRIMARY">
+    <key id="266" parent="224" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="263" parent="225" name="activity_apply_id">
+    <column id="267" parent="225" name="activity_apply_id">
       <AutoIncrement>12</AutoIncrement>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="264" parent="225" name="user_id">
+    <column id="268" parent="225" name="user_id">
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="265" parent="225" name="club_id">
+    <column id="269" parent="225" name="club_id">
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="266" parent="225" name="activity_apply_reason">
+    <column id="270" parent="225" name="activity_apply_reason">
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="267" parent="225" name="activity_apply_is_pass">
+    <column id="271" parent="225" name="activity_apply_is_pass">
       <Comment>0 审核中 1通过 2没通过</Comment>
       <DataType>tinyint(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="268" parent="225" name="activity_apply_time">
+    <column id="272" parent="225" name="activity_apply_time">
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <column id="269" parent="225" name="feedback">
+    <column id="273" parent="225" name="feedback">
       <DataType>text|0s</DataType>
       <Position>7</Position>
     </column>
-    <foreign-key id="270" parent="225" name="activity_apply_ibfk_1">
+    <foreign-key id="274" parent="225" name="activity_apply_ibfk_1">
       <ColNames>user_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>user_id</RefColNames>
       <RefTableName>user</RefTableName>
     </foreign-key>
-    <foreign-key id="271" parent="225" name="activity_apply_ibfk_2">
+    <foreign-key id="275" parent="225" name="activity_apply_ibfk_2">
       <ColNames>club_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>club_id</RefColNames>
       <RefTableName>club</RefTableName>
     </foreign-key>
-    <index id="272" parent="225" name="PRIMARY">
+    <index id="276" parent="225" name="PRIMARY">
       <ColNames>activity_apply_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="273" parent="225" name="user_id">
+    <index id="277" parent="225" name="user_id">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="274" parent="225" name="user_id_2">
+    <index id="278" parent="225" name="user_id_2">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="275" parent="225" name="club_id">
+    <index id="279" parent="225" name="club_id">
       <ColNames>club_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="276" parent="225" name="PRIMARY">
+    <key id="280" parent="225" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="277" parent="226" name="admin_apply_id">
+    <column id="281" parent="226" name="admin_apply_id">
       <AutoIncrement>114520</AutoIncrement>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="278" parent="226" name="user_id">
+    <column id="282" parent="226" name="user_id">
       <Comment>申请人</Comment>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="279" parent="226" name="admin_club_id">
+    <column id="283" parent="226" name="admin_club_id">
       <Comment>申请的社团id</Comment>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="280" parent="226" name="admin_apply_reason">
+    <column id="284" parent="226" name="admin_apply_reason">
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="281" parent="226" name="admin_apply_is_pass">
+    <column id="285" parent="226" name="admin_apply_is_pass">
       <Comment>0 审核中 1通过 2没通过</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="282" parent="226" name="admin_apply_time">
+    <column id="286" parent="226" name="admin_apply_time">
       <Comment>申请时间</Comment>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <column id="283" parent="226" name="feedback">
+    <column id="287" parent="226" name="feedback">
       <DataType>text|0s</DataType>
       <Position>7</Position>
     </column>
-    <foreign-key id="284" parent="226" name="admin_apply_ibfk_1">
+    <foreign-key id="288" parent="226" name="admin_apply_ibfk_1">
       <ColNames>user_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>user_id</RefColNames>
       <RefTableName>user</RefTableName>
     </foreign-key>
-    <foreign-key id="285" parent="226" name="admin_apply_ibfk_2">
+    <foreign-key id="289" parent="226" name="admin_apply_ibfk_2">
       <ColNames>admin_club_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>club_id</RefColNames>
       <RefTableName>club</RefTableName>
     </foreign-key>
-    <index id="286" parent="226" name="PRIMARY">
+    <index id="290" parent="226" name="PRIMARY">
       <ColNames>admin_apply_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="287" parent="226" name="user_id">
+    <index id="291" parent="226" name="user_id">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="288" parent="226" name="admin_club_id">
+    <index id="292" parent="226" name="admin_club_id">
       <ColNames>admin_club_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="289" parent="226" name="PRIMARY">
+    <key id="293" parent="226" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="290" parent="227" name="club_id">
+    <column id="294" parent="227" name="club_id">
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="291" parent="227" name="user_id">
+    <column id="295" parent="227" name="user_id">
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="292" parent="227" name="permission">
+    <column id="296" parent="227" name="permission">
       <Comment>0社员 1管理员 2社长</Comment>
       <DataType>tinyint(4)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="293" parent="227" name="state">
+    <column id="297" parent="227" name="state">
       <Comment>0没事 1永封</Comment>
       <DataType>tinyint(4)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <foreign-key id="294" parent="227" name="belong_ibfk_1">
+    <foreign-key id="298" parent="227" name="belong_ibfk_1">
       <ColNames>club_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>club_id</RefColNames>
       <RefTableName>club</RefTableName>
     </foreign-key>
-    <foreign-key id="295" parent="227" name="belong_ibfk_2">
+    <foreign-key id="299" parent="227" name="belong_ibfk_2">
       <ColNames>user_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>user_id</RefColNames>
       <RefTableName>user</RefTableName>
     </foreign-key>
-    <index id="296" parent="227" name="PRIMARY">
+    <index id="300" parent="227" name="PRIMARY">
       <ColNames>club_id
 user_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="297" parent="227" name="user_id">
+    <index id="301" parent="227" name="user_id">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="298" parent="227" name="PRIMARY">
+    <key id="302" parent="227" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="299" parent="228" name="budget_apply_id">
-      <AutoIncrement>22</AutoIncrement>
+    <column id="303" parent="228" name="budget_apply_id">
+      <AutoIncrement>28</AutoIncrement>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="300" parent="228" name="user_id">
+    <column id="304" parent="228" name="user_id">
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="301" parent="228" name="club_id">
+    <column id="305" parent="228" name="club_id">
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="302" parent="228" name="budget_apply_reason">
+    <column id="306" parent="228" name="budget_apply_reason">
       <Comment>申请理由</Comment>
       <DataType>text|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="303" parent="228" name="budget_apply_is_pass">
+    <column id="307" parent="228" name="budget_apply_is_pass">
       <Comment>0审核中，1未通过 2已通过</Comment>
       <DataType>tinyint(4)|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="304" parent="228" name="budget_apply_time">
+    <column id="308" parent="228" name="budget_apply_time">
       <Comment>申请时间</Comment>
       <DataType>timestamp|0s</DataType>
       <Position>6</Position>
     </column>
-    <column id="305" parent="228" name="feedback">
+    <column id="309" parent="228" name="feedback">
       <DataType>text|0s</DataType>
       <Position>7</Position>
     </column>
-    <foreign-key id="306" parent="228" name="budget_apply_ibfk_1">
+    <foreign-key id="310" parent="228" name="budget_apply_ibfk_1">
       <ColNames>user_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>user_id</RefColNames>
       <RefTableName>user</RefTableName>
     </foreign-key>
-    <foreign-key id="307" parent="228" name="budget_apply_ibfk_2">
+    <foreign-key id="311" parent="228" name="budget_apply_ibfk_2">
       <ColNames>club_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>club_id</RefColNames>
       <RefTableName>club</RefTableName>
     </foreign-key>
-    <index id="308" parent="228" name="PRIMARY">
+    <index id="312" parent="228" name="PRIMARY">
       <ColNames>budget_apply_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="309" parent="228" name="user_id">
+    <index id="313" parent="228" name="user_id">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="310" parent="228" name="club_id">
+    <index id="314" parent="228" name="club_id">
       <ColNames>club_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="311" parent="228" name="PRIMARY">
+    <key id="315" parent="228" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="312" parent="229" name="club_id">
-      <AutoIncrement>16</AutoIncrement>
+    <column id="316" parent="229" name="item_id">
+      <AutoIncrement>10</AutoIncrement>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="317" parent="229" name="budget_id">
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="318" parent="229" name="name">
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="319" parent="229" name="money">
+      <DataType>decimal(10,2 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="320" parent="229" name="description">
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <foreign-key id="321" parent="229" name="budget_item_fk">
+      <ColNames>budget_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+      <RefColNames>budget_id</RefColNames>
+      <RefTableName>budgets</RefTableName>
+    </foreign-key>
+    <index id="322" parent="229" name="PRIMARY">
+      <ColNames>item_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="323" parent="229" name="budget_item_fk">
+      <ColNames>budget_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="324" parent="229" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="325" parent="230" name="budget_id">
+      <AutoIncrement>7</AutoIncrement>
+      <Comment>预算id，自增</Comment>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="326" parent="230" name="club_id">
+      <Comment>社团id</Comment>
+      <DataType>int(11) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="327" parent="230" name="applicant_id">
+      <Comment>申请人id</Comment>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="328" parent="230" name="title">
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="329" parent="230" name="amount">
+      <Comment>预算金额</Comment>
+      <DataType>decimal(10,2 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="330" parent="230" name="status">
+      <Comment>报销状态</Comment>
+      <DataType>enum(&apos;待审批&apos;, &apos;已通过&apos;, &apos;已拒绝&apos;)|0e</DataType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <column id="331" parent="230" name="create_time">
+      <Comment>创建时间</Comment>
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <column id="332" parent="230" name="feedback">
+      <Comment>审核拒绝理由</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <Position>8</Position>
+    </column>
+    <foreign-key id="333" parent="230" name="club_id_fk">
+      <ColNames>club_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+      <RefColNames>club_id</RefColNames>
+      <RefTableName>club</RefTableName>
+    </foreign-key>
+    <foreign-key id="334" parent="230" name="applicant_id_fk">
+      <ColNames>applicant_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+      <RefColNames>user_id</RefColNames>
+      <RefTableName>user</RefTableName>
+    </foreign-key>
+    <index id="335" parent="230" name="PRIMARY">
+      <ColNames>budget_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="336" parent="230" name="club_id_fk">
+      <ColNames>club_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="337" parent="230" name="applicant_id_fk">
+      <ColNames>applicant_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="338" parent="230" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="339" parent="231" name="club_id">
+      <AutoIncrement>11</AutoIncrement>
       <Comment>社团id</Comment>
       <DataType>int(11) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="313" parent="229" name="club_name">
+    <column id="340" parent="231" name="club_name">
       <Comment>社团名字，唯一</Comment>
       <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="314" parent="229" name="club_information">
+    <column id="341" parent="231" name="club_information">
       <Comment>社团简介</Comment>
       <DataType>text|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="315" parent="229" name="club_imageURL">
+    <column id="342" parent="231" name="club_imageURL">
       <Comment>社团头像url</Comment>
       <DataType>varchar(256)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="316" parent="229" name="club_create_time">
+    <column id="343" parent="231" name="club_create_time">
       <Comment>社团建立时间</Comment>
       <DataType>timestamp|0s</DataType>
       <Position>5</Position>
     </column>
-    <index id="317" parent="229" name="PRIMARY">
+    <index id="344" parent="231" name="PRIMARY">
       <ColNames>club_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="318" parent="229" name="club_name">
+    <index id="345" parent="231" name="club_name">
       <ColNames>club_name</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="319" parent="229" name="PRIMARY">
+    <key id="346" parent="231" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="320" parent="229" name="club_name">
+    <key id="347" parent="231" name="club_name">
       <UnderlyingIndexName>club_name</UnderlyingIndexName>
     </key>
-    <column id="321" parent="230" name="user_id">
+    <column id="348" parent="232" name="user_id">
       <Comment>用户id，外码</Comment>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="322" parent="230" name="club_id">
+    <column id="349" parent="232" name="club_id">
       <Comment>社团id，外码</Comment>
       <DataType>int(11) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="323" parent="230" name="permission">
+    <column id="350" parent="232" name="permission">
       <Comment>0代表管理员，1代表社长</Comment>
       <DataType>tinyint(1)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <foreign-key id="324" parent="230" name="club_admin_ibfk_1">
+    <foreign-key id="351" parent="232" name="club_admin_ibfk_1">
       <ColNames>user_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>user_id</RefColNames>
       <RefTableName>user_info</RefTableName>
     </foreign-key>
-    <foreign-key id="325" parent="230" name="club_admin_ibfk_2">
+    <foreign-key id="352" parent="232" name="club_admin_ibfk_2">
       <ColNames>club_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>club_id</RefColNames>
       <RefTableName>club</RefTableName>
     </foreign-key>
-    <index id="326" parent="230" name="PRIMARY">
+    <index id="353" parent="232" name="PRIMARY">
       <ColNames>user_id
 club_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="327" parent="230" name="club_id">
+    <index id="354" parent="232" name="club_id">
       <ColNames>club_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="328" parent="230" name="PRIMARY">
+    <key id="355" parent="232" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="329" parent="231" name="build_apply_id">
-      <AutoIncrement>12</AutoIncrement>
+    <column id="356" parent="233" name="build_apply_id">
+      <AutoIncrement>4</AutoIncrement>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="330" parent="231" name="user_id">
+    <column id="357" parent="233" name="user_id">
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="331" parent="231" name="build_apply_reason">
+    <column id="358" parent="233" name="build_apply_reason">
       <Comment>申请内容</Comment>
       <DataType>text|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="332" parent="231" name="build_apply_time">
+    <column id="359" parent="233" name="build_apply_time">
       <Comment>申请时间</Comment>
       <DataType>timestamp|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="333" parent="231" name="build_apply_is_pass">
-      <Comment>0审核中 1已通过 2未通过</Comment>
-      <DataType>tinyint(4)|0s</DataType>
+    <column id="360" parent="233" name="status">
+      <DataType>enum(&apos;待审批&apos;, &apos;已通过&apos;, &apos;已拒绝&apos;)|0e</DataType>
+      <DefaultExpression>&apos;待审批&apos;</DefaultExpression>
       <Position>5</Position>
     </column>
-    <column id="334" parent="231" name="admin_club_name">
+    <column id="361" parent="233" name="admin_club_name">
       <Comment>申请社团名字</Comment>
       <DataType>varchar(10)|0s</DataType>
       <Position>6</Position>
     </column>
-    <column id="335" parent="231" name="feedback">
+    <column id="362" parent="233" name="feedback">
       <DataType>text|0s</DataType>
       <Position>7</Position>
     </column>
-    <foreign-key id="336" parent="231" name="club_build_apply_ibfk_1">
+    <foreign-key id="363" parent="233" name="club_build_apply_ibfk_1">
       <ColNames>user_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>user_id</RefColNames>
       <RefTableName>user</RefTableName>
     </foreign-key>
-    <index id="337" parent="231" name="PRIMARY">
+    <index id="364" parent="233" name="PRIMARY">
       <ColNames>build_apply_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="338" parent="231" name="user_id">
+    <index id="365" parent="233" name="user_id">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="339" parent="231" name="PRIMARY">
+    <key id="366" parent="233" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="340" parent="232" name="cancel_apply_id">
+    <column id="367" parent="234" name="cancel_apply_id">
       <AutoIncrement>14</AutoIncrement>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="341" parent="232" name="user_id">
+    <column id="368" parent="234" name="user_id">
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="342" parent="232" name="club_id">
+    <column id="369" parent="234" name="club_id">
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="343" parent="232" name="cancel_apply_reason">
+    <column id="370" parent="234" name="cancel_apply_reason">
       <DataType>text|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="344" parent="232" name="cancel_apply_is_pass">
+    <column id="371" parent="234" name="cancel_apply_is_pass">
       <Comment>0 审核中 1通过 2没通过</Comment>
       <DataType>tinyint(4)|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="345" parent="232" name="cancel_apply_time">
+    <column id="372" parent="234" name="cancel_apply_time">
       <DataType>timestamp|0s</DataType>
       <Position>6</Position>
     </column>
-    <column id="346" parent="232" name="feedback">
+    <column id="373" parent="234" name="feedback">
       <DataType>text|0s</DataType>
       <Position>7</Position>
     </column>
-    <foreign-key id="347" parent="232" name="club_cancel_apply_ibfk_1">
+    <foreign-key id="374" parent="234" name="club_cancel_apply_ibfk_1">
       <ColNames>user_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>user_id</RefColNames>
       <RefTableName>user</RefTableName>
     </foreign-key>
-    <foreign-key id="348" parent="232" name="club_cancel_apply_ibfk_2">
+    <foreign-key id="375" parent="234" name="club_cancel_apply_ibfk_2">
       <ColNames>club_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>club_id</RefColNames>
       <RefTableName>club</RefTableName>
     </foreign-key>
-    <index id="349" parent="232" name="PRIMARY">
+    <index id="376" parent="234" name="PRIMARY">
       <ColNames>cancel_apply_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="350" parent="232" name="user_id">
+    <index id="377" parent="234" name="user_id">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="351" parent="232" name="club_id">
+    <index id="378" parent="234" name="club_id">
       <ColNames>club_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="352" parent="232" name="PRIMARY">
+    <key id="379" parent="234" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="353" parent="233" name="post_id">
+    <column id="380" parent="235" name="post_id">
       <Comment>收藏帖子id</Comment>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="354" parent="233" name="user_id">
+    <column id="381" parent="235" name="user_id">
       <Comment>用户id</Comment>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <foreign-key id="355" parent="233" name="collection_ibfk_3">
+    <foreign-key id="382" parent="235" name="collection_ibfk_3">
       <ColNames>post_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>post_id</RefColNames>
       <RefTableName>post</RefTableName>
     </foreign-key>
-    <foreign-key id="356" parent="233" name="collection_ibfk_2">
+    <foreign-key id="383" parent="235" name="collection_ibfk_2">
       <ColNames>user_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>user_id</RefColNames>
       <RefTableName>user</RefTableName>
     </foreign-key>
-    <index id="357" parent="233" name="PRIMARY">
+    <index id="384" parent="235" name="PRIMARY">
       <ColNames>post_id
 user_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="358" parent="233" name="collection_ibfk_2">
+    <index id="385" parent="235" name="collection_ibfk_2">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="359" parent="233" name="PRIMARY">
+    <key id="386" parent="235" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="360" parent="234" name="comment_id">
+    <column id="387" parent="236" name="comment_id">
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="361" parent="234" name="user_id">
+    <column id="388" parent="236" name="user_id">
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="362" parent="234" name="post_id">
+    <column id="389" parent="236" name="post_id">
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="363" parent="234" name="comment_content">
+    <column id="390" parent="236" name="comment_content">
       <Comment>评论内容</Comment>
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="364" parent="234" name="comment_time">
+    <column id="391" parent="236" name="comment_time">
       <Comment>评论时间</Comment>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <foreign-key id="365" parent="234" name="comment_ibfk_3">
+    <foreign-key id="392" parent="236" name="comment_ibfk_3">
       <ColNames>user_id</ColNames>
       <RefColNames>user_id</RefColNames>
       <RefTableName>user</RefTableName>
     </foreign-key>
-    <foreign-key id="366" parent="234" name="comment_ibfk_4">
+    <foreign-key id="393" parent="236" name="comment_ibfk_4">
       <ColNames>post_id</ColNames>
       <RefColNames>post_id</RefColNames>
       <RefTableName>post</RefTableName>
     </foreign-key>
-    <index id="367" parent="234" name="PRIMARY">
+    <index id="394" parent="236" name="PRIMARY">
       <ColNames>comment_id
 post_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="368" parent="234" name="userid">
+    <index id="395" parent="236" name="userid">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="369" parent="234" name="post_id">
+    <index id="396" parent="236" name="post_id">
       <ColNames>post_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="370" parent="234" name="PRIMARY">
+    <key id="397" parent="236" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="371" parent="235" name="activity_id">
+    <column id="398" parent="237" name="activity_id">
       <Comment>关注的活动id</Comment>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="372" parent="235" name="user_id">
+    <column id="399" parent="237" name="user_id">
       <Comment>用户id</Comment>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <foreign-key id="373" parent="235" name="follow_ibfk_1">
+    <foreign-key id="400" parent="237" name="follow_ibfk_1">
       <ColNames>activity_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>activity_id</RefColNames>
       <RefTableName>activity</RefTableName>
     </foreign-key>
-    <foreign-key id="374" parent="235" name="follow_ibfk_2">
+    <foreign-key id="401" parent="237" name="follow_ibfk_2">
       <ColNames>user_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>user_id</RefColNames>
       <RefTableName>user</RefTableName>
     </foreign-key>
-    <index id="375" parent="235" name="PRIMARY">
+    <index id="402" parent="237" name="PRIMARY">
       <ColNames>activity_id
 user_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="376" parent="235" name="user_id">
+    <index id="403" parent="237" name="user_id">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="377" parent="235" name="PRIMARY">
+    <key id="404" parent="237" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="378" parent="236" name="join_apply_id">
+    <column id="405" parent="238" name="join_apply_id">
       <AutoIncrement>23</AutoIncrement>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="379" parent="236" name="user_id">
+    <column id="406" parent="238" name="user_id">
       <Comment>申请人id</Comment>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="380" parent="236" name="join_club_id">
+    <column id="407" parent="238" name="join_club_id">
       <Comment>申请社团id</Comment>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="381" parent="236" name="join_apply_content">
+    <column id="408" parent="238" name="join_apply_content">
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="382" parent="236" name="join_apply_time">
+    <column id="409" parent="238" name="join_apply_time">
       <Comment>申请时间</Comment>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="383" parent="236" name="join_apply_is_pass">
+    <column id="410" parent="238" name="join_apply_is_pass">
       <Comment>0审核中 1已通过 2未通过</Comment>
       <DataType>tinyint(4)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <column id="384" parent="236" name="feedback">
+    <column id="411" parent="238" name="feedback">
       <DataType>text|0s</DataType>
       <Position>7</Position>
     </column>
-    <foreign-key id="385" parent="236" name="join_apply_ibfk_1">
+    <foreign-key id="412" parent="238" name="join_apply_ibfk_1">
       <ColNames>user_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>user_id</RefColNames>
       <RefTableName>user</RefTableName>
     </foreign-key>
-    <foreign-key id="386" parent="236" name="join_apply_ibfk_2">
+    <foreign-key id="413" parent="238" name="join_apply_ibfk_2">
       <ColNames>join_club_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>club_id</RefColNames>
       <RefTableName>club</RefTableName>
     </foreign-key>
-    <index id="387" parent="236" name="PRIMARY">
+    <index id="414" parent="238" name="PRIMARY">
       <ColNames>join_apply_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="388" parent="236" name="user_id">
+    <index id="415" parent="238" name="user_id">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="389" parent="236" name="join_club_id">
+    <index id="416" parent="238" name="join_club_id">
       <ColNames>join_club_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="390" parent="236" name="PRIMARY">
+    <key id="417" parent="238" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="391" parent="237" name="post_id">
+    <column id="418" parent="239" name="post_id">
       <Comment>帖子id</Comment>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="392" parent="237" name="user_id">
+    <column id="419" parent="239" name="user_id">
       <Comment>用户id</Comment>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <foreign-key id="393" parent="237" name="likes_ibfk_3">
+    <foreign-key id="420" parent="239" name="likes_ibfk_3">
       <ColNames>post_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>post_id</RefColNames>
       <RefTableName>post</RefTableName>
     </foreign-key>
-    <foreign-key id="394" parent="237" name="likes_ibfk_2">
+    <foreign-key id="421" parent="239" name="likes_ibfk_2">
       <ColNames>user_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>user_id</RefColNames>
       <RefTableName>user</RefTableName>
     </foreign-key>
-    <index id="395" parent="237" name="PRIMARY">
+    <index id="422" parent="239" name="PRIMARY">
       <ColNames>post_id
 user_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="396" parent="237" name="likes_ibfk_2">
+    <index id="423" parent="239" name="likes_ibfk_2">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="397" parent="237" name="PRIMARY">
+    <key id="424" parent="239" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="398" parent="238" name="news_id">
+    <column id="425" parent="240" name="news_id">
       <AutoIncrement>11</AutoIncrement>
       <Comment>资讯id</Comment>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="399" parent="238" name="user_id">
+    <column id="426" parent="240" name="user_id">
       <Comment>发布人id 外码</Comment>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="400" parent="238" name="club_id">
+    <column id="427" parent="240" name="club_id">
       <Comment>所属社团 外码</Comment>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="401" parent="238" name="news_title">
+    <column id="428" parent="240" name="news_title">
       <Comment>标题</Comment>
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="402" parent="238" name="news_time">
+    <column id="429" parent="240" name="news_time">
       <Comment>发布时间</Comment>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="403" parent="238" name="news_content">
+    <column id="430" parent="240" name="news_content">
       <Comment>内容</Comment>
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <foreign-key id="404" parent="238" name="news_ibfk_1">
+    <foreign-key id="431" parent="240" name="news_ibfk_1">
       <ColNames>user_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>user_id</RefColNames>
       <RefTableName>user</RefTableName>
     </foreign-key>
-    <foreign-key id="405" parent="238" name="news_ibfk_2">
+    <foreign-key id="432" parent="240" name="news_ibfk_2">
       <ColNames>club_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>club_id</RefColNames>
       <RefTableName>club</RefTableName>
     </foreign-key>
-    <index id="406" parent="238" name="PRIMARY">
+    <index id="433" parent="240" name="PRIMARY">
       <ColNames>news_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="407" parent="238" name="user_id">
+    <index id="434" parent="240" name="user_id">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="408" parent="238" name="club_id">
+    <index id="435" parent="240" name="club_id">
       <ColNames>club_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="409" parent="238" name="PRIMARY">
+    <key id="436" parent="240" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="410" parent="239" name="notification_id">
+    <column id="437" parent="241" name="notification_id">
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="411" parent="239" name="receiver_id">
+    <column id="438" parent="241" name="receiver_id">
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <foreign-key id="412" parent="239" name="not_receiver_ibfk_1">
+    <foreign-key id="439" parent="241" name="not_receiver_ibfk_1">
       <ColNames>notification_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>notification_id</RefColNames>
       <RefTableName>notification</RefTableName>
     </foreign-key>
-    <foreign-key id="413" parent="239" name="not_receiver_ibfk_2">
+    <foreign-key id="440" parent="241" name="not_receiver_ibfk_2">
       <ColNames>receiver_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>user_id</RefColNames>
       <RefTableName>user</RefTableName>
     </foreign-key>
-    <index id="414" parent="239" name="PRIMARY">
+    <index id="441" parent="241" name="PRIMARY">
       <ColNames>notification_id
 receiver_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="415" parent="239" name="receiver_id">
+    <index id="442" parent="241" name="receiver_id">
       <ColNames>receiver_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="416" parent="239" name="PRIMARY">
+    <key id="443" parent="241" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="417" parent="240" name="notification_id">
-      <AutoIncrement>26</AutoIncrement>
+    <column id="444" parent="242" name="notification_id">
+      <AutoIncrement>53</AutoIncrement>
       <Comment>通知id</Comment>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="418" parent="240" name="send_admin_id">
+    <column id="445" parent="242" name="send_admin_id">
       <DataType>int(10) unsigned|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="419" parent="240" name="send_user_id">
+    <column id="446" parent="242" name="send_user_id">
       <DataType>int(10) unsigned|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="420" parent="240" name="notification_title">
+    <column id="447" parent="242" name="notification_title">
       <Comment>通知标题</Comment>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="421" parent="240" name="notification_content">
+    <column id="448" parent="242" name="notification_content">
       <Comment>通知内容</Comment>
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="422" parent="240" name="notification_time">
+    <column id="449" parent="242" name="notification_time">
       <Comment>发布时间</Comment>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <column id="423" parent="240" name="sender_type">
+    <column id="450" parent="242" name="sender_type">
       <Comment>0:社团发的 1：社联发的 2: 系统发的</Comment>
       <DataType>tinyint(4)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
-    <index id="424" parent="240" name="PRIMARY">
+    <index id="451" parent="242" name="PRIMARY">
       <ColNames>notification_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="425" parent="240" name="send_admin_id">
+    <index id="452" parent="242" name="send_admin_id">
       <ColNames>send_admin_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="426" parent="240" name="send_user_id">
+    <index id="453" parent="242" name="send_user_id">
       <ColNames>send_user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="427" parent="240" name="PRIMARY">
+    <key id="454" parent="242" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="428" parent="241" name="post_id">
-      <AutoIncrement>21</AutoIncrement>
+    <column id="455" parent="243" name="post_id">
+      <AutoIncrement>11</AutoIncrement>
       <Comment>帖子id</Comment>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="429" parent="241" name="post_time">
+    <column id="456" parent="243" name="post_time">
       <Comment>发帖时间</Comment>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="430" parent="241" name="is_top">
+    <column id="457" parent="243" name="is_top">
       <Comment>是否置顶</Comment>
       <DataType>tinyint(1)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="431" parent="241" name="post_title">
+    <column id="458" parent="243" name="post_title">
       <Comment>帖子标题</Comment>
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="432" parent="241" name="club_id">
+    <column id="459" parent="243" name="club_id">
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="433" parent="241" name="user_id">
+    <column id="460" parent="243" name="user_id">
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <foreign-key id="434" parent="241" name="post_ibfk_1">
+    <foreign-key id="461" parent="243" name="post_ibfk_1">
       <ColNames>club_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>club_id</RefColNames>
       <RefTableName>club</RefTableName>
     </foreign-key>
-    <foreign-key id="435" parent="241" name="post_ibfk_2">
+    <foreign-key id="462" parent="243" name="post_ibfk_2">
       <ColNames>user_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>user_id</RefColNames>
       <RefTableName>user</RefTableName>
     </foreign-key>
-    <index id="436" parent="241" name="PRIMARY">
+    <index id="463" parent="243" name="PRIMARY">
       <ColNames>post_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="437" parent="241" name="club_id">
+    <index id="464" parent="243" name="club_id">
       <ColNames>club_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="438" parent="241" name="user_id">
+    <index id="465" parent="243" name="user_id">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="439" parent="241" name="PRIMARY">
+    <key id="466" parent="243" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="440" parent="242" name="post_id">
+    <column id="467" parent="244" name="post_id">
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="441" parent="242" name="tag_name">
+    <column id="468" parent="244" name="tag_name">
       <DataType>varchar(15)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <foreign-key id="442" parent="242" name="post_tag_ibfk_3">
+    <foreign-key id="469" parent="244" name="post_tag_ibfk_3">
       <ColNames>post_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>post_id</RefColNames>
       <RefTableName>post</RefTableName>
     </foreign-key>
-    <foreign-key id="443" parent="242" name="post_tag_ibfk_2">
+    <foreign-key id="470" parent="244" name="post_tag_ibfk_2">
       <ColNames>tag_name</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>tag_name</RefColNames>
       <RefTableName>tag</RefTableName>
     </foreign-key>
-    <index id="444" parent="242" name="PRIMARY">
+    <index id="471" parent="244" name="PRIMARY">
       <ColNames>post_id
 tag_name</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="445" parent="242" name="post_tag_ibfk_2">
+    <index id="472" parent="244" name="post_tag_ibfk_2">
       <ColNames>tag_name</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="446" parent="242" name="PRIMARY">
+    <key id="473" parent="244" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="447" parent="243" name="pubnot_id">
+    <column id="474" parent="245" name="pubnot_id">
       <AutoIncrement>35</AutoIncrement>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="448" parent="243" name="admin_id">
+    <column id="475" parent="245" name="admin_id">
       <Comment>社联发布人id</Comment>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="449" parent="243" name="pubnot_title">
+    <column id="476" parent="245" name="pubnot_title">
       <Comment>公告标题</Comment>
       <DataType>varchar(50)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="450" parent="243" name="pubnot_time">
+    <column id="477" parent="245" name="pubnot_time">
       <Comment>发布时间</Comment>
       <DataType>timestamp|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="451" parent="243" name="pubnot_content">
+    <column id="478" parent="245" name="pubnot_content">
       <Comment>内容</Comment>
       <DataType>text|0s</DataType>
       <Position>5</Position>
     </column>
-    <foreign-key id="452" parent="243" name="pubnot_ibfk_1">
+    <foreign-key id="479" parent="245" name="pubnot_ibfk_1">
       <ColNames>admin_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>admin_id</RefColNames>
       <RefTableName>sys_admin</RefTableName>
     </foreign-key>
-    <index id="453" parent="243" name="PRIMARY">
+    <index id="480" parent="245" name="PRIMARY">
       <ColNames>pubnot_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="454" parent="243" name="admin_id">
+    <index id="481" parent="245" name="admin_id">
       <ColNames>admin_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="455" parent="243" name="PRIMARY">
+    <key id="482" parent="245" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="456" parent="244" name="reim_apply_id">
-      <AutoIncrement>9</AutoIncrement>
+    <column id="483" parent="246" name="reim_apply_id">
+      <AutoIncrement>7</AutoIncrement>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="457" parent="244" name="user_id">
+    <column id="484" parent="246" name="user_id">
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="458" parent="244" name="club_id">
+    <column id="485" parent="246" name="club_id">
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="459" parent="244" name="reim_apply_reason">
+    <column id="486" parent="246" name="reim_apply_reason">
       <DataType>text|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="460" parent="244" name="reim_apply_is_pass">
+    <column id="487" parent="246" name="reim_apply_is_pass">
       <Comment>0审核中 1通过 2未通过</Comment>
       <DataType>tinyint(4)|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="461" parent="244" name="reim_apply_time">
+    <column id="488" parent="246" name="reim_apply_time">
       <DataType>timestamp|0s</DataType>
       <Position>6</Position>
     </column>
-    <column id="462" parent="244" name="feedback">
+    <column id="489" parent="246" name="feedback">
       <DataType>text|0s</DataType>
       <Position>7</Position>
     </column>
-    <foreign-key id="463" parent="244" name="reim_apply_ibfk_1">
+    <foreign-key id="490" parent="246" name="reim_apply_ibfk_1">
       <ColNames>user_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>user_id</RefColNames>
       <RefTableName>user</RefTableName>
     </foreign-key>
-    <foreign-key id="464" parent="244" name="reim_apply_ibfk_2">
+    <foreign-key id="491" parent="246" name="reim_apply_ibfk_2">
       <ColNames>club_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>club_id</RefColNames>
       <RefTableName>club</RefTableName>
     </foreign-key>
-    <index id="465" parent="244" name="PRIMARY">
+    <index id="492" parent="246" name="PRIMARY">
       <ColNames>reim_apply_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="466" parent="244" name="user_id">
+    <index id="493" parent="246" name="user_id">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="467" parent="244" name="club_id">
+    <index id="494" parent="246" name="club_id">
       <ColNames>club_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="468" parent="244" name="PRIMARY">
+    <key id="495" parent="246" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="469" parent="245" name="post_id">
+    <column id="496" parent="247" name="reim_attach_id">
+      <AutoIncrement>15</AutoIncrement>
+      <DataType>int(11) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="497" parent="247" name="reim_id">
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="498" parent="247" name="attach_url">
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <foreign-key id="499" parent="247" name="reim_attach_fk">
+      <ColNames>reim_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+      <RefColNames>reim_id</RefColNames>
+      <RefTableName>reimbursements</RefTableName>
+    </foreign-key>
+    <index id="500" parent="247" name="PRIMARY">
+      <ColNames>reim_attach_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="501" parent="247" name="reim_attach_fk">
+      <ColNames>reim_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="502" parent="247" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="503" parent="248" name="reim_id">
+      <AutoIncrement>6</AutoIncrement>
+      <Comment>报销id，自增</Comment>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="504" parent="248" name="club_id">
+      <Comment>申请社团id</Comment>
+      <DataType>int(11) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="505" parent="248" name="user_id">
+      <Comment>申请人id</Comment>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="506" parent="248" name="title">
+      <Comment>报销标题</Comment>
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="507" parent="248" name="amount">
+      <Comment>报销金额</Comment>
+      <DataType>decimal(10,2 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="508" parent="248" name="description">
+      <Comment>报销原因描述</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <column id="509" parent="248" name="create_time">
+      <Comment>创建时间</Comment>
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <column id="510" parent="248" name="status">
+      <Comment>报销状态</Comment>
+      <DataType>enum(&apos;待审批&apos;, &apos;已通过&apos;, &apos;已拒绝&apos;)|0e</DataType>
+      <DefaultExpression>&apos;待审批&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+    </column>
+    <column id="511" parent="248" name="feedback">
+      <Comment>审核申请拒绝理由</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <Position>9</Position>
+    </column>
+    <foreign-key id="512" parent="248" name="reim_club_id_fk">
+      <ColNames>club_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+      <RefColNames>club_id</RefColNames>
+      <RefTableName>club</RefTableName>
+    </foreign-key>
+    <foreign-key id="513" parent="248" name="reim_user_id_fk">
+      <ColNames>user_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+      <RefColNames>user_id</RefColNames>
+      <RefTableName>user</RefTableName>
+    </foreign-key>
+    <index id="514" parent="248" name="PRIMARY">
+      <ColNames>reim_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="515" parent="248" name="reim_club_id_fk">
+      <ColNames>club_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="516" parent="248" name="reim_user_id_fk">
+      <ColNames>user_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="517" parent="248" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="518" parent="249" name="post_id">
       <Comment>帖子id</Comment>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="470" parent="245" name="user_id">
+    <column id="519" parent="249" name="user_id">
       <Comment>举报人id</Comment>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="471" parent="245" name="comment_id">
+    <column id="520" parent="249" name="comment_id">
       <Comment>默认空代表帖子，否则是评论</Comment>
       <DataType>int(10) unsigned|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="472" parent="245" name="report_reason">
+    <column id="521" parent="249" name="report_reason">
       <Comment>举报理由</Comment>
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <foreign-key id="473" parent="245" name="report_ibfk_3">
+    <foreign-key id="522" parent="249" name="report_ibfk_3">
       <ColNames>post_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>post_id</RefColNames>
       <RefTableName>post</RefTableName>
     </foreign-key>
-    <foreign-key id="474" parent="245" name="report_ibfk_2">
+    <foreign-key id="523" parent="249" name="report_ibfk_2">
       <ColNames>user_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>user_id</RefColNames>
       <RefTableName>user</RefTableName>
     </foreign-key>
-    <index id="475" parent="245" name="PRIMARY">
+    <index id="524" parent="249" name="PRIMARY">
       <ColNames>post_id
 user_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="476" parent="245" name="user_id">
+    <index id="525" parent="249" name="user_id">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="477" parent="245" name="PRIMARY">
+    <key id="526" parent="249" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="478" parent="246" name="admin_id">
-      <AutoIncrement>3</AutoIncrement>
+    <column id="527" parent="250" name="admin_id">
+      <AutoIncrement>2</AutoIncrement>
       <Comment>社联管理员id</Comment>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="479" parent="246" name="admin_account">
+    <column id="528" parent="250" name="admin_account">
       <DataType>varchar(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="480" parent="246" name="admin_password">
+    <column id="529" parent="250" name="admin_password">
       <Comment>社联管理员密码</Comment>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <index id="481" parent="246" name="PRIMARY">
+    <index id="530" parent="250" name="PRIMARY">
       <ColNames>admin_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="482" parent="246" name="admin_id">
+    <index id="531" parent="250" name="admin_id">
       <ColNames>admin_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="483" parent="246" name="admin_acount">
+    <index id="532" parent="250" name="admin_acount">
       <ColNames>admin_account</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="484" parent="246" name="PRIMARY">
+    <key id="533" parent="250" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="485" parent="246" name="admin_id">
+    <key id="534" parent="250" name="admin_id">
       <UnderlyingIndexName>admin_id</UnderlyingIndexName>
     </key>
-    <key id="486" parent="246" name="admin_acount">
+    <key id="535" parent="250" name="admin_acount">
       <UnderlyingIndexName>admin_acount</UnderlyingIndexName>
     </key>
-    <column id="487" parent="247" name="club_id">
+    <column id="536" parent="251" name="club_id">
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="488" parent="247" name="tag_name">
+    <column id="537" parent="251" name="tag_name">
       <DataType>varchar(15)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <foreign-key id="489" parent="247" name="tag_ibfk_1">
+    <foreign-key id="538" parent="251" name="tag_ibfk_1">
       <ColNames>club_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>club_id</RefColNames>
       <RefTableName>club</RefTableName>
     </foreign-key>
-    <index id="490" parent="247" name="PRIMARY">
+    <index id="539" parent="251" name="PRIMARY">
       <ColNames>club_id
 tag_name</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="491" parent="247" name="tag_name">
+    <index id="540" parent="251" name="tag_name">
       <ColNames>tag_name</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="492" parent="247" name="PRIMARY">
+    <key id="541" parent="251" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="493" parent="248" name="user_id">
+    <column id="542" parent="252" name="user_id">
       <AutoIncrement>44</AutoIncrement>
       <Comment>用户id</Comment>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="494" parent="248" name="user_phone">
+    <column id="543" parent="252" name="user_phone">
       <Comment>用户电话</Comment>
       <DataType>varchar(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="495" parent="248" name="user_password">
+    <column id="544" parent="252" name="user_password">
       <Comment>用户密码</Comment>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <index id="496" parent="248" name="PRIMARY">
+    <index id="545" parent="252" name="PRIMARY">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="497" parent="248" name="PRIMARY">
+    <key id="546" parent="252" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="498" parent="249" name="user_id">
+    <column id="547" parent="253" name="user_id">
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="499" parent="249" name="club_id">
+    <column id="548" parent="253" name="club_id">
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="500" parent="249" name="user_state">
+    <column id="549" parent="253" name="user_state">
       <Comment>0是没事 1是被永封</Comment>
       <DataType>tinyint(1)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <foreign-key id="501" parent="249" name="user_club_ibfk_1">
+    <foreign-key id="550" parent="253" name="user_club_ibfk_1">
       <ColNames>user_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>user_id</RefColNames>
       <RefTableName>user</RefTableName>
     </foreign-key>
-    <foreign-key id="502" parent="249" name="user_club_ibfk_2">
+    <foreign-key id="551" parent="253" name="user_club_ibfk_2">
       <ColNames>club_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>club_id</RefColNames>
       <RefTableName>club</RefTableName>
     </foreign-key>
-    <index id="503" parent="249" name="PRIMARY">
+    <index id="552" parent="253" name="PRIMARY">
       <ColNames>user_id
 club_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="504" parent="249" name="club_id">
+    <index id="553" parent="253" name="club_id">
       <ColNames>club_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="505" parent="249" name="PRIMARY">
+    <key id="554" parent="253" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="506" parent="250" name="user_id">
+    <column id="555" parent="254" name="user_id">
       <AutoIncrement>44</AutoIncrement>
       <Comment>用户id</Comment>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="507" parent="250" name="user_name">
+    <column id="556" parent="254" name="user_name">
       <Comment>用户昵称</Comment>
       <DataType>varchar(15)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="508" parent="250" name="user_sexual">
+    <column id="557" parent="254" name="user_sexual">
       <Comment>用户性别</Comment>
       <DataType>varchar(4)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="509" parent="250" name="user_create_time">
+    <column id="558" parent="254" name="user_create_time">
       <Comment>用户创建时间</Comment>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="510" parent="250" name="user_photo_url">
+    <column id="559" parent="254" name="user_photo_url">
       <Comment>用户头像URL</Comment>
       <DataType>varchar(256)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="511" parent="250" name="user_sign">
+    <column id="560" parent="254" name="user_sign">
       <Comment>个人签名</Comment>
       <DataType>tinytext|0s</DataType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <foreign-key id="512" parent="250" name="user_info_ibfk_1">
+    <foreign-key id="561" parent="254" name="user_info_ibfk_1">
       <ColNames>user_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>user_id</RefColNames>
       <RefTableName>user</RefTableName>
     </foreign-key>
-    <index id="513" parent="250" name="PRIMARY">
+    <index id="562" parent="254" name="PRIMARY">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="514" parent="250" name="user_name">
+    <index id="563" parent="254" name="user_name">
       <ColNames>user_name</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="515" parent="250" name="PRIMARY">
+    <key id="564" parent="254" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="516" parent="250" name="user_name">
+    <key id="565" parent="254" name="user_name">
       <UnderlyingIndexName>user_name</UnderlyingIndexName>
     </key>
   </database-model>

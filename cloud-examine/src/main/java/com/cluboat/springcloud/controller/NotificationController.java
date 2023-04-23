@@ -196,9 +196,10 @@ public class NotificationController {
             if(type == 0){
                 notification.setSendUserId(notificationParam.sendUserId);
             }
-            else {
+            else if(type == 1){
                 notification.setSendAdminId(notificationParam.sendAdminId);
             }
+            //是系统则不设置userId或adminId
             LambdaQueryWrapper<Belong> wrapper2 = new LambdaQueryWrapper<Belong>()
                     .eq(Belong::getClubId, notificationParam.receiverId);
             List<Belong> belongList = belongService.list(wrapper2);
@@ -227,12 +228,14 @@ public class NotificationController {
             LambdaQueryWrapper<SysAdminEntity> wrapper = new LambdaQueryWrapper<SysAdminEntity>()
                     .eq(SysAdminEntity::getAdminId, notificationParam.sendAdminId);
             SysAdminEntity admin = sysAdminService.getOne(wrapper);
-            //如果不是社联管理员
-            if(admin == null){
-                return new CommonResult(400, "发送失败，用户权限不足",null);
+            //首先判断是否是系统
+            if (notificationParam.senderType != 2){
+                //如果不是社联管理员
+                if(admin == null){
+                    return new CommonResult(400, "发送失败，用户权限不足",null);
+                }
+                notification.setSendAdminId(notificationParam.sendAdminId);
             }
-
-            notification.setSendAdminId(notificationParam.sendAdminId);
             List<UserEntity> userList = userService.list();
             notificationService.save(notification);
             //获取刚刚生成的not的id
@@ -329,6 +332,26 @@ public class NotificationController {
                         notReceiverEntity.setReceiverId(notificationParam.receiverId);
                         notReceiverService.save(notReceiverEntity);
                     }
+                }
+            }
+            //如果是系统
+            else if(notificationParam.senderType == 2){
+                //如果是系统向全体成员发消息
+                if(notificationParam.receiverType == 0){
+                    return sendToAllUsers(notification, notificationParam);
+                }
+                //如果是系统管理员向全体社团成员发消息
+                else if(notificationParam.receiverType == 1){
+                    return sendToClub(notification, notificationParam, 2);
+                }
+                else{
+                    notificationService.save(notification);
+                    //获取刚刚生成的not的id
+                    Integer notId = getNotId();
+                    NotReceiverEntity notReceiverEntity = new NotReceiverEntity();
+                    notReceiverEntity.setNotificationId(notId);
+                    notReceiverEntity.setReceiverId(notificationParam.receiverId);
+                    notReceiverService.save(notReceiverEntity);
                 }
             }
             return new CommonResult(200, "创建成功");
