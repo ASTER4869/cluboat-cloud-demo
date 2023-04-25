@@ -10,14 +10,15 @@ import java.sql.Timestamp;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ClubBuildApplyDTO {
-    private Integer buildApplyId;
+public class ClubCancelApplyDTO {
+    private Integer cancelApplyId;
     private Integer userId;
-    private String buildApplyReason;
+    private Integer clubId;
+    private String cancelApplyReason;
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
-    private Timestamp buildApplyTime;
+    private Timestamp cancelApplyTime;
     private String status;
-    private String adminClubName;
     private String feedback;
+    private String clubName;
     private String userName;
 }

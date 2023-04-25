@@ -1027,9 +1027,9 @@ cluboat|schema||CluBoat||UPDATE|G</Grants>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="285" parent="226" name="admin_apply_is_pass">
-      <Comment>0 审核中 1通过 2没通过</Comment>
-      <DataType>int(11)|0s</DataType>
+    <column id="285" parent="226" name="status">
+      <DataType>enum(&apos;待审批&apos;, &apos;已通过&apos;, &apos;已拒绝&apos;)|0e</DataType>
+      <DefaultExpression>&apos;待审批&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
@@ -1193,7 +1193,7 @@ user_id</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="316" parent="229" name="item_id">
-      <AutoIncrement>10</AutoIncrement>
+      <AutoIncrement>13</AutoIncrement>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1240,7 +1240,7 @@ user_id</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="325" parent="230" name="budget_id">
-      <AutoIncrement>7</AutoIncrement>
+      <AutoIncrement>8</AutoIncrement>
       <Comment>预算id，自增</Comment>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
@@ -1319,7 +1319,7 @@ user_id</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="339" parent="231" name="club_id">
-      <AutoIncrement>11</AutoIncrement>
+      <AutoIncrement>12</AutoIncrement>
       <Comment>社团id</Comment>
       <DataType>int(11) unsigned|0s</DataType>
       <NotNull>1</NotNull>
@@ -1468,7 +1468,7 @@ club_id</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="367" parent="234" name="cancel_apply_id">
-      <AutoIncrement>14</AutoIncrement>
+      <AutoIncrement>16</AutoIncrement>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1487,9 +1487,9 @@ club_id</ColNames>
       <DataType>text|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="371" parent="234" name="cancel_apply_is_pass">
-      <Comment>0 审核中 1通过 2没通过</Comment>
-      <DataType>tinyint(4)|0s</DataType>
+    <column id="371" parent="234" name="status">
+      <DataType>enum(&apos;待审批&apos;, &apos;已通过&apos;, &apos;已拒绝&apos;)|0e</DataType>
+      <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
     <column id="372" parent="234" name="cancel_apply_time">
@@ -1699,9 +1699,9 @@ user_id</ColNames>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="410" parent="238" name="join_apply_is_pass">
-      <Comment>0审核中 1已通过 2未通过</Comment>
-      <DataType>tinyint(4)|0s</DataType>
+    <column id="410" parent="238" name="status">
+      <DataType>enum(&apos;待审批&apos;, &apos;已通过&apos;, &apos;已拒绝&apos;)|0e</DataType>
+      <DefaultExpression>&apos;待审批&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
@@ -1891,7 +1891,7 @@ receiver_id</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="444" parent="242" name="notification_id">
-      <AutoIncrement>53</AutoIncrement>
+      <AutoIncrement>58</AutoIncrement>
       <Comment>通知id</Comment>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>

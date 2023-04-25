@@ -8,10 +8,12 @@ import com.cluboat.springcloud.entity.DTO.GetBudgetsDTO;
 import com.cluboat.springcloud.entity.DTO.GetBudgetsDetailDTO;
 import com.cluboat.springcloud.entity.param.CreateBudgetsItemParam;
 import com.cluboat.springcloud.entity.param.CreateBudgetsParam;
+import com.cluboat.springcloud.entity.param.NotificationParam;
 import com.cluboat.springcloud.entity.param.UpdateBudgetsParam;
 import com.cluboat.springcloud.service.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
 import java.sql.Timestamp;
@@ -23,6 +25,8 @@ import java.util.List;
 @Slf4j
 @RequestMapping("/budgets")
 public class BudgetsController {
+    @Resource
+    private RestTemplate restTemplate;
     @Resource
     BudgetsService budgetsService;
 
@@ -233,10 +237,28 @@ public class BudgetsController {
             budgetsEntity.setStatus(budgetsParam.getStatus());
             budgetsEntity.setFeedback(budgetsParam.getFeedback());
             budgetsService.saveOrUpdate(budgetsEntity);
+
             if(budgetsParam.getStatus().equals("已通过")){
+                //系统向用户发通知
+                NotificationParam notificationParam = new NotificationParam();
+                notificationParam.setSenderType((byte)(2));
+                notificationParam.setReceiverType((byte)(2));
+                notificationParam.setReceiverId(budgetsEntity.getApplicantId());
+                notificationParam.setNotificationTitle("预算申请成功");
+                notificationParam.setNotificationContent("您申请的预算：" + budgetsEntity.getTitle() + "，已成功通过");
+                CommonResult result = restTemplate.postForObject("http://cloud-examine-service/notification/", notificationParam, CommonResult.class);
                 return new CommonResult(200, "已通过该申请");
             }
             else if(budgetsParam.getStatus().equals("已拒绝")){
+                //系统向用户发通知
+                NotificationParam notificationParam = new NotificationParam();
+                notificationParam.setSenderType((byte)(2));
+                notificationParam.setReceiverType((byte)(2));
+                notificationParam.setReceiverId(budgetsEntity.getApplicantId());
+                notificationParam.setNotificationTitle("预算申请失败");
+                notificationParam.setNotificationContent("您申请的预算：" + budgetsEntity.getTitle() + "，审核不通过");
+                CommonResult result = restTemplate.postForObject("http://cloud-examine-service/notification/", notificationParam, CommonResult.class);
+
                 return new CommonResult(200, "已驳回该申请");
             }
             return new CommonResult(200, "修改成功");

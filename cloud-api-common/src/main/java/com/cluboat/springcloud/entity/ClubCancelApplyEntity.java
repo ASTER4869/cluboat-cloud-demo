@@ -25,12 +25,16 @@ public class ClubCancelApplyEntity {
     @Basic
     @Column(name = "cancel_apply_reason")
     private String cancelApplyReason;
-    @Basic
-    @Column(name = "cancel_apply_is_pass")
-    private byte cancelApplyIsPass;
+
     @Basic
     @Column(name = "cancel_apply_time")
     private Timestamp cancelApplyTime;
+    @Basic
+    @Column(name = "status")
+    private String status;
+    @Basic
+    @Column(name = "feedback")
+    private String feedback;
 
     public int getCancelApplyId() {
         return cancelApplyId;
@@ -64,14 +68,6 @@ public class ClubCancelApplyEntity {
         this.cancelApplyReason = cancelApplyReason;
     }
 
-    public byte getCancelApplyIsPass() {
-        return cancelApplyIsPass;
-    }
-
-    public void setCancelApplyIsPass(byte cancelApplyIsPass) {
-        this.cancelApplyIsPass = cancelApplyIsPass;
-    }
-
     public Timestamp getCancelApplyTime() {
         return cancelApplyTime;
     }
@@ -80,16 +76,32 @@ public class ClubCancelApplyEntity {
         this.cancelApplyTime = cancelApplyTime;
     }
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String  status) {
+        this.status = status;
+    }
+
+    public String getFeedback() {
+        return feedback;
+    }
+
+    public void setFeedback(String feedback) {
+        this.feedback = feedback;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ClubCancelApplyEntity that = (ClubCancelApplyEntity) o;
-        return cancelApplyId == that.cancelApplyId && userId == that.userId && clubId == that.clubId && cancelApplyIsPass == that.cancelApplyIsPass && Objects.equals(cancelApplyReason, that.cancelApplyReason) && Objects.equals(cancelApplyTime, that.cancelApplyTime);
+        return cancelApplyId == that.cancelApplyId && userId == that.userId && clubId == that.clubId && Objects.equals(cancelApplyReason, that.cancelApplyReason) && Objects.equals(cancelApplyTime, that.cancelApplyTime) && Objects.equals(status, that.status) && Objects.equals(feedback, that.feedback);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(cancelApplyId, userId, clubId, cancelApplyReason, cancelApplyIsPass, cancelApplyTime);
+        return Objects.hash(cancelApplyId, userId, clubId, cancelApplyReason, status, cancelApplyTime, feedback);
     }
 }

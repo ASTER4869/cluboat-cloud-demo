@@ -29,8 +29,11 @@ public class JoinApplyEntity {
     @Column(name = "join_apply_time")
     private Timestamp joinApplyTime;
     @Basic
-    @Column(name = "join_apply_is_pass")
-    private byte joinApplyIsPass;
+    @Column(name = "status")
+    private String  status;
+    @Basic
+    @Column(name = "feedback")
+    private String feedback;
 
     public int getJoinApplyId() {
         return joinApplyId;
@@ -72,12 +75,20 @@ public class JoinApplyEntity {
         this.joinApplyTime = joinApplyTime;
     }
 
-    public byte getJoinApplyIsPass() {
-        return joinApplyIsPass;
+    public String getStatus() {
+        return status;
     }
 
-    public void setJoinApplyIsPass(byte joinApplyIsPass) {
-        this.joinApplyIsPass = joinApplyIsPass;
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getFeedback() {
+        return feedback;
+    }
+
+    public void setFeedback(String feedback) {
+        this.feedback = feedback;
     }
 
     @Override
@@ -85,11 +96,11 @@ public class JoinApplyEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         JoinApplyEntity that = (JoinApplyEntity) o;
-        return joinApplyId == that.joinApplyId && userId == that.userId && joinClubId == that.joinClubId && joinApplyIsPass == that.joinApplyIsPass && Objects.equals(joinApplyContent, that.joinApplyContent) && Objects.equals(joinApplyTime, that.joinApplyTime);
+        return joinApplyId == that.joinApplyId && userId == that.userId && joinClubId == that.joinClubId && Objects.equals(joinApplyContent, that.joinApplyContent) && Objects.equals(joinApplyTime, that.joinApplyTime) && Objects.equals(status, that.status) && Objects.equals(feedback, that.feedback);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(joinApplyId, userId, joinClubId, joinApplyContent, joinApplyTime, joinApplyIsPass);
+        return Objects.hash(joinApplyId, userId, joinClubId, joinApplyContent, joinApplyTime, status, feedback);
     }
 }

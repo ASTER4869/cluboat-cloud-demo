@@ -10,6 +10,4 @@ public class AdminApplyParam {
     public int userId;
     public int adminClubId;
     public String adminApplyReason;
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
-    public Timestamp adminApplyTime;
 }

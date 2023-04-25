@@ -7,10 +7,12 @@ import com.cluboat.springcloud.entity.DTO.GetReimAttachDTO;
 import com.cluboat.springcloud.entity.DTO.GetReimDTO;
 import com.cluboat.springcloud.entity.param.CreateReimAttachParam;
 import com.cluboat.springcloud.entity.param.CreateReimParam;
+import com.cluboat.springcloud.entity.param.NotificationParam;
 import com.cluboat.springcloud.entity.param.UpdateReimParam;
 import com.cluboat.springcloud.service.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
 import java.sql.Timestamp;
@@ -22,6 +24,8 @@ import java.util.List;
 @Slf4j
 @RequestMapping("/reimbursements")
 public class ReimController {
+    @Resource
+    private RestTemplate restTemplate;
     @Resource
     ReimbursementService reimbursementService;
 
@@ -224,9 +228,25 @@ public class ReimController {
             reimbursementService.saveOrUpdate(reimbursementsEntity);
 
             if(reimParam.getStatus().equals("已通过")){
+                //系统向用户发通知
+                NotificationParam notificationParam = new NotificationParam();
+                notificationParam.setSenderType((byte)(2));
+                notificationParam.setReceiverType((byte)(2));
+                notificationParam.setReceiverId(reimbursementsEntity.getUserId());
+                notificationParam.setNotificationTitle("报销申请成功");
+                notificationParam.setNotificationContent("您申请的报销：" + reimbursementsEntity.getTitle() + "，已成功通过");
+                CommonResult result = restTemplate.postForObject("http://cloud-examine-service/notification/", notificationParam, CommonResult.class);
+
                 return new CommonResult(200, "已通过该申请");
             }
             else if(reimParam.getStatus().equals("已拒绝")){
+                //系统向用户发通知
+                NotificationParam notificationParam = new NotificationParam();
+                notificationParam.setSenderType((byte)(2));
+                notificationParam.setReceiverType((byte)(2));
+                notificationParam.setReceiverId(reimbursementsEntity.getUserId());
+                notificationParam.setNotificationTitle("报销申请失败");
+                notificationParam.setNotificationContent("您申请的报销：" + reimbursementsEntity.getTitle() + "，审核不通过");
                 return new CommonResult(200, "已驳回该申请");
             }
             return new CommonResult(200, "修改成功");

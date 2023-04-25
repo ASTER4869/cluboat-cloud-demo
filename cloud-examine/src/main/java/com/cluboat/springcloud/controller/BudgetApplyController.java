@@ -47,7 +47,7 @@ public class BudgetApplyController {
 
     }
 
-    @PostMapping
+    @PutMapping
     public CommonResult updateById(@RequestBody String json) {
         JSONObject jsonObject = new JSONObject(json);
         int id = jsonObject.getInt("id");

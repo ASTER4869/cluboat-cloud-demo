@@ -93,7 +93,7 @@ public class ClubBuildApplyController {
 
     }
 
-    @PostMapping
+    @PutMapping
     public CommonResult updateById(@RequestBody String json) {
         JSONObject jsonObject = new JSONObject(json);
         int id = jsonObject.getInt("buildApplyId");
@@ -124,7 +124,7 @@ public class ClubBuildApplyController {
                 result.setMessage("建社成功通知已发送成功");
                 return result;
             } catch (Exception e){
-                return new CommonResult(400, "创建失败",e);
+                return new CommonResult(400, "建社成功通知发送失败",e);
             }
         }
         else if(status.equals("已拒绝")){
@@ -141,7 +141,7 @@ public class ClubBuildApplyController {
                 result.setMessage("建社失败通知已发送成功");
                 return result;
             } catch (Exception e){
-                return new CommonResult(400, "通知消息发送失败",e);
+                return new CommonResult(400, "建社失败通知发送失败",e);
             }
         }
         if (isSuccess)

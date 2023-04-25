@@ -1,13 +1,19 @@
 package com.cluboat.springcloud.controller;
 
+import com.alibaba.nacos.common.http.param.MediaType;
 import com.cluboat.springcloud.entities.CommonResult;
+import com.cluboat.springcloud.entity.AdminApplyEntity;
 import com.cluboat.springcloud.entity.Belong;
-import com.cluboat.springcloud.entity.apply.AdminApplyEntity;
 import com.cluboat.springcloud.service.AdminApplyService;
 import com.cluboat.springcloud.service.BelongService;
 import lombok.extern.slf4j.Slf4j;
 import org.json.JSONObject;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -21,43 +27,24 @@ public class AdminApplyController {
     @Resource
     private AdminApplyService adminApplyService;
 
+    @Resource
+    private RestTemplate restTemplate;
 
     @GetMapping("/{id}")
     public CommonResult getPaymentById(@PathVariable("id") int id){
-        List<AdminApplyEntity> list = adminApplyService.lambdaQuery().eq(AdminApplyEntity::getAdminClubId, id).list();
-        log.info("****插入结果：{payment}");
-        if(!list.isEmpty()){
-            return new CommonResult(200,"查询成功",list);
-        }else {
-            return new CommonResult(400,"无记录");
-        }
+
+        CommonResult result = restTemplate.getForObject("http://cloud-club-manage-service/admin-apply/" + id, CommonResult.class);
+        return result;
     }
     @Resource
     private BelongService belongService;
-    @PostMapping
+    @PutMapping
     public CommonResult updateById(@RequestBody String json) {
-        JSONObject jsonObject = new JSONObject(json);
-        int id = jsonObject.getInt("id");
-        int state = jsonObject.getInt("state");
-        String feedback =jsonObject.optString("feedback");
-        AdminApplyEntity adminApply = adminApplyService.getById(id);
-        adminApply.setAdminApplyIsPass(state);
-        adminApply.setFeedback(feedback);
-        Belong belong=new Belong();
-        boolean isSuccess = adminApplyService.updateById(adminApply);
-        if(state==1) {
-            belong.setPermission(1);
-            belong.setClubId(adminApply.getAdminClubId());
-            belong.setUserId(adminApply.getUserId());
-            belong.setState(0);
-            isSuccess = belongService.save(belong);
-        }
-        if (isSuccess) {
-            return new CommonResult(200, "修改成功");
-        }
-        else {
-            return new CommonResult(400, "修改失败");
-        }
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(org.springframework.http.MediaType.valueOf(MediaType.APPLICATION_JSON));
+        HttpEntity<String> entity = new HttpEntity<>(json,headers);
+        ResponseEntity<CommonResult> result = restTemplate.exchange("http://cloud-club-manage-service/admin-apply/", HttpMethod.PUT, entity, CommonResult.class);
+        return result.getBody();
 
     }
 }

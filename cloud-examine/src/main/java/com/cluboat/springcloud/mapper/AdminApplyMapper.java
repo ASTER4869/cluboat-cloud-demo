@@ -1,7 +1,7 @@
 package com.cluboat.springcloud.mapper;
 
+import com.cluboat.springcloud.entity.AdminApplyEntity;
 import com.github.yulichang.base.MPJBaseMapper;
-import com.cluboat.springcloud.entity.apply.AdminApplyEntity;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 

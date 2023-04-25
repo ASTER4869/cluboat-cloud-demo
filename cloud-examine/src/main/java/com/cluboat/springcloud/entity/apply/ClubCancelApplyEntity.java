@@ -31,8 +31,8 @@ public class ClubCancelApplyEntity {
     @Column(name = "cancel_apply_reason")
     private String cancelApplyReason;
     @Basic
-    @Column(name = "cancel_apply_is_pass")
-    private int cancelApplyIsPass;
+    @Column(name = "status")
+    private String status;
     @Basic
     @Column(name = "cancel_apply_time")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
@@ -71,12 +71,12 @@ public class ClubCancelApplyEntity {
         this.cancelApplyReason = cancelApplyReason;
     }
 
-    public int getCancelApplyIsPass() {
-        return cancelApplyIsPass;
+    public String  getStatus() {
+        return status;
     }
 
-    public void setCancelApplyIsPass(int cancelApplyIsPass) {
-        this.cancelApplyIsPass = cancelApplyIsPass;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public Timestamp getCancelApplyTime() {
@@ -92,11 +92,11 @@ public class ClubCancelApplyEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ClubCancelApplyEntity that = (ClubCancelApplyEntity) o;
-        return cancelApplyId == that.cancelApplyId && userId == that.userId && clubId == that.clubId && cancelApplyIsPass == that.cancelApplyIsPass && Objects.equals(cancelApplyReason, that.cancelApplyReason) && Objects.equals(cancelApplyTime, that.cancelApplyTime);
+        return cancelApplyId == that.cancelApplyId && userId == that.userId && clubId == that.clubId && status == that.status && Objects.equals(cancelApplyReason, that.cancelApplyReason) && Objects.equals(cancelApplyTime, that.cancelApplyTime);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(cancelApplyId, userId, clubId, cancelApplyReason, cancelApplyIsPass, cancelApplyTime);
+        return Objects.hash(cancelApplyId, userId, clubId, cancelApplyReason, status, cancelApplyTime);
     }
 }

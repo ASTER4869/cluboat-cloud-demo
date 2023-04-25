@@ -25,12 +25,16 @@ public class AdminApplyEntity {
     @Basic
     @Column(name = "admin_apply_reason")
     private String adminApplyReason;
-    @Basic
-    @Column(name = "admin_apply_is_pass")
-    private int adminApplyIsPass;
+
     @Basic
     @Column(name = "admin_apply_time")
     private Timestamp adminApplyTime;
+    @Basic
+    @Column(name = "status")
+    private String status;
+    @Basic
+    @Column(name = "feedback")
+    private String feedback;
 
     public int getAdminApplyId() {
         return adminApplyId;
@@ -64,14 +68,6 @@ public class AdminApplyEntity {
         this.adminApplyReason = adminApplyReason;
     }
 
-    public int getAdminApplyIsPass() {
-        return adminApplyIsPass;
-    }
-
-    public void setAdminApplyIsPass(int adminApplyIsPass) {
-        this.adminApplyIsPass = adminApplyIsPass;
-    }
-
     public Timestamp getAdminApplyTime() {
         return adminApplyTime;
     }
@@ -80,16 +76,32 @@ public class AdminApplyEntity {
         this.adminApplyTime = adminApplyTime;
     }
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getFeedback() {
+        return feedback;
+    }
+
+    public void setFeedback(String feedback) {
+        this.feedback = feedback;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         AdminApplyEntity that = (AdminApplyEntity) o;
-        return adminApplyId == that.adminApplyId && userId == that.userId && adminClubId == that.adminClubId && adminApplyIsPass == that.adminApplyIsPass && Objects.equals(adminApplyReason, that.adminApplyReason) && Objects.equals(adminApplyTime, that.adminApplyTime);
+        return adminApplyId == that.adminApplyId && userId == that.userId && adminClubId == that.adminClubId && Objects.equals(adminApplyReason, that.adminApplyReason) && Objects.equals(adminApplyTime, that.adminApplyTime) && Objects.equals(status, that.status) && Objects.equals(feedback, that.feedback);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(adminApplyId, userId, adminClubId, adminApplyReason, adminApplyIsPass, adminApplyTime);
+        return Objects.hash(adminApplyId, userId, adminClubId, adminApplyReason, status, adminApplyTime, feedback);
     }
 }
