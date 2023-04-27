@@ -247,6 +247,8 @@ public class ReimController {
                 notificationParam.setReceiverId(reimbursementsEntity.getUserId());
                 notificationParam.setNotificationTitle("报销申请失败");
                 notificationParam.setNotificationContent("您申请的报销：" + reimbursementsEntity.getTitle() + "，审核不通过");
+                CommonResult result = restTemplate.postForObject("http://cloud-examine-service/notification/", notificationParam, CommonResult.class);
+
                 return new CommonResult(200, "已驳回该申请");
             }
             return new CommonResult(200, "修改成功");

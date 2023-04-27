@@ -10,6 +10,4 @@ public class ClubBuildApplyParam {
     public int userId;
     public String clubName;
     public String buildApplyReason;
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
-    public Timestamp buildApplyTime;
 }

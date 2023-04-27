@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.persistence.*;
+import java.sql.Date;
 import java.sql.Timestamp;
 import java.util.Objects;
 
@@ -27,11 +28,35 @@ public class ActivityApplyEntity {
     @Column(name = "activity_apply_reason")
     private String activityApplyReason;
     @Basic
-    @Column(name = "activity_apply_is_pass")
-    private byte activityApplyIsPass;
+    @Column(name = "status")
+    private String status;
     @Basic
     @Column(name = "activity_apply_time")
     private Timestamp activityApplyTime;
+    @Basic
+    @Column(name = "feedback")
+    private String feedback;
+    @Basic
+    @Column(name = "activity_title")
+    private String activityTitle;
+    @Basic
+    @Column(name = "activity_date")
+    private Date activityDate;
+    @Basic
+    @Column(name = "activity_time")
+    private String activityTime;
+    @Basic
+    @Column(name = "activity_campus")
+    private String activityCampus;
+    @Basic
+    @Column(name = "activity_location")
+    private String activityLocation;
+    @Basic
+    @Column(name = "activity_people_num")
+    private String activityPeopleNum;
+    @Basic
+    @Column(name = "activity_description")
+    private String activityDescription;
 
     public int getActivityApplyId() {
         return activityApplyId;
@@ -65,12 +90,12 @@ public class ActivityApplyEntity {
         this.activityApplyReason = activityApplyReason;
     }
 
-    public byte getActivityApplyIsPass() {
-        return activityApplyIsPass;
+    public String getStatus() {
+        return status;
     }
 
-    public void setActivityApplyIsPass(byte activityApplyIsPass) {
-        this.activityApplyIsPass = activityApplyIsPass;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public Timestamp getActivityApplyTime() {
@@ -81,16 +106,80 @@ public class ActivityApplyEntity {
         this.activityApplyTime = activityApplyTime;
     }
 
+    public String getFeedback() {
+        return feedback;
+    }
+
+    public void setFeedback(String feedback) {
+        this.feedback = feedback;
+    }
+
+    public String getActivityTitle() {
+        return activityTitle;
+    }
+
+    public void setActivityTitle(String activityTitle) {
+        this.activityTitle = activityTitle;
+    }
+
+    public Date getActivityDate() {
+        return activityDate;
+    }
+
+    public void setActivityDate(Date activityDate) {
+        this.activityDate = activityDate;
+    }
+
+    public String getActivityTime() {
+        return activityTime;
+    }
+
+    public void setActivityTime(String activityTime) {
+        this.activityTime = activityTime;
+    }
+
+    public String getActivityCampus() {
+        return activityCampus;
+    }
+
+    public void setActivityCampus(String activityCampus) {
+        this.activityCampus = activityCampus;
+    }
+
+    public String getActivityLocation() {
+        return activityLocation;
+    }
+
+    public void setActivityLocation(String activityLocation) {
+        this.activityLocation = activityLocation;
+    }
+
+    public String getActivityPeopleNum() {
+        return activityPeopleNum;
+    }
+
+    public void setActivityPeopleNum(String activityPeopleNum) {
+        this.activityPeopleNum = activityPeopleNum;
+    }
+
+    public String getActivityDescription() {
+        return activityDescription;
+    }
+
+    public void setActivityDescription(String activityDescription) {
+        this.activityDescription = activityDescription;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ActivityApplyEntity that = (ActivityApplyEntity) o;
-        return activityApplyId == that.activityApplyId && userId == that.userId && clubId == that.clubId && activityApplyIsPass == that.activityApplyIsPass && Objects.equals(activityApplyReason, that.activityApplyReason) && Objects.equals(activityApplyTime, that.activityApplyTime);
+        return activityApplyId == that.activityApplyId && userId == that.userId && clubId == that.clubId && Objects.equals(activityApplyReason, that.activityApplyReason) && Objects.equals(status, that.status) && Objects.equals(activityApplyTime, that.activityApplyTime) && Objects.equals(feedback, that.feedback) && Objects.equals(activityTitle, that.activityTitle) && Objects.equals(activityDate, that.activityDate) && Objects.equals(activityTime, that.activityTime) && Objects.equals(activityCampus, that.activityCampus) && Objects.equals(activityLocation, that.activityLocation) && Objects.equals(activityPeopleNum, that.activityPeopleNum) && Objects.equals(activityDescription, that.activityDescription);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(activityApplyId, userId, clubId, activityApplyReason, activityApplyIsPass, activityApplyTime);
+        return Objects.hash(activityApplyId, userId, clubId, activityApplyReason, status, activityApplyTime, feedback, activityTitle, activityDate, activityTime, activityCampus, activityLocation, activityPeopleNum, activityDescription);
     }
 }

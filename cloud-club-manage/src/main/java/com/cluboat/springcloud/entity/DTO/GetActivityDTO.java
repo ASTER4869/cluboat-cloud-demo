@@ -1,21 +1,16 @@
-package com.cluboat.springcloud.entity.dto;
+package com.cluboat.springcloud.entity.DTO;
 
-
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
-import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Table;
 import java.sql.Date;
-import java.sql.Timestamp;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class MyActivityDTO {
+public class GetActivityDTO {
+
 
     private Integer activityId;
     private Integer userId;

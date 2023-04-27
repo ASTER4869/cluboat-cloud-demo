@@ -2,24 +2,36 @@ package com.cluboat.springcloud.controller;
 
 
 
+import com.alibaba.nacos.common.http.param.MediaType;
 import com.cluboat.springcloud.entities.CommonResult;
+import com.cluboat.springcloud.entity.ActivityApplyEntity;
 import com.cluboat.springcloud.entity.ActivityEntity;
-import com.cluboat.springcloud.entity.apply.ActivityApplyEntity;
+import com.cluboat.springcloud.entity.ClubEntity;
+import com.cluboat.springcloud.entity.UserInfoEntity;
+import com.cluboat.springcloud.entity.param.NotificationParam;
 import com.cluboat.springcloud.service.ActivityApplyService;
 import com.cluboat.springcloud.service.ActivityService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import org.json.*;
+import org.springframework.web.client.RestTemplate;
 
 @RestController
 @Slf4j
 @RequestMapping("/activity-apply")
 public class ActivityApplyController {
 
+    @Resource
+    private RestTemplate restTemplate;
 
     @Resource
     private ActivityApplyService activityApplyService;
@@ -27,26 +39,33 @@ public class ActivityApplyController {
     private ActivityService activityService;
 
 
-    @GetMapping("/{id}")
-    public CommonResult getActivityApplyById(@PathVariable("id") int id) {
-        ActivityApplyEntity activityApply = activityApplyService.getById(id);
-        log.info("****插入结果：{payment}");
-        if (activityApply != null) {
-            return new CommonResult(200, "查询成功", activityApply);
-        } else {
-            return new CommonResult(400, "无记录");
-        }
+    /* 获得本社团提交的活动申请 */
+    @GetMapping("/{clubId}")
+    public CommonResult getActivityApplyByClubId(@PathVariable("clubId") int clubId) {
+
+        CommonResult result = restTemplate.getForObject("http://cloud-club-manage-service/activity-apply/" + clubId, CommonResult.class);
+        return result;
     }
 
-    @GetMapping
-    public CommonResult getActivityApply() {
-        List<ActivityApplyEntity> activityApply = activityApplyService.list();
-        if (!activityApply.isEmpty()) {
-            return new CommonResult(200, "查询成功", activityApply);
-        } else {
-            return new CommonResult(400, "无记录");
-        }
+    /* 获得所有活动申请 */
+    @GetMapping()
+    public CommonResult getAllActivityApply() {
+
+        CommonResult result = restTemplate.getForObject("http://cloud-club-manage-service/activity-apply/", CommonResult.class);
+        return result;
     }
+
+    @PutMapping
+    public CommonResult updateById(@RequestBody String json) {
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(org.springframework.http.MediaType.valueOf(MediaType.APPLICATION_JSON));
+        HttpEntity<String> entity = new HttpEntity<>(json,headers);
+        ResponseEntity<CommonResult> result = restTemplate.exchange("http://cloud-club-manage-service/activity-apply/", HttpMethod.PUT, entity, CommonResult.class);
+        return result.getBody();
+
+    }
+
 
     @DeleteMapping("/{id}")
     public CommonResult removeById(@PathVariable("id") int id) {
@@ -60,32 +79,4 @@ public class ActivityApplyController {
 
     }
 
-    @PostMapping
-    public CommonResult updateById(@RequestBody String json) {
-        JSONObject jsonObject = new JSONObject(json);
-        int id = jsonObject.getInt("id");
-        int state = jsonObject.getInt("state");
-        String feedback =jsonObject.optString("feedback");
-        ActivityApplyEntity activityApply = activityApplyService.getById(id);
-        activityApply.setActivityApplyIsPass(state);
-        activityApply.setFeedback(feedback);
-        ActivityEntity activity = new ActivityEntity();
-        boolean isSuccess = activityApplyService.updateById(activityApply);
-        if(state==1) {
-            activity.setActivityIsPass(state);
-            activity.setClubId(activityApply.getClubId());
-            isSuccess = activityService.save(activity);
-        }
-
-
-
-
-        if (isSuccess) {
-            return new CommonResult(200, "修改成功");
-        }
-        else {
-            return new CommonResult(400, "修改失败");
-        }
-
-    }
 }

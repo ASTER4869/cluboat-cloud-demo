@@ -3,6 +3,7 @@ package com.cluboat.springcloud.service.impl;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.cluboat.springcloud.entity.ActivityEntity;
 import com.cluboat.springcloud.entity.FollowEntity;
+import com.cluboat.springcloud.entity.UserInfoEntity;
 import com.cluboat.springcloud.entity.dto.MyActivityDTO;
 import com.cluboat.springcloud.mapper.ActivityMapper;
 import com.cluboat.springcloud.mapper.FollowMapper;
@@ -25,7 +26,9 @@ public class ActivityServiceImpl  extends ServiceImpl<ActivityMapper, ActivityEn
         //第一个参数是接受返回参数的类，第二个参数中的类型是连接中的左表对应的DO
         List<MyActivityDTO> myActivityList = activityMapper.selectJoinList(MyActivityDTO.class, new MPJLambdaWrapper<ActivityEntity>()
             .selectAll(ActivityEntity.class)
+            .select(UserInfoEntity::getUserName)
             .leftJoin(FollowEntity.class, FollowEntity::getActivityId, ActivityEntity::getActivityId)
+            .leftJoin(UserInfoEntity.class, UserInfoEntity::getUserId, ActivityEntity::getUserId)
             .eq(FollowEntity::getUserId, userId));
         return myActivityList;
     }

@@ -17,7 +17,7 @@ import java.util.List;
 
 @RestController
 @Slf4j
-@RequestMapping("/club-creation-application")
+@RequestMapping("/club-build-apply")
 public class ClubBuildApplyController {
 
     @Resource
@@ -29,8 +29,6 @@ public class ClubBuildApplyController {
         ClubBuildApplyEntity clubBuildApply = new ClubBuildApplyEntity();
         clubBuildApply.setFeedback(null);  //提交申请没有反馈！
         clubBuildApply.setStatus("待审批");  //初始未通过！
-
-        clubBuildApplyParam.buildApplyTime =  new Timestamp(System.currentTimeMillis());
         clubBuildApply.setBuildApply(clubBuildApplyParam);
         try {
             clubBuildApplyService.save(clubBuildApply);

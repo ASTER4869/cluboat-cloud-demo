@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 
 import javax.persistence.*;
+import java.sql.Date;
 import java.sql.Timestamp;
 import java.util.Objects;
 
@@ -20,23 +21,29 @@ public class ActivityEntity {
     @Column(name = "club_id")
     private int clubId;
     @Basic
-    @Column(name = "activity_name")
-    private String activityName;
+    @Column(name = "activity_title")
+    private String activityTitle;
     @Basic
-    @Column(name = "activity_area")
-    private String activityArea;
+    @Column(name = "activity_date")
+    private Date activityDate;
     @Basic
-    @Column(name = "activity_start_time")
-    private Timestamp activityStartTime;
+    @Column(name = "activity_time")
+    private String activityTime;
     @Basic
-    @Column(name = "activity_end_time")
-    private Timestamp activityEndTime;
+    @Column(name = "activity_campus")
+    private String activityCampus;
     @Basic
-    @Column(name = "activity_is_pass")
-    private int activityIsPass;
+    @Column(name = "activity_location")
+    private String activityLocation;
     @Basic
-    @Column(name = "activity_content")
-    private String activityContent;
+    @Column(name = "activity_people_num")
+    private String activityPeopleNum;
+    @Basic
+    @Column(name = "activity_description")
+    private String activityDescription;
+    @Basic
+    @Column(name = "user_id")
+    private int userId;
 
     public int getActivityId() {
         return activityId;
@@ -54,52 +61,70 @@ public class ActivityEntity {
         this.clubId = clubId;
     }
 
-    public String getActivityName() {
-        return activityName;
+    public String getActivityTitle() {
+        return activityTitle;
     }
 
-    public void setActivityName(String activityName) {
-        this.activityName = activityName;
+    public void setActivityTitle(String activityTitle) {
+        this.activityTitle = activityTitle;
     }
 
-    public String getActivityArea() {
-        return activityArea;
+    public Date getActivityDate() {
+        return activityDate;
     }
 
-    public void setActivityArea(String activityArea) {
-        this.activityArea = activityArea;
+    public void setActivityDate(Date activityDate) {
+        this.activityDate = activityDate;
     }
 
-    public Timestamp getActivityStartTime() {
-        return activityStartTime;
+    public String getActivityTime() {
+        return activityTime;
     }
 
-    public void setActivityStartTime(Timestamp activityStartTime) {
-        this.activityStartTime = activityStartTime;
+    public void setActivityTime(String activityTime) {
+        this.activityTime = activityTime;
     }
 
-    public Timestamp getActivityEndTime() {
-        return activityEndTime;
+    public String getActivityCampus() {
+        return activityCampus;
     }
 
-    public void setActivityEndTime(Timestamp activityEndTime) {
-        this.activityEndTime = activityEndTime;
+    public void setActivityCampus(String activityCampus) {
+        this.activityCampus = activityCampus;
     }
 
-    public int getActivityIsPass() {
-        return activityIsPass;
+    public String getActivityLocation() {
+        return activityLocation;
     }
 
-    public void setActivityIsPass(int activityIsPass) {
-        this.activityIsPass = activityIsPass;
+    public void setActivityLocation(String activityLocation) {
+        this.activityLocation = activityLocation;
     }
 
-    public String getActivityContent() {
-        return activityContent;
+    public String getActivityPeopleNum() {
+        return activityPeopleNum;
     }
 
-    public void setActivityContent(String activityContent) {
-        this.activityContent = activityContent;
+    public void setActivityPeopleNum(String activityPeopleNum) {
+        this.activityPeopleNum = activityPeopleNum;
+    }
+
+    public String getActivityDescription() {
+        return activityDescription;
+    }
+
+    public void setActivityDescription(String activityDescription) {
+        this.activityDescription = activityDescription;
+    }
+
+
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
     @Override
@@ -107,11 +132,11 @@ public class ActivityEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ActivityEntity that = (ActivityEntity) o;
-        return activityId == that.activityId && clubId == that.clubId && activityIsPass == that.activityIsPass && Objects.equals(activityName, that.activityName) && Objects.equals(activityArea, that.activityArea) && Objects.equals(activityStartTime, that.activityStartTime) && Objects.equals(activityEndTime, that.activityEndTime) && Objects.equals(activityContent, that.activityContent);
+        return activityId == that.activityId && clubId == that.clubId && userId == that.userId && Objects.equals(activityTitle, that.activityTitle) && Objects.equals(activityDate, that.activityDate) && Objects.equals(activityTime, that.activityTime) && Objects.equals(activityCampus, that.activityCampus) && Objects.equals(activityLocation, that.activityLocation) && Objects.equals(activityPeopleNum, that.activityPeopleNum) && Objects.equals(activityDescription, that.activityDescription);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(activityId, clubId, activityName, activityArea, activityStartTime, activityEndTime, activityIsPass, activityContent);
+        return Objects.hash(activityId, userId, clubId, activityTitle, activityDate, activityTime, activityCampus, activityLocation, activityPeopleNum, activityDescription);
     }
 }

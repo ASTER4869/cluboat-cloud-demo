@@ -44,7 +44,7 @@ public class ClubBuildApplyEntity {
 
     public void setBuildApply(ClubBuildApplyParam clubBuildApplyParam) {
         this.buildApplyReason= clubBuildApplyParam.buildApplyReason;
-        this.buildApplyTime = clubBuildApplyParam.buildApplyTime;
+        this.buildApplyTime = new Timestamp(System.currentTimeMillis());
         this.adminClubName = clubBuildApplyParam.clubName;
         this.userId = clubBuildApplyParam.userId;
     }

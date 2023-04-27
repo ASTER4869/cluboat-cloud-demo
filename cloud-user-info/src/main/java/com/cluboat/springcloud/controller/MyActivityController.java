@@ -27,13 +27,18 @@ public class MyActivityController {
 
     //查看关注的活动列表
     @GetMapping("/{userId}")
-    public CommonResult findAll(@PathVariable Integer userId) {
-        List<MyActivityDTO> myActivityDTO = activityService.GetMyActivity(userId);
-        if(myActivityDTO.isEmpty()==false){
-            return new CommonResult(200,"查询成功", myActivityDTO);
-        }
-        else{
-            return new CommonResult(444,"无记录");
+    public CommonResult getMyActivity(@PathVariable("userId") Integer userId) {
+        try {
+            List<MyActivityDTO> myActivityDTO = activityService.GetMyActivity(userId);
+            if(myActivityDTO.isEmpty()==false){
+                return new CommonResult(200,"查询成功", myActivityDTO);
+            }
+            else{
+                return new CommonResult(444,"无记录");
+            }
+
+        }catch (Exception e){
+            return new CommonResult(400,"系统出错", e);
         }
 
     }
