@@ -36,16 +36,24 @@ public class MyClubController {
 
     @DeleteMapping
     public CommonResult quitFromClub(@RequestBody DeleteMyClubParam param) {
-        LambdaQueryWrapper<BelongEntity> wrapper = new LambdaQueryWrapper<BelongEntity>()
-                .eq(BelongEntity::getUserId, param.getUserId())
-                .eq(BelongEntity::getClubId, param.getClubId());
-        BelongEntity belongEntity = belongService.getOne(wrapper);
-        if(belongEntity!=null){
-            belongService.remove(wrapper);
-            return new CommonResult(200,"删除成功");
-        }
-        else{
-            return new CommonResult(444,"无记录");
+        try {
+            LambdaQueryWrapper<BelongEntity> wrapper = new LambdaQueryWrapper<BelongEntity>()
+                    .eq(BelongEntity::getUserId, param.getUserId())
+                    .eq(BelongEntity::getClubId, param.getClubId());
+            BelongEntity belongEntity = belongService.getOne(wrapper);
+            if(belongEntity!=null){
+                //如果该用户是社长
+                if(belongEntity.getPermission() == 2){
+                    return new CommonResult(400, "您是该社团社长，无法直接退出社团");
+                }
+                belongService.remove(wrapper);
+                return new CommonResult(200,"删除成功");
+            }
+            else{
+                return new CommonResult(444,"无记录");
+            }
+        }catch (Exception e){
+            return new CommonResult(400, "系统出现错误", e);
         }
     }
 

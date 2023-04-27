@@ -10,32 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d4d16d2-b824-45f3-a1a5-21313ed733a4" name="变更" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8049691a-bc80-42b5-9ec0-c4638bb187ed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8049691a-bc80-42b5-9ec0-c4638bb187ed.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-api-common/src/main/java/com/cluboat/springcloud/entity/ActivityApplyEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-common/src/main/java/com/cluboat/springcloud/entity/ActivityApplyEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-api-common/src/main/java/com/cluboat/springcloud/entity/ActivityEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-common/src/main/java/com/cluboat/springcloud/entity/ActivityEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-api-common/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-common/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/Controller/ClubActivityApplyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/Controller/ClubActivityApplyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/Controller/ClubActivityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/Controller/ClubActivityController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/Controller/ClubBuildApplyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/Controller/ClubBuildApplyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/Controller/ReimController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/Controller/ReimController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/entity/ActivityApplyEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/entity/ActivityEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/entity/ClubBuildApplyEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/entity/ClubBuildApplyEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/entity/param/ActivityApplyParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/entity/param/ActivityApplyParam.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/entity/param/ClubBuildApplyParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/entity/param/ClubBuildApplyParam.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/controller/ActivityApplyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/controller/ActivityApplyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/controller/BudgetApplyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/controller/BudgetsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/controller/ReimApplyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/controller/ReimController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/mapper/BudgetApplyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/mapper/BudgetApplyMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/mapper/ReimApplyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/mapper/ReimApplyMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/service/BudgetApplyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/service/BudgetApplyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/service/ReimApplyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/service/ReimApplyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/service/impl/BudgetApplyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/service/impl/BudgetApplyServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/service/impl/ReimApplyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/src/main/java/com/cluboat/springcloud/service/impl/ReimApplyServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/controller/MyActivityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/controller/MyActivityController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/entity/dto/MyActivityDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/entity/dto/MyActivityDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/service/impl/ActivityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/service/impl/ActivityServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/controller/MyClubController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/controller/MyClubController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -333,7 +309,7 @@
       <workItem from="1681902780696" duration="86736000" />
       <workItem from="1682314322436" duration="31663000" />
       <workItem from="1682497663241" duration="147000" />
-      <workItem from="1682510801513" duration="11938000" />
+      <workItem from="1682510801513" duration="12654000" />
     </task>
     <servers />
   </component>
