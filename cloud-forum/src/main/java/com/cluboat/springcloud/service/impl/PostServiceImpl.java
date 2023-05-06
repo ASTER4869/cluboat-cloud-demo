@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.cluboat.springcloud.entity.*;
 import com.cluboat.springcloud.entity.dto.PostListDTO;
 import com.cluboat.springcloud.entity.param.PostAddParam;
+import com.cluboat.springcloud.entity.param.PostGetParam;
 import com.cluboat.springcloud.mapper.PostMapper;
 import com.cluboat.springcloud.service.PostService;
 import com.cluboat.springcloud.service.PostTagService;
@@ -40,12 +41,16 @@ public class PostServiceImpl extends ServiceImpl<PostMapper, PostEntity> impleme
 //    }
 
     @Override
-    public List<PostListDTO> GetPostListByUserId(Integer userId){
-        List<PostListDTO> postList = postMapper.selectJoinList(PostListDTO.class,
-                new MPJLambdaWrapper<PostEntity>()
-                        .selectAll(PostEntity.class)
-                        .eq(PostEntity::getUserId,userId)
-        );
+    public List<PostListDTO> GetPostListByParam(PostGetParam param){
+        MPJLambdaWrapper<PostEntity> wrapper = new MPJLambdaWrapper<PostEntity>()
+                .selectAll(PostEntity.class);
+        if (param.getUserId() != null){
+            wrapper = wrapper.eq(PostEntity::getUserId, param.getUserId());
+        }
+        if (param.getStatus() != null){
+            wrapper = wrapper.eq(PostEntity::getStatus, param.getStatus());
+        }
+        List<PostListDTO> postList = postMapper.selectJoinList(PostListDTO.class, wrapper);
 //        for(PostListDTO postListDTO:postList){
 //            postListDTO.setPostTag(postTagService.GetPostTagListByPostId(postListDTO.getPostId()));
 //        }

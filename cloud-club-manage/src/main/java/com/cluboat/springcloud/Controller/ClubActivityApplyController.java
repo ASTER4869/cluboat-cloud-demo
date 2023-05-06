@@ -10,6 +10,7 @@ import com.cluboat.springcloud.entity.UserInfoEntity;
 import com.cluboat.springcloud.entity.param.ActivityApplyParam;
 import com.cluboat.springcloud.entity.param.GetActivityApplyParam;
 import com.cluboat.springcloud.entity.param.NotificationParam;
+import com.cluboat.springcloud.mapper.ActivityApplyMapper;
 import com.cluboat.springcloud.service.ActivityApplyService;
 import com.cluboat.springcloud.service.ClubActivityService;
 import com.cluboat.springcloud.service.ClubService;
@@ -42,6 +43,9 @@ public class ClubActivityApplyController {
 
     @Resource
     private ClubActivityService activityService;
+
+    @Resource
+    private ActivityApplyMapper activityApplyMapper;
 
     /* 提交活动申请 */
     @PostMapping

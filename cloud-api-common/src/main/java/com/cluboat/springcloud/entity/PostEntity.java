@@ -1,7 +1,9 @@
 package com.cluboat.springcloud.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
@@ -13,11 +15,12 @@ import java.util.Objects;
 public class PostEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @TableId("post_id")
+    @TableId(value = "post_id", type = IdType.AUTO)
     @Column(name = "post_id")
     private int postId;
     @Basic
     @Column(name = "post_time")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Timestamp postTime;
     @Basic
     @Column(name = "is_top")
@@ -31,6 +34,9 @@ public class PostEntity {
     @Basic
     @Column(name = "user_id")
     private int userId;
+    @Basic
+    @Column(name = "status")
+    private String status;
 
     public int getPostId() {
         return postId;
@@ -80,16 +86,24 @@ public class PostEntity {
         this.userId = userId;
     }
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         PostEntity that = (PostEntity) o;
-        return postId == that.postId && isTop == that.isTop && clubId == that.clubId && userId == that.userId && Objects.equals(postTime, that.postTime) && Objects.equals(postTitle, that.postTitle);
+        return postId == that.postId && isTop == that.isTop && clubId == that.clubId && userId == that.userId && Objects.equals(postTime, that.postTime) && Objects.equals(postTitle, that.postTitle) && Objects.equals(status, that.status);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(postId, postTime, isTop, postTitle, clubId, userId);
+        return Objects.hash(postId, postTime, isTop, postTitle, clubId, userId, status);
     }
 }

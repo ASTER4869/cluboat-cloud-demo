@@ -1,6 +1,9 @@
 package com.cluboat.springcloud.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
@@ -9,18 +12,16 @@ import java.util.Objects;
 @Entity
 @TableName("comment")
 @Table(name = "comment", schema = "cluboat", catalog = "")
-@IdClass(CommentEntityPK.class)
 public class CommentEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
+    @TableId(value = "comment_id", type = IdType.AUTO)
     @Column(name = "comment_id")
     private int commentId;
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Id
+    @Basic
     @Column(name = "user_id")
     private int userId;
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Id
+    @Basic
     @Column(name = "post_id")
     private int postId;
     @Basic
@@ -28,7 +29,11 @@ public class CommentEntity {
     private String commentContent;
     @Basic
     @Column(name = "comment_time")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Timestamp commentTime;
+    @Basic
+    @Column(name = "status")
+    private String  status;
 
     public int getCommentId() {
         return commentId;
@@ -70,16 +75,24 @@ public class CommentEntity {
         this.commentTime = commentTime;
     }
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         CommentEntity that = (CommentEntity) o;
-        return commentId == that.commentId && userId == that.userId && postId == that.postId && Objects.equals(commentContent, that.commentContent) && Objects.equals(commentTime, that.commentTime);
+        return commentId == that.commentId && userId == that.userId && postId == that.postId && Objects.equals(commentContent, that.commentContent) && Objects.equals(commentTime, that.commentTime) && Objects.equals(status, that.status);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(commentId, userId, postId, commentContent, commentTime);
+        return Objects.hash(commentId, userId, postId, commentContent, commentTime, status);
     }
 }

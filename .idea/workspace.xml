@@ -10,8 +10,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d4d16d2-b824-45f3-a1a5-21313ed733a4" name="变更" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8049691a-bc80-42b5-9ec0-c4638bb187ed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8049691a-bc80-42b5-9ec0-c4638bb187ed.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/controller/MyClubController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/controller/MyClubController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-common/src/main/java/com/cluboat/springcloud/entity/CommentEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-common/src/main/java/com/cluboat/springcloud/entity/CommentEntityPK.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-common/src/main/java/com/cluboat/springcloud/entity/PostEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-common/src/main/java/com/cluboat/springcloud/entity/ReportEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-common/src/main/java/com/cluboat/springcloud/entity/ReportEntityPK.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-common/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-common/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/Controller/ClubActivityApplyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/Controller/ClubActivityApplyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-forum/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-forum/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-forum/src/main/java/com/cluboat/springcloud/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-forum/src/main/java/com/cluboat/springcloud/controller/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-forum/src/main/java/com/cluboat/springcloud/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-forum/src/main/java/com/cluboat/springcloud/controller/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-forum/src/main/java/com/cluboat/springcloud/controller/PostListController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-forum/src/main/java/com/cluboat/springcloud/entity/param/CommentAddParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-forum/src/main/java/com/cluboat/springcloud/entity/param/CommentAddParam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-forum/src/main/java/com/cluboat/springcloud/entity/param/PostAddParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-forum/src/main/java/com/cluboat/springcloud/entity/param/PostAddParam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-forum/src/main/java/com/cluboat/springcloud/forum.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-forum/src/main/java/com/cluboat/springcloud/forum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-forum/src/main/java/com/cluboat/springcloud/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-forum/src/main/java/com/cluboat/springcloud/service/PostService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-forum/src/main/java/com/cluboat/springcloud/service/impl/CommentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-forum/src/main/java/com/cluboat/springcloud/service/impl/CommentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-forum/src/main/java/com/cluboat/springcloud/service/impl/PostServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-forum/src/main/java/com/cluboat/springcloud/service/impl/PostServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -309,7 +326,9 @@
       <workItem from="1681902780696" duration="86736000" />
       <workItem from="1682314322436" duration="31663000" />
       <workItem from="1682497663241" duration="147000" />
-      <workItem from="1682510801513" duration="12654000" />
+      <workItem from="1682510801513" duration="16409000" />
+      <workItem from="1682666214233" duration="12570000" />
+      <workItem from="1682918047760" duration="30969000" />
     </task>
     <servers />
   </component>

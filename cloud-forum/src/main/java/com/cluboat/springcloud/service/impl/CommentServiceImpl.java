@@ -17,6 +17,7 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, CommentEntity
     @Resource
     CommentMapper commentMapper;
 
+    //原版api，先弃用
     @Override
     public int DeleteComment(CommentDeleteParam param){
         LambdaQueryWrapper<CommentEntity> wrapper = new LambdaQueryWrapper<CommentEntity>()
