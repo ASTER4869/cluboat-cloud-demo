@@ -1,12 +1,10 @@
 package com.cluboat.springcloud.Controller;
 
-import com.cluboat.springcloud.entities.CommonResult;
+import com.cluboat.springcloud.common.CommonResult;
 import com.cluboat.springcloud.entity.ActivityEntity;
 import com.cluboat.springcloud.entity.DTO.GetActivityDTO;
 import com.cluboat.springcloud.entity.DTO.GetActivityRoughDTO;
 import com.cluboat.springcloud.entity.UserInfoEntity;
-import com.cluboat.springcloud.entity.param.ActivityChangeParam;
-import com.cluboat.springcloud.entity.param.ActivityParam;
 import com.cluboat.springcloud.service.ClubActivityService;
 import com.cluboat.springcloud.service.UserInfoService;
 import lombok.extern.slf4j.Slf4j;
@@ -20,7 +18,7 @@ import java.util.List;
 @Slf4j
 @RequestMapping("/activity")
 
-public class ClubActivityController {
+public class ActivityController {
     @Resource
     UserInfoService userInfoService;
     @Resource

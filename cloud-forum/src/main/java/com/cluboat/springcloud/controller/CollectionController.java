@@ -1,6 +1,6 @@
 package com.cluboat.springcloud.controller;
 
-import com.cluboat.springcloud.entities.CommonResult;
+import com.cluboat.springcloud.common.CommonResult;
 import com.cluboat.springcloud.entity.CollectionEntity;
 import com.cluboat.springcloud.entity.param.CollectionAddParam;
 import com.cluboat.springcloud.entity.param.CollectionDeleteParam;

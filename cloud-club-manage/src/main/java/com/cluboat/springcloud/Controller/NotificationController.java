@@ -2,13 +2,12 @@ package com.cluboat.springcloud.Controller;
 
 import com.alibaba.nacos.common.http.param.MediaType;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.cluboat.springcloud.entities.CommonResult;
+import com.cluboat.springcloud.common.CommonResult;
 import com.cluboat.springcloud.entity.DTO.NotificationDTO;
 import com.cluboat.springcloud.entity.NotReceiverEntity;
 import com.cluboat.springcloud.entity.NotificationEntity;
 import com.cluboat.springcloud.entity.param.GetNotificationParam;
 import com.cluboat.springcloud.entity.param.NotificationParam;
-import com.cluboat.springcloud.service.ClubNotificationService;
 import com.cluboat.springcloud.service.NotReceiverService;
 import com.cluboat.springcloud.service.NotificationService;
 import lombok.extern.slf4j.Slf4j;
@@ -18,14 +17,13 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
-import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
 @RestController
 @Slf4j
 @RequestMapping("/notification")
-public class ClubNotificationController {
+public class NotificationController {
 
     @Resource
     private RestTemplate restTemplate;

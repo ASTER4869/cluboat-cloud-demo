@@ -5,7 +5,7 @@ import com.cluboat.springcloud.entity.FollowEntity;
 import com.cluboat.springcloud.entity.dto.MyActivityDTO;
 import com.cluboat.springcloud.entity.param.DeleteMyActivityParam;
 import com.cluboat.springcloud.service.ActivityService;
-import com.cluboat.springcloud.entities.CommonResult;
+import com.cluboat.springcloud.common.CommonResult;
 import com.cluboat.springcloud.service.FollowService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;

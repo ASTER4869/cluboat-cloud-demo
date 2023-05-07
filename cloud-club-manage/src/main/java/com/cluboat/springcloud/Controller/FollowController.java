@@ -1,11 +1,9 @@
 package com.cluboat.springcloud.Controller;
 
-import com.cluboat.springcloud.entities.CommonResult;
-import com.cluboat.springcloud.entity.ActivityEntity;
+import com.cluboat.springcloud.common.CommonResult;
 import com.cluboat.springcloud.entity.FollowEntity;
 import com.cluboat.springcloud.entity.param.FollowParam;
 import com.cluboat.springcloud.mapper.FollowMapper;
-import com.cluboat.springcloud.service.ClubNotificationService;
 import com.cluboat.springcloud.service.FollowService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;

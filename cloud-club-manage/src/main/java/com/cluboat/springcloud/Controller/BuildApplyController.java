@@ -1,24 +1,19 @@
 package com.cluboat.springcloud.Controller;
 
 
-import com.cluboat.springcloud.entities.CommonResult;
-import com.cluboat.springcloud.entity.AdminApplyEntity;
+import com.cluboat.springcloud.common.CommonResult;
 import com.cluboat.springcloud.entity.ClubBuildApplyEntity;
-import com.cluboat.springcloud.entity.param.AdminApplyParam;
 import com.cluboat.springcloud.entity.param.ClubBuildApplyParam;
-import com.cluboat.springcloud.service.AdminApplyService;
 import com.cluboat.springcloud.service.ClubBuildApplyService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
-import java.sql.Timestamp;
-import java.util.List;
 
 @RestController
 @Slf4j
 @RequestMapping("/club-build-apply")
-public class ClubBuildApplyController {
+public class BuildApplyController {
 
     @Resource
     private ClubBuildApplyService clubBuildApplyService;

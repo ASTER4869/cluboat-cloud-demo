@@ -1,7 +1,7 @@
 package com.cluboat.springcloud.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.cluboat.springcloud.entities.CommonResult;
+import com.cluboat.springcloud.common.CommonResult;
 import com.cluboat.springcloud.entity.CollectionEntity;
 import com.cluboat.springcloud.entity.dto.CollectionDTO;
 import com.cluboat.springcloud.entity.param.DeleteCollectionParam;

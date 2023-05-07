@@ -2,10 +2,9 @@ package com.cluboat.springcloud.Controller;
 
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.cluboat.springcloud.entities.CommonResult;
+import com.cluboat.springcloud.common.CommonResult;
 import com.cluboat.springcloud.entity.*;
 import com.cluboat.springcloud.entity.DTO.GetJoinApplyDTO;
-import com.cluboat.springcloud.entity.param.ActivityApplyParam;
 import com.cluboat.springcloud.entity.param.JoinApplyParam;
 import com.cluboat.springcloud.entity.param.NotificationParam;
 import com.cluboat.springcloud.service.*;
@@ -22,7 +21,7 @@ import java.util.List;
 @RestController
 @Slf4j
 @RequestMapping("/join-apply")
-public class ClubJoinApplyController {
+public class JoinApplyController {
     @Resource
     private RestTemplate restTemplate;
 

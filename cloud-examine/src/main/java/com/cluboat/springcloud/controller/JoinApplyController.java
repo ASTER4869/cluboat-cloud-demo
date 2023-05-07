@@ -1,16 +1,10 @@
 package com.cluboat.springcloud.controller;
 
 import com.alibaba.nacos.common.http.param.MediaType;
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.cluboat.springcloud.entities.CommonResult;
-import com.cluboat.springcloud.entity.Belong;
-import com.cluboat.springcloud.entity.ClubMaster;
-import com.cluboat.springcloud.entity.JoinApplyEntity;
-import com.cluboat.springcloud.entity.param.JoinApplyParam;
+import com.cluboat.springcloud.common.CommonResult;
 import com.cluboat.springcloud.service.BelongService;
 import com.cluboat.springcloud.service.JoinApplyService;
 import lombok.extern.slf4j.Slf4j;
-import org.json.JSONObject;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -19,9 +13,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
-import java.sql.Timestamp;
-import java.util.ArrayList;
-import java.util.List;
 
 @RestController
 @Slf4j

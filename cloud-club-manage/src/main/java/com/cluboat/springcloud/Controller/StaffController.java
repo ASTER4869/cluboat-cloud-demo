@@ -1,8 +1,7 @@
 package com.cluboat.springcloud.Controller;
 
-import com.cluboat.springcloud.entities.CommonResult;
+import com.cluboat.springcloud.common.CommonResult;
 import com.cluboat.springcloud.entity.DTO.GetClubStaffDTO;
-import com.cluboat.springcloud.entity.DTO.UserInfoDTO;
 import com.cluboat.springcloud.service.UserInfoService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +12,7 @@ import java.util.List;
 @RestController
 @Slf4j
 @RequestMapping("/club-staff")
-public class ClubStaffController {
+public class StaffController {
     @Resource
     private UserInfoService userInfoService;
 

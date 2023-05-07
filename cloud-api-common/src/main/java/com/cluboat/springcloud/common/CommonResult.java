@@ -1,4 +1,4 @@
-package com.cluboat.springcloud.entities;
+package com.cluboat.springcloud.common;
 
 
 import lombok.AllArgsConstructor;

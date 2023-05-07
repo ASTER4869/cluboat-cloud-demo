@@ -1,9 +1,7 @@
 package com.cluboat.springcloud.controller;
 
 import cn.hutool.json.JSONObject;
-import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.cluboat.springcloud.entities.CommonResult;
-import com.cluboat.springcloud.entity.CommentEntity;
+import com.cluboat.springcloud.common.CommonResult;
 import com.cluboat.springcloud.entity.PostEntity;
 import com.cluboat.springcloud.entity.PostTagEntity;
 import com.cluboat.springcloud.entity.dto.PostListDTO;
@@ -15,7 +13,6 @@ import com.cluboat.springcloud.entity.param.ReportAddParam;
 import com.cluboat.springcloud.service.PostService;
 import com.cluboat.springcloud.service.PostTagService;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.io.FileUtils;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
@@ -26,7 +23,6 @@ import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
 import java.sql.Timestamp;
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController

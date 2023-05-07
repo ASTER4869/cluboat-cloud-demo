@@ -1,6 +1,6 @@
 package com.cluboat.springcloud.Controller;
 
-import com.cluboat.springcloud.entities.CommonResult;
+import com.cluboat.springcloud.common.CommonResult;
 import com.cluboat.springcloud.entity.BelongEntity;
 import com.cluboat.springcloud.entity.param.BelongParam;
 import com.cluboat.springcloud.service.BelongService;

@@ -1,8 +1,7 @@
 package com.cluboat.springcloud.controller;
 
-import com.cluboat.springcloud.entities.CommonResult;
+import com.cluboat.springcloud.common.CommonResult;
 import com.cluboat.springcloud.entity.ClubEntity;
-import com.cluboat.springcloud.entity.UserEntity;
 import com.cluboat.springcloud.entity.UserInfoEntity;
 import com.cluboat.springcloud.entity.apply.ClubCancelApplyEntity;
 import com.cluboat.springcloud.entity.dto.ClubCancelApplyDTO;
@@ -18,9 +17,7 @@ import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
 import java.sql.Timestamp;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @RestController

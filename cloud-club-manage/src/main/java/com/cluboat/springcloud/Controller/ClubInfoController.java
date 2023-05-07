@@ -1,6 +1,6 @@
 package com.cluboat.springcloud.Controller;
 
-import com.cluboat.springcloud.entities.CommonResult;
+import com.cluboat.springcloud.common.CommonResult;
 import com.cluboat.springcloud.entity.ClubEntity;
 import com.cluboat.springcloud.entity.param.ClubParam;
 import com.cluboat.springcloud.service.ClubService;
@@ -8,7 +8,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
-import java.util.List;
 
 @RestController
 @Slf4j

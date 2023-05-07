@@ -2,10 +2,9 @@ package com.cluboat.springcloud.controller;
 
 import cn.hutool.json.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.cluboat.springcloud.entities.CommonResult;
+import com.cluboat.springcloud.common.CommonResult;
 import com.cluboat.springcloud.entity.*;
 import com.cluboat.springcloud.entity.param.CommentAddParam;
-import com.cluboat.springcloud.entity.param.CommentDeleteParam;
 import com.cluboat.springcloud.entity.param.ReportAddParam;
 import com.cluboat.springcloud.mapper.CommentMapper;
 import com.cluboat.springcloud.mapper.PostMapper;

@@ -2,7 +2,7 @@ package com.cluboat.springcloud.controller;
 
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.cluboat.springcloud.entities.CommonResult;
+import com.cluboat.springcloud.common.CommonResult;
 import com.cluboat.springcloud.entity.LikesEntity;
 import com.cluboat.springcloud.entity.param.LikesAddParam;
 import com.cluboat.springcloud.entity.param.LikesDeleteParam;

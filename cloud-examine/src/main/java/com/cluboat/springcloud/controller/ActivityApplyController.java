@@ -3,12 +3,7 @@ package com.cluboat.springcloud.controller;
 
 
 import com.alibaba.nacos.common.http.param.MediaType;
-import com.cluboat.springcloud.entities.CommonResult;
-import com.cluboat.springcloud.entity.ActivityApplyEntity;
-import com.cluboat.springcloud.entity.ActivityEntity;
-import com.cluboat.springcloud.entity.ClubEntity;
-import com.cluboat.springcloud.entity.UserInfoEntity;
-import com.cluboat.springcloud.entity.param.NotificationParam;
+import com.cluboat.springcloud.common.CommonResult;
 import com.cluboat.springcloud.service.ActivityApplyService;
 import com.cluboat.springcloud.service.ActivityService;
 import lombok.extern.slf4j.Slf4j;
@@ -19,10 +14,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import org.json.*;
+
 import org.springframework.web.client.RestTemplate;
 
 @RestController

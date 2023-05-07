@@ -1,7 +1,7 @@
 package com.cluboat.springcloud.Controller;
 
 
-import com.cluboat.springcloud.entities.CommonResult;
+import com.cluboat.springcloud.common.CommonResult;
 import com.cluboat.springcloud.entity.AdminApplyEntity;
 import com.cluboat.springcloud.entity.BelongEntity;
 import com.cluboat.springcloud.entity.ClubEntity;
@@ -26,7 +26,7 @@ import java.util.List;
 @RestController
 @Slf4j
 @RequestMapping("/admin-apply")
-public class ClubAdminApplyController {
+public class AdminApplyController {
 
     @Resource
     private RestTemplate restTemplate;

@@ -1,5 +1,6 @@
 package com.cluboat.springcloud.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -15,7 +16,7 @@ import java.util.Objects;
 public class ActivityApplyEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @TableId("activity_apply_id")
+    @TableId(value = "activity_apply_id", type = IdType.AUTO)
     @Column(name = "activity_apply_id")
     private int activityApplyId;
     @Basic

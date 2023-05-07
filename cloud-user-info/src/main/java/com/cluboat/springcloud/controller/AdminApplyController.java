@@ -1,7 +1,7 @@
 package com.cluboat.springcloud.controller;
 
 
-import com.cluboat.springcloud.entities.CommonResult;
+import com.cluboat.springcloud.common.CommonResult;
 import com.cluboat.springcloud.entity.AdminApplyEntity;
 import com.cluboat.springcloud.entity.UserInfoEntity;
 import com.cluboat.springcloud.entity.dto.GetAdminApplyDTO;

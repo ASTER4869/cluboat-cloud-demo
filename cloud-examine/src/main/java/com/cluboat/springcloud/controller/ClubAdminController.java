@@ -2,7 +2,7 @@ package com.cluboat.springcloud.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
-import com.cluboat.springcloud.entities.CommonResult;
+import com.cluboat.springcloud.common.CommonResult;
 import com.cluboat.springcloud.entity.*;
 import com.cluboat.springcloud.mapper.BelongMapper;
 import com.cluboat.springcloud.mapper.ClubMaMapper;

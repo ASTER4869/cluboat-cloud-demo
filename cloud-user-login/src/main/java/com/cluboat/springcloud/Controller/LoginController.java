@@ -1,6 +1,6 @@
 package com.cluboat.springcloud.Controller;
 
-import com.cluboat.springcloud.entities.CommonResult;
+import com.cluboat.springcloud.common.CommonResult;
 import com.cluboat.springcloud.entity.SysAdminEntity;
 import com.cluboat.springcloud.entity.UserEntity;
 import com.cluboat.springcloud.entity.param.LoginParam;

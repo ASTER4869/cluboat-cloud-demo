@@ -1,19 +1,17 @@
 package com.cluboat.springcloud.Controller;
 
 
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.cluboat.springcloud.entity.UserEntity;
 import com.cluboat.springcloud.entity.UserInfoEntity;
 import com.cluboat.springcloud.service.UserInfoService;
 import com.cluboat.springcloud.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
-import com.cluboat.springcloud.entities.CommonResult;
+import com.cluboat.springcloud.common.CommonResult;
 import com.cluboat.springcloud.entity.param.UserParam;
 
 import javax.annotation.Resource;
 import java.sql.Timestamp;
-import java.util.List;
 
 //@RequestMapping(value = "/employees/{id}",method = RequestMethod.GET)
 

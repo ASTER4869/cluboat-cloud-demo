@@ -1,14 +1,11 @@
 package com.cluboat.springcloud.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.cluboat.springcloud.entities.CommonResult;
+import com.cluboat.springcloud.common.CommonResult;
 import com.cluboat.springcloud.entity.BelongEntity;
-import com.cluboat.springcloud.entity.FollowEntity;
-import com.cluboat.springcloud.entity.UserClubEntity;
 import com.cluboat.springcloud.entity.dto.MyClubDTO;
 import com.cluboat.springcloud.entity.param.DeleteMyClubParam;
 import com.cluboat.springcloud.service.BelongService;
-import com.cluboat.springcloud.service.UserClubService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 

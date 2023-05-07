@@ -1,6 +1,6 @@
 package com.cluboat.springcloud.Controller;
 
-import com.cluboat.springcloud.entities.CommonResult;
+import com.cluboat.springcloud.common.CommonResult;
 import com.cluboat.springcloud.entity.NewsEntity;
 import com.cluboat.springcloud.entity.param.NewsParam;
 import com.cluboat.springcloud.entity.param.NewsUpdateParam;
@@ -10,15 +10,13 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.sql.Timestamp;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 
 @RestController
 @Slf4j
 @RequestMapping("/news")
 
-public class ClubNewsController {
+public class NewsController {
     @Resource
     private ClubNewsService newsService;
 
