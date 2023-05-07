@@ -20,4 +20,6 @@ public class GetBudgetsDTO {
     private Timestamp createTime;
     private String status;
     private String feedback;
+
+    private String clubName;
 }

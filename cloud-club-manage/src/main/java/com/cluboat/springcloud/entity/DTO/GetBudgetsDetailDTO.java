@@ -13,6 +13,10 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class GetBudgetsDetailDTO {
+    private Integer budgetId;
+
+    private String status;
+
     private String clubName;
     private String applicantName;
     private String title;

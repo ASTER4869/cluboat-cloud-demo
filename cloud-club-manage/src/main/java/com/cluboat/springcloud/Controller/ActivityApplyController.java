@@ -51,8 +51,8 @@ public class ActivityApplyController {
     @PostMapping
     public CommonResult createActivityApply(@RequestBody ActivityApplyParam activityApplyParam) {
         ActivityApplyEntity activityApply = new ActivityApplyEntity();
-        activityApply.setFeedback(null);  //提交申请没有反馈！
-        activityApply.setStatus("待审批");  //初始未通过！
+        activityApply.setFeedback(null);  //提交申请时没有反馈
+        activityApply.setStatus("待审批");  //初始为待审批状态
         activityApply.setActivityApplyTime(new Timestamp(System.currentTimeMillis()));
 
         activityApply.setUserId(activityApplyParam.userId);

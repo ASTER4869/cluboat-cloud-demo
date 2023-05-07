@@ -59,6 +59,9 @@ public class BudgetsController {
                 if(user == null){
                     return new CommonResult(400, "获取失败，该用户id不存在");
                 }
+                ClubEntity clubEntity = clubService.getById(budgetsEntity.getClubId());
+                String clubName = clubEntity.getClubName();
+
                 GetBudgetsDTO budgetsDTO = new GetBudgetsDTO();
                 budgetsDTO.setBudgetId(budgetsEntity.getBudgetId());
                 budgetsDTO.setTitle(budgetsEntity.getTitle());
@@ -67,6 +70,8 @@ public class BudgetsController {
                 budgetsDTO.setCreateTime(budgetsEntity.getCreateTime());
                 budgetsDTO.setStatus(budgetsEntity.getStatus());
                 budgetsDTO.setFeedback(budgetsEntity.getFeedback());
+
+                budgetsDTO.setClubName(clubName);
                 budgetsDTOList.add(budgetsDTO);
             }
             return new CommonResult(200, "获取成功", budgetsDTOList);
@@ -93,6 +98,9 @@ public class BudgetsController {
                 if(user == null){
                     return new CommonResult(400, "获取失败，该用户id不存在");
                 }
+                ClubEntity clubEntity = clubService.getById(budgetsEntity.getClubId());
+                String clubName = clubEntity.getClubName();
+
                 GetBudgetsDTO budgetsDTO = new GetBudgetsDTO();
                 budgetsDTO.setBudgetId(budgetsEntity.getBudgetId());
                 budgetsDTO.setTitle(budgetsEntity.getTitle());
@@ -101,6 +109,8 @@ public class BudgetsController {
                 budgetsDTO.setCreateTime(budgetsEntity.getCreateTime());
                 budgetsDTO.setStatus(budgetsEntity.getStatus());
                 budgetsDTO.setFeedback(budgetsEntity.getFeedback());
+
+                budgetsDTO.setClubName(clubName);
                 budgetsDTOList.add(budgetsDTO);
             }
             return new CommonResult(200, "获取成功", budgetsDTOList);
@@ -124,6 +134,10 @@ public class BudgetsController {
             }
             //已经有该预算了
             GetBudgetsDetailDTO budgetsDetailDTO = new GetBudgetsDetailDTO();
+            //设定budgetId
+            budgetsDetailDTO.setBudgetId(budgetId);
+            budgetsDetailDTO.setStatus(budgetsEntity.getStatus());
+
             budgetsDetailDTO.setTitle(budgetsEntity.getTitle());
             budgetsDetailDTO.setAmount(budgetsEntity.getAmount());
             budgetsDetailDTO.setCreateTime(budgetsEntity.getCreateTime());
@@ -192,11 +206,11 @@ public class BudgetsController {
             budgetsEntity.setCreateTime(new Timestamp(System.currentTimeMillis()));
             budgetsService.save(budgetsEntity);
 
-            //获取最新的budget_id
-            LambdaQueryWrapper<BudgetsEntity> tmpWrapper = new LambdaQueryWrapper<BudgetsEntity>()
-                    .orderByDesc(BudgetsEntity::getBudgetId);
-            BudgetsEntity tmp = budgetsService.getOne(tmpWrapper, false);
-            Integer budgetId = tmp.getBudgetId();
+            //获取创建记录的budget_id
+//            LambdaQueryWrapper<BudgetsEntity> tmpWrapper = new LambdaQueryWrapper<BudgetsEntity>()
+//                    .orderByDesc(BudgetsEntity::getBudgetId);
+//            BudgetsEntity tmp = budgetsService.getOne(tmpWrapper, false);
+            Integer budgetId = budgetsEntity.getBudgetId();
 
             List<CreateBudgetsItemParam> budgetsItemParamList = budgetsParam.getItemList();
             //再创建预算项内容

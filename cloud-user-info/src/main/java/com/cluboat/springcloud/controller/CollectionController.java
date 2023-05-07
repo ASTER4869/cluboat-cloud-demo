@@ -26,19 +26,20 @@ public class CollectionController {
     //查看收藏的帖子
     @GetMapping("/{userId}")
     public CommonResult getCollectionList(@PathVariable Integer userId) {
-        List<CollectionDTO> collectionList = collectionService.GetCollection(userId);
-
-
-
-        if(!collectionList.isEmpty()){
-            //获取每个tag对应的tag名，并赋值
-            for (CollectionDTO collection:collectionList) {
-                collection.setPostTag(postTagService.GetPostTagList(collection.getPostId()));
+        try {
+            List<CollectionDTO> collectionList = collectionService.GetCollection(userId);
+            if(!collectionList.isEmpty()){
+                //获取每个tag对应的tag名，并赋值
+                for (CollectionDTO collection:collectionList) {
+                    collection.setPostTag(postTagService.GetPostTagList(collection.getPostId()));
+                }
+                return new CommonResult(200,"查询成功", collectionList);
             }
-            return new CommonResult(200,"查询成功", collectionList);
-        }
-        else{
-            return new CommonResult(444,"无记录");
+            else{
+                return new CommonResult(444,"无记录");
+            }
+        }catch (Exception e){
+            return new CommonResult(400, "系统出现错误", e);
         }
     }
 
