@@ -9,6 +9,7 @@ import com.cluboat.springcloud.entity.param.GetNotificationParam;
 import com.cluboat.springcloud.entity.param.NotificationParam;
 import com.cluboat.springcloud.service.*;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.ibatis.jdbc.Null;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
@@ -33,6 +34,8 @@ public class NotificationController {
     private SysAdminService sysAdminService;
     @Resource
     private UserService userService;
+    @Resource
+    private UserInfoService userInfoService;
 
 
 //    @GetMapping("/{id}")
@@ -50,9 +53,50 @@ public class NotificationController {
 //        return result;
 //    }
 
+
+    public List<NotificationDTO> getAllSendNotification(){
+
+        List<NotificationDTO> notificationDTOList = new ArrayList<>();
+        //先找出所有notification
+        List<NotificationEntity> notificationEntityList = notificationService.list();
+
+        //从NotReceiver表中获取对应的接收者
+        for(NotificationEntity notificationEntity : notificationEntityList){
+            LambdaQueryWrapper<NotReceiverEntity> receiverWrapper = new LambdaQueryWrapper<NotReceiverEntity>()
+                    .eq(NotReceiverEntity::getNotificationId, notificationEntity.getNotificationId());
+            List<NotReceiverEntity> notReceiverEntityList = notReceiverService.list(receiverWrapper);
+            for(NotReceiverEntity notReceiverEntity : notReceiverEntityList){
+                UserInfoEntity userInfoEntity = userInfoService.getById(notReceiverEntity.getReceiverId());
+//                System.out.println(userInfoEntity);
+                String receiverName = "null";
+                if(userInfoEntity != null){
+                    receiverName = userInfoEntity.getUserName();
+                }
+                NotificationDTO notificationDTO = new NotificationDTO();
+                notificationDTO.setNotificationId(notificationEntity.getNotificationId());
+                // 设定社联管理员id
+                if(notificationEntity.getSendAdminId() != null)
+                    notificationDTO.setSendAdminId(notificationEntity.getSendAdminId());
+                // 设定社团管理员id
+                if(notificationEntity.getSendUserId() != null)
+                    notificationDTO.setSendUserId(notificationEntity.getSendUserId());
+                notificationDTO.setNotificationContent(notificationEntity.getNotificationContent());
+                notificationDTO.setNotificationTime(notificationEntity.getNotificationTime());
+                notificationDTO.setSenderType(notificationEntity.getSenderType());
+                notificationDTO.setNotificationTitle(notificationEntity.getNotificationTitle());
+                notificationDTO.setReceiverId(notReceiverEntity.getReceiverId());
+                if (userInfoEntity != null)
+                    notificationDTO.setReceiverName(receiverName);
+                notificationDTOList.add(notificationDTO);
+            }
+        }
+        return notificationDTOList;
+    }
+    // 获取自己发出的所有通知
     public List<NotificationDTO> getSendNotification(GetNotificationParam notificationParam){
 
         List<NotificationDTO> notificationDTOList = new ArrayList<>();
+        // 如果是社联管理员
         if(notificationParam.type == 0){
             LambdaQueryWrapper<NotificationEntity> wrapper = new LambdaQueryWrapper<NotificationEntity>()
                     .eq(NotificationEntity::getSendAdminId, notificationParam.id);
@@ -65,18 +109,26 @@ public class NotificationController {
                         .eq(NotReceiverEntity::getNotificationId, notificationEntity.getNotificationId());
                 List<NotReceiverEntity> notReceiverEntityList = notReceiverService.list(receiverWrapper);
                 for(NotReceiverEntity notReceiverEntity : notReceiverEntityList){
+                    UserInfoEntity userInfoEntity = userInfoService.getById(notReceiverEntity.getReceiverId());
+                    String receiverName = "null";
+                    if(userInfoEntity != null)
+                        receiverName = userInfoEntity.getUserName();
                     NotificationDTO notificationDTO = new NotificationDTO();
                     notificationDTO.setNotificationId(notificationEntity.getNotificationId());
+                    // 设定社联管理员id
                     notificationDTO.setSendAdminId(notificationEntity.getSendAdminId());
                     notificationDTO.setNotificationContent(notificationEntity.getNotificationContent());
                     notificationDTO.setNotificationTime(notificationEntity.getNotificationTime());
                     notificationDTO.setSenderType(notificationEntity.getSenderType());
                     notificationDTO.setNotificationTitle(notificationEntity.getNotificationTitle());
                     notificationDTO.setReceiverId(notReceiverEntity.getReceiverId());
+                    if(userInfoEntity != null)
+                        notificationDTO.setReceiverName(receiverName);
                     notificationDTOList.add(notificationDTO);
                 }
             }
         }
+        // 如果是社团管理员
         else if(notificationParam.type == 1){
             LambdaQueryWrapper<NotificationEntity> wrapper = new LambdaQueryWrapper<NotificationEntity>()
                     .eq(NotificationEntity::getSendUserId, notificationParam.id);
@@ -89,14 +141,21 @@ public class NotificationController {
                         .eq(NotReceiverEntity::getNotificationId, notificationEntity.getNotificationId());
                 List<NotReceiverEntity> notReceiverEntityList = notReceiverService.list(receiverWrapper);
                 for(NotReceiverEntity notReceiverEntity : notReceiverEntityList){
+                    UserInfoEntity userInfoEntity = userInfoService.getById(notReceiverEntity.getReceiverId());
+                    String receiverName = "null";
+                    if(userInfoEntity != null)
+                        receiverName = userInfoEntity.getUserName();
                     NotificationDTO notificationDTO = new NotificationDTO();
                     notificationDTO.setNotificationId(notificationEntity.getNotificationId());
+                    // 设定社团管理员id
                     notificationDTO.setSendUserId(notificationEntity.getSendUserId());
                     notificationDTO.setNotificationContent(notificationEntity.getNotificationContent());
                     notificationDTO.setNotificationTime(notificationEntity.getNotificationTime());
                     notificationDTO.setSenderType(notificationEntity.getSenderType());
                     notificationDTO.setNotificationTitle(notificationEntity.getNotificationTitle());
                     notificationDTO.setReceiverId(notReceiverEntity.getReceiverId());
+                    if(userInfoEntity != null)
+                        notificationDTO.setReceiverName(receiverName);
                     notificationDTOList.add(notificationDTO);
                 }
             }
@@ -106,15 +165,20 @@ public class NotificationController {
 
 
 
+
     @GetMapping()
     public CommonResult getNotification(@RequestBody(required = false) GetNotificationParam notificationParam) {
-        //如果无参，则返回全部
-        if(notificationParam == null){
-            CommonResult result = restTemplate.getForObject("http://cloud-user-info-service/notification/", CommonResult.class);
-            return result;
-        }
-
         try {
+            //如果无参，则返回全部
+            if(notificationParam == null){
+                List<NotificationDTO> notificationList = getAllSendNotification();
+                if(notificationList.isEmpty()!=true){
+                    return new CommonResult(200,"查询成功", notificationList);
+                }
+                else{
+                    return new CommonResult(444,"无记录");
+                }
+            }
             if(notificationParam.id == null){
                 return new CommonResult(400,"id为空");
             }

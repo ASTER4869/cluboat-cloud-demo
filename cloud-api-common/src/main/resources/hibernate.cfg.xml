@@ -40,6 +40,8 @@
       <mapping class="com.cluboat.springcloud.entity.ReimAttachEntity"/>
       <mapping class="com.cluboat.springcloud.entity.ReimbursementsEntity"/>
       <mapping class="com.cluboat.springcloud.entity.BudgetItemEntity"/>
+      <mapping class="com.cluboat.springcloud.entity.ClubHistoryEntity"/>
+      <mapping class="com.cluboat.springcloud.entity.PostHistoryEntity"/>
       <!-- <property name="connection.username"/> -->
     <!-- <property name="connection.password"/> -->
 

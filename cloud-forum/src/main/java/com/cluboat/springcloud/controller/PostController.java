@@ -79,12 +79,12 @@ public class PostController {
             JSONObject result = HttpGet("http://124.70.163.146:8001/ai/illegalCheck", param.getPostTitle());
             //如果AI那边没拿到东西，则添加失败
             if (result == null){
-                return new CommonResult(400, "系统繁忙，请稍后重试");
+                return new CommonResult(401, "系统繁忙，请稍后重试");
             }
             JSONObject data = result.getJSONObject("data");
             Integer illegalScore = data.getInt("illegalScore");
             if (illegalScore > 1){
-                return new CommonResult(401, "输入的帖子内容不合规，请稍后重试");
+                return new CommonResult(402, "输入的帖子内容不合规，请稍后重试");
             }
             //AI那边拿到结果了才能继续
             //先创建相应的记录，以及tag的记录
@@ -114,7 +114,7 @@ public class PostController {
                 post.setStatus("系统判定违规");
                 postService.updateById(post);
 
-                return new CommonResult(401, "输入的帖子内容可能违规，已提交给管理员审核，审核结果会以通知形式发送给您");
+                return new CommonResult(403, "输入的帖子内容可能违规，已提交给管理员审核，审核结果会以通知形式发送给您");
             }
             return new CommonResult(200, "添加成功", post.getPostId());
         }catch (Exception e){

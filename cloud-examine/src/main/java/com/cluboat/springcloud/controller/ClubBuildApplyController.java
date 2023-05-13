@@ -122,6 +122,7 @@ public class ClubBuildApplyController {
                 CommonResult result = restTemplate.postForObject("http://cloud-examine-service/notification/", notificationParam, CommonResult.class);
 //                return new CommonResult(200, "创建成功",club);
                 result.setMessage("建社成功通知已发送成功");
+                result.setData(club.getClubId());
                 return result;
             } catch (Exception e){
                 return new CommonResult(400, "建社成功通知发送失败",e);

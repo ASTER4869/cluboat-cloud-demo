@@ -1,9 +1,12 @@
 package com.cluboat.springcloud.controller;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.cluboat.springcloud.common.CommonResult;
 import com.cluboat.springcloud.entity.CollectionEntity;
+import com.cluboat.springcloud.entity.LikesEntity;
 import com.cluboat.springcloud.entity.param.CollectionAddParam;
 import com.cluboat.springcloud.entity.param.CollectionDeleteParam;
+import com.cluboat.springcloud.entity.param.CollectionJudgeParam;
 import com.cluboat.springcloud.service.CollectionService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
@@ -16,6 +19,26 @@ import javax.annotation.Resource;
 public class CollectionController {
     @Resource
     private CollectionService collectionService;
+
+    //判断某个帖子是否被收藏
+    @GetMapping
+    public CommonResult GetCollectionStatus(@RequestBody CollectionJudgeParam collectionJudgeParam){
+        try {
+            LambdaQueryWrapper<CollectionEntity> wrapper = new LambdaQueryWrapper<CollectionEntity>()
+                    .eq(CollectionEntity::getPostId, collectionJudgeParam.getPostId())
+                    .eq(CollectionEntity::getUserId, collectionJudgeParam.getUserId());
+            if(collectionService.getOne(wrapper, false) == null){
+                return new CommonResult(444, "无记录");
+            }
+            else {
+                return new CommonResult(200, "该帖子已收藏");
+            }
+        }
+        catch (Exception e){
+            return new CommonResult(400, "系统出现错误", e);
+        }
+
+    }
 
     @PostMapping
     public CommonResult InsertCollection(@RequestBody CollectionAddParam param){

@@ -32,4 +32,5 @@ public class NotificationDTO {
     private Timestamp notificationTime;
 
     private byte senderType;
+    private String receiverName;
 }
