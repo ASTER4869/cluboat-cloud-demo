@@ -37,6 +37,9 @@ public class PostEntity {
     @Basic
     @Column(name = "status")
     private String status;
+    @Basic
+    @Column(name = "post_content")
+    private String postContent;
 
     public int getPostId() {
         return postId;
@@ -94,16 +97,24 @@ public class PostEntity {
         this.status = status;
     }
 
+    public String getPostContent() {
+        return postContent;
+    }
+
+    public void setPostContent(String postContent) {
+        this.postContent = postContent;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        PostEntity that = (PostEntity) o;
-        return postId == that.postId && isTop == that.isTop && clubId == that.clubId && userId == that.userId && Objects.equals(postTime, that.postTime) && Objects.equals(postTitle, that.postTitle) && Objects.equals(status, that.status);
+        PostEntity post = (PostEntity) o;
+        return postId == post.postId && isTop == post.isTop && clubId == post.clubId && userId == post.userId && Objects.equals(postTime, post.postTime) && Objects.equals(postTitle, post.postTitle) && Objects.equals(status, post.status) && Objects.equals(postContent, post.postContent);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(postId, postTime, isTop, postTitle, clubId, userId, status);
+        return Objects.hash(postId, postTime, isTop, postTitle, clubId, userId, status, postContent);
     }
 }

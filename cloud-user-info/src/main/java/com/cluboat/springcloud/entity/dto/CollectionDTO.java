@@ -15,6 +15,7 @@ public class CollectionDTO {
     private Integer postId;
     private Integer clubId;
     private String postTitle;
+    private String postContent;
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Timestamp postTime;
     private List<PostTagDTO> postTag;

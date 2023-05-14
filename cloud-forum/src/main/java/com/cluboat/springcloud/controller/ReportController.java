@@ -139,7 +139,7 @@ public class ReportController {
                 if (post == null){
                     return new CommonResult(444, "该举报对应的帖子不存在");
                 }
-                reportGetDetailDTO.setReportContent(post.getPostTitle());
+                reportGetDetailDTO.setReportContent(post.getPostContent());
             }
             else if(reportEntity.getTargetType().equals("评论")){
                 CommentEntity comment = commentService.getById(reportEntity.getTargetId());

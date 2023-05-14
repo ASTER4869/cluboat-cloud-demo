@@ -13,7 +13,8 @@ import java.util.List;
 public class PostPutParam {
     private Integer postId;
     private String postTitle;
+    private String postContent;
     private List<PostTagDTO> postTag;
-    private byte isTop;
+    private Byte isTop;
 
 }

@@ -92,6 +92,7 @@ public class PostController {
             post.setPostTime(new Timestamp(System.currentTimeMillis()));
             post.setIsTop((byte)0);
             post.setPostTitle(param.getPostTitle());
+            post.setPostContent(param.getPostContent());
             post.setClubId(param.getClubId());
             post.setUserId(param.getUserId());
             //save之后post会自动被赋值一个id
@@ -141,15 +142,21 @@ public class PostController {
             if(param.getPostTitle()!=null){
                 post.setPostTitle(param.getPostTitle());
             }
-            //byte无法用是否是空来判断，所以这里必须有这个参数
-            post.setIsTop(param.getIsTop());
+            if(param.getPostContent()!=null){
+                post.setPostContent(param.getPostContent());
+            }
+            //byte无法用是否是空来判断，所以这里改为Byte类型
+            if(param.getIsTop() != null)
+                post.setIsTop(param.getIsTop().byteValue());
             boolean re = postService.updateById(post);
 
-            //先把tag全删了
-            postTagService.DeleteByPostId(post.getPostId());
+            if (param.getPostTag() != null){
+                //先把tag全删了
+                postTagService.DeleteByPostId(post.getPostId());
 
-            for(PostTagDTO tag:param.getPostTag()){
-                postTagService.SavePostTag(post.getPostId(), tag.getTagName());
+                for(PostTagDTO tag:param.getPostTag()){
+                    postTagService.SavePostTag(post.getPostId(), tag.getTagName());
+                }
             }
             return new CommonResult(200, "修改成功", post.getPostId());
         }

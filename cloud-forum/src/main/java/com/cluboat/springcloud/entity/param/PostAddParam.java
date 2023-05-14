@@ -16,5 +16,6 @@ public class PostAddParam {
     private Integer userId;
     private Integer clubId;
     private String postTitle;
+    private String postContent;
     private List<String> postTag;
 }
