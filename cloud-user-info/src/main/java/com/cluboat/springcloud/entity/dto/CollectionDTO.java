@@ -13,6 +13,7 @@ import java.util.List;
 @NoArgsConstructor
 public class CollectionDTO {
     private Integer postId;
+    private Integer userId;
     private Integer clubId;
     private String postTitle;
     private String postContent;

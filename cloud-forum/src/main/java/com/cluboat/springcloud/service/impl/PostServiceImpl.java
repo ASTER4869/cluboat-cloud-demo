@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.cluboat.springcloud.entity.*;
 import com.cluboat.springcloud.entity.dto.PostListDTO;
 import com.cluboat.springcloud.entity.param.PostAddParam;
+import com.cluboat.springcloud.entity.param.PostGetByClubIdParam;
 import com.cluboat.springcloud.entity.param.PostGetParam;
 import com.cluboat.springcloud.mapper.PostMapper;
 import com.cluboat.springcloud.service.PostService;
@@ -46,6 +47,25 @@ public class PostServiceImpl extends ServiceImpl<PostMapper, PostEntity> impleme
                 .selectAll(PostEntity.class);
         if (param.getUserId() != null){
             wrapper = wrapper.eq(PostEntity::getUserId, param.getUserId());
+        }
+        if (param.getStatus() != null){
+            wrapper = wrapper.eq(PostEntity::getStatus, param.getStatus());
+        }
+        List<PostListDTO> postList = postMapper.selectJoinList(PostListDTO.class, wrapper);
+//        for(PostListDTO postListDTO:postList){
+//            postListDTO.setPostTag(postTagService.GetPostTagListByPostId(postListDTO.getPostId()));
+//        }
+
+        return postList;
+    }
+
+
+    @Override
+    public List<PostListDTO> GetPostListByClubId(PostGetByClubIdParam param){
+        MPJLambdaWrapper<PostEntity> wrapper = new MPJLambdaWrapper<PostEntity>()
+                .selectAll(PostEntity.class);
+        if (param.getClubId() != null){
+            wrapper = wrapper.eq(PostEntity::getClubId, param.getClubId());
         }
         if (param.getStatus() != null){
             wrapper = wrapper.eq(PostEntity::getStatus, param.getStatus());

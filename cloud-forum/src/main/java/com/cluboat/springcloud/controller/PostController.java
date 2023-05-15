@@ -6,10 +6,7 @@ import com.cluboat.springcloud.entity.PostEntity;
 import com.cluboat.springcloud.entity.PostTagEntity;
 import com.cluboat.springcloud.entity.dto.PostListDTO;
 import com.cluboat.springcloud.entity.dto.PostTagDTO;
-import com.cluboat.springcloud.entity.param.PostAddParam;
-import com.cluboat.springcloud.entity.param.PostGetParam;
-import com.cluboat.springcloud.entity.param.PostPutParam;
-import com.cluboat.springcloud.entity.param.ReportAddParam;
+import com.cluboat.springcloud.entity.param.*;
 import com.cluboat.springcloud.service.PostService;
 import com.cluboat.springcloud.service.PostTagService;
 import lombok.extern.slf4j.Slf4j;
@@ -172,8 +169,9 @@ public class PostController {
 //
 //    }
 
-    @GetMapping()
-    public CommonResult getPostList(@RequestBody(required = false) PostGetParam param) {
+    // 用get方法前端请求体拿不到
+    @PostMapping("/user")
+    public CommonResult getUserPostList(@RequestBody(required = false) PostGetParam param) {
         try {
             List<PostListDTO> postList;
             if (param == null){
@@ -197,5 +195,30 @@ public class PostController {
         }
     }
 
+    // 根据clubId和status获取对应的帖子
+    @PostMapping("/club")
+    public CommonResult getClubPostList(@RequestBody(required = false) PostGetByClubIdParam param) {
+        try {
+            List<PostListDTO> postList;
+            if (param == null){
+                postList = postService.GetAllPostList();
+            }
+            else {
+                postList = postService.GetPostListByClubId(param);
+            }
+            if(!postList.isEmpty()){
+                //获取每个tag对应的tag名，并赋值
+                for (PostListDTO post:postList) {
+                    post.setPostTag(postTagService.GetPostTagListByPostId(post.getPostId()));
+                }
+                return new CommonResult(200,"查询成功", postList);
+            }
+            else{
+                return new CommonResult(444,"无记录");
+            }
+        }catch (Exception e){
+            return new CommonResult(400, "系统出现错误", e);
+        }
+    }
 
 }

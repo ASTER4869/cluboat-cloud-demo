@@ -4,12 +4,14 @@ import cn.hutool.json.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.cluboat.springcloud.common.CommonResult;
 import com.cluboat.springcloud.entity.*;
+import com.cluboat.springcloud.entity.dto.CommentGetDTO;
 import com.cluboat.springcloud.entity.param.CommentAddParam;
 import com.cluboat.springcloud.entity.param.ReportAddParam;
 import com.cluboat.springcloud.mapper.CommentMapper;
 import com.cluboat.springcloud.mapper.PostMapper;
 import com.cluboat.springcloud.service.CommentService;
 import com.cluboat.springcloud.service.PostService;
+import com.cluboat.springcloud.service.UserInfoService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
@@ -21,6 +23,7 @@ import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -69,18 +72,36 @@ public class CommentController {
     @Resource
     private PostMapper postMapper;
 
+    @Resource
+    private UserInfoService userInfoService;
 
     //根据帖子的id获取评论列表
     @GetMapping("{postId}")
     public CommonResult GetCommentByPostId(@PathVariable Integer postId){
         try {
+            List<CommentGetDTO> commentGetDTOList = new ArrayList<>();
+
             LambdaQueryWrapper<CommentEntity> wrapper = new LambdaQueryWrapper<CommentEntity>()
-                    .eq(CommentEntity::getPostId, postId);
+                    .eq(CommentEntity::getPostId, postId)
+                    .orderByAsc(CommentEntity::getCommentTime);
             List<CommentEntity> commentEntityList = commentService.list(wrapper);
             if (commentEntityList == null || commentEntityList.isEmpty()){
                 return new CommonResult(444, "无记录");
             }
-            return new CommonResult(200, "获取成功", commentEntityList);
+            for (CommentEntity commentEntity : commentEntityList){
+                CommentGetDTO commentGetDTO = new CommentGetDTO();
+                UserInfoEntity userInfoEntity = userInfoService.getById(commentEntity.getUserId());
+                commentGetDTO.setCommentId(commentEntity.getCommentId());
+                commentGetDTO.setCommentTime(commentEntity.getCommentTime());
+                commentGetDTO.setCommentContent(commentEntity.getCommentContent());
+                commentGetDTO.setStatus(commentEntity.getStatus());
+                commentGetDTO.setPostId(commentEntity.getPostId());
+                commentGetDTO.setUserId(commentEntity.getUserId());
+                commentGetDTO.setUserName(userInfoEntity.getUserName());
+                commentGetDTO.setUserPhotoUrl(userInfoEntity.getUserPhotoUrl());
+                commentGetDTOList.add(commentGetDTO);
+            }
+            return new CommonResult(200, "获取成功", commentGetDTOList);
         }
         catch (Exception e){
             return new CommonResult(400, "系统出现错误", e);

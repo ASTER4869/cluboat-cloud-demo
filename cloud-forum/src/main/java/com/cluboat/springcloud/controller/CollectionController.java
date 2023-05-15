@@ -21,7 +21,7 @@ public class CollectionController {
     private CollectionService collectionService;
 
     //判断某个帖子是否被收藏
-    @GetMapping
+    @PostMapping("/judge")
     public CommonResult GetCollectionStatus(@RequestBody CollectionJudgeParam collectionJudgeParam){
         try {
             LambdaQueryWrapper<CollectionEntity> wrapper = new LambdaQueryWrapper<CollectionEntity>()

@@ -27,7 +27,7 @@ public class LikesController {
     LikesMapper likesMapper;
 
     //判断某个帖子是否已点赞
-    @GetMapping
+    @PostMapping("/judge")
     public CommonResult GetLikesStatus(@RequestBody LikesJudgeParam likesJudgeParam){
         try {
             LambdaQueryWrapper<LikesEntity> wrapper = new LambdaQueryWrapper<LikesEntity>()
