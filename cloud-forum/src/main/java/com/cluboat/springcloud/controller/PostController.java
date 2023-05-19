@@ -1,7 +1,10 @@
 package com.cluboat.springcloud.controller;
 
+
+
 import cn.hutool.json.JSONObject;
 import com.cluboat.springcloud.common.CommonResult;
+import com.cluboat.springcloud.entity.ClubEntity;
 import com.cluboat.springcloud.entity.PostEntity;
 import com.cluboat.springcloud.entity.PostTagEntity;
 import com.cluboat.springcloud.entity.dto.PostListDTO;
@@ -15,6 +18,7 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
+//import org.json.JSONObject;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
@@ -72,8 +76,10 @@ public class PostController {
     @PostMapping
     public CommonResult InsertPost(@RequestBody PostAddParam param) {
         try {
+            RestTemplate restTemplate1 = new RestTemplate();
             //AI判定其是否违规
-            JSONObject result = HttpGet("http://124.70.163.146:8001/ai/illegalCheck", param.getPostTitle());
+            JSONObject result = HttpGet("http://124.70.163.146:8001/ai/illegalCheck", param.getPostContent());
+//            JSONObject result = restTemplate1.getForObject("http://124.70.163.146:8001/ai/illegalCheck" + param.getPostContent(), JSONObject.class);
             //如果AI那边没拿到东西，则添加失败
             if (result == null){
                 return new CommonResult(401, "系统繁忙，请稍后重试");
@@ -83,6 +89,7 @@ public class PostController {
             if (illegalScore > 1){
                 return new CommonResult(402, "输入的帖子内容不合规，请稍后重试");
             }
+            System.out.println(data.getStr("content"));
             //AI那边拿到结果了才能继续
             //先创建相应的记录，以及tag的记录
             PostEntity post = new PostEntity();
@@ -217,6 +224,61 @@ public class PostController {
                 return new CommonResult(444,"无记录");
             }
         }catch (Exception e){
+            return new CommonResult(400, "系统出现错误", e);
+        }
+    }
+
+    // 获取某个帖子的摘要
+    @GetMapping("/abstract/{postId}")
+    public CommonResult getPostAbstract(@PathVariable Integer postId){
+        try {
+            RestTemplate restTemplate1 = new RestTemplate();
+            PostEntity post = postService.getById(postId);
+            if (post == null){
+                return new CommonResult(401, "该帖子不存在");
+            }
+            //AI提取摘要
+//            JSONObject result = HttpGet("http://124.70.163.146:8001/ai/abstract/", post.getPostContent());
+            // 使用上一种方法会因为中文编码的问题得到乱码，会出很多麻烦，所以还是新建一个RestTemplate对象更方便一点
+            JSONObject result = restTemplate1.getForObject("http://124.70.163.146:8001/ai/abstract/" + post.getPostContent(), JSONObject.class);
+            //如果AI那边没拿到东西，则添加失败
+            if (result == null){
+                return new CommonResult(402, "系统繁忙，请稍后重试");
+            }
+            JSONObject data = result.getJSONObject("data");
+            String abstractWord = data.getStr("abstract");
+
+            //AI那边拿到结果了才能继续
+            return new CommonResult(200, "获取成功", abstractWord);
+        }
+        catch (Exception e){
+            return new CommonResult(400, "系统出现错误", e);
+        }
+    }
+    // 获取某个论坛的词云图
+    @GetMapping("/topic/{clubId}")
+    public CommonResult getForumTopic(@PathVariable Integer clubId){
+        try {
+            RestTemplate restTemplate1 = new RestTemplate();
+            //AI提取摘要
+            JSONObject result = HttpGet("http://124.70.163.146:8001/ai/wordCloudByClub/", Integer.toString(clubId));
+//            JSONObject result = restTemplate1.getForObject("http://124.70.163.146:8001/ai/wordCloudByClub/" + clubId, JSONObject.class);
+            //如果AI那边没拿到东西，则添加失败
+            if (result == null){
+                return new CommonResult(402, "系统繁忙，请稍后重试");
+            }
+            JSONObject data = result.getJSONObject("data");
+            Integer code = result.getInt("code");
+            if(code != 200){
+                return new CommonResult(444, "该社团不存在");
+            }
+            // 引入的Json包使用本方式获取string
+            String picUrl = data.getStr("picUrl");
+
+            //AI那边拿到结果了才能继续
+            return new CommonResult(200, "获取成功", picUrl);
+        }
+        catch (Exception e){
             return new CommonResult(400, "系统出现错误", e);
         }
     }

@@ -19,6 +19,7 @@ import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -88,35 +89,47 @@ public class ReportController {
                 }
                 reportEntityList = reportService.list(wrapper);
                 if (reportGetParam.getClubId() != null){
-                    for (ReportEntity reportEntity : reportEntityList){
-                        //如果该举报是针对帖子的
-                        if (reportEntity.getTargetType().equals("帖子")){
-                            Integer postId = reportEntity.getTargetId();
-                            PostEntity postEntity = postService.getById(postId);
-                            //如果该帖子不存在或者该帖子不是该社团的
-                            if(postEntity == null || postEntity.getClubId() != reportGetParam.getClubId()){
-                                reportEntityList.remove(reportEntity);
-                            }
-                        }
-                        //如果该举报是针对评论的
-                        else if (reportEntity.getTargetType().equals("评论")){
-                            Integer commentId = reportEntity.getTargetId();
-                            CommentEntity commentEntity = commentService.getById(commentId);
-                            if(commentEntity != null){
-                                Integer postId = commentEntity.getPostId();
+                    if(reportEntityList != null && reportEntityList.isEmpty()!= true){
+                        // 由于会发生并发修改异常，所以不能在for循环中remove
+                        List<ReportEntity> temp = new ArrayList<>();
+                        for (ReportEntity reportEntity : reportEntityList){
+                            //如果该举报是针对帖子的
+                            if (reportEntity.getTargetType().equals("帖子")){
+                                Integer postId = reportEntity.getTargetId();
                                 PostEntity postEntity = postService.getById(postId);
                                 //如果该帖子不存在或者该帖子不是该社团的
                                 if(postEntity == null || postEntity.getClubId() != reportGetParam.getClubId()){
-                                    reportEntityList.remove(reportEntity);
+                                    temp.add(reportEntity);
                                 }
                             }
-                            //如果该评论不存在
-                            else {
-                                reportEntityList.remove(reportEntity);
+                            //如果该举报是针对评论的
+                            else if (reportEntity.getTargetType().equals("评论")){
+                                Integer commentId = reportEntity.getTargetId();
+                                CommentEntity commentEntity = commentService.getById(commentId);
+                                if(commentEntity != null){
+                                    Integer postId = commentEntity.getPostId();
+                                    PostEntity postEntity = postService.getById(postId);
+                                    //如果该帖子不存在或者该帖子不是该社团的
+                                    if(postEntity == null || postEntity.getClubId() != reportGetParam.getClubId()){
+                                        temp.add(reportEntity);
+                                    }
+                                }
+                                //如果该评论不存在
+                                else {
+                                    temp.add(reportEntity);
+                                }
+                            }
+                            // 有可能在中途把数组清空，那么进入下一个循环就可能出错
+                            if (reportEntityList.isEmpty()==true){
+                                break;
                             }
                         }
+                        reportEntityList.removeAll(temp);
                     }
                 }
+            }
+            if (reportEntityList.isEmpty()==true){
+                return new CommonResult(444, "无记录");
             }
             return new CommonResult(200, "获取成功", reportEntityList);
 
