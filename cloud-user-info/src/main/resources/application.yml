@@ -1,16 +1,16 @@
 server:
-  port: 8002
+  port: 8102
 spring:
   application:
-    name: cloud-user-info-service
+    name: cloud-user-info-service-se
   datasource:
     # 当前数据源操作类型
     type: com.alibaba.druid.pool.DruidDataSource
     # mysql驱动类
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://1.15.156.161:3306/cluboat?serverTimezone=GMT%2B8&characterEncoding=utf-8&useSSL=false
+    url: jdbc:mysql://1.15.156.161:3306/cluboat_new?serverTimezone=GMT%2B8&characterEncoding=utf-8&useSSL=false
     username: CluBoat
-    password: bf2mZnLFRpyy2JGE
+    password: zeaCMsNTSprifxER
   cloud:
     loadbalancer:
       enabled: true
