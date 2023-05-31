@@ -15,6 +15,8 @@ public interface PostService extends IService<PostEntity> {
     // 根据clubId和status获取帖子列表
     public List<PostListDTO> GetPostListByClubId(PostGetByClubIdParam param);
 
+    public PostListDTO GetPostById(Integer postId);
+
     public List<PostListDTO> GetAllPostList();
 
 //    public List<Integer> GetPostIdByBasicInfo(PostAddParam postAddParam);

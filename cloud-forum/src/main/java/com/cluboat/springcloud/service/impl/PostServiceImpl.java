@@ -59,6 +59,14 @@ public class PostServiceImpl extends ServiceImpl<PostMapper, PostEntity> impleme
         return postList;
     }
 
+    @Override
+    public PostListDTO GetPostById(Integer postId){
+        MPJLambdaWrapper<PostEntity> wrapper = new MPJLambdaWrapper<PostEntity>()
+                .selectAll(PostEntity.class).eq(PostEntity::getPostId, postId).eq(PostEntity::getStatus, "正常");
+
+        PostListDTO post = postMapper.selectJoinOne(PostListDTO.class, wrapper);
+        return post;
+    }
 
     @Override
     public List<PostListDTO> GetPostListByClubId(PostGetByClubIdParam param){

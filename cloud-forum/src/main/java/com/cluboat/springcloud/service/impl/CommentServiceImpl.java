@@ -8,6 +8,7 @@ import com.cluboat.springcloud.entity.CommentEntity;
 import com.cluboat.springcloud.entity.PostTagEntity;
 import com.cluboat.springcloud.entity.UserInfoEntity;
 import com.cluboat.springcloud.entity.dto.CommentGetDTO;
+import com.cluboat.springcloud.entity.dto.PopularPostDTO;
 import com.cluboat.springcloud.entity.dto.PostTagDTO;
 import com.cluboat.springcloud.entity.param.CommentDeleteParam;
 import com.cluboat.springcloud.mapper.CommentMapper;
@@ -17,6 +18,7 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class CommentServiceImpl extends ServiceImpl<CommentMapper, CommentEntity> implements CommentService {
@@ -46,5 +48,14 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, CommentEntity
                     .orderByAsc(CommentEntity::getCommentTime));
         return commentGetDTOList;
     }
+
+//    @Override
+//    public List<PopularPostDTO> GetPopularPost(){
+//        List<PopularPostDTO> = commentMapper.selectJoinList(PopularPostDTO.class,
+//                new MPJLambdaWrapper<CommentEntity>()
+//                    .select(CommentEntity::getPostId)
+//                    .select("COUNT(commentId) as commentCount")
+//                )
+//    }
 
 }

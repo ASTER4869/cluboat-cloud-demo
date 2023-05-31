@@ -2,14 +2,19 @@ package com.cluboat.springcloud.controller;
 
 
 
+import cn.hutool.json.JSONArray;
 import cn.hutool.json.JSONObject;
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.cluboat.springcloud.common.CommonResult;
-import com.cluboat.springcloud.entity.ClubEntity;
-import com.cluboat.springcloud.entity.PostEntity;
-import com.cluboat.springcloud.entity.PostTagEntity;
+import com.cluboat.springcloud.entity.*;
+import com.cluboat.springcloud.entity.dto.PopularPostDTO;
 import com.cluboat.springcloud.entity.dto.PostListDTO;
 import com.cluboat.springcloud.entity.dto.PostTagDTO;
 import com.cluboat.springcloud.entity.param.*;
+import com.cluboat.springcloud.mapper.CommentMapper;
+import com.cluboat.springcloud.service.CommentService;
+import com.cluboat.springcloud.service.LikesService;
 import com.cluboat.springcloud.service.PostService;
 import com.cluboat.springcloud.service.PostTagService;
 import lombok.extern.slf4j.Slf4j;
@@ -24,7 +29,10 @@ import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
 import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @Slf4j
@@ -70,6 +78,14 @@ public class PostController {
     private RestTemplate restTemplate;
     @Resource
     private PostTagService postTagService;
+
+    @Resource
+    private CommentService commentService;
+
+    @Resource
+    private LikesService likesService;
+
+
 
 
 //    Put中没有判断加的tag是否是该club下有的tag
@@ -283,4 +299,143 @@ public class PostController {
         }
     }
 
+    // 获取给某个用户推荐的帖子列表
+    @GetMapping("/recommend/{userId}")
+    public CommonResult getRecommendPost(@PathVariable Integer userId){
+        try {
+            RestTemplate restTemplate1 = new RestTemplate();
+            //AI获取推荐帖子列表
+            JSONObject result = HttpGet("http://124.70.163.146:8001/ai/recommend/", Integer.toString(userId));
+//            JSONObject result = restTemplate1.getForObject("http://124.70.163.146:8001/ai/wordCloudByClub/" + clubId, JSONObject.class);
+            //如果AI那边没拿到东西，则获取失败
+            if (result == null){
+                return new CommonResult(402, "系统繁忙，请稍后重试");
+            }
+            JSONArray data = result.getJSONArray("data");
+            Integer code = result.getInt("code");
+            String msg = result.getStr("message");
+            if(code != 200){
+                return new CommonResult(444, msg);
+            }
+            List<PostListDTO> postList = new ArrayList<>();
+            for (Object item : data){
+                PostListDTO postItem = new PostListDTO();
+                JSONObject post = (JSONObject)item;
+                Integer postId = post.getInt("postId");
+                postItem = postService.GetPostById(postId);
+                if (postItem != null){
+                    postList.add(postItem);
+                }
+            }
+
+            if(!postList.isEmpty()){
+                //获取每个tag对应的tag名，并赋值
+                for (PostListDTO post:postList) {
+                    post.setPostTag(postTagService.GetPostTagListByPostId(post.getPostId()));
+                }
+                return new CommonResult(200,"查询成功", postList);
+            }
+            else{
+                return new CommonResult(444,"无记录");
+            }
+        }
+        catch (Exception e){
+            return new CommonResult(400, "系统出现错误", e);
+        }
+    }
+
+    public static void swap(PopularPostDTO a, PopularPostDTO b){
+        PopularPostDTO temp = b;
+        b = a;
+        a = temp;
+    }
+
+    // 快速排序
+    //快排实现方法
+    public static void quickRow(PopularPostDTO[] array, int low, int high){
+        int i,j;
+        PopularPostDTO pivot;
+        //结束条件
+        if (low >= high) {
+            return;
+        }
+        i = low;
+        j = high;
+        //选择的节点，这里选择的数组的第一数作为节点
+        pivot = array[low];
+        while (i < j){
+            //从右往左找比节点小的数，循环结束要么找到了，要么i=j
+            while (array[j].getScore() >= pivot.getScore() && i < j){
+                j--;
+            }
+            //从左往右找比节点大的数，循环结束要么找到了，要么i=j
+            while (array[i].getScore() <= pivot.getScore() && i < j){
+                i++;
+            }
+            //如果i!=j说明都找到了，就交换这两个数
+            if (i < j){
+                swap(array[i], array[j]);
+            }
+        }
+        //i==j一轮循环结束，交换节点的数和相遇点的数
+        array[low] = array[i];
+        array[i] = pivot;
+        //数组“分两半”,再重复上面的操作
+        quickRow(array,low,i - 1);
+        quickRow(array,i + 1,high);
+    }
+
+
+
+    @GetMapping("/popular")
+    public CommonResult getPopularPost(){
+        try {
+            List<PopularPostDTO> popularPostDTOList = new ArrayList<>();
+            LambdaQueryWrapper<PostEntity> wrapper1 = new LambdaQueryWrapper<>();
+            wrapper1.eq(PostEntity::getStatus, "正常");
+            // 先获取所有正常的post
+            List<PostEntity> postEntityList = postService.list(wrapper1);
+            // 针对每个post，获取对应的评论数
+            for (PostEntity postEntity : postEntityList){
+                PopularPostDTO popularPostDTO = new PopularPostDTO();
+                popularPostDTO.setPostId(postEntity.getPostId());
+                LambdaQueryWrapper<CommentEntity> wrapper2 = new LambdaQueryWrapper<>();
+                wrapper2.eq(CommentEntity::getPostId, postEntity.getPostId());
+                Integer commentCount = (int)commentService.count(wrapper2);
+                popularPostDTO.setCommentCount(commentCount);
+                popularPostDTO.setLikesCount(0);
+                popularPostDTOList.add(popularPostDTO);
+            }
+            // 针对每个post，获取对应的点赞数
+            for (PopularPostDTO popularPostDTO : popularPostDTOList){
+                LambdaQueryWrapper<LikesEntity> wrapper3 = new LambdaQueryWrapper<>();
+                wrapper3.eq(LikesEntity::getPostId, popularPostDTO.getPostId());
+                Integer likesCount = (int)likesService.count(wrapper3);
+                popularPostDTO.setLikesCount(likesCount);
+            }
+            // 根据权重获取每个post对应的热度分数
+            for (PopularPostDTO popularPostDTO : popularPostDTOList){
+                Integer commentCount = popularPostDTO.getCommentCount();
+                Integer likesCount = popularPostDTO.getLikesCount();
+                popularPostDTO.setScore(commentCount * 5 + likesCount * 3);
+            }
+//            popularPostDTOList.sort();
+
+            PopularPostDTO[] popularPostDTOArray = popularPostDTOList.toArray(new PopularPostDTO[popularPostDTOList.size()]);
+//            quickRow(popularPostDTOArray, 0, popularPostDTOArray.length - 1);
+            Arrays.sort(popularPostDTOArray);
+            popularPostDTOList = Arrays.asList(popularPostDTOArray);
+            // 把帖子信息填入结果中
+            for (PopularPostDTO popularPostDTO : popularPostDTOList){
+                PostListDTO postListDTO = postService.GetPostById(popularPostDTO.getPostId());
+                postListDTO.setPostTag(postTagService.GetPostTagListByPostId(popularPostDTO.getPostId()));
+                popularPostDTO.setPostInfo(postListDTO);
+            }
+
+            return new CommonResult(200, "获取成功", popularPostDTOList);
+        }
+        catch (Exception e){
+            return new CommonResult(400, "系统出现错误", e);
+        }
+    }
 }
