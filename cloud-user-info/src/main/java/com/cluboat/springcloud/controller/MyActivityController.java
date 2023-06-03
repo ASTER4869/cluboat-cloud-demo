@@ -51,6 +51,12 @@ public class MyActivityController {
     //取消关注活动
     @DeleteMapping
     public CommonResult deleteMyActivity(@RequestBody DeleteMyActivityParam param) {
+        if(param.getUserId() == null){
+            return new CommonResult(401, "用户编号为空");
+        }
+        if(param.getActivityId() == null){
+            return new CommonResult(402, "活动编号为空");
+        }
         LambdaQueryWrapper<FollowEntity> wrapper = new LambdaQueryWrapper<FollowEntity>()
             .eq(FollowEntity::getUserId, param.getUserId())
             .eq(FollowEntity::getActivityId, param.getActivityId());

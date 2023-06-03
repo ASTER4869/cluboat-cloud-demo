@@ -12,10 +12,8 @@
     <list default="true" id="6d4d16d2-b824-45f3-a1a5-21313ed733a4" name="变更" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-forum/src/main/java/com/cluboat/springcloud/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-forum/src/main/java/com/cluboat/springcloud/controller/PostController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-forum/src/main/java/com/cluboat/springcloud/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-forum/src/main/java/com/cluboat/springcloud/service/CommentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-forum/src/main/java/com/cluboat/springcloud/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-forum/src/main/java/com/cluboat/springcloud/service/PostService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-forum/src/main/java/com/cluboat/springcloud/service/impl/CommentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-forum/src/main/java/com/cluboat/springcloud/service/impl/CommentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-forum/src/main/java/com/cluboat/springcloud/service/impl/PostServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-forum/src/main/java/com/cluboat/springcloud/service/impl/PostServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-forum/src/main/java/com/cluboat/springcloud/entity/dto/PopularPostDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-forum/src/main/java/com/cluboat/springcloud/entity/dto/PopularPostDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/controller/MyActivityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/controller/MyActivityController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -323,7 +321,8 @@
       <workItem from="1684405009095" duration="3807000" />
       <workItem from="1684756514198" duration="28000" />
       <workItem from="1685088489438" duration="6000" />
-      <workItem from="1685357490670" duration="18929000" />
+      <workItem from="1685357490670" duration="19788000" />
+      <workItem from="1685704775796" duration="3297000" />
     </task>
     <servers />
   </component>

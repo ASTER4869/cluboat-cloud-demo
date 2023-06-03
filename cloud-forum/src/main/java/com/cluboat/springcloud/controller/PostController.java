@@ -426,10 +426,16 @@ public class PostController {
             Arrays.sort(popularPostDTOArray);
             popularPostDTOList = Arrays.asList(popularPostDTOArray);
             // 把帖子信息填入结果中
+
             for (PopularPostDTO popularPostDTO : popularPostDTOList){
                 PostListDTO postListDTO = postService.GetPostById(popularPostDTO.getPostId());
                 postListDTO.setPostTag(postTagService.GetPostTagListByPostId(popularPostDTO.getPostId()));
-                popularPostDTO.setPostInfo(postListDTO);
+                popularPostDTO.setUserId(postListDTO.getUserId());
+                popularPostDTO.setClubId(postListDTO.getClubId());
+                popularPostDTO.setPostTitle(postListDTO.getPostTitle());
+                popularPostDTO.setPostContent(postListDTO.getPostContent());
+                popularPostDTO.setPostTime(postListDTO.getPostTime());
+                popularPostDTO.setPostTag(postListDTO.getPostTag());
             }
 
             return new CommonResult(200, "获取成功", popularPostDTOList);
