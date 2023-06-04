@@ -10,11 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d4d16d2-b824-45f3-a1a5-21313ed733a4" name="变更" comment="变更">
-      <change beforePath="$PROJECT_DIR$/cloud-club-manage/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-club-manage/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-examine/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-forum/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-forum/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-user-info/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-info/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login/src/main/java/com/cluboat/springcloud/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login/src/main/java/com/cluboat/springcloud/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login/src/main/java/com/cluboat/springcloud/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login/src/main/java/com/cluboat/springcloud/service/impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-user-login/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login/src/test/java/mybatistest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +29,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -64,6 +68,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "jdk.selected.JAVA_MODULE": "1.8",
     "last_opened_file_path": "D:/Code/microservicesDemo/cluboat-cloud-demo/cloud-api-common/src/main/resources/hibernate.cfg.xml",
     "node.js.detected.package.eslint": "true",
@@ -74,8 +80,8 @@
     "project.structure.last.edited": "模块",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.ignored.files",
-    "spring.configuration.checksum": "fce22e26123e9691c5807915b93761ee"
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "spring.configuration.checksum": "87d4ee9a0bee20a99b66fc25a5308f35"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -92,6 +98,14 @@
       <recent name="D:\Code\microservicesDemo\cluboat-cloud-demo\cloud-examine\src\main\resources" />
       <recent name="D:\Code\microservicesDemo\cluboat-cloud-demo\cloud-forum\src\main\resources" />
       <recent name="D:\Code\microservicesDemo\cluboat-cloud-demo\cloud-user-info\src\main\resources" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.cluboat.springcloud.service.impl" />
+      <recent name="com.cluboat.springcloud.service" />
+      <recent name="com.cluboat.springcloud.Controller" />
     </key>
     <key name="ImportMappingsDialog.RecentPackages">
       <recent name="com.cluboat.springcloud.entity" />
@@ -113,47 +127,39 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.examine">
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.cluboat.demo.springcloud.Main" />
-      <module name="cloud-forum" />
+  <component name="RunManager">
+    <configuration name="LoginControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cloud-user-login" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.cluboat.demo.springcloud.*" />
+          <option name="PATTERN" value="com.cluboat.springcloud.Controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.cluboat.springcloud.Controller" />
+      <option name="MAIN_CLASS_NAME" value="com.cluboat.springcloud.Controller.LoginControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.cluboat.demo.springcloud.Main" />
-      <module name="cloud-club-manage" />
+    <configuration name="LoginControllerTest.testLogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cloud-user-login" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.cluboat.demo.springcloud.*" />
+          <option name="PATTERN" value="com.cluboat.springcloud.Controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.cluboat.springcloud.Controller" />
+      <option name="MAIN_CLASS_NAME" value="com.cluboat.springcloud.Controller.LoginControllerTest" />
+      <option name="METHOD_NAME" value="testLogin" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.cluboat.demo.springcloud.Main" />
-      <module name="cloud-examine" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.cluboat.demo.springcloud.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MyBatisplustest.testSelectList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MyBatisplustest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cloud-user-login" />
       <extension name="coverage">
         <pattern>
@@ -163,21 +169,45 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.cluboat.springcloud" />
       <option name="MAIN_CLASS_NAME" value="com.cluboat.springcloud.MyBatisplustest" />
-      <option name="METHOD_NAME" value="testSelectList" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cloud-user-login" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cluboat.springcloud.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cluboat.springcloud.service" />
+      <option name="MAIN_CLASS_NAME" value="com.cluboat.springcloud.service.UserServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.testLogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cloud-user-login" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cluboat.springcloud.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cluboat.springcloud.service" />
+      <option name="MAIN_CLASS_NAME" value="com.cluboat.springcloud.service.UserServiceTest" />
+      <option name="METHOD_NAME" value="testLogin" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NacosGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="NacosGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="cloud-gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.cluboat.springcloud.NacosGatewayApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.cluboat.springcloud.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -219,8 +249,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.NacosGatewayApplication" />
-        <item itemvalue="JUnit.MyBatisplustest.testSelectList" />
+        <item itemvalue="JUnit.UserServiceTest" />
+        <item itemvalue="JUnit.UserServiceTest.testLogin" />
+        <item itemvalue="JUnit.LoginControllerTest" />
+        <item itemvalue="JUnit.LoginControllerTest.testLogin" />
+        <item itemvalue="JUnit.MyBatisplustest" />
       </list>
     </recent_temporary>
   </component>
@@ -322,6 +355,8 @@
       <workItem from="1684405009095" duration="3807000" />
       <workItem from="1685432326435" duration="460000" />
       <workItem from="1685432795008" duration="1234000" />
+      <workItem from="1685707959906" duration="3935000" />
+      <workItem from="1685882662835" duration="9301000" />
     </task>
     <servers />
   </component>
