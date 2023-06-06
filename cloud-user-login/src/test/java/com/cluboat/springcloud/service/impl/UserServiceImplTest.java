@@ -1,6 +1,7 @@
 package com.cluboat.springcloud.service.impl;
 
 import com.cluboat.springcloud.entity.UserEntity;
+import com.mysql.cj.x.protobuf.MysqlxDatatypes;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.jupiter.api.BeforeEach;
@@ -25,7 +26,7 @@ public class UserServiceImplTest {
         final UserEntity userEntity1 = new UserEntity();
         userEntity1.setUserPhone("13011112222");
         userEntity1.setUserPassword("666666");
-        String test1 = userServiceImpl.loginSuccess(userEntity1);
+        String test1 = userServiceImpl.loginJudge(userEntity1);
         Assert.assertEquals(test1,"登录成功");
     }
 }

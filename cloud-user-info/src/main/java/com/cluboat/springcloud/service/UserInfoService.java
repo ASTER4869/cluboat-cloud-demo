@@ -9,6 +9,7 @@ import java.util.List;
 public interface UserInfoService extends IService<UserInfoEntity>{
     public PersonInfoDTO GetPersonInfo(Integer userId);
     public List<PersonInfoDTO> GetAllPersonInfo();
+    public String changeUserInfo(UserInfoEntity userInfoEntity);
 
     //修改用户个人信息，返回修改的个数
 //    public Integer PutPersonInfo(PutPersonInfoParam putInfo);

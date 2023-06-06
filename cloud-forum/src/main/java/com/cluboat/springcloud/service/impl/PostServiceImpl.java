@@ -1,12 +1,15 @@
 package com.cluboat.springcloud.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.cluboat.springcloud.entity.*;
 import com.cluboat.springcloud.entity.dto.PostListDTO;
 import com.cluboat.springcloud.entity.param.PostAddParam;
 import com.cluboat.springcloud.entity.param.PostGetByClubIdParam;
 import com.cluboat.springcloud.entity.param.PostGetParam;
+import com.cluboat.springcloud.mapper.ClubMapper;
 import com.cluboat.springcloud.mapper.PostMapper;
+import com.cluboat.springcloud.mapper.UserInfoMapper;
 import com.cluboat.springcloud.service.PostService;
 import com.cluboat.springcloud.service.PostTagService;
 import com.github.yulichang.wrapper.MPJLambdaWrapper;
@@ -18,10 +21,10 @@ import java.util.List;
 
 @Service
 public class PostServiceImpl extends ServiceImpl<PostMapper, PostEntity> implements PostService{
+
+    private String blacklist = "~!@#$%^&*()_+|`-=\\{}[]:\";'<>/";
     @Resource
     PostMapper postMapper;
-
-    PostTagService postTagService;
 
     //有bug
 //    @Override
@@ -62,15 +65,32 @@ public class PostServiceImpl extends ServiceImpl<PostMapper, PostEntity> impleme
 
     @Override
     public List<PostListDTO> GetPostListByClubId(PostGetByClubIdParam param){
-        MPJLambdaWrapper<PostEntity> wrapper = new MPJLambdaWrapper<PostEntity>()
-                .selectAll(PostEntity.class);
-        if (param.getClubId() != null){
-            wrapper = wrapper.eq(PostEntity::getClubId, param.getClubId());
+        List<PostListDTO> postList = new ArrayList<>();
+        PostListDTO resultPost = new PostListDTO();
+        QueryWrapper<ClubMapper> wrapper = new QueryWrapper<>();
+        wrapper.eq("club_id", param.getClubId());
+        if(wrapper.isEmptyOfEntity()){
+            resultPost.setPostTitle("查询社团不存在");
+            postList.add(resultPost);
         }
-        if (param.getStatus() != null){
-            wrapper = wrapper.eq(PostEntity::getStatus, param.getStatus());
+        else{
+            MPJLambdaWrapper<PostEntity> lambdaWrapper = new MPJLambdaWrapper<PostEntity>()
+                    .selectAll(PostEntity.class);
+            if (param.getClubId() != null){
+                lambdaWrapper = lambdaWrapper.eq(PostEntity::getClubId, param.getClubId());
+            }
+            if (param.getStatus() != null){
+                lambdaWrapper = lambdaWrapper.eq(PostEntity::getStatus, param.getStatus());
+            }
+
+            if(lambdaWrapper.isEmptyOfEntity()){
+                resultPost.setPostTitle("社团不存在满足查询条件的活动");
+                postList.add(resultPost);
+            }
+            else{
+                postList = postMapper.selectJoinList(PostListDTO.class, lambdaWrapper);
+            }
         }
-        List<PostListDTO> postList = postMapper.selectJoinList(PostListDTO.class, wrapper);
 //        for(PostListDTO postListDTO:postList){
 //            postListDTO.setPostTag(postTagService.GetPostTagListByPostId(postListDTO.getPostId()));
 //        }
@@ -86,6 +106,30 @@ public class PostServiceImpl extends ServiceImpl<PostMapper, PostEntity> impleme
         );
 
         return postList;
+    }
+
+    @Override
+    public String addPost(PostEntity postEntity){
+        QueryWrapper<UserInfoMapper> wrapper1 = new QueryWrapper<>();
+        wrapper1.eq("user_id", postEntity.getUserId());
+        if(wrapper1 == null){
+            return "用户不存在";
+        }
+
+        QueryWrapper<ClubMapper> wrapper2 = new QueryWrapper<>();
+        wrapper2.eq("club_id", postEntity.getClubId());
+        if(wrapper2 == null){
+            return "帖子所属社团不存在";
+        }
+
+        for(char c : blacklist.toCharArray()){
+            if(postEntity.getPostTitle().contains(String.valueOf(c))){
+                return "帖子标题包含非法字符";
+            }
+        }
+
+        return "创建成功";
+
     }
 
 

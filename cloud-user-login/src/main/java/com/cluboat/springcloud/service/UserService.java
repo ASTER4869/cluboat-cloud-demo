@@ -5,6 +5,8 @@ import com.cluboat.springcloud.entity.UserEntity;
 
 
 public interface UserService extends IService<UserEntity>{
-    String loginSuccess(UserEntity userEntity);
+    String loginJudge(UserEntity userEntity);
+
+    String registerJudge(UserEntity userEntity);
 
 }

@@ -11,13 +11,16 @@
   <component name="ChangeListManager">
     <list default="true" id="6d4d16d2-b824-45f3-a1a5-21313ed733a4" name="变更" comment="变更">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-examine/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-examine/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/service/ActivityApplyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/service/ActivityApplyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/service/impl/ActivityApplyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-club-manage/src/main/java/com/cluboat/springcloud/service/impl/ActivityApplyServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-forum/src/main/java/com/cluboat/springcloud/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-forum/src/main/java/com/cluboat/springcloud/service/PostService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-forum/src/main/java/com/cluboat/springcloud/service/impl/PostServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-forum/src/main/java/com/cluboat/springcloud/service/impl/PostServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/service/UserInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/service/UserInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/service/impl/UserInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/service/impl/UserInfoServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-user-login/src/main/java/com/cluboat/springcloud/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login/src/main/java/com/cluboat/springcloud/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-user-login/src/main/java/com/cluboat/springcloud/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login/src/main/java/com/cluboat/springcloud/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-user-login/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-user-login/src/test/java/mybatistest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login/src/test/java/com/cluboat/springcloud/service/impl/UserServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login/src/test/java/com/cluboat/springcloud/service/impl/UserServiceImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,9 +30,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JUnit5 Test Class" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -77,11 +80,11 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "模块",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "spring.configuration.checksum": "87d4ee9a0bee20a99b66fc25a5308f35"
+    "settings.editor.selected.configurable": "project.propVCSSupport.Mappings",
+    "spring.configuration.checksum": "2216d883ee2367f9fba312cfa519c6de"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -127,7 +130,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.UserServiceImplTest.testLoginSuccess">
     <configuration name="LoginControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cloud-user-login" />
       <extension name="coverage">
@@ -143,33 +146,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginControllerTest.testLogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cloud-user-login" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.cluboat.springcloud.Controller.*" />
+          <option name="PATTERN" value="com.cluboat.springcloud.service.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.cluboat.springcloud.Controller" />
-      <option name="MAIN_CLASS_NAME" value="com.cluboat.springcloud.Controller.LoginControllerTest" />
-      <option name="METHOD_NAME" value="testLogin" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.cluboat.springcloud.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.cluboat.springcloud.service.impl.UserServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyBatisplustest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserServiceImplTest.testLoginSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cloud-user-login" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.cluboat.springcloud.*" />
+          <option name="PATTERN" value="com.cluboat.springcloud.service.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.cluboat.springcloud" />
-      <option name="MAIN_CLASS_NAME" value="com.cluboat.springcloud.MyBatisplustest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="com.cluboat.springcloud.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.cluboat.springcloud.service.impl.UserServiceImplTest" />
+      <option name="METHOD_NAME" value="testLoginSuccess" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -249,11 +252,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserServiceImplTest.testLoginSuccess" />
+        <item itemvalue="JUnit.UserServiceImplTest" />
         <item itemvalue="JUnit.UserServiceTest" />
         <item itemvalue="JUnit.UserServiceTest.testLogin" />
         <item itemvalue="JUnit.LoginControllerTest" />
-        <item itemvalue="JUnit.LoginControllerTest.testLogin" />
-        <item itemvalue="JUnit.MyBatisplustest" />
       </list>
     </recent_temporary>
   </component>
@@ -357,6 +360,11 @@
       <workItem from="1685432795008" duration="1234000" />
       <workItem from="1685707959906" duration="3935000" />
       <workItem from="1685882662835" duration="9301000" />
+      <workItem from="1685956041401" duration="2167000" />
+      <workItem from="1685969947811" duration="4856000" />
+      <workItem from="1686026845129" duration="2831000" />
+      <workItem from="1686030288174" duration="4191000" />
+      <workItem from="1686050109020" duration="3601000" />
     </task>
     <servers />
   </component>

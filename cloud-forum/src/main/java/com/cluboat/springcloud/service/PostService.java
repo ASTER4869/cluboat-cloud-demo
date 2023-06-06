@@ -17,5 +17,7 @@ public interface PostService extends IService<PostEntity> {
 
     public List<PostListDTO> GetAllPostList();
 
+    public String addPost(PostEntity postEntity);
+
 //    public List<Integer> GetPostIdByBasicInfo(PostAddParam postAddParam);
 }
