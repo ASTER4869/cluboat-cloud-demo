@@ -22,11 +22,20 @@ public class UserServiceImplTest {
     UserServiceImpl userServiceImpl;
 
     @Test
-    public void testLoginSuccess(){
+    public void testLoginSuccess1(){
         final UserEntity userEntity1 = new UserEntity();
         userEntity1.setUserPhone("13011112222");
         userEntity1.setUserPassword("666666");
-        String test1 = userServiceImpl.loginJudge(userEntity1);
-        Assert.assertEquals(test1,"登录成功");
+        String test = userServiceImpl.loginJudge(userEntity1);
+        Assert.assertEquals(test,"登录成功");
+    }
+
+    @Test
+    public void testLoginSuccess2(){
+        final UserEntity userEntity1 = new UserEntity();
+        userEntity1.setUserPhone("13011113333");
+        userEntity1.setUserPassword("666666");
+        String test = userServiceImpl.loginJudge(userEntity1);
+        Assert.assertEquals(test,"账户不存在");
     }
 }

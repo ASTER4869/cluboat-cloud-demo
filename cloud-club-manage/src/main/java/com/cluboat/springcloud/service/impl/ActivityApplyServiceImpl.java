@@ -8,6 +8,7 @@ import com.cluboat.springcloud.entity.param.ActivityApplyClubParam;
 import com.cluboat.springcloud.mapper.ActivityApplyMapper;
 import com.cluboat.springcloud.mapper.ClubMapper;
 import com.cluboat.springcloud.service.ActivityApplyService;
+import com.cluboat.springcloud.service.ClubService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -18,6 +19,9 @@ import java.util.List;
 @Service
 public class ActivityApplyServiceImpl extends ServiceImpl<ActivityApplyMapper, ActivityApplyEntity> implements ActivityApplyService {
     private String blacklist = "~!@#$%^&*()_+|`-=\\{}[]:\";'<>/";
+
+    @Resource
+    ClubService clubService;
 
     @Override
     public String applyForActivity(ActivityApplyEntity activityApply){
@@ -30,9 +34,7 @@ public class ActivityApplyServiceImpl extends ServiceImpl<ActivityApplyMapper, A
 
         }
 
-        QueryWrapper<ClubMapper> clubMapper = new QueryWrapper<>();
-        clubMapper.eq("club_id", activityApply.getClubId());
-        if(clubMapper.isEmptyOfEntity()){
+        if(clubService.getById(activityApply.getClubId()) == null){
             return "创建社团不存在";
         }
 
@@ -41,26 +43,29 @@ public class ActivityApplyServiceImpl extends ServiceImpl<ActivityApplyMapper, A
                 return "活动标题含有非法字符";
             }
         }
-
         return "活动申请提交成功";
     }
+
 
     @Override
     public List<ActivityApplyEntity> getActivityApplyList(ActivityApplyClubParam param){
         List<ActivityApplyEntity> resultList = new ArrayList<>();
         ActivityApplyEntity result = new ActivityApplyEntity();
         QueryWrapper<ActivityApplyEntity> wrapper = new QueryWrapper<>();
-        wrapper.eq("club_id", param.getClubId());
-        if(wrapper.isEmptyOfEntity()){
+
+        if(clubService.getById(param.getClubId()) == null){
             result.setActivityTitle("查询社团不存在");
             resultList.add(result);
         }
         else if(param.getStatus().isEmpty()){
+            wrapper.eq("club_id", param.getClubId());
             resultList = list(wrapper);
         }
         else{
-            wrapper.eq("stauts", param.getStatus());
-            if(wrapper.isEmptyOfEntity()){
+            wrapper
+                    .eq("club_id", param.getClubId())
+                    .eq("stauts", param.getStatus());
+            if(list(wrapper).isEmpty()){
                 result.setActivityTitle("满足查询条件的社团活动为空");
                 resultList.add(result);
             }
@@ -70,8 +75,6 @@ public class ActivityApplyServiceImpl extends ServiceImpl<ActivityApplyMapper, A
         }
 
         return resultList;
-
-
     }
 
 

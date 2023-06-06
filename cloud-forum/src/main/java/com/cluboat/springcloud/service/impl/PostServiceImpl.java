@@ -10,8 +10,10 @@ import com.cluboat.springcloud.entity.param.PostGetParam;
 import com.cluboat.springcloud.mapper.ClubMapper;
 import com.cluboat.springcloud.mapper.PostMapper;
 import com.cluboat.springcloud.mapper.UserInfoMapper;
+import com.cluboat.springcloud.service.ClubService;
 import com.cluboat.springcloud.service.PostService;
 import com.cluboat.springcloud.service.PostTagService;
+import com.cluboat.springcloud.service.UserInfoService;
 import com.github.yulichang.wrapper.MPJLambdaWrapper;
 import org.springframework.stereotype.Service;
 
@@ -25,6 +27,10 @@ public class PostServiceImpl extends ServiceImpl<PostMapper, PostEntity> impleme
     private String blacklist = "~!@#$%^&*()_+|`-=\\{}[]:\";'<>/";
     @Resource
     PostMapper postMapper;
+    @Resource
+    ClubService clubService;
+    @Resource
+    UserInfoService userInfoService;
 
     //有bug
 //    @Override
@@ -67,9 +73,8 @@ public class PostServiceImpl extends ServiceImpl<PostMapper, PostEntity> impleme
     public List<PostListDTO> GetPostListByClubId(PostGetByClubIdParam param){
         List<PostListDTO> postList = new ArrayList<>();
         PostListDTO resultPost = new PostListDTO();
-        QueryWrapper<ClubMapper> wrapper = new QueryWrapper<>();
-        wrapper.eq("club_id", param.getClubId());
-        if(wrapper.isEmptyOfEntity()){
+
+        if(clubService.getById(param.getClubId()) == null){
             resultPost.setPostTitle("查询社团不存在");
             postList.add(resultPost);
         }
@@ -83,7 +88,7 @@ public class PostServiceImpl extends ServiceImpl<PostMapper, PostEntity> impleme
                 lambdaWrapper = lambdaWrapper.eq(PostEntity::getStatus, param.getStatus());
             }
 
-            if(lambdaWrapper.isEmptyOfEntity()){
+            if(list(lambdaWrapper).isEmpty()){
                 resultPost.setPostTitle("社团不存在满足查询条件的活动");
                 postList.add(resultPost);
             }
@@ -110,15 +115,12 @@ public class PostServiceImpl extends ServiceImpl<PostMapper, PostEntity> impleme
 
     @Override
     public String addPost(PostEntity postEntity){
-        QueryWrapper<UserInfoMapper> wrapper1 = new QueryWrapper<>();
-        wrapper1.eq("user_id", postEntity.getUserId());
-        if(wrapper1 == null){
+        if(userInfoService.getById(postEntity.getClubId()) == null){
             return "用户不存在";
         }
 
-        QueryWrapper<ClubMapper> wrapper2 = new QueryWrapper<>();
-        wrapper2.eq("club_id", postEntity.getClubId());
-        if(wrapper2 == null){
+
+        if(clubService.getById(postEntity.getClubId()) == null){
             return "帖子所属社团不存在";
         }
 
