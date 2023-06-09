@@ -93,7 +93,9 @@ public class PostServiceImpl extends ServiceImpl<PostMapper, PostEntity> impleme
                 postList.add(resultPost);
             }
             else{
-                postList = postMapper.selectJoinList(PostListDTO.class, lambdaWrapper);
+                resultPost.setPostTitle("帖子存在");
+                postList.add(resultPost);
+                //postList = postMapper.selectJoinList(PostListDTO.class, lambdaWrapper);
             }
         }
 //        for(PostListDTO postListDTO:postList){

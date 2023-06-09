@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.cluboat.springcloud.entity.ClubEntity;
 import com.cluboat.springcloud.mapper.ClubMapper;
 import com.cluboat.springcloud.service.ClubService;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ClubServiceImpl extends ServiceImpl<ClubMapper, ClubEntity> implements ClubService {
 }
