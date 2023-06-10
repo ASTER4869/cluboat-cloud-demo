@@ -1,4 +1,5 @@
 package com.cluboat.springcloud.service.impl;
+import com.cluboat.springcloud.entity.PostEntity;
 import com.cluboat.springcloud.entity.dto.PostListDTO;
 import com.cluboat.springcloud.entity.param.PostGetByClubIdParam;
 import org.junit.AfterClass;
@@ -33,24 +34,78 @@ public class PostServiceImplTest {
         postGetByClubIdParam.setClubId(1);
         postGetByClubIdParam.setStatus("正常");
         List<PostListDTO> test = postServiceImpl.GetPostListByClubId(postGetByClubIdParam);
-        
+
         Assert.assertEquals(test.get(test.size()-1).getPostTitle(),"帖子存在");
     }
 
     @Test
     public void testGetPostInfo2(){
         final PostGetByClubIdParam postGetByClubIdParam = new PostGetByClubIdParam();
-        postGetByClubIdParam.setClubId(1);
+        postGetByClubIdParam.setClubId(666);
         postGetByClubIdParam.setStatus("正常");
         List<PostListDTO> test = postServiceImpl.GetPostListByClubId(postGetByClubIdParam);
-
-        for(int i=0;i<test.size();i++){
-            System.out.println(test.get(i).getPostTitle());
-        }
-
         System.out.println("===="+test.get(test.size()-1).getPostTitle());
-        Assert.assertEquals(test.get(test.size()-1).getPostTitle(),"帖子存在");
+        Assert.assertEquals(test.get(test.size()-1).getPostTitle(),"查询社团不存在");
     }
+
+    @Test
+    public void testGetPostInfo3(){
+        final PostGetByClubIdParam postGetByClubIdParam = new PostGetByClubIdParam();
+        postGetByClubIdParam.setClubId(1);
+        postGetByClubIdParam.setStatus("系统判定违规");
+        List<PostListDTO> test = postServiceImpl.GetPostListByClubId(postGetByClubIdParam);
+        System.out.println("===="+test.get(test.size()-1).getPostTitle());
+        Assert.assertEquals(test.get(test.size()-1).getPostTitle(),"社团不存在满足查询条件的帖子");
+    }
+
+    @Test
+    public void testAddPost1(){
+        final PostEntity postEntity = new PostEntity();
+        postEntity.setClubId(1);
+        postEntity.setUserId(2);
+        postEntity.setPostTitle("");
+        String test = postServiceImpl.addPost(postEntity);
+        Assert.assertEquals(test,"帖子标题包含非法字符");
+    }
+
+    @Test
+    public void testAddPost2(){
+        final PostEntity postEntity = new PostEntity();
+        postEntity.setClubId(1);
+        postEntity.setUserId(2);
+        postEntity.setPostTitle("@@@");
+        String test = postServiceImpl.addPost(postEntity);
+        Assert.assertEquals(test,"帖子标题包含非法字符");
+    }
+
+    @Test
+    public void testAddPost3(){
+        final PostEntity postEntity = new PostEntity();
+        postEntity.setClubId(1);
+        postEntity.setUserId(666);
+        String test = postServiceImpl.addPost(postEntity);
+        Assert.assertEquals(test ,"用户不存在");
+    }
+
+    @Test
+    public void testAddPost4(){
+        final PostEntity postEntity = new PostEntity();
+        postEntity.setClubId(1266);
+        postEntity.setUserId(1);
+        String test = postServiceImpl.addPost(postEntity);
+        Assert.assertEquals(test,"帖子所属社团不存在");
+    }
+
+    @Test
+    public void testAddPost5(){
+        final PostEntity postEntity = new PostEntity();
+        postEntity.setClubId(1);
+        postEntity.setUserId(1);
+        postEntity.setPostTitle("11");
+        String test = postServiceImpl.addPost(postEntity);
+        Assert.assertEquals(test,"创建成功");
+    }
+
 
 
     @AfterClass

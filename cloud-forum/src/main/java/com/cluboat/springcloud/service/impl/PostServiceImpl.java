@@ -89,7 +89,7 @@ public class PostServiceImpl extends ServiceImpl<PostMapper, PostEntity> impleme
             }
 
             if(list(lambdaWrapper).isEmpty()){
-                resultPost.setPostTitle("社团不存在满足查询条件的活动");
+                resultPost.setPostTitle("社团不存在满足查询条件的帖子");
                 postList.add(resultPost);
             }
             else{
@@ -117,7 +117,7 @@ public class PostServiceImpl extends ServiceImpl<PostMapper, PostEntity> impleme
 
     @Override
     public String addPost(PostEntity postEntity){
-        if(userInfoService.getById(postEntity.getClubId()) == null){
+        if(userInfoService.getById(postEntity.getUserId()) == null){
             return "用户不存在";
         }
 
