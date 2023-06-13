@@ -1,30 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="hibernate.cfg.xml/Hibernate">
   <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.43">
-    <root id="1">
-      <DefaultCasing>exact</DefaultCasing>
-      <DefaultEngine>InnoDB</DefaultEngine>
-      <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
-      <Grants>cluboat|schema||CluBoat||ALTER|G
-cluboat|schema||CluBoat||ALTER ROUTINE|G
-cluboat|schema||CluBoat||CREATE|G
-cluboat|schema||CluBoat||CREATE ROUTINE|G
-cluboat|schema||CluBoat||CREATE TEMPORARY TABLES|G
-cluboat|schema||CluBoat||CREATE VIEW|G
-cluboat|schema||CluBoat||DELETE|G
-cluboat|schema||CluBoat||DROP|G
-cluboat|schema||CluBoat||EVENT|G
-cluboat|schema||CluBoat||EXECUTE|G
-cluboat|schema||CluBoat||INDEX|G
-cluboat|schema||CluBoat||INSERT|G
-cluboat|schema||CluBoat||LOCK TABLES|G
-cluboat|schema||CluBoat||REFERENCES|G
-cluboat|schema||CluBoat||SELECT|G
-cluboat|schema||CluBoat||SHOW VIEW|G
-cluboat|schema||CluBoat||TRIGGER|G
-cluboat|schema||CluBoat||UPDATE|G</Grants>
-      <ServerVersion>5.6.50</ServerVersion>
-    </root>
+    <root id="1"/>
     <collation id="2" parent="1" name="big5_chinese_ci">
       <Charset>big5</Charset>
       <DefaultForCharset>1</DefaultForCharset>

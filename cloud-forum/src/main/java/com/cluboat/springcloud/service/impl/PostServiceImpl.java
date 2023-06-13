@@ -121,7 +121,6 @@ public class PostServiceImpl extends ServiceImpl<PostMapper, PostEntity> impleme
             return "用户不存在";
         }
 
-
         if(clubService.getById(postEntity.getClubId()) == null){
             return "帖子所属社团不存在";
         }

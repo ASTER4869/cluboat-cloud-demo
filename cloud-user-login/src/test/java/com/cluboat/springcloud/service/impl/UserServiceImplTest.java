@@ -71,56 +71,56 @@ public class UserServiceImplTest {
     }
 
     @Test
-    public void testRegisterSuccess1(){
+    public void testSignUpSuccess1(){
         final UserEntity userEntity = new UserEntity();
         userEntity.setUserPhone("");
         userEntity.setUserPassword("123456");
-        String test = userServiceImpl.registerJudge(userEntity);
-          Assert.assertEquals(test,"手机不合法");
+        String test = userServiceImpl.signUpJudge(userEntity);
+          Assert.assertEquals(test,"手机号为空");
     }
 
     @Test
-    public void testRegisterSuccess2(){
+    public void testSignUpSuccess2(){
         final UserEntity userEntity = new UserEntity();
         userEntity.setUserPhone("13911112222");
         userEntity.setUserPassword("");
-        String test = userServiceImpl.registerJudge(userEntity);
-        Assert.assertEquals(test,"密码不合法");
+        String test = userServiceImpl.signUpJudge(userEntity);
+        Assert.assertEquals(test,"密码为空");
     }
 
     @Test
-    public void testRegisterSuccess3(){
+    public void testSignUpSuccess3(){
         final UserEntity userEntity = new UserEntity();
         userEntity.setUserPhone("1231321");
         userEntity.setUserPassword("123456");
-        String test = userServiceImpl.registerJudge(userEntity);
+        String test = userServiceImpl.signUpJudge(userEntity);
         Assert.assertEquals(test,"手机不合法");
     }
 
     @Test
-    public void testRegisterSuccess4(){
+    public void testSignUpSuccess4(){
         final UserEntity userEntity = new UserEntity();
         userEntity.setUserPhone("13911112222");
         userEntity.setUserPassword("1 2 3");
-        String test = userServiceImpl.registerJudge(userEntity);
+        String test = userServiceImpl.signUpJudge(userEntity);
         Assert.assertEquals(test,"密码不合法");
     }
 
     @Test
-    public void testRegisterSuccess5(){
+    public void testSignUpJudgeSuccess5(){
         final UserEntity userEntity = new UserEntity();
         userEntity.setUserPhone("13011112222");
         userEntity.setUserPassword("1242452");
-        String test = userServiceImpl.registerJudge(userEntity);
+        String test = userServiceImpl.signUpJudge(userEntity);
         Assert.assertEquals(test,"手机已注册");
     }
 
     @Test
-    public void testRegisterSuccess6(){
+    public void testSignUpJudgeSuccess6(){
         final UserEntity userEntity = new UserEntity();
         userEntity.setUserPhone("13911112222");
         userEntity.setUserPassword("1242452");
-        String test = userServiceImpl.registerJudge(userEntity);
+        String test = userServiceImpl.signUpJudge(userEntity);
         Assert.assertEquals(test,"注册成功");
     }
 

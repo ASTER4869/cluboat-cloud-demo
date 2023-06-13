@@ -29,8 +29,17 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, UserEntity> impleme
     }
 
     @Override
-    public String registerJudge(UserEntity userEntity){
+    public String signUpJudge(UserEntity userEntity){
         char[] phone = userEntity.getUserPhone().toCharArray();
+
+        if (phone.length == 0){
+            return "手机号为空";
+        }
+
+        if(phone.length != 11){
+            return "手机不合法";
+        }
+
         for(char c : phone){
             if(c < '0' || c > '9'){
                 return "手机不合法";
@@ -38,6 +47,11 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, UserEntity> impleme
         }
 
         char[] password = userEntity.getUserPassword().toCharArray();
+
+        if (password.length == 0){
+            return "密码为空";
+        }
+
         for(char c : password){
             if((c < '0' || c > '9')&&(c < 'a' || c > 'z')&&(c < 'A' || c > 'Z')){
                 return "密码不合法";
@@ -51,12 +65,6 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, UserEntity> impleme
         }
 
         return "注册成功";
-
-
-
-
-
-
 
     }
 }

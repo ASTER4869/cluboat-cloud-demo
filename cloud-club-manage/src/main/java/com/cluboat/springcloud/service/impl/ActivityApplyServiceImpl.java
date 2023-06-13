@@ -64,7 +64,7 @@ public class ActivityApplyServiceImpl extends ServiceImpl<ActivityApplyMapper, A
         else{
             wrapper
                     .eq("club_id", param.getClubId())
-                    .eq("stauts", param.getStatus());
+                    .eq("status", param.getStatus());
             if(list(wrapper).isEmpty()){
                 result.setActivityTitle("满足查询条件的社团活动为空");
                 resultList.add(result);
