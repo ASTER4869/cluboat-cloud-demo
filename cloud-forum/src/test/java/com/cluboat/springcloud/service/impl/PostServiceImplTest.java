@@ -35,7 +35,7 @@ public class PostServiceImplTest {
         postGetByClubIdParam.setStatus("正常");
         List<PostListDTO> test = postServiceImpl.GetPostListByClubId(postGetByClubIdParam);
 
-        Assert.assertEquals(test.get(test.size()-1).getPostTitle(),"帖子存在");
+        Assert.assertEquals("帖子存在",test.get(test.size()-1).getPostTitle());
     }
 
     @Test
@@ -45,7 +45,7 @@ public class PostServiceImplTest {
         postGetByClubIdParam.setStatus("正常");
         List<PostListDTO> test = postServiceImpl.GetPostListByClubId(postGetByClubIdParam);
         System.out.println("===="+test.get(test.size()-1).getPostTitle());
-        Assert.assertEquals(test.get(test.size()-1).getPostTitle(),"查询社团不存在");
+        Assert.assertEquals("查询社团不存在",test.get(test.size()-1).getPostTitle());
     }
 
     @Test
@@ -55,7 +55,7 @@ public class PostServiceImplTest {
         postGetByClubIdParam.setStatus("系统判定违规");
         List<PostListDTO> test = postServiceImpl.GetPostListByClubId(postGetByClubIdParam);
         System.out.println("===="+test.get(test.size()-1).getPostTitle());
-        Assert.assertEquals(test.get(test.size()-1).getPostTitle(),"社团不存在满足查询条件的帖子");
+        Assert.assertEquals("社团不存在满足查询条件的帖子",test.get(test.size()-1).getPostTitle());
     }
 
     @Test
@@ -65,7 +65,7 @@ public class PostServiceImplTest {
         postEntity.setUserId(2);
         postEntity.setPostTitle("");
         String test = postServiceImpl.addPost(postEntity);
-        Assert.assertEquals(test,"帖子标题包含非法字符");
+        Assert.assertEquals("帖子标题包含非法字符",test);
     }
 
     @Test
@@ -75,7 +75,7 @@ public class PostServiceImplTest {
         postEntity.setUserId(2);
         postEntity.setPostTitle("@@@");
         String test = postServiceImpl.addPost(postEntity);
-        Assert.assertEquals(test,"帖子标题包含非法字符");
+        Assert.assertEquals("帖子标题包含非法字符",test);
     }
 
     @Test
@@ -84,7 +84,7 @@ public class PostServiceImplTest {
         postEntity.setClubId(1);
         postEntity.setUserId(666);
         String test = postServiceImpl.addPost(postEntity);
-        Assert.assertEquals(test ,"用户不存在");
+        Assert.assertEquals("用户不存在",test);
     }
 
     @Test
@@ -93,7 +93,7 @@ public class PostServiceImplTest {
         postEntity.setClubId(1266);
         postEntity.setUserId(1);
         String test = postServiceImpl.addPost(postEntity);
-        Assert.assertEquals(test,"帖子所属社团不存在");
+        Assert.assertEquals("帖子所属社团不存在",test);
     }
 
     @Test
@@ -103,7 +103,7 @@ public class PostServiceImplTest {
         postEntity.setUserId(1);
         postEntity.setPostTitle("11");
         String test = postServiceImpl.addPost(postEntity);
-        Assert.assertEquals(test,"创建成功");
+        Assert.assertEquals("创建成功",test);
     }
 
 

@@ -32,7 +32,7 @@ public class UserInfoServiceImplTest {
         userInfoEntity.setUserName("123456");
         userInfoEntity.setUserSign("");
         String test = userInfoServiceImpl.changeUserInfo(userInfoEntity);
-        Assert.assertEquals(test,"用户昵称违法");
+        Assert.assertEquals("用户昵称违法",test);
     }
 
     @Test
@@ -42,7 +42,7 @@ public class UserInfoServiceImplTest {
         userInfoEntity.setUserName("aa@");
         userInfoEntity.setUserSign("123456");
         String test = userInfoServiceImpl.changeUserInfo(userInfoEntity);
-        Assert.assertEquals(test,"用户昵称违法");
+        Assert.assertEquals("用户昵称违法",test);
     }
 
     @Test
@@ -52,7 +52,7 @@ public class UserInfoServiceImplTest {
         userInfoEntity.setUserName("刻晴");
         userInfoEntity.setUserSign("123456");
         String test = userInfoServiceImpl.changeUserInfo(userInfoEntity);
-        Assert.assertEquals(test,"用户昵称已存在");
+        Assert.assertEquals("用户昵称已存在",test);
     }
 
     @Test
@@ -65,7 +65,7 @@ public class UserInfoServiceImplTest {
             s = s + "1";
         userInfoEntity.setUserSign(s);
         String test = userInfoServiceImpl.changeUserInfo(userInfoEntity);
-        Assert.assertEquals(test,"个人签名超过字数");
+        Assert.assertEquals("个人签名超过字数",test);
     }
 
     @Test
@@ -75,7 +75,7 @@ public class UserInfoServiceImplTest {
         userInfoEntity.setUserName("用户1245464");
         userInfoEntity.setUserSign("123");
         String test = userInfoServiceImpl.changeUserInfo(userInfoEntity);
-        Assert.assertEquals(test,"更改成功");
+        Assert.assertEquals("更改成功",test);
     }
 
 

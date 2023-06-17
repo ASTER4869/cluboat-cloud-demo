@@ -31,7 +31,7 @@ public class ActivityApplyServiceImplTest {
         activityApplyClubParam.setStatus("正常");
         List<ActivityApplyEntity> test_list = activityApplyServiceImpl.getActivityApplyList(activityApplyClubParam);
         String test = test_list.get(test_list.size()-1).getActivityTitle();
-        Assert.assertEquals(test,"查询社团不存在");
+        Assert.assertEquals("查询社团不存在",test);
     }
 
     @Test
@@ -41,7 +41,7 @@ public class ActivityApplyServiceImplTest {
         activityApplyClubParam.setStatus("待审批");
         List<ActivityApplyEntity> test_list = activityApplyServiceImpl.getActivityApplyList(activityApplyClubParam);
         String test = test_list.get(test_list.size()-1).getActivityTitle();
-        Assert.assertEquals(test,"查询社团不存在");
+        Assert.assertEquals("查询社团不存在",test);
     }
 
     @Test
@@ -51,7 +51,7 @@ public class ActivityApplyServiceImplTest {
         activityApplyClubParam.setStatus("待审批");
         List<ActivityApplyEntity> test_list = activityApplyServiceImpl.getActivityApplyList(activityApplyClubParam);
         String test = test_list.get(test_list.size()-1).getActivityTitle();
-        Assert.assertEquals(test,"满足查询条件的社团活动为空");
+        Assert.assertEquals("满足查询条件的社团活动为空",test);
     }
 
     @Test
@@ -63,7 +63,7 @@ public class ActivityApplyServiceImplTest {
         activityApplyEntity.setClubId(1);
         activityApplyEntity.setActivityTitle("123");
         String test = activityApplyServiceImpl.applyForActivity(activityApplyEntity);
-        Assert.assertEquals(test,"活动地点为空");
+        Assert.assertEquals("活动地点为空",test);
     }
 
     @Test
@@ -75,7 +75,7 @@ public class ActivityApplyServiceImplTest {
         activityApplyEntity.setClubId(1);
         activityApplyEntity.setActivityTitle("123");
         String test = activityApplyServiceImpl.applyForActivity(activityApplyEntity);
-        Assert.assertEquals(test,"活动时间不符合规范");
+        Assert.assertEquals("活动时间不符合规范",test);
     }
 
     @Test
@@ -87,7 +87,7 @@ public class ActivityApplyServiceImplTest {
         activityApplyEntity.setClubId(233);
         activityApplyEntity.setActivityTitle("123");
         String test = activityApplyServiceImpl.applyForActivity(activityApplyEntity);
-        Assert.assertEquals(test,"创建社团不存在");
+        Assert.assertEquals("创建社团不存在",test);
     }
 
     @Test
@@ -99,7 +99,7 @@ public class ActivityApplyServiceImplTest {
         activityApplyEntity.setClubId(1);
         activityApplyEntity.setActivityTitle("@23");
         String test = activityApplyServiceImpl.applyForActivity(activityApplyEntity);
-        Assert.assertEquals(test,"活动标题含有非法字符");
+        Assert.assertEquals("活动标题含有非法字符",test);
     }
 
     @Test
@@ -111,7 +111,7 @@ public class ActivityApplyServiceImplTest {
         activityApplyEntity.setClubId(1);
         activityApplyEntity.setActivityTitle("");
         String test = activityApplyServiceImpl.applyForActivity(activityApplyEntity);
-        Assert.assertEquals(test,"活动标题含有非法字符");
+        Assert.assertEquals("活动标题含有非法字符",test);
     }
 
     @Test
@@ -123,7 +123,7 @@ public class ActivityApplyServiceImplTest {
         activityApplyEntity.setClubId(1);
         activityApplyEntity.setActivityTitle("活动预告");
         String test = activityApplyServiceImpl.applyForActivity(activityApplyEntity);
-        Assert.assertEquals(test,"活动申请提交成功");
+        Assert.assertEquals("活动申请提交成功",test);
     }
 
 

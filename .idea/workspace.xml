@@ -11,7 +11,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6d4d16d2-b824-45f3-a1a5-21313ed733a4" name="变更" comment="变更">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/service/impl/UserInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-info/src/main/java/com/cluboat/springcloud/service/impl/UserInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-forum/src/test/java/com/cluboat/springcloud/service/impl/PostServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-forum/src/test/java/com/cluboat/springcloud/service/impl/PostServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-info/src/test/java/com/cluboat/springcloud/service/impl/UserInfoServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-info/src/test/java/com/cluboat/springcloud/service/impl/UserInfoServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-user-login/src/test/java/com/cluboat/springcloud/service/impl/UserServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login/src/test/java/com/cluboat/springcloud/service/impl/UserServiceImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -364,7 +366,7 @@
       <workItem from="1686066186529" duration="1052000" />
       <workItem from="1686301213050" duration="14263000" />
       <workItem from="1686391772752" duration="8488000" />
-      <workItem from="1687004507631" duration="1984000" />
+      <workItem from="1687004507631" duration="3100000" />
     </task>
     <servers />
   </component>
