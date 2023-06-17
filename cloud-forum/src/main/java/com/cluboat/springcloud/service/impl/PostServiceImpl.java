@@ -126,7 +126,7 @@ public class PostServiceImpl extends ServiceImpl<PostMapper, PostEntity> impleme
         }
 
         for(char c : blacklist.toCharArray()){
-            if(postEntity.getPostTitle().contains(String.valueOf(c))){
+            if(postEntity.getPostTitle() == "" || postEntity.getPostTitle().contains(String.valueOf(c))){
                 return "帖子标题包含非法字符";
             }
         }

@@ -60,7 +60,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, UserEntity> impleme
 
         QueryWrapper<UserEntity> wrapper = new QueryWrapper<>();
         wrapper.eq("user_phone", userEntity.getUserPhone());
-        if(list(wrapper).isEmpty()){
+        if(!list(wrapper).isEmpty()){
             return "手机已注册";
         }
 

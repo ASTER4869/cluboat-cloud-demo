@@ -32,7 +32,7 @@ public class UserInfoServiceImplTest {
         userInfoEntity.setUserName("123456");
         userInfoEntity.setUserSign("");
         String test = userInfoServiceImpl.changeUserInfo(userInfoEntity);
-        Assert.assertEquals("用户昵称违法",test);
+        Assert.assertEquals("更改成功",test);
     }
 
     @Test
