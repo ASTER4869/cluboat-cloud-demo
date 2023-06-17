@@ -56,7 +56,7 @@ public class UserInfoServiceImpl extends ServiceImpl<UserInfoMapper, UserInfoEnt
 
         QueryWrapper<UserInfoEntity> wrapper = new QueryWrapper<UserInfoEntity>();
         wrapper.eq("user_name", userInfoEntity.getUserName());
-        if(list(wrapper).isEmpty()){
+        if(!list(wrapper).isEmpty()){
             return "用户昵称已存在";
         }
 
