@@ -425,6 +425,10 @@ public class PostController {
 //            quickRow(popularPostDTOArray, 0, popularPostDTOArray.length - 1);
             Arrays.sort(popularPostDTOArray);
             popularPostDTOList = Arrays.asList(popularPostDTOArray);
+            // 如果长度大于10，则截断
+            if(popularPostDTOList.size() > 10){
+                popularPostDTOList = popularPostDTOList.subList(0, 10);
+            }
             // 把帖子信息填入结果中
 
             for (PopularPostDTO popularPostDTO : popularPostDTOList){

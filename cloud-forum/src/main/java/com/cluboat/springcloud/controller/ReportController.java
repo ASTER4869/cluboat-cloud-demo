@@ -173,6 +173,12 @@ public class ReportController {
     @PutMapping
     private CommonResult UpdateStatus(@RequestBody ReportUpdateParam reportUpdateParam){
         try {
+            if(reportUpdateParam.getReportId() == null){
+                return new CommonResult(401, "举报id为空");
+            }
+            if(reportUpdateParam.getStatus() == null){
+                return new CommonResult(402, "审批状态为空");
+            }
             //先查看是否有该举报
             ReportEntity reportEntity = reportService.getById(reportUpdateParam.getReportId());
             if (reportEntity == null){
