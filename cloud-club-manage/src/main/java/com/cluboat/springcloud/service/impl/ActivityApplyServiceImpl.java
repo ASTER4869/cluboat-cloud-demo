@@ -29,13 +29,13 @@ public class ActivityApplyServiceImpl extends ServiceImpl<ActivityApplyMapper, A
             return "活动地点为空";
         }
 
-        if(activityApply.getActivityDate() == null || activityApply.getActivityTime().isEmpty()){
-            return "活动时间不符合规范";
-
+        if(activityApply.getActivityTitle().isEmpty()){
+            return "活动标题为空";
         }
 
-        if(clubService.getById(activityApply.getClubId()) == null){
-            return "创建社团不存在";
+        if(activityApply.getActivityDate() == null){
+            return "活动时间不符合规范";
+
         }
 
         for(char c : blacklist.toCharArray()){
@@ -43,7 +43,12 @@ public class ActivityApplyServiceImpl extends ServiceImpl<ActivityApplyMapper, A
                 return "活动标题含有非法字符";
             }
         }
-        return "活动申请提交成功";
+
+        if(clubService.getById(activityApply.getClubId()) == null){
+            return "创建社团不存在";
+        }
+
+         return "活动申请提交成功";
     }
 
 

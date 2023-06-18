@@ -111,7 +111,7 @@ public class ActivityApplyServiceImplTest {
         activityApplyEntity.setClubId(1);
         activityApplyEntity.setActivityTitle("");
         String test = activityApplyServiceImpl.applyForActivity(activityApplyEntity);
-        Assert.assertEquals("活动标题含有非法字符",test);
+        Assert.assertEquals("活动标题为空",test);
     }
 
     @Test

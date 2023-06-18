@@ -28,35 +28,35 @@ public class PostServiceImplTest {
         System.out.println("开始测试...");
     }
 
-//    @Test
-//    public void testGetPostInfo1(){
-//        final PostGetByClubIdParam postGetByClubIdParam = new PostGetByClubIdParam();
-//        postGetByClubIdParam.setClubId(1);
-//        postGetByClubIdParam.setStatus("正常");
-//        List<PostListDTO> test = postServiceImpl.GetPostListByClubId(postGetByClubIdParam);
-//
-//        Assert.assertEquals("帖子存在",test.get(test.size()-1).getPostTitle());
-//    }
-//
-//    @Test
-//    public void testGetPostInfo2(){
-//        final PostGetByClubIdParam postGetByClubIdParam = new PostGetByClubIdParam();
-//        postGetByClubIdParam.setClubId(666);
-//        postGetByClubIdParam.setStatus("正常");
-//        List<PostListDTO> test = postServiceImpl.GetPostListByClubId(postGetByClubIdParam);
-//        System.out.println("===="+test.get(test.size()-1).getPostTitle());
-//        Assert.assertEquals("查询社团不存在",test.get(test.size()-1).getPostTitle());
-//    }
-//
-//    @Test
-//    public void testGetPostInfo3(){
-//        final PostGetByClubIdParam postGetByClubIdParam = new PostGetByClubIdParam();
-//        postGetByClubIdParam.setClubId(1);
-//        postGetByClubIdParam.setStatus("系统判定违规");
-//        List<PostListDTO> test = postServiceImpl.GetPostListByClubId(postGetByClubIdParam);
-//        System.out.println("===="+test.get(test.size()-1).getPostTitle());
-//        Assert.assertEquals("社团不存在满足查询条件的帖子",test.get(test.size()-1).getPostTitle());
-//    }
+    @Test
+    public void testGetPostInfo1(){
+        final PostGetByClubIdParam postGetByClubIdParam = new PostGetByClubIdParam();
+        postGetByClubIdParam.setClubId(1);
+        postGetByClubIdParam.setStatus("正常");
+        List<PostListDTO> test = postServiceImpl.GetPostListByClubId(postGetByClubIdParam);
+
+        Assert.assertEquals("帖子存在",test.get(test.size()-1).getPostTitle());
+    }
+
+    @Test
+    public void testGetPostInfo2(){
+        final PostGetByClubIdParam postGetByClubIdParam = new PostGetByClubIdParam();
+        postGetByClubIdParam.setClubId(666);
+        postGetByClubIdParam.setStatus("正常");
+        List<PostListDTO> test = postServiceImpl.GetPostListByClubId(postGetByClubIdParam);
+        System.out.println("===="+test.get(test.size()-1).getPostTitle());
+        Assert.assertEquals("查询社团不存在",test.get(test.size()-1).getPostTitle());
+    }
+
+    @Test
+    public void testGetPostInfo3(){
+        final PostGetByClubIdParam postGetByClubIdParam = new PostGetByClubIdParam();
+        postGetByClubIdParam.setClubId(1);
+        postGetByClubIdParam.setStatus("系统判定违规");
+        List<PostListDTO> test = postServiceImpl.GetPostListByClubId(postGetByClubIdParam);
+        System.out.println("===="+test.get(test.size()-1).getPostTitle());
+        Assert.assertEquals("社团不存在满足查询条件的帖子",test.get(test.size()-1).getPostTitle());
+    }
 
     @Test
     public void testAddPost1(){
