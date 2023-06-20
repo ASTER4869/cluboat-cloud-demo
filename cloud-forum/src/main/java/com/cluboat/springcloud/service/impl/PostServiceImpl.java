@@ -125,8 +125,12 @@ public class PostServiceImpl extends ServiceImpl<PostMapper, PostEntity> impleme
             return "帖子所属社团不存在";
         }
 
+        if(postEntity.getPostTitle().isEmpty()){
+            return "帖子标题为空";
+        }
+
         for(char c : blacklist.toCharArray()){
-            if(postEntity.getPostTitle() == "" || postEntity.getPostTitle().contains(String.valueOf(c))){
+            if(postEntity.getPostTitle().contains(String.valueOf(c))){
                 return "帖子标题包含非法字符";
             }
         }
