@@ -18,7 +18,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, UserEntity> impleme
     public String loginJudge(UserEntity userEntity){
         QueryWrapper<UserEntity> wrapper = new QueryWrapper<>();
         wrapper.eq("user_phone", userEntity.getUserPhone());
-        if(userEntity.getUserPhone().isEmpty()){
+        if(userEntity.getUserPhone().isEmpty() || list(wrapper).isEmpty()){
             return "账号不存在";
         }
         wrapper.eq("user_password", userEntity.getUserPassword());
@@ -53,7 +53,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, UserEntity> impleme
         }
 
         for(char c : password){
-            if((c < '0' || c > '9')||(c < 'a' || c > 'z')||(c < 'A' || c > 'Z')){
+            if((c < '0' || c > '9')&&(c < 'a' || c > 'z')&&(c < 'A' || c > 'Z')){
                 return "密码不合法";
             }
         }

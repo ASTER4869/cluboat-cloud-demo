@@ -117,12 +117,17 @@ public class PostServiceImpl extends ServiceImpl<PostMapper, PostEntity> impleme
 
     @Override
     public String addPost(PostEntity postEntity){
+
         if(userInfoService.getById(postEntity.getUserId()) == null){
             return "用户不存在";
         }
 
         if(clubService.getById(postEntity.getClubId()) == null){
             return "帖子所属社团不存在";
+        }
+
+        if(postEntity.getPostTitle().isEmpty()){
+            return "帖子标题为空";
         }
 
         for(char c : blacklist.toCharArray()){

@@ -10,11 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d4d16d2-b824-45f3-a1a5-21313ed733a4" name="变更" comment="变更">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/28118269-f1a2-42c3-aebe-355382f1c3c2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/28118269-f1a2-42c3-aebe-355382f1c3c2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-forum/src/main/java/com/cluboat/springcloud/service/impl/PostServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-forum/src/main/java/com/cluboat/springcloud/service/impl/PostServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-user-login/src/main/java/com/cluboat/springcloud/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login/src/main/java/com/cluboat/springcloud/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-user-login/src/test/java/com/cluboat/springcloud/service/impl/UserServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-user-login/src/test/java/com/cluboat/springcloud/service/impl/UserServiceImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +124,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserServiceImplTest">
+  <component name="RunManager" selected="JUnit.PostServiceImplTest">
     <configuration name="ActivityApplyServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cloud-club-manage" />
       <extension name="coverage">
@@ -249,8 +245,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserServiceImplTest" />
         <item itemvalue="JUnit.PostServiceImplTest" />
+        <item itemvalue="JUnit.UserServiceImplTest" />
         <item itemvalue="JUnit.ActivityApplyServiceImplTest" />
         <item itemvalue="JUnit.UserInfoServiceImplTest" />
         <item itemvalue="JUnit.UserServiceImplTest.testLoginSuccess" />
@@ -372,7 +368,7 @@
       <workItem from="1687276589064" duration="1385000" />
       <workItem from="1687286627620" duration="82000" />
       <workItem from="1687286920053" duration="595000" />
-      <workItem from="1687315055599" duration="1712000" />
+      <workItem from="1687315055599" duration="2035000" />
     </task>
     <servers />
   </component>
