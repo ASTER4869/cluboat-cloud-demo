@@ -55,7 +55,7 @@ public class UserServiceImplTest {
     @Test
     public void testLoginSuccess4(){
         final UserEntity userEntity = new UserEntity();
-        userEntity.setUserPhone("13999112222");
+        userEntity.setUserPhone("13911112222");
         userEntity.setUserPassword("123456");
         String test = userServiceImpl.loginJudge(userEntity);
         Assert.assertEquals("账号不存在",test);
@@ -116,9 +116,9 @@ public class UserServiceImplTest {
     }
 
     @Test
-    public void testSignUpJudgeSuccess6(){
+    public void testSignUpSuccess6(){
         final UserEntity userEntity = new UserEntity();
-        userEntity.setUserPhone("13999112222");
+        userEntity.setUserPhone("13911112222");
         userEntity.setUserPassword("1242452");
         String test = userServiceImpl.signUpJudge(userEntity);
         Assert.assertEquals("注册成功",test);
